@@ -7,10 +7,11 @@ import ru.mironenko.cycles.Square;
 
 public class SquareTest{
 	@Test
-	public void calculateTest(){
-		final Square square =  new Square(3f, 2f, 1f);
-		float checked = 1f;
-		final float result = square.calculate(0);
-		assertThat(result, is(checked));
+	public void whenCalculate(){
+		final Square square = new Square(3,2,1);
+        	float checked = 6f;
+
+        	final float result = square.calculate(1);;
+        	assertThat(result, is(checked));
 	}
 }

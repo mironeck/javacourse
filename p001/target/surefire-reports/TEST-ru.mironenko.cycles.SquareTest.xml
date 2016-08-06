@@ -63,5 +63,5 @@
     <property name="sun.desktop" value="windows"/>
     <property name="sun.cpu.isalist" value="amd64"/>
   </properties>
-  <testcase classname="ru.mironenko.cycles.SquareTest" name="calculateTest" time="0"/>
+  <testcase classname="ru.mironenko.cycles.SquareTest" name="whenCalculate" time="0"/>
 </testsuite>
