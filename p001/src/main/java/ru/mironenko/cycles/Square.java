@@ -8,25 +8,21 @@ package ru.mironenko.cycles;
 */
 
 public class Square{
- 
-	private float a;
-	private float b;
-	private float c;
+	
+	private double a;
+	private double b;
+	private double c;
+	
 	private int rangeOne;
 	private int rangeTwo;
 	private int step;
 	
-
-	public Square(float a, float b, float c, int x, int y, int z){
-	
-		a = this.a;
-		b = this.b;
-		c = this.c;
-		x = this.rangeOne;
-		y = this.rangeTwo;
-		z = this.step;
-		
+	public Square (double a, double b, double c){
+		this.a = a;
+		this.b = b;
+		this.c = c;		
 	}
+
 	
 	/**
 	*function evaluatio
@@ -36,6 +32,7 @@ public class Square{
 	*/
 	public float calculate(int x){
 		return (float)(this.a * Math.pow(x, 2) + this.b * x + this.c);
+		
 	}
 	
 	/**
@@ -44,7 +41,7 @@ public class Square{
 	 */
 	public void showDiapasone(){
 
-		for (int i = this.rangeOne; i <= this.rangeTwo; i = i + this.step){
+		for (int i = rangeOne; i <= rangeTwo; i = i + step){
 			System.out.println(calculate(i));
 		}
 	}
