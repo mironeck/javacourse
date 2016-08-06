@@ -1,30 +1,28 @@
 package ru.mironenko.cycles;
 
 /*
-*Class Factorial for calcilation factorial
+*Class Factorial for calculation factorial
 *@author mironenko
 *@since 06.08.2016
 *@version 1
 */
 
 public class Factorial{
-	
-	private int n;
-	
-	public Factorial(int n){
-		if (n < 0){
-			System.out.println("Enter n >= 0");
-		}else{
-			n = this.n;
+	/**
+	*calculate factorial of number n
+	*@param n number
+	*@return result
+	*/
+	public int calculateFactorial(int n){
+		 if (n < 0){
+			 return -1;
+		 }else{
+			 int result = 1; 
+			 for (int i = 1; i <= n; i++){
+				result *= i;
+			 }
+			 return result;		 
 		}
-	}
-	
-	private int calculateFactorial(int n){
-		int x = 1;
-		for (int i = 1; i <= this.n; i++){
-			x = x * i;
-		}
-		return x;
 	}
 	
 }
