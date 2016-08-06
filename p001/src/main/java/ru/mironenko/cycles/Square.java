@@ -12,34 +12,42 @@ public class Square{
 	private float a;
 	private float b;
 	private float c;
+	private int rangeOne;
+	private int rangeTwo;
+	private int step;
+	
 
-	public Square(float a, float b, float c){
+	public Square(float a, float b, float c, int x, int y, int z){
 	
 		a = this.a;
 		b = this.b;
 		c = this.c;
+		x = this.rangeOne;
+		y = this.rangeTwo;
+		z = this.step;
+		
 	}
 	
 	/**
 	*function evaluatio
 	*@param x variable
-	*@param a,b,c coefficients
+	*@params a, b, c coefficients
 	*@return result
 	*/
-	private float calculate(int x){
-		return a * x * x + b * x + c;
+	public float calculate(int x){
+		return (float)(this.a * Math.pow(x, 2) + this.b * x + this.c);
 	}
 	
-	public float getA(){
-		return a;
-	}
+	/**
+	*print value of function in diapasone beetween rangeOne and rangeTwo
+	*@params rangeOne, rangeTwo diapasone
+	 */
+	public void showDiapasone(){
 
-	public float getB(){
-		return b;
+		for (int i = this.rangeOne; i <= this.rangeTwo; i = i + this.step){
+			System.out.println(calculate(i));
+		}
 	}
 	
-	public float getC(){
-		return c;
-	}
 	
 }

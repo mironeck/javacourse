@@ -1,4 +1,4 @@
-package ru.mironenko.lessons.conditionaloperator;
+package ru.mironenko.conditionaloperator;
 
 import org.hamcrest.Matchers;
 import org.junit.Test;

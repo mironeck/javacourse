@@ -1,4 +1,4 @@
-ru\mironenko\lessons\jvmbytecode\CalculatorTest.class
-ru\mironenko\lessons\conditionaloperator\FindMaxSideTest.class
-ru\mironenko\lessons\conditionaloperator\TriangleTest.class
-ru\mironenko\lessons\conditionaloperator\PointTest.class
+ru\mironenko\conditionaloperator\PointTest.class
+ru\mironenko\conditionaloperator\FindMaxSideTest.class
+ru\mironenko\jvmbytecode\CalculatorTest.class
+ru\mironenko\conditionaloperator\TriangleTest.class
