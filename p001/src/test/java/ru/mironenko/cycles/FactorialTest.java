@@ -19,4 +19,14 @@ public class FactorialTest{
 		assertThat(result, is(checked));
 		
 	}
+	
+	public void whenNumberLessThenZero(){
+	
+		final Factorial factorial =  new Factorial();
+		int checked = -1;
+		
+		final int result = factorial.calculateFactorial(-5);
+		assertThat(result, is(checked));
+		
+	}
 }

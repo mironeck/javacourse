@@ -17,4 +17,5 @@ public class SquareTest{
         final float result = square.calculate(1);;
         assertThat(result, is(checked));
 	}
+	
 }

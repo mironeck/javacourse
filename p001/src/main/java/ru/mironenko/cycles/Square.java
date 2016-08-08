@@ -13,9 +13,8 @@ public class Square{
 	private double b;
 	private double c;
 	
-	private int rangeOne;
-	private int rangeTwo;
-	private int step;
+	private final StringBuilder out = new StringBuilder();
+	
 	
 	public Square (double a, double b, double c){
 		this.a = a;
@@ -38,13 +37,13 @@ public class Square{
 	/**
 	*print value of function in diapasone beetween rangeOne and rangeTwo
 	*@params rangeOne, rangeTwo diapasone
+	*@param step
 	 */
-	public void showDiapasone(){
+	public void showDiapasone(int rangeOne, int rangeTwo, int step){
 
 		for (int i = rangeOne; i <= rangeTwo; i = i + step){
 			System.out.println(calculate(i));
 		}
 	}
-	
-	
+
 }
