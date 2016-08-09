@@ -1,5 +1,7 @@
 package ru.mironenko.cycles;
 
+import java.io.ByteArrayOutputStream;
+
 /**
 *Class Square for calculation function y = a*x2 + b * x + c
 *@author mironenko
@@ -39,11 +41,18 @@ public class Square{
 	*@params rangeOne, rangeTwo diapasone
 	*@param step
 	 */
+
+    ByteArrayOutputStream output =  new ByteArrayOutputStream();
+    byte[] bytes;
+
 	public void showDiapasone(int rangeOne, int rangeTwo, int step){
 
 		for (int i = rangeOne; i <= rangeTwo; i = i + step){
 			System.out.println(calculate(i));
+            output.write((int)calculate(i));
 		}
+        bytes = output.toByteArray();
 	}
+
 
 }

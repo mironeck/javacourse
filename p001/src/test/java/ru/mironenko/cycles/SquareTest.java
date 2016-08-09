@@ -17,5 +17,15 @@ public class SquareTest{
         final float result = square.calculate(1);;
         assertThat(result, is(checked));
 	}
+
+    @Test
+    public void whenPrint(){
+        final Square square = new Square(3,2,1);
+        byte[] checked = new byte[]{6};
+
+        square.showDiapasone(1, 2, 2);
+        byte[] result = square.bytes;
+        assertThat(result, is (checked));
+    }
 	
 }
