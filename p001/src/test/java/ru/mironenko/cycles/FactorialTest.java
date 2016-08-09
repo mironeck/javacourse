@@ -19,7 +19,7 @@ public class FactorialTest{
 		assertThat(result, is(checked));
 		
 	}
-	
+	@Test
 	public void whenNumberLessThenZero(){
 	
 		final Factorial factorial =  new Factorial();
