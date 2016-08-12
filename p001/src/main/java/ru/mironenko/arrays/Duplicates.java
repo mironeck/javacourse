@@ -13,6 +13,7 @@ public class Duplicates{
 	/*
 	*delete duplicates from String array
 	*@param arrayWithDuplicates
+	*@param numberOfUniqueElements
 	*creat new array with length of arrayWithDuplicates
 	*if find duplicate replace it with last unique element
 	*and decrement numberOfUniqueElements
