@@ -1,10 +1,11 @@
-ru\mironenko\jvmbytecode\CalcInit.class
 ru\mironenko\arrays\BubbleSort.class
+ru\mironenko\cycles\Factorial.class
+ru\mironenko\arrays\Duplicates.class
+ru\mironenko\jvmbytecode\CalcInit.class
 ru\mironenko\jvmbytecode\Calculate.class
 ru\mironenko\cycles\Square.class
 ru\mironenko\conditionaloperator\Triangle.class
 ru\mironenko\conditionaloperator\CalculateArea.class
-ru\mironenko\cycles\Factorial.class
 ru\mironenko\arrays\ArrayTurn.class
 ru\mironenko\jvmbytecode\Calculator.class
 ru\mironenko\conditionaloperator\FindMaxSide.class
