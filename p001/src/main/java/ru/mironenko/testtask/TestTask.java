@@ -12,7 +12,7 @@ import java.util.Arrays;
 public class TestTask{
 	/*
 	*@param origin
-	*@sub
+	*@param sub
 	*@return result return true if origin contains sub and false if not
 	*
 	*/
