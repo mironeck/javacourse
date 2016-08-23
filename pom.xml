@@ -10,6 +10,7 @@
   
 	<modules>
         <module>p001</module>
+		<module>p002</module>
     </modules>
 	
 	<dependencies>
