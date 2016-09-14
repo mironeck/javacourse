@@ -104,6 +104,7 @@ import java.util.*;
 	
 	/*
 	*The method add comment to item 
+	*params id, comment
 	*@return void
 	*/
 	public void addComment(String id , String comment){

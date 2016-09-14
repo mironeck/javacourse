@@ -7,7 +7,7 @@ public class Item{
 	private long timeOfCreation;
 	private String id;
 	private String[] comments;
-	private int position = 0;
+	private int index = 0;
 	
 	public Item(){};
 	
@@ -54,7 +54,7 @@ public class Item{
 	}
 	
 	public void addComment(String comment){
-		this.comments[position++] = comment;
+		this.comments[index++] = comment;
 	}
 	
 }
