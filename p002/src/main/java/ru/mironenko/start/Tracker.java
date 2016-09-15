@@ -4,7 +4,7 @@ import ru.mironenko.models.*;
 import java.util.*;
 /*
 *Class Tracker is repository of items. It makes some actions with items:
-*add, edit, delete, add comment to item, get all items and filtered array of items.
+*add, edit, delete, comment to item, get all items and filtered array of items.
 *@mironenko
 *@since 24.08.2016
 *@version 1
@@ -15,7 +15,19 @@ import java.util.*;
 	private Item[] items = new Item[10];
 	private int position = 0;
 	private static final Random RN = new Random();
-	
+
+	 public Item[] getItems(){
+	 	return this.items;
+	 }
+	 /*
+	*The method generate id for new item
+	*@return String id
+	*/
+	 String generateId(){
+		 return String.valueOf(System.currentTimeMillis() + RN.nextInt());
+	 }
+
+
 	/*
 	*The method generate id for the item and add new item in array of items
 	*@param item
@@ -57,15 +69,7 @@ import java.util.*;
 		}
 		return result;
 	}
-	
-	/*
-	*The method generate id for new item
-	*@return String id
-	*/
-	String generateId(){
-		return String.valueOf(System.currentTimeMillis() + RN.nextInt());
-	}
-	
+
 	/*
 	*The method return all items created
 	*@return array of items created
@@ -77,29 +81,30 @@ import java.util.*;
 		}
 		return result;
 	}
-	
-	
+
 	/*
 	*The method delete item
 	*@params items[], id
 	*@return result
 	*/
-	public Item[] deleteItem(String id){
-		 Item[] result = new Item[items.length-1]; // создаём новый массив длиной на 1 элемент меньше
+	public Item[] deleteItem(Item itemToDelete){
+		 Item[] result = new Item[this.items.length-1]; // создаём новый массив длиной на 1 элемент меньше
 		 int indexDeletedItem = -1; //индекс удаляемого элемента
-		 position--;
+
 		 //получаем индекс удаляемого элемента
-		 for(int index = 0; index != items.length; index++){
-			 if (items[index] != null && items[index].getId().equals(id)){
+		 for(int index = 0; index < this.position; index++){
+			 if (this.items[index] != null && this.items[index].equals(itemToDelete)){
 				 indexDeletedItem = index;
+				 // копируем в новый массив элементы до удаляемого
+				 System.arraycopy(items, 0, result, 0, indexDeletedItem);
+				 // копируем в новый массив элементы после удаляемого
+				 System.arraycopy(items, indexDeletedItem+1, result, indexDeletedItem, items.length-indexDeletedItem-1);
+				 break;
 			 }
 		 }
-		 // копируем в новый массив элементы до удаляемого
-		 System.arraycopy(items, 0, result, 0, indexDeletedItem);
-		 // копируем в новый массив элементы после удаляемого
-		 System.arraycopy(items, indexDeletedItem+1, result, indexDeletedItem, items.length-indexDeletedItem-1);	 
-		 items = result;
-		 return items;
+		 this.items = result;
+		 position--;
+		 return this.items;
 	}  
 	
 	/*
@@ -107,16 +112,28 @@ import java.util.*;
 	*params id, comment
 	*@return void
 	*/
-	public void addComment(String id , String comment){
+	public Item addComment(String id , Comment comment){
 		Item item = this.findById(id);
 		item.addComment(comment);
+		return item;
 	}
-	
-	
+
 	/*
 	*method return array of items sorted by filter 
-	*@return void
+	*@return array of items sorted by filter
 	*/
-	
-	
+
+	public Item[] filterItems(Filter filter){
+
+		Item [] result = new Item[position];
+		int resultIndex = 0;
+		for (int index = 0; index < this.position; index++) {
+			if(this.items[index].getName().contains(filter.getFilter()) || this.items[index].getDescription().contains(filter.getFilter())){
+
+				result[resultIndex++] = this.items[index];
+			}
+		}
+		//result = Arrays.copyOf(result, resultIndex);
+		return  Arrays.copyOf(result, resultIndex);
+	}
 }

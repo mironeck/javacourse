@@ -6,11 +6,16 @@ public class Item{
 	private String description;
 	private long timeOfCreation;
 	private String id;
-	private String[] comments;
+	private Comment[] comments = new Comment[10];
 	private int index = 0;
 	
-	public Item(){};
-	
+	public Item(){}
+
+	public Item(String name, String description){
+		this.name =  name;
+		this.description = description;
+	}
+
 	public Item(String name, String description, long timeOfCreation){
 		this.name = name;
 		this.description = description;
@@ -45,15 +50,15 @@ public class Item{
 		this.description = description;
 	}
 	
-	public String[] getComment(){
+	public Comment[] getComment(){
 		return this.comments;
 	}
 	
-	public void setComment(String[] comments){
+	public void setComment(Comment[] comments){
 		this.comments = comments;
 	}
 	
-	public void addComment(String comment){
+	public void addComment(Comment comment){
 		this.comments[index++] = comment;
 	}
 	

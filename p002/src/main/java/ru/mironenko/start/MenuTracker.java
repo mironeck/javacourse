@@ -21,9 +21,9 @@ class EditItem implements UserAction{
 			String id = input.ask ("Please, enter the task's id: ");
 			String name = input.ask ("Please, enter the task's name: ");
 			String desc = input.ask ("Please, enter the task desc: ");
-			Task task = new Task(name, desc);
-			task.setId(id);
-			tracker.edit(task);
+			Item item = new Item(name, desc);
+			item.setId(id);
+			tracker.edit(item);
 		}
 		
 		public String info(){
@@ -59,6 +59,7 @@ public class MenuTracker{
 		this.actions[2] = new EditItem();
 		this.actions[3] = this.new DeleteItem();
 		this.actions[4] = this.new AddComment();
+		this.actions[5] = this.new FilterItem();
 	}
 	
 	public UserAction[] getActions(){
@@ -92,7 +93,7 @@ public class MenuTracker{
 		public void execute(Input input, Tracker tracker){
 			String name = input.ask ("Please, enter the task's name: ");
 			String desc = input.ask ("Please, enter the task desc: ");
-			tracker.add(new Task(name, desc));
+			tracker.add(new Item(name, desc));
 		}
 		
 		public String info(){
@@ -136,7 +137,7 @@ public class MenuTracker{
 		
 		public void execute(Input input, Tracker tracker){
 			String id = input.ask ("Please, enter the task's id to delete: ");
-			tracker.deleteItem(id);
+			tracker.deleteItem(tracker.findById(id));
 		}
 		
 		public String info(){
@@ -158,14 +159,34 @@ public class MenuTracker{
 		public void execute(Input input, Tracker tracker){
 			String id = input.ask ("Please, enter the task's id to add comment: ");
 			String comment = input.ask("Please, enter a comment: ");
-			tracker.addComment(id, comment);
+
+			tracker.addComment(id, new Comment(comment));
 		}
 		
 		public String info(){
 			return String.format("%s. %s", this.key(), "Add comment.");
 		}
 	}
-	
-	
+
+	/*
+	* private inner class to get filter array
+	*
+	*
+	*/
+	private class FilterItem implements UserAction{
+
+		public int key(){
+			return 5;
+		}
+
+		public void execute(Input input, Tracker tracker){
+			String filter = input.ask("Please, enter a filter word: ");
+			tracker.filterItems(new Filter(filter));
+		}
+
+		public String info(){
+			return String.format("%s. %s", this.key(), "Filter items.");
+		}
+	}
 	
 }
