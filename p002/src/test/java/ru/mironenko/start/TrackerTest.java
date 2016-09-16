@@ -3,6 +3,7 @@ package ru.mironenko.start;
 import org.hamcrest.Matcher;
 import org.junit.Test;
 import ru.mironenko.models.Comment;
+import ru.mironenko.models.Filter;
 import ru.mironenko.models.Item;
 
 import static org.hamcrest.Matchers.is;
@@ -83,6 +84,21 @@ public class TrackerTest {
         tracker.addComment(itemOne.getId(), comment);
 
         assertThat(tracker.findById(itemOne.getId()).getComment()[0], is(comment));
+    }
+
+    @Test
+    public void whenGetFilterItems() throws Exception {
+        Tracker tracker = new Tracker();
+        Item itemOne = new Item("1","desc1");
+        Item itemTwo = new Item("2","desc2");
+        Item itemThree = new Item("3","test");
+        tracker.add(itemOne);
+        tracker.add(itemTwo);
+        tracker.add(itemThree);
+
+        Item [] checked = new Item[]{itemOne, itemTwo};
+
+        assertThat(tracker.filterItems(new Filter("desc")), is(checked));
     }
 
 }
