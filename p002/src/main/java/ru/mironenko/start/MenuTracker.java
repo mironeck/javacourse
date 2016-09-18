@@ -114,8 +114,9 @@ public class MenuTracker{
 		
 		public void execute(Input input, Tracker tracker){
 			for (Item item : tracker.getAll()){
-				System.out.println(String.format("%s. %s", item.getId(), item.getName())
-				);
+				//System.out.println(String.format("%s. %s", item.getId(), item.getName()))
+				System.out.println(item)
+				;
 			}
 		}
 		

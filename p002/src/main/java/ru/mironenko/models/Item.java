@@ -1,5 +1,7 @@
 package ru.mironenko.models;
 
+import java.util.Arrays;
+
 public class Item{
 	
 	private String name;
@@ -51,7 +53,8 @@ public class Item{
 	}
 	
 	public Comment[] getComment(){
-		return this.comments;
+		Comment[] result = this.comments;
+		return Arrays.copyOf(result, index);
 	}
 	
 	public void setComment(Comment[] comments){
@@ -61,5 +64,10 @@ public class Item{
 	public void addComment(Comment comment){
 		this.comments[index++] = comment;
 	}
-	
+
+	@Override
+	public String toString(){
+		return "Item - " + " id " + getId() + " name " + getName() +" description " + getDescription() +
+				(this.index == 0 ? " no comments" : " comments : " + Arrays.toString(this.getComment()) );
+	}
 }
