@@ -14,7 +14,7 @@ class EditItem implements UserAction{
 	
 			
 		public int key(){
-			return 2;
+			return 3;
 		}
 		
 		public void execute(Input input, Tracker tracker){
@@ -27,7 +27,7 @@ class EditItem implements UserAction{
 		}
 		
 		public String info(){
-			return String.format("%s. %s", this.key(), "Edit the new item.");
+			return String.format("%s. %s", this.key(), "Edit the item.");
 		}
 		
 }
@@ -36,7 +36,7 @@ public class MenuTracker{
 	
 	private Input input; // система ввода вывода
 	private Tracker tracker;  // базовый класс, который хранит, добавляет и редактирует заявки
-	private UserAction[] actions = new UserAction[6]; // массив действий, которые описаны в системе
+	private UserAction[] actions = new UserAction[7]; // массив действий, которые описаны в системе
 	
 	public MenuTracker(Input input, Tracker tracker){
 		this.input = input;
@@ -46,20 +46,20 @@ public class MenuTracker{
 	/*
 	*создадим событи€
 	*для этого создаЄм метод дл€ инициализации этих событий
-	*которые будем хранить в массиве UserAction[]
+	*которые будем хранить в массиве UserAction[] action
 	* 
 	* 
 	*/
 	public void fillActions(){
 		//how to fill it.
 		// если используется нестатический класс, то обращение происходит через объект родителя
-		this.actions[0] = this.new AddItem();
+		this.actions[1] = this.new AddItem();
 		//если класс статический, то обращение через класс, в котором находится родитель
-		this.actions[1] = new MenuTracker.ShowItems();
-		this.actions[2] = new EditItem();
-		this.actions[3] = this.new DeleteItem();
-		this.actions[4] = this.new AddComment();
-		this.actions[5] = this.new FilterItem();
+		this.actions[2] = new MenuTracker.ShowItems();
+		this.actions[3] = new EditItem();
+		this.actions[4] = this.new DeleteItem();
+		this.actions[5] = this.new AddComment();
+		this.actions[6] = this.new FilterItem();
 	}
 	
 	public UserAction[] getActions(){
@@ -87,7 +87,7 @@ public class MenuTracker{
 	private class AddItem implements UserAction{
 		
 		public int key(){
-			return 0;
+			return 1;
 		}
 		
 		public void execute(Input input, Tracker tracker){
@@ -109,7 +109,7 @@ public class MenuTracker{
 	private static class ShowItems implements UserAction{
 		
 		public int key(){
-			return 1;
+			return 2;
 		}
 		
 		public void execute(Input input, Tracker tracker){
@@ -133,7 +133,7 @@ public class MenuTracker{
 	private class DeleteItem implements UserAction{
 		
 		public int key(){
-			return 3;
+			return 4;
 		}
 		
 		public void execute(Input input, Tracker tracker){
@@ -154,7 +154,7 @@ public class MenuTracker{
 	private class AddComment implements UserAction{
 		
 		public int key(){
-			return 4;
+			return 5;
 		}
 		
 		public void execute(Input input, Tracker tracker){
@@ -177,12 +177,16 @@ public class MenuTracker{
 	private class FilterItem implements UserAction{
 
 		public int key(){
-			return 5;
+			return 6;
 		}
 
 		public void execute(Input input, Tracker tracker){
 			String filter = input.ask("Please, enter a filter word: ");
-			tracker.filterItems(new Filter(filter));
+			Item[] result  = tracker.filterItems(new Filter(filter));
+			for (Item item : result){
+				System.out.println(item)
+				;
+			}
 		}
 
 		public String info(){

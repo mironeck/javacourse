@@ -13,11 +13,15 @@ import java.util.*;
  public class Tracker{
 	
 	private Item[] items = new Item[10];
+	 private Item[] filteredItems = new Item[0];
 	private int position = 0;
 	private static final Random RN = new Random();
 
 	 public Item[] getItems(){
 	 	return this.items;
+	 }
+	 public Item[] getFilteredItems(){
+		 return this.filteredItems;
 	 }
 	 /*
 	*The method generate id for new item
@@ -133,7 +137,7 @@ import java.util.*;
 				result[resultIndex++] = this.items[index];
 			}
 		}
-		//result = Arrays.copyOf(result, resultIndex);
-		return  Arrays.copyOf(result, resultIndex);
+		this.filteredItems = Arrays.copyOf(result, resultIndex);
+		return  this.filteredItems;
 	}
 }
