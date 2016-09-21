@@ -1,15 +1,15 @@
 package ru.mironenko.start;
 
 import static org.hamcrest.Matchers.is;
-import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.*;
-import org.junit.Assert;
 import org.junit.Test;
-import ru.mironenko.models.Filter;
-import ru.mironenko.models.Item;
 
-import java.awt.*;
-
+/*
+*Class StartUITest is class for test tracker with StubInput
+*@mironenko
+*@since 17.09.2016
+*@version 1
+**/
 public class StartUITest{
 
 //	public static void main(String[] args) {

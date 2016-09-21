@@ -2,14 +2,27 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="19d2fbfb-0d4f-4774-a872-f77554d22bd1" name="Default" comment="add trackertest">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/p002/target/tracker-1.0.jar" afterPath="$PROJECT_DIR$/p002/target/tracker-1.0.jar" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/p002/pom.xml" afterPath="$PROJECT_DIR$/p002/pom.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/p002/src/main/java/ru/mironenko/start/MenuTracker.java" afterPath="$PROJECT_DIR$/p002/src/main/java/ru/mironenko/start/MenuTracker.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/p002/src/main/java/ru/mironenko/start/StartUI.java" afterPath="$PROJECT_DIR$/p002/src/main/java/ru/mironenko/start/StartUI.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/p001/target/maven-archiver/pom.properties" afterPath="$PROJECT_DIR$/p001/target/maven-archiver/pom.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/p001/target/surefire-reports/TEST-ru.mironenko.arrays.ArrayTurnTest.xml" afterPath="$PROJECT_DIR$/p001/target/surefire-reports/TEST-ru.mironenko.arrays.ArrayTurnTest.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/p001/target/surefire-reports/TEST-ru.mironenko.cycles.SquareTest.xml" afterPath="$PROJECT_DIR$/p001/target/surefire-reports/TEST-ru.mironenko.cycles.SquareTest.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/p001/target/surefire-reports/ru.mironenko.arrays.ArrayTurnTest.txt" afterPath="$PROJECT_DIR$/p001/target/surefire-reports/ru.mironenko.arrays.ArrayTurnTest.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/p001/target/surefire-reports/ru.mironenko.arrays.BubbleSortTest.txt" afterPath="$PROJECT_DIR$/p001/target/surefire-reports/ru.mironenko.arrays.BubbleSortTest.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/p001/target/surefire-reports/ru.mironenko.arrays.DuplicatesTest.txt" afterPath="$PROJECT_DIR$/p001/target/surefire-reports/ru.mironenko.arrays.DuplicatesTest.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/p001/target/surefire-reports/ru.mironenko.conditionaloperator.FindMaxSideTest.txt" afterPath="$PROJECT_DIR$/p001/target/surefire-reports/ru.mironenko.conditionaloperator.FindMaxSideTest.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/p001/target/surefire-reports/ru.mironenko.conditionaloperator.TriangleTest.txt" afterPath="$PROJECT_DIR$/p001/target/surefire-reports/ru.mironenko.conditionaloperator.TriangleTest.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/p001/target/surefire-reports/ru.mironenko.cycles.FactorialTest.txt" afterPath="$PROJECT_DIR$/p001/target/surefire-reports/ru.mironenko.cycles.FactorialTest.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/p001/target/surefire-reports/ru.mironenko.cycles.SquareTest.txt" afterPath="$PROJECT_DIR$/p001/target/surefire-reports/ru.mironenko.cycles.SquareTest.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/p001/target/surefire-reports/ru.mironenko.jvmbytecode.CalculatorTest.txt" afterPath="$PROJECT_DIR$/p001/target/surefire-reports/ru.mironenko.jvmbytecode.CalculatorTest.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/p001/target/surefire-reports/ru.mironenko.testtask.TestTaskTest.txt" afterPath="$PROJECT_DIR$/p001/target/surefire-reports/ru.mironenko.testtask.TestTaskTest.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/p001/target/surefire-reports/ru.mironenko.testtask.TestTaskVersionTwoTest.txt" afterPath="$PROJECT_DIR$/p001/target/surefire-reports/ru.mironenko.testtask.TestTaskVersionTwoTest.txt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/p002/src/main/java/ru/mironenko/start/StartUITest.java" afterPath="$PROJECT_DIR$/p002/src/main/java/ru/mironenko/start/StartUITest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/p002/src/main/java/ru/mironenko/start/StubInput.java" afterPath="$PROJECT_DIR$/p002/src/main/java/ru/mironenko/start/StubInput.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/p002/src/main/java/ru/mironenko/start/Tracker.java" afterPath="$PROJECT_DIR$/p002/src/main/java/ru/mironenko/start/Tracker.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/p002/tracker.iml" afterPath="$PROJECT_DIR$/p002/tracker.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/p002/target/maven-archiver/pom.properties" afterPath="$PROJECT_DIR$/p002/target/maven-archiver/pom.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/p002/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterPath="$PROJECT_DIR$/p002/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/p002/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" afterPath="$PROJECT_DIR$/p002/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/p002/target/surefire-reports/TEST-ru.mironenko.start.TrackerTest.xml" afterPath="$PROJECT_DIR$/p002/target/surefire-reports/TEST-ru.mironenko.start.TrackerTest.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/p002/target/surefire-reports/ru.mironenko.start.TrackerTest.txt" afterPath="$PROJECT_DIR$/p002/target/surefire-reports/ru.mironenko.start.TrackerTest.txt" />
     </list>
     <ignored path="javacourse.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -35,8 +48,8 @@
       <file leaf-file-name="StartUI.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/p002/src/main/java/ru/mironenko/start/StartUI.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="247">
-              <caret line="53" column="27" selection-start-line="53" selection-start-column="27" selection-end-line="53" selection-end-column="27" />
+            <state relative-caret-position="34">
+              <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
               <folding>
                 <element signature="e#161#162#0" expanded="true" />
                 <element signature="e#186#187#0" expanded="true" />
@@ -76,8 +89,8 @@
       <file leaf-file-name="StartUITest.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/p002/src/main/java/ru/mironenko/start/StartUITest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="792">
-              <caret line="144" column="73" selection-start-line="144" selection-start-column="73" selection-end-line="144" selection-end-column="73" />
+            <state relative-caret-position="85">
+              <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -88,8 +101,8 @@
       <file leaf-file-name="Tracker.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/p002/src/main/java/ru/mironenko/start/Tracker.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="326">
-              <caret line="140" column="34" selection-start-line="140" selection-start-column="34" selection-end-line="140" selection-end-column="34" />
+            <state relative-caret-position="170">
+              <caret line="10" column="3" selection-start-line="4" selection-start-column="0" selection-end-line="10" selection-end-column="3" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -912,7 +925,7 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329429" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.09463722" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.09463722" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1280,8 +1293,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/p002/src/main/java/ru/mironenko/start/Tracker.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="326">
-          <caret line="140" column="34" selection-start-line="140" selection-start-column="34" selection-end-line="140" selection-end-column="34" />
+        <state relative-caret-position="170">
+          <caret line="10" column="3" selection-start-line="4" selection-start-column="0" selection-end-line="10" selection-end-column="3" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1290,8 +1303,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/p002/src/main/java/ru/mironenko/start/StartUI.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="247">
-          <caret line="53" column="27" selection-start-line="53" selection-start-column="27" selection-end-line="53" selection-end-column="27" />
+        <state relative-caret-position="34">
+          <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
           <folding>
             <element signature="e#161#162#0" expanded="true" />
             <element signature="e#186#187#0" expanded="true" />
@@ -1301,8 +1314,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/p002/src/main/java/ru/mironenko/start/StartUITest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="792">
-          <caret line="144" column="73" selection-start-line="144" selection-start-column="73" selection-end-line="144" selection-end-column="73" />
+        <state relative-caret-position="85">
+          <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
