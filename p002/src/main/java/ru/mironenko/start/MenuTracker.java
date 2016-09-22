@@ -2,35 +2,9 @@ package ru.mironenko.start;
 
 import ru.mironenko.models.*;
 /*
-* MenuTracker содержит все действия и отвечает отображение меню,
-* выбор пользользователем действия.
-* Но всё выполнение происходит не в классе MenuTracker, а в классе,
-* который отвечает за эти действия.
-* в меню необходимо получить экземпляры объектов классов Tracker и Input
-* поэтому примем их в качестве параметров конструктора
+* class MenuTracker consist all actions and show menu
+*
 */
-
-class EditItem implements UserAction{
-	
-			
-		public int key(){
-			return 3;
-		}
-		
-		public void execute(Input input, Tracker tracker){
-			String id = input.ask ("Please, enter the task's id: ");
-			String name = input.ask ("Please, enter the task's name: ");
-			String desc = input.ask ("Please, enter the task desc: ");
-			Item item = new Item(name, desc);
-			item.setId(id);
-			tracker.edit(item);
-		}
-		
-		public String info(){
-			return String.format("%s. %s", this.key(), "Edit the item.");
-		}
-		
-}
 
 public class MenuTracker{
 	
@@ -44,11 +18,9 @@ public class MenuTracker{
 	}
 	
 	/*
-	*создадим событи€
-	*для этого создаЄм метод дл€ инициализации этих событий
-	*которые будем хранить в массиве UserAction[] action
-	* 
-	* 
+	*the method initialize actions
+	* and keep it in UserAction[] actions
+	*@return void
 	*/
 	public void fillActions(){
 		//how to fill it.
@@ -66,11 +38,18 @@ public class MenuTracker{
 		return this.actions;
 	}
 	
-	//метод, который будет выполн€ть действи€, которые выбрал пользователь
+	/*
+	*the method to do action that choose user
+	*@return void
+	*/
 	public void select(int key){
 		this.actions[key-1].execute(this.input, this.tracker);
 	}
-	// метод дл€ печати меню
+
+	/*
+	*the method to show menu
+	*@return void
+	*/
 	public void show(){
 		for (UserAction action : actions){
 			if (action != null){
@@ -80,106 +59,177 @@ public class MenuTracker{
 	}
 	
 	/*
-	* private inner class to add items
-	*
-	*
+	* Class AddItem to add items
 	*/
 	private class AddItem implements UserAction{
-		
+		/*
+		* the method return key of the action
+		* @return 1
+		* */
 		public int key(){
 			return 1;
 		}
-		
+
+		/*
+		* the method return ask user new item's name and description
+		* and add the item
+		* @params input, tracker
+		* @return void
+		* */
 		public void execute(Input input, Tracker tracker){
 			String name = input.ask ("Please, enter the task's name: ");
 			String desc = input.ask ("Please, enter the task desc: ");
 			tracker.add(new Item(name, desc));
 		}
-		
+		/*
+		* the method print info what the class do
+		* @return info
+		* */
 		public String info(){
 			return String.format("%s. %s", this.key(), "Add the new item.");
 		}
 	}
 	
 	/*
-	* class to show items
-	*
-	*
+	* Class ShowItems to show items
 	*/
 	private static class ShowItems implements UserAction{
-		
+		/*
+		* the method return key of the action
+		* @return 2
+		* */
 		public int key(){
 			return 2;
 		}
-		
+
+		/*
+		* the method print all items created
+		* @params input, tracker
+		* @return void
+		* */
 		public void execute(Input input, Tracker tracker){
 			for (Item item : tracker.getAll()){
-				//System.out.println(String.format("%s. %s", item.getId(), item.getName()))
 				System.out.println(item)
 				;
 			}
 		}
-		
+		/*
+		* the method print info what the class do
+		* @return info
+		* */
 		public String info(){
 			return String.format("%s. %s", this.key(), "Show all items.");
 		}
 	}
-	
+
 	/*
-	* private inner class to delete item
-	*
-	*
+	* Class EditItem to edit item
+	*/
+	class EditItem implements UserAction{
+		/*
+		* the method return key of the action
+		* @return 3
+		* */
+		public int key(){
+			return 3;
+		}
+
+		/*
+		* the method ask user item's id to edit and new name and description
+		* @params input, tracker
+		* @return void
+		* */
+		public void execute(Input input, Tracker tracker){
+			String id = input.ask ("Please, enter the task's id to edit: ");
+			String name = input.ask ("Please, enter the task's name: ");
+			String desc = input.ask ("Please, enter the task desc: ");
+			Item item = new Item(name, desc);
+			item.setId(id);
+			tracker.edit(item);
+		}
+		/*
+		* the method print info what the class do
+		* @return info
+		* */
+		public String info(){
+			return String.format("%s. %s", this.key(), "Edit the item.");
+		}
+	}
+	/*
+	* Class DeleteItem to delete item
 	*/
 	private class DeleteItem implements UserAction{
-		
+		/*
+		* the method return key of the action
+		* @return 4
+		* */
 		public int key(){
 			return 4;
 		}
-		
+		/*
+		* the method ask user item's id to delete
+		* @params input, tracker
+		* @return void
+		* */
 		public void execute(Input input, Tracker tracker){
 			String id = input.ask ("Please, enter the task's id to delete: ");
 			tracker.deleteItem(tracker.findById(id));
 		}
-		
+		/*
+		* the method print info what the class do
+		* @return info
+		* */
 		public String info(){
 			return String.format("%s. %s", this.key(), "Delete item.");
 		}
 	}
 	
 	/*
-	* private inner class to add comment to item
-	*
-	*
+	* Class AddItem to add comment to item
 	*/
 	private class AddComment implements UserAction{
-		
+		/*
+		* the method return key of the action
+		* @return 5
+		* */
 		public int key(){
 			return 5;
 		}
-		
+		/*
+		* the method ask user item's id to add comment, enter comment and add comment
+		* @params input, tracker
+		* @return void
+		* */
 		public void execute(Input input, Tracker tracker){
 			String id = input.ask ("Please, enter the task's id to add comment: ");
 			String comment = input.ask("Please, enter a comment: ");
-
 			tracker.addComment(id, new Comment(comment));
 		}
-		
+		/*
+		* the method print info what the class do
+		* @return info
+		* */
 		public String info(){
 			return String.format("%s. %s", this.key(), "Add comment.");
 		}
 	}
 
 	/*
-	* private inner class to get filter array
-	*
-	*
+	* Class FilterItem to get filtered array of items
 	*/
 	private class FilterItem implements UserAction{
-
+		/*
+		* the method return key of the action
+		* @return 6
+		* */
 		public int key(){
 			return 6;
 		}
-
+		/*
+		* the method ask user filter world and print filtered array of items
+		* @params input, tracker
+		* @return void
+		* */
 		public void execute(Input input, Tracker tracker){
 			String filter = input.ask("Please, enter a filter word: ");
 			Item[] result  = tracker.filterItems(new Filter(filter));
@@ -188,7 +238,10 @@ public class MenuTracker{
 				;
 			}
 		}
-
+		/*
+        * the method print info what the class do
+        * @return info
+        * */
 		public String info(){
 			return String.format("%s. %s", this.key(), "Filter items.");
 		}
