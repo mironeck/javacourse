@@ -12,9 +12,9 @@ public class MenuTracker{
 	/**
 	 * @params input, tracker, actions
 	 */
-	private Input input; // система ввода вывода
-	private Tracker tracker;  // базовый класс, который хранит, добавляет и редактирует заявки
-	private UserAction[] actions = new UserAction[6]; // массив действий, которые описаны в системе
+	private Input input;
+	private Tracker tracker;
+	private UserAction[] actions = new UserAction[6];
 	
 	public MenuTracker(Input input, Tracker tracker){
 		this.input = input;
