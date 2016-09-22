@@ -22,9 +22,9 @@ public class StartUI{
 		MenuTracker menu = new MenuTracker(this.input, tracker);
 		// массив возможных значений для выбора
 		int[] ranges = new int[menu.getActions().length];
-		// заполняем его индексами из массива событий меню actions[]
-		for(int index = 1; index < menu.getActions().length; index++){
-			ranges[index] = index;
+		// заполняем его индексами из  массива событий меню actions[]
+		for(int index = 0; index < menu.getActions().length; index++){
+			ranges[index] = index+1;
 		}
 		
 		menu.fillActions();
@@ -38,15 +38,14 @@ public class StartUI{
 	}
 
 	public void initTest(){
-
 		//Tracker tracker = new Tracker();
 		//создаём объект меню
 		MenuTracker menu = new MenuTracker(this.input, this.tracker);
 		// массив возможных значений для выбора
 		int[] ranges = new int[menu.getActions().length];
 		// заполняем его индексами из массива событий меню actions[]
-		for(int index = 1; index < menu.getActions().length; index++){
-			ranges[index] = index;
+		for(int index = 0; index < menu.getActions().length; index++){
+			ranges[index] = index+1;
 		}
 
 		menu.fillActions();
@@ -60,7 +59,7 @@ public class StartUI{
 	}
 
 	public static void main(String[] args){
-		Input input = new ConsoleInput();
+		Input input = new ValidateInput();
 		new StartUI(input).init();
 	}
 }

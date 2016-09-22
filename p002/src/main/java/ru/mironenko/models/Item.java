@@ -1,12 +1,14 @@
 package ru.mironenko.models;
 
+import java.sql.Time;
 import java.util.Arrays;
+import java.util.Date;
 
 public class Item{
 	
 	private String name;
 	private String description;
-	private long timeOfCreation;
+	private Date timeOfCreation;
 	private String id;
 	private Comment[] comments = new Comment[10];
 	private int index = 0;
@@ -16,13 +18,9 @@ public class Item{
 	public Item(String name, String description){
 		this.name =  name;
 		this.description = description;
+		this.timeOfCreation = new Date();
 	}
 
-	public Item(String name, String description, long timeOfCreation){
-		this.name = name;
-		this.description = description;
-		this.timeOfCreation = timeOfCreation;
-	}
 	
 	public String getName(){
 		return this.name;
@@ -32,7 +30,7 @@ public class Item{
 		return this.description;
 	}
 	
-	public long getTimeOfCreation(){
+	public Date getTimeOfCreation(){
 		return this.timeOfCreation;
 	}
 	
@@ -68,6 +66,6 @@ public class Item{
 	@Override
 	public String toString(){
 		return "Item - " + " id " + getId() + " name " + getName() +" description " + getDescription() +
-				(this.index == 0 ? " no comments" : " comments : " + Arrays.toString(this.getComment()) );
+				" time of creation " + getTimeOfCreation() + (this.index == 0 ? " no comments" : " comments : " + Arrays.toString(this.getComment()) );
 	}
 }

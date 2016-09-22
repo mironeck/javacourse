@@ -87,8 +87,8 @@ import java.util.*;
 	}
 
 	/*
-	*The method delete item
-	*@params items[], id
+	*The method delete item and return Item[] without it
+	*@params itemToDelete
 	*@return result
 	*/
 	public Item[] deleteItem(Item itemToDelete){
@@ -123,7 +123,8 @@ import java.util.*;
 	}
 
 	/*
-	*method return array of items sorted by filter 
+	*method return array of items sorted by filter
+	*@param filter
 	*@return array of items sorted by filter
 	*/
 

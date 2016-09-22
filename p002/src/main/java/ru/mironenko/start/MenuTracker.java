@@ -36,7 +36,7 @@ public class MenuTracker{
 	
 	private Input input; // система ввода вывода
 	private Tracker tracker;  // базовый класс, который хранит, добавлЯет и редактирует заЯвки
-	private UserAction[] actions = new UserAction[7]; // массив действий, которые описаны в системе
+	private UserAction[] actions = new UserAction[6]; // массив действий, которые описаны в системе
 	
 	public MenuTracker(Input input, Tracker tracker){
 		this.input = input;
@@ -53,13 +53,13 @@ public class MenuTracker{
 	public void fillActions(){
 		//how to fill it.
 		// если используетсЯ нестатический класс, то обращение происходит через объект родителЯ
-		this.actions[1] = this.new AddItem();
+		this.actions[0] = this.new AddItem();
 		//если класс статический, то обращение через класс, в котором находитсЯ родитель
-		this.actions[2] = new MenuTracker.ShowItems();
-		this.actions[3] = new EditItem();
-		this.actions[4] = this.new DeleteItem();
-		this.actions[5] = this.new AddComment();
-		this.actions[6] = this.new FilterItem();
+		this.actions[1] = new MenuTracker.ShowItems();
+		this.actions[2] = new EditItem();
+		this.actions[3] = this.new DeleteItem();
+		this.actions[4] = this.new AddComment();
+		this.actions[5] = this.new FilterItem();
 	}
 	
 	public UserAction[] getActions(){
@@ -68,7 +68,7 @@ public class MenuTracker{
 	
 	//метод, который будет выполнять действия, которые выбрал пользователь
 	public void select(int key){
-		this.actions[key].execute(this.input, this.tracker);
+		this.actions[key-1].execute(this.input, this.tracker);
 	}
 	// метод для печати меню
 	public void show(){

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="6" failures="0" name="ru.mironenko.start.TrackerTest" time="0" errors="0" skipped="0">
+<testsuite tests="5" failures="0" name="ru.mironenko.start.StartUITest" time="0.077" errors="0" skipped="0">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk1.8.0_91\jre\bin"/>
@@ -63,10 +63,9 @@
     <property name="sun.desktop" value="windows"/>
     <property name="sun.cpu.isalist" value="amd64"/>
   </properties>
-  <testcase classname="ru.mironenko.start.TrackerTest" name="whenEditItem" time="0"/>
-  <testcase classname="ru.mironenko.start.TrackerTest" name="whenDeleteItem" time="0"/>
-  <testcase classname="ru.mironenko.start.TrackerTest" name="whenAddItems" time="0"/>
-  <testcase classname="ru.mironenko.start.TrackerTest" name="whenAddComment" time="0"/>
-  <testcase classname="ru.mironenko.start.TrackerTest" name="whenGetFilterItems" time="0"/>
-  <testcase classname="ru.mironenko.start.TrackerTest" name="whenGetAllItems" time="0"/>
+  <testcase classname="ru.mironenko.start.StartUITest" name="whenAddCommentStubTest" time="0.046"/>
+  <testcase classname="ru.mironenko.start.StartUITest" name="whenEditItemStubTest" time="0"/>
+  <testcase classname="ru.mironenko.start.StartUITest" name="whenAddItemStubTest" time="0"/>
+  <testcase classname="ru.mironenko.start.StartUITest" name="whenFilterItemsStubTest" time="0.016"/>
+  <testcase classname="ru.mironenko.start.StartUITest" name="whenDeleteItemStubTest" time="0.015"/>
 </testsuite>

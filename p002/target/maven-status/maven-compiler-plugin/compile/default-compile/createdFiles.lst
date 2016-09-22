@@ -6,7 +6,6 @@ ru\mironenko\start\ConsoleInput.class
 ru\mironenko\start\MenuTracker$1.class
 ru\mironenko\start\MenuTracker.class
 ru\mironenko\models\Filter.class
-ru\mironenko\start\StartUITest.class
 ru\mironenko\start\MenuTracker$AddItem.class
 ru\mironenko\start\Input.class
 ru\mironenko\start\ValidateInput.class
