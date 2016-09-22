@@ -4,8 +4,8 @@ import static org.hamcrest.Matchers.is;
 import static org.junit.Assert.*;
 import org.junit.Test;
 
-/*
-*Class StartUITest is class for test tracker with StubInput
+/**
+*Class StartUITest is class for test tracker with StubInput to emulate behavior of user
 *@mironenko
 *@since 17.09.2016
 *@version 1
