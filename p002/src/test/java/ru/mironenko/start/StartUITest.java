@@ -12,11 +12,6 @@ import org.junit.Test;
 **/
 public class StartUITest{
 
-//	public static void main(String[] args) {
-//
-//		Input input = new StubInput(new String[]{"1", "test", "ttest", "b", "2", "y"});
-//		new StartUI(input).init();
-//	}
 		@Test
 		public void whenAddItemStubTest(){
 
@@ -86,6 +81,8 @@ public class StartUITest{
 		new StartUI(input2, tracker).initTest();
 
 		assertThat(tracker.getAll().length, is(1));
+		assertThat(tracker.getAll()[0].getName(), is("name1"));
+
 	}
 
 	@Test

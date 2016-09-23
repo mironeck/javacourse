@@ -10,14 +10,11 @@ import java.util.Arrays;
 */
 
 public class TestTask{
-	/*
+	/**
 	*@param origin
 	*@param sub
 	*@return result return true if origin contains sub and false if not
-	*
 	*/
-	
-	
 		public boolean contains(String origin, String sub){
 			char[] charOrigin = origin.toCharArray();
 			char[] charSub = sub.toCharArray();
@@ -32,7 +29,6 @@ public class TestTask{
 					System.arraycopy(charOrigin, i, charSubOrigin, 0, charSubOrigin.length);
 					result = Arrays.equals(charSubOrigin, charSub);
 				}
-				
 			}
 			return result;
 		}

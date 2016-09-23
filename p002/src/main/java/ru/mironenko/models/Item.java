@@ -1,17 +1,24 @@
 package ru.mironenko.models;
 
-import java.sql.Time;
 import java.util.Arrays;
 import java.util.Date;
 
+/**
+*Class Item to create items in tracker
+*@author mironenko
+*@since 24.08.2016
+*@version 1
+**/
 public class Item{
-	
+	/**
+	 * @params name, description, timeOfCreation, id, comments, index
+	 */
 	private String name;
 	private String description;
 	private Date timeOfCreation;
 	private String id;
 	private Comment[] comments = new Comment[10];
-	private int index = 0;
+	private int indexComments = 0;
 	
 	public Item(){}
 
@@ -21,7 +28,9 @@ public class Item{
 		this.timeOfCreation = new Date();
 	}
 
-	
+	public int getIndexComments(){
+		return this.indexComments;
+	}
 	public String getName(){
 		return this.name;
 	}
@@ -52,7 +61,7 @@ public class Item{
 	
 	public Comment[] getComment(){
 		Comment[] result = this.comments;
-		return Arrays.copyOf(result, index);
+		return Arrays.copyOf(result, indexComments);
 	}
 	
 	public void setComment(Comment[] comments){
@@ -60,12 +69,17 @@ public class Item{
 	}
 	
 	public void addComment(Comment comment){
-		this.comments[index++] = comment;
+		if (this.indexComments == this.comments.length){
+			Comment[] temp = new Comment[indexComments + 10];
+			System.arraycopy(this.comments, 0, temp, 0, indexComments);
+			this.comments = temp;
+		}
+		this.comments[indexComments++] = comment;
 	}
 
 	@Override
 	public String toString(){
 		return "Item - " + " id " + getId() + " name " + getName() +" description " + getDescription() +
-				" time of creation " + getTimeOfCreation() + (this.index == 0 ? " no comments" : " comments : " + Arrays.toString(this.getComment()) );
+				" time of creation " + getTimeOfCreation() + (this.indexComments == 0 ? " no comments" : " comments : " + Arrays.toString(this.getComment()) );
 	}
 }

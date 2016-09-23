@@ -9,10 +9,10 @@ ru\mironenko\models\Filter.class
 ru\mironenko\start\MenuTracker$AddItem.class
 ru\mironenko\start\Input.class
 ru\mironenko\start\ValidateInput.class
-ru\mironenko\start\EditItem.class
 ru\mironenko\start\UserAction.class
 ru\mironenko\start\MenuTracker$AddComment.class
 ru\mironenko\models\Comment.class
+ru\mironenko\start\MenuTracker$EditItem.class
 ru\mironenko\start\Tracker.class
 ru\mironenko\start\MenuTracker$FilterItem.class
 ru\mironenko\start\MenuTracker$ShowItems.class

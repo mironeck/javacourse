@@ -1,10 +1,15 @@
 package ru.mironenko.models;
 
 /**
- * Created by Nikita on 15.09.2016.
+ * Class Filter
+ * @author mironenko
+ * @since 15.09.2016.
+ * @version 1
  */
 public class Filter {
-
+    /**
+     * @param filter
+     */
     private String filter;
 
     public Filter(String filter){

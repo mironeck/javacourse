@@ -1,9 +1,15 @@
 package ru.mironenko.start;
 
-import ru.mironenko.models.*;
+/**
+ * Class StartUI with main method to start the program
+ * @author mironenko
+ * @since 17.09.2016
+ */
 
 public class StartUI{
-	
+	/**
+	 * @params input, tracker
+	 */
 	private Input input;
 	private Tracker tracker;
 
@@ -14,49 +20,54 @@ public class StartUI{
 		this.input = input;
 		this.tracker = tracker;
 	}
-	
+
+	/**
+	 * the method create objects of Tracker, MenuTracker,
+	 * array of acceptable values to choose from array of actions,
+	 * show menu while user don't enter "y"
+	 */
 	public void init(){
 		
 		Tracker tracker = new Tracker();
-		//создаём объект меню
 		MenuTracker menu = new MenuTracker(this.input, tracker);
-		// массив возможных значений для выбора
 		int[] ranges = new int[menu.getActions().length];
-		// заполняем его индексами из  массива событий меню actions[]
 		for(int index = 0; index < menu.getActions().length; index++){
 			ranges[index] = index+1;
 		}
 		
 		menu.fillActions();
-		//отображаем меню пока пользователь не ввёл "y"
-		//при помощи цикла с постусловием do while
+
 		do{
 			menu.show();
-			//int key = Integer.valueOf(input.ask("Select: "));
 			menu.select(input.ask("select: ", ranges));
 		}while(!"y".equals(this.input.ask("Exit?(y):")));
 	}
 
+	/**
+	 * the method for StartUITest to test it with StunInput
+	 * create objects of MenuTracker,
+	 * array of acceptable values to choose from array of actions,
+	 * show menu while user don't enter "y"
+	 */
 	public void initTest(){
-		//Tracker tracker = new Tracker();
-		//создаём объект меню
 		MenuTracker menu = new MenuTracker(this.input, this.tracker);
-		// массив возможных значений для выбора
 		int[] ranges = new int[menu.getActions().length];
-		// заполняем его индексами из массива событий меню actions[]
 		for(int index = 0; index < menu.getActions().length; index++){
 			ranges[index] = index+1;
 		}
 
 		menu.fillActions();
-		//отображаем меню пока пользователь не ввёл "y"
-		//при помощи цикла с постусловием do while
+
 		do{
 			menu.show();
-			//int key = Integer.valueOf(input.ask("Select: "));
 			menu.select(input.ask("select: ", ranges));
 		}while(!"y".equals(this.input.ask("Exit?(y):")));
 	}
+
+	/**
+	 * the main method to start the program
+	 * @param args
+	 */
 
 	public static void main(String[] args){
 		Input input = new ValidateInput();
