@@ -29,8 +29,8 @@ public class MenuTracker{
 	public void fillActions(){
 		//how to fill it.
 		this.actions[0] = this.new AddItem();
-		this.actions[1] = new MenuTracker.ShowItems();
-		this.actions[2] = new EditItem();
+		this.actions[1] = this.new ShowItems();
+		this.actions[2] = this.new EditItem();
 		this.actions[3] = this.new DeleteItem();
 		this.actions[4] = this.new AddComment();
 		this.actions[5] = this.new FilterItem();
@@ -63,7 +63,12 @@ public class MenuTracker{
 	/**
 	* Class AddItem to add items
 	*/
-	private class AddItem implements UserAction{
+	private class AddItem extends BaseAction{
+
+		public AddItem() {
+			super("Add new item.");
+		}
+
 		/**
 		* the method return key of the action
 		* @return 1
@@ -83,19 +88,18 @@ public class MenuTracker{
 			String desc = input.ask ("Please, enter the task desc: ");
 			tracker.add(new Item(name, desc));
 		}
-		/**
-		* the method print info what the class do
-		* @return info
-		* */
-		public String info(){
-			return String.format("%s. %s", this.key(), "Add the new item.");
-		}
+
 	}
 	
 	/**
 	* Class ShowItems to show items
 	*/
-	private static class ShowItems implements UserAction{
+	private class ShowItems extends BaseAction{
+
+		public ShowItems() {
+			super("Show all items.");
+		}
+
 		/**
 		* the method return key of the action
 		* @return 2
@@ -115,19 +119,16 @@ public class MenuTracker{
 				;
 			}
 		}
-		/**
-		* the method print info what the class do
-		* @return info
-		* */
-		public String info(){
-			return String.format("%s. %s", this.key(), "Show all items.");
-		}
 	}
 
 	/**
 	* Class EditItem to edit item
 	*/
-	class EditItem implements UserAction{
+	private class EditItem extends BaseAction{
+		public EditItem() {
+			super("Edit the item.");
+		}
+
 		/**
 		* the method return key of the action
 		* @return 3
@@ -149,18 +150,16 @@ public class MenuTracker{
 			item.setId(id);
 			tracker.edit(item);
 		}
-		/**
-		* the method print info what the class do
-		* @return info
-		* */
-		public String info(){
-			return String.format("%s. %s", this.key(), "Edit the item.");
-		}
+
 	}
 	/**
 	* Class DeleteItem to delete item
 	*/
-	private class DeleteItem implements UserAction{
+	private class DeleteItem extends BaseAction{
+		public DeleteItem() {
+			super("Delete item.");
+		}
+
 		/**
 		* the method return key of the action
 		* @return 4
@@ -177,19 +176,16 @@ public class MenuTracker{
 			String id = input.ask ("Please, enter the task's id to delete: ");
 			tracker.deleteItem(tracker.findById(id));
 		}
-		/**
-		* the method print info what the class do
-		* @return info
-		* */
-		public String info(){
-			return String.format("%s. %s", this.key(), "Delete item.");
-		}
 	}
 	
 	/**
 	* Class AddItem to add comment to item
 	*/
-	private class AddComment implements UserAction{
+	private class AddComment extends BaseAction{
+		public AddComment() {
+			super("Add comment.");
+		}
+
 		/**
 		* the method return key of the action
 		* @return 5
@@ -207,19 +203,16 @@ public class MenuTracker{
 			String comment = input.ask("Please, enter a comment: ");
 			tracker.addComment(id, new Comment(comment));
 		}
-		/**
-		* the method print info what the class do
-		* @return info
-		* */
-		public String info(){
-			return String.format("%s. %s", this.key(), "Add comment.");
-		}
 	}
 
 	/**
 	* Class FilterItem to get filtered array of items
 	*/
-	private class FilterItem implements UserAction{
+	private class FilterItem extends BaseAction{
+		public FilterItem() {
+			super("Filter items.");
+		}
+
 		/**
 		* the method return key of the action
 		* @return 6
@@ -239,13 +232,6 @@ public class MenuTracker{
 				System.out.println(item)
 				;
 			}
-		}
-		/**
-        * the method print info what the class do
-        * @return info
-        * */
-		public String info(){
-			return String.format("%s. %s", this.key(), "Filter items.");
 		}
 	}
 	

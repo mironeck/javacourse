@@ -3,7 +3,7 @@ ru\mironenko\models\Item.class
 ru\mironenko\start\MenuOutException.class
 ru\mironenko\start\MenuTracker$DeleteItem.class
 ru\mironenko\start\ConsoleInput.class
-ru\mironenko\start\MenuTracker$1.class
+ru\mironenko\templates\TemplateAction.class
 ru\mironenko\start\MenuTracker.class
 ru\mironenko\models\Filter.class
 ru\mironenko\start\MenuTracker$AddItem.class
@@ -17,4 +17,6 @@ ru\mironenko\start\Tracker.class
 ru\mironenko\start\MenuTracker$FilterItem.class
 ru\mironenko\start\MenuTracker$ShowItems.class
 ru\mironenko\start\StartUI.class
+ru\mironenko\start\BaseAction.class
 ru\mironenko\models\Bug.class
+ru\mironenko\templates\CopyAction.class
