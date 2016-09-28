@@ -82,4 +82,32 @@ public class Item{
 		return "Item - " + " id " + getId() + " name " + getName() +" description " + getDescription() +
 				" time of creation " + getTimeOfCreation() + (this.indexComments == 0 ? " no comments" : " comments : " + Arrays.toString(this.getComment()) );
 	}
+
+	@Override
+	public boolean equals(Object o) {
+		if (this == o) return true;
+		if (!(o instanceof Item)) return false;
+
+		Item item = (Item) o;
+
+		if (getIndexComments() != item.getIndexComments()) return false;
+		if (!getName().equals(item.getName())) return false;
+		if (!getDescription().equals(item.getDescription())) return false;
+		if (!getTimeOfCreation().equals(item.getTimeOfCreation())) return false;
+		if (!getId().equals(item.getId())) return false;
+		// Probably incorrect - comparing Object[] arrays with Arrays.equals
+		return Arrays.equals(comments, item.comments);
+
+	}
+
+	@Override
+	public int hashCode() {
+		int result = getName().hashCode();
+		result = 31 * result + getDescription().hashCode();
+		result = 31 * result + getTimeOfCreation().hashCode();
+		result = 31 * result + getId().hashCode();
+		result = 31 * result + Arrays.hashCode(comments);
+		result = 31 * result + getIndexComments();
+		return result;
+	}
 }
