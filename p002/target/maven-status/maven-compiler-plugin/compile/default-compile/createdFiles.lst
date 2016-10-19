@@ -12,6 +12,7 @@ ru\mironenko\start\ValidateInput.class
 ru\mironenko\start\UserAction.class
 ru\mironenko\start\MenuTracker$AddComment.class
 ru\mironenko\models\Comment.class
+ru\mironenko\chesstask\Piece.class
 ru\mironenko\start\MenuTracker$EditItem.class
 ru\mironenko\start\Tracker.class
 ru\mironenko\start\MenuTracker$FilterItem.class

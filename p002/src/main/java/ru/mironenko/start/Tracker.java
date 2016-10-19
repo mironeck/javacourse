@@ -13,7 +13,7 @@ import java.util.*;
  public class Tracker{
 	
 	private Item[] items = new Item[10];
-	 private Item[] filteredItems = new Item[0];
+	private Item[] filteredItems = new Item[0];
 	private int position = 0;
 	private static final Random RN = new Random();
 

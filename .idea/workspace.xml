@@ -1,7 +1,40 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="19d2fbfb-0d4f-4774-a872-f77554d22bd1" name="Default" comment="add trackertest" />
+    <list default="true" id="19d2fbfb-0d4f-4774-a872-f77554d22bd1" name="Default" comment="add trackertest">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/p002/src/main/java/ru/mironenko/chesstask/Piece.java" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/p002/target/tracker-1.0.jar" afterPath="$PROJECT_DIR$/p002/target/tracker-1.0.jar" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/p001/target/maven-archiver/pom.properties" afterPath="$PROJECT_DIR$/p001/target/maven-archiver/pom.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/p001/target/surefire-reports/TEST-ru.mironenko.arrays.ArrayTurnTest.xml" afterPath="$PROJECT_DIR$/p001/target/surefire-reports/TEST-ru.mironenko.arrays.ArrayTurnTest.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/p001/target/surefire-reports/TEST-ru.mironenko.arrays.BubbleSortTest.xml" afterPath="$PROJECT_DIR$/p001/target/surefire-reports/TEST-ru.mironenko.arrays.BubbleSortTest.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/p001/target/surefire-reports/TEST-ru.mironenko.arrays.DuplicatesTest.xml" afterPath="$PROJECT_DIR$/p001/target/surefire-reports/TEST-ru.mironenko.arrays.DuplicatesTest.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/p001/target/surefire-reports/TEST-ru.mironenko.conditionaloperator.FindMaxSideTest.xml" afterPath="$PROJECT_DIR$/p001/target/surefire-reports/TEST-ru.mironenko.conditionaloperator.FindMaxSideTest.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/p001/target/surefire-reports/TEST-ru.mironenko.conditionaloperator.PointTest.xml" afterPath="$PROJECT_DIR$/p001/target/surefire-reports/TEST-ru.mironenko.conditionaloperator.PointTest.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/p001/target/surefire-reports/TEST-ru.mironenko.conditionaloperator.TriangleTest.xml" afterPath="$PROJECT_DIR$/p001/target/surefire-reports/TEST-ru.mironenko.conditionaloperator.TriangleTest.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/p001/target/surefire-reports/TEST-ru.mironenko.cycles.FactorialTest.xml" afterPath="$PROJECT_DIR$/p001/target/surefire-reports/TEST-ru.mironenko.cycles.FactorialTest.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/p001/target/surefire-reports/TEST-ru.mironenko.cycles.SquareTest.xml" afterPath="$PROJECT_DIR$/p001/target/surefire-reports/TEST-ru.mironenko.cycles.SquareTest.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/p001/target/surefire-reports/TEST-ru.mironenko.jvmbytecode.CalculatorTest.xml" afterPath="$PROJECT_DIR$/p001/target/surefire-reports/TEST-ru.mironenko.jvmbytecode.CalculatorTest.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/p001/target/surefire-reports/TEST-ru.mironenko.testtask.TestTaskTest.xml" afterPath="$PROJECT_DIR$/p001/target/surefire-reports/TEST-ru.mironenko.testtask.TestTaskTest.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/p001/target/surefire-reports/TEST-ru.mironenko.testtask.TestTaskVersionTwoTest.xml" afterPath="$PROJECT_DIR$/p001/target/surefire-reports/TEST-ru.mironenko.testtask.TestTaskVersionTwoTest.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/p001/target/surefire-reports/ru.mironenko.arrays.ArrayTurnTest.txt" afterPath="$PROJECT_DIR$/p001/target/surefire-reports/ru.mironenko.arrays.ArrayTurnTest.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/p001/target/surefire-reports/ru.mironenko.arrays.BubbleSortTest.txt" afterPath="$PROJECT_DIR$/p001/target/surefire-reports/ru.mironenko.arrays.BubbleSortTest.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/p001/target/surefire-reports/ru.mironenko.arrays.DuplicatesTest.txt" afterPath="$PROJECT_DIR$/p001/target/surefire-reports/ru.mironenko.arrays.DuplicatesTest.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/p001/target/surefire-reports/ru.mironenko.conditionaloperator.FindMaxSideTest.txt" afterPath="$PROJECT_DIR$/p001/target/surefire-reports/ru.mironenko.conditionaloperator.FindMaxSideTest.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/p001/target/surefire-reports/ru.mironenko.conditionaloperator.TriangleTest.txt" afterPath="$PROJECT_DIR$/p001/target/surefire-reports/ru.mironenko.conditionaloperator.TriangleTest.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/p001/target/surefire-reports/ru.mironenko.cycles.FactorialTest.txt" afterPath="$PROJECT_DIR$/p001/target/surefire-reports/ru.mironenko.cycles.FactorialTest.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/p001/target/surefire-reports/ru.mironenko.cycles.SquareTest.txt" afterPath="$PROJECT_DIR$/p001/target/surefire-reports/ru.mironenko.cycles.SquareTest.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/p001/target/surefire-reports/ru.mironenko.jvmbytecode.CalculatorTest.txt" afterPath="$PROJECT_DIR$/p001/target/surefire-reports/ru.mironenko.jvmbytecode.CalculatorTest.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/p001/target/surefire-reports/ru.mironenko.testtask.TestTaskVersionTwoTest.txt" afterPath="$PROJECT_DIR$/p001/target/surefire-reports/ru.mironenko.testtask.TestTaskVersionTwoTest.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/p002/src/main/java/ru/mironenko/start/Tracker.java" afterPath="$PROJECT_DIR$/p002/src/main/java/ru/mironenko/start/Tracker.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/p002/target/maven-archiver/pom.properties" afterPath="$PROJECT_DIR$/p002/target/maven-archiver/pom.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/p002/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterPath="$PROJECT_DIR$/p002/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/p002/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterPath="$PROJECT_DIR$/p002/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/p002/target/surefire-reports/TEST-ru.mironenko.start.StartUITest.xml" afterPath="$PROJECT_DIR$/p002/target/surefire-reports/TEST-ru.mironenko.start.StartUITest.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/p002/target/surefire-reports/TEST-ru.mironenko.start.TrackerTest.xml" afterPath="$PROJECT_DIR$/p002/target/surefire-reports/TEST-ru.mironenko.start.TrackerTest.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/p002/target/surefire-reports/ru.mironenko.start.StartUITest.txt" afterPath="$PROJECT_DIR$/p002/target/surefire-reports/ru.mironenko.start.StartUITest.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/p002/target/surefire-reports/ru.mironenko.start.TrackerTest.txt" afterPath="$PROJECT_DIR$/p002/target/surefire-reports/ru.mironenko.start.TrackerTest.txt" />
+    </list>
     <ignored path="javacourse.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path="$PROJECT_DIR$/p001/target/" />
@@ -23,61 +56,26 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="StartUI.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/p002/src/main/java/ru/mironenko/start/StartUI.java">
+      <file leaf-file-name="Pawn.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/p002/src/main/java/ru/mironenko/chesstask/Pawn.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="561">
-              <caret line="35" column="9" selection-start-line="35" selection-start-column="9" selection-end-line="35" selection-end-column="9" />
-              <folding />
+            <state relative-caret-position="289">
+              <caret line="53" column="91" selection-start-line="49" selection-start-column="7" selection-end-line="53" selection-end-column="91" />
+              <folding>
+                <element signature="e#218#219#0" expanded="true" />
+                <element signature="e#251#252#0" expanded="true" />
+                <element signature="e#282#283#0" expanded="true" />
+                <element signature="e#309#310#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Item.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/p002/src/main/java/ru/mironenko/models/Item.java">
+      <file leaf-file-name="ChessAction.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/p002/src/main/java/ru/mironenko/chesstask/ChessAction.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1428">
-              <caret line="103" column="27" selection-start-line="103" selection-start-column="27" selection-end-line="103" selection-end-column="27" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Piece.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/p002/src/main/java/ru/mironenko/chesstask/Piece.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MenuTracker.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/p002/src/main/java/ru/mironenko/start/MenuTracker.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3196">
-              <caret line="214" column="0" selection-start-line="214" selection-start-column="0" selection-end-line="214" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="BaseAction.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/p002/src/main/java/ru/mironenko/start/BaseAction.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="UserAction.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/p002/src/main/java/ru/mironenko/start/UserAction.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="8" column="17" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
+            <state relative-caret-position="527">
+              <caret line="31" column="95" selection-start-line="31" selection-start-column="95" selection-end-line="31" selection-end-column="95" />
               <folding />
             </state>
           </provider>
@@ -86,30 +84,21 @@
       <file leaf-file-name="Tracker.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/p002/src/main/java/ru/mironenko/start/Tracker.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1938">
-              <caret line="121" column="0" selection-start-line="121" selection-start-column="0" selection-end-line="121" selection-end-column="0" />
+            <state relative-caret-position="255">
+              <caret line="15" column="4" selection-start-line="15" selection-start-column="4" selection-end-line="15" selection-end-column="4" />
               <folding>
-                <element signature="imports" expanded="false" />
-                <element signature="e#502#503#0" expanded="false" />
-                <element signature="e#528#529#0" expanded="false" />
-                <element signature="e#564#565#0" expanded="false" />
-                <element signature="e#598#599#0" expanded="false" />
-                <element signature="e#689#690#0" expanded="false" />
-                <element signature="e#762#763#0" expanded="false" />
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MenuOutException.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/p002/src/main/java/ru/mironenko/start/MenuOutException.java">
+      <file leaf-file-name="ChessBoard.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/p002/src/main/java/ru/mironenko/chesstask/ChessBoard.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="4" column="39" selection-start-line="4" selection-start-column="39" selection-end-line="4" selection-end-column="39" />
-              <folding>
-                <element signature="e#123#124#0" expanded="false" />
-                <element signature="e#140#141#0" expanded="false" />
-              </folding>
+            <state relative-caret-position="136">
+              <caret line="8" column="10" selection-start-line="8" selection-start-column="10" selection-end-line="8" selection-end-column="10" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -120,6 +109,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="JUnit4 Test Class" />
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -154,12 +144,24 @@
         <option value="$PROJECT_DIR$/p002/src/main/java/ru/mironenko/models/Filter.java" />
         <option value="$PROJECT_DIR$/p002/src/test/java/ru/mironenko/start/StartUITest.java" />
         <option value="$PROJECT_DIR$/p002/src/test/java/ru/mironenko/start/TrackerTest.java" />
-        <option value="$PROJECT_DIR$/p002/src/main/java/ru/mironenko/start/Tracker.java" />
         <option value="$PROJECT_DIR$/p002/src/main/java/ru/mironenko/start/BaseAction.java" />
         <option value="$PROJECT_DIR$/p002/src/main/java/ru/mironenko/templates/TemplateAction.java" />
         <option value="$PROJECT_DIR$/p002/src/main/java/ru/mironenko/start/MenuTracker.java" />
         <option value="$PROJECT_DIR$/p002/src/main/java/ru/mironenko/models/Item.java" />
+        <option value="$PROJECT_DIR$/p002/src/main/java/ru/mironenko/chesstask/Tile.java" />
         <option value="$PROJECT_DIR$/p002/src/main/java/ru/mironenko/chesstask/Piece.java" />
+        <option value="$PROJECT_DIR$/p002/src/main/java/ru/mironenko/chesstask/board/Tile.java" />
+        <option value="$PROJECT_DIR$/p002/src/main/java/ru/mironenko/chesstask/pieces/Piece.java" />
+        <option value="$PROJECT_DIR$/p002/src/main/java/ru/mironenko/chesstask/pieces/Action.java" />
+        <option value="$PROJECT_DIR$/p002/src/main/java/ru/mironenko/chesstask/pieces/Board.java" />
+        <option value="$PROJECT_DIR$/p002/src/main/java/ru/mironenko/start/Tracker.java" />
+        <option value="$PROJECT_DIR$/p002/src/main/java/ru/mironenko/chesstask/pieces/ChessBoard.java" />
+        <option value="$PROJECT_DIR$/p002/src/main/java/ru/mironenko/chesstask/pieces/ChessAction.java" />
+        <option value="$PROJECT_DIR$/p002/src/main/java/ru/mironenko/chesstask/pieces/Bishop.java" />
+        <option value="$PROJECT_DIR$/p002/src/main/java/ru/mironenko/chesstask/ChessBoard.java" />
+        <option value="$PROJECT_DIR$/p002/src/main/java/ru/mironenko/chesstask/Bishop.java" />
+        <option value="$PROJECT_DIR$/p002/src/main/java/ru/mironenko/chesstask/Pawn.java" />
+        <option value="$PROJECT_DIR$/p002/src/main/java/ru/mironenko/chesstask/ChessAction.java" />
       </list>
     </option>
   </component>
@@ -179,7 +181,9 @@
     <treeState />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="width" value="1370" />
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1378" />
     <option name="height" value="744" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
@@ -229,7 +233,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
+      <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -374,48 +379,13 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="models" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="javacourse" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="javacourse" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="p002" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="mironenko" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="chesstask" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches" />
-      <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -427,13 +397,19 @@
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.0" />
     <property name="SearchEverywhereHistoryKey" value="git&#9;ACTION&#9;Github.Open.In.Browser&#10;maven&#9;ACTION&#9;ActivateMavenProjectsToolWindow&#10;mave&#9;ACTION&#9;ActivateMavenProjectsToolWindow&#10;vcs&#9;ACTION&#9;Vcs.Browse&#10;мсы&#9;ACTION&#9;VcsToobarActions" />
+    <property name="last_directory_selection" value="$PROJECT_DIR$/p002/src/main/java/ru/mironenko/chesstask" />
   </component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.RecentsKey">
       <recent name="ru.mironenko.start" />
       <recent name="ru.mironenko.cycles" />
     </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\javacourse\p001\src\main\java\ru\mironenko\cycles" />
+      <recent name="C:\javacourse\p001\src\test\java\ru\mironenko\cycles" />
+    </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="ru.mironenko.chesstask" />
       <recent name="ru.mironenko.start" />
     </key>
     <key name="CreateTestDialog.Recents.Supers">
@@ -441,9 +417,9 @@
       <recent name="ru.mironenko.cycles.Square" />
       <recent name="groovy.util.GroovyTestCase" />
     </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\javacourse\p001\src\main\java\ru\mironenko\cycles" />
-      <recent name="C:\javacourse\p001\src\test\java\ru\mironenko\cycles" />
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="ru.mironenko.chesstask.pieces" />
+      <recent name="ru.mironenko.chesstask" />
     </key>
   </component>
   <component name="RunManager" selected="Application.StartUI">
@@ -910,21 +886,22 @@
     </history-entry>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1370" height="744" extended-state="0" />
-    <editor active="false" />
+    <frame x="-8" y="-8" width="1378" height="744" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329653" sideWeight="0.5" order="10" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329429" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.08201893" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21861152" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2349486" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.029968454" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -936,7 +913,6 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.03154574" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -964,8 +940,14 @@
           <line>16</line>
           <properties />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/p002/src/main/java/ru/mironenko/start/StartUI.java</url>
+          <line>35</line>
+          <properties />
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
       </breakpoints>
-      <option name="time" value="4" />
+      <option name="time" value="7" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -974,28 +956,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/p001/src/main/java/ru/mironenko/jvmbytecode/CalcInit.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="17" selection-start-line="3" selection-start-column="17" selection-end-line="3" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/p001/src/main/java/ru/mironenko/cycles/Square.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="595">
-          <caret line="35" column="33" selection-start-line="35" selection-start-column="33" selection-end-line="35" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/p001/src/main/java/ru/mironenko/cycles/SquareTest.java" />
-    <entry file="file://$PROJECT_DIR$/p001/src/test/java/ru/mironenko/jvmbytecode/CalculatorTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/p001/src/main/java/ru/mironenko/jvmbytecode/CalcInit.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="51">
@@ -1190,7 +1150,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
           <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1219,23 +1178,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
           <caret line="14" column="21" selection-start-line="14" selection-start-column="21" selection-end-line="14" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/p002/src/main/java/ru/mironenko/start/Tracker.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1938">
-          <caret line="121" column="0" selection-start-line="121" selection-start-column="0" selection-end-line="121" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#502#503#0" expanded="false" />
-            <element signature="e#528#529#0" expanded="false" />
-            <element signature="e#564#565#0" expanded="false" />
-            <element signature="e#598#599#0" expanded="false" />
-            <element signature="e#689#690#0" expanded="false" />
-            <element signature="e#762#763#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1243,18 +1185,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
           <caret line="8" column="17" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/p002/src/main/java/ru/mironenko/start/MenuOutException.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="39" selection-start-line="4" selection-start-column="39" selection-end-line="4" selection-end-column="39" />
-          <folding>
-            <element signature="e#123#124#0" expanded="false" />
-            <element signature="e#140#141#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1262,7 +1192,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
           <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1277,30 +1206,85 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="3196">
           <caret line="214" column="0" selection-start-line="214" selection-start-column="0" selection-end-line="214" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/p002/src/main/java/ru/mironenko/start/StartUI.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="561">
+        <state relative-caret-position="17">
           <caret line="35" column="9" selection-start-line="35" selection-start-column="9" selection-end-line="35" selection-end-column="9" />
-          <folding />
+          <folding>
+            <element signature="e#271#272#0" expanded="false" />
+            <element signature="e#296#297#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/p002/src/main/java/ru/mironenko/models/Item.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1428">
+        <state relative-caret-position="301">
           <caret line="103" column="27" selection-start-line="103" selection-start-column="27" selection-end-line="103" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/p002/src/main/java/ru/mironenko/start/MenuOutException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="39" selection-start-line="4" selection-start-column="39" selection-end-line="4" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/p002/src/main/java/ru/mironenko/chesstask/board/Tile.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/p002/src/main/java/ru/mironenko/chesstask/Piece.java">
+    <entry file="file://$PROJECT_DIR$/p002/src/main/java/ru/mironenko/chesstask/pieces/Piece.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+        <state relative-caret-position="391">
+          <caret line="23" column="85" selection-start-line="5" selection-start-column="4" selection-end-line="23" selection-end-column="85" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/p002/src/main/java/ru/mironenko/start/Tracker.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" column="4" selection-start-line="15" selection-start-column="4" selection-end-line="15" selection-end-column="4" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/p002/src/main/java/ru/mironenko/chesstask/ChessBoard.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="10" selection-start-line="8" selection-start-column="10" selection-end-line="8" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/p002/src/main/java/ru/mironenko/chesstask/Pawn.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="53" column="91" selection-start-line="49" selection-start-column="7" selection-end-line="53" selection-end-column="91" />
+          <folding>
+            <element signature="e#218#219#0" expanded="true" />
+            <element signature="e#251#252#0" expanded="true" />
+            <element signature="e#282#283#0" expanded="true" />
+            <element signature="e#309#310#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/p002/src/main/java/ru/mironenko/chesstask/ChessAction.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="527">
+          <caret line="31" column="95" selection-start-line="31" selection-start-column="95" selection-end-line="31" selection-end-column="95" />
           <folding />
         </state>
       </provider>
@@ -1363,6 +1347,18 @@
               <list>
                 <option value="0.2" />
                 <option value="0.6" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectJDKs.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
               </list>
             </option>
           </splitter-proportions>
