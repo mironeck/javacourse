@@ -44,6 +44,7 @@ public class ChessBoard {
 
 
     public void makeMove(Figure[][] board, int startX, int startY, int finalX, int finalY){
+
         board[finalX][finalY] = board[startX][startY];
         board[startX][startY] = null;
     }

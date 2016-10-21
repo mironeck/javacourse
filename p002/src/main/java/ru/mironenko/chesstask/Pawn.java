@@ -10,6 +10,10 @@ public class Pawn implements Figure {
     private final String NAME = "Pawn";
     int count = 0;
 
+    public Pawn(String color){
+        this.color = color;
+    }
+
     public String getColor() {
         return this.color;
     }
