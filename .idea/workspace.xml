@@ -2,38 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="19d2fbfb-0d4f-4774-a872-f77554d22bd1" name="Default" comment="add trackertest">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/p002/src/main/java/ru/mironenko/chesstask/Piece.java" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/p002/target/tracker-1.0.jar" afterPath="$PROJECT_DIR$/p002/target/tracker-1.0.jar" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/p002/src/main/java/ru/mironenko/chesstask/ChessAction.java" afterPath="$PROJECT_DIR$/p002/src/main/java/ru/mironenko/chesstask/Figure.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/p001/target/maven-archiver/pom.properties" afterPath="$PROJECT_DIR$/p001/target/maven-archiver/pom.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/p001/target/surefire-reports/TEST-ru.mironenko.arrays.ArrayTurnTest.xml" afterPath="$PROJECT_DIR$/p001/target/surefire-reports/TEST-ru.mironenko.arrays.ArrayTurnTest.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/p001/target/surefire-reports/TEST-ru.mironenko.arrays.BubbleSortTest.xml" afterPath="$PROJECT_DIR$/p001/target/surefire-reports/TEST-ru.mironenko.arrays.BubbleSortTest.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/p001/target/surefire-reports/TEST-ru.mironenko.arrays.DuplicatesTest.xml" afterPath="$PROJECT_DIR$/p001/target/surefire-reports/TEST-ru.mironenko.arrays.DuplicatesTest.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/p001/target/surefire-reports/TEST-ru.mironenko.conditionaloperator.FindMaxSideTest.xml" afterPath="$PROJECT_DIR$/p001/target/surefire-reports/TEST-ru.mironenko.conditionaloperator.FindMaxSideTest.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/p001/target/surefire-reports/TEST-ru.mironenko.conditionaloperator.PointTest.xml" afterPath="$PROJECT_DIR$/p001/target/surefire-reports/TEST-ru.mironenko.conditionaloperator.PointTest.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/p001/target/surefire-reports/TEST-ru.mironenko.conditionaloperator.TriangleTest.xml" afterPath="$PROJECT_DIR$/p001/target/surefire-reports/TEST-ru.mironenko.conditionaloperator.TriangleTest.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/p001/target/surefire-reports/TEST-ru.mironenko.cycles.FactorialTest.xml" afterPath="$PROJECT_DIR$/p001/target/surefire-reports/TEST-ru.mironenko.cycles.FactorialTest.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/p001/target/surefire-reports/TEST-ru.mironenko.cycles.SquareTest.xml" afterPath="$PROJECT_DIR$/p001/target/surefire-reports/TEST-ru.mironenko.cycles.SquareTest.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/p001/target/surefire-reports/TEST-ru.mironenko.jvmbytecode.CalculatorTest.xml" afterPath="$PROJECT_DIR$/p001/target/surefire-reports/TEST-ru.mironenko.jvmbytecode.CalculatorTest.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/p001/target/surefire-reports/TEST-ru.mironenko.testtask.TestTaskTest.xml" afterPath="$PROJECT_DIR$/p001/target/surefire-reports/TEST-ru.mironenko.testtask.TestTaskTest.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/p001/target/surefire-reports/TEST-ru.mironenko.testtask.TestTaskVersionTwoTest.xml" afterPath="$PROJECT_DIR$/p001/target/surefire-reports/TEST-ru.mironenko.testtask.TestTaskVersionTwoTest.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/p001/target/surefire-reports/ru.mironenko.arrays.ArrayTurnTest.txt" afterPath="$PROJECT_DIR$/p001/target/surefire-reports/ru.mironenko.arrays.ArrayTurnTest.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/p001/target/surefire-reports/ru.mironenko.arrays.BubbleSortTest.txt" afterPath="$PROJECT_DIR$/p001/target/surefire-reports/ru.mironenko.arrays.BubbleSortTest.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/p001/target/surefire-reports/ru.mironenko.arrays.DuplicatesTest.txt" afterPath="$PROJECT_DIR$/p001/target/surefire-reports/ru.mironenko.arrays.DuplicatesTest.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/p001/target/surefire-reports/ru.mironenko.conditionaloperator.FindMaxSideTest.txt" afterPath="$PROJECT_DIR$/p001/target/surefire-reports/ru.mironenko.conditionaloperator.FindMaxSideTest.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/p001/target/surefire-reports/ru.mironenko.conditionaloperator.TriangleTest.txt" afterPath="$PROJECT_DIR$/p001/target/surefire-reports/ru.mironenko.conditionaloperator.TriangleTest.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/p001/target/surefire-reports/ru.mironenko.cycles.FactorialTest.txt" afterPath="$PROJECT_DIR$/p001/target/surefire-reports/ru.mironenko.cycles.FactorialTest.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/p001/target/surefire-reports/ru.mironenko.cycles.SquareTest.txt" afterPath="$PROJECT_DIR$/p001/target/surefire-reports/ru.mironenko.cycles.SquareTest.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/p001/target/surefire-reports/ru.mironenko.jvmbytecode.CalculatorTest.txt" afterPath="$PROJECT_DIR$/p001/target/surefire-reports/ru.mironenko.jvmbytecode.CalculatorTest.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/p001/target/surefire-reports/ru.mironenko.testtask.TestTaskVersionTwoTest.txt" afterPath="$PROJECT_DIR$/p001/target/surefire-reports/ru.mironenko.testtask.TestTaskVersionTwoTest.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/p002/src/main/java/ru/mironenko/start/Tracker.java" afterPath="$PROJECT_DIR$/p002/src/main/java/ru/mironenko/start/Tracker.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/p002/target/maven-archiver/pom.properties" afterPath="$PROJECT_DIR$/p002/target/maven-archiver/pom.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/p002/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterPath="$PROJECT_DIR$/p002/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/p002/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterPath="$PROJECT_DIR$/p002/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/p002/target/surefire-reports/TEST-ru.mironenko.start.StartUITest.xml" afterPath="$PROJECT_DIR$/p002/target/surefire-reports/TEST-ru.mironenko.start.StartUITest.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/p002/target/surefire-reports/TEST-ru.mironenko.start.TrackerTest.xml" afterPath="$PROJECT_DIR$/p002/target/surefire-reports/TEST-ru.mironenko.start.TrackerTest.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/p002/target/surefire-reports/ru.mironenko.start.StartUITest.txt" afterPath="$PROJECT_DIR$/p002/target/surefire-reports/ru.mironenko.start.StartUITest.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/p002/target/surefire-reports/ru.mironenko.start.TrackerTest.txt" afterPath="$PROJECT_DIR$/p002/target/surefire-reports/ru.mironenko.start.TrackerTest.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/p002/src/main/java/ru/mironenko/chesstask/ChessBoard.java" afterPath="$PROJECT_DIR$/p002/src/main/java/ru/mironenko/chesstask/ChessBoard.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/p002/src/main/java/ru/mironenko/chesstask/Pawn.java" afterPath="$PROJECT_DIR$/p002/src/main/java/ru/mironenko/chesstask/Pawn.java" />
     </list>
     <ignored path="javacourse.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -59,45 +31,28 @@
       <file leaf-file-name="Pawn.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/p002/src/main/java/ru/mironenko/chesstask/Pawn.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="53" column="91" selection-start-line="49" selection-start-column="7" selection-end-line="53" selection-end-column="91" />
-              <folding>
-                <element signature="e#218#219#0" expanded="true" />
-                <element signature="e#251#252#0" expanded="true" />
-                <element signature="e#282#283#0" expanded="true" />
-                <element signature="e#309#310#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ChessAction.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/p002/src/main/java/ru/mironenko/chesstask/ChessAction.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="527">
-              <caret line="31" column="95" selection-start-line="31" selection-start-column="95" selection-end-line="31" selection-end-column="95" />
+            <state relative-caret-position="529">
+              <caret line="52" column="0" selection-start-line="52" selection-start-column="0" selection-end-line="52" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Tracker.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/p002/src/main/java/ru/mironenko/start/Tracker.java">
+      <file leaf-file-name="Figure.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/p002/src/main/java/ru/mironenko/chesstask/Figure.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="15" column="4" selection-start-line="15" selection-start-column="4" selection-end-line="15" selection-end-column="4" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="289">
+              <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ChessBoard.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="ChessBoard.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/p002/src/main/java/ru/mironenko/chesstask/ChessBoard.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="8" column="10" selection-start-line="8" selection-start-column="10" selection-end-line="8" selection-end-column="10" />
+            <state relative-caret-position="782">
+              <caret line="46" column="0" selection-start-line="46" selection-start-column="0" selection-end-line="46" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -158,10 +113,11 @@
         <option value="$PROJECT_DIR$/p002/src/main/java/ru/mironenko/chesstask/pieces/ChessBoard.java" />
         <option value="$PROJECT_DIR$/p002/src/main/java/ru/mironenko/chesstask/pieces/ChessAction.java" />
         <option value="$PROJECT_DIR$/p002/src/main/java/ru/mironenko/chesstask/pieces/Bishop.java" />
-        <option value="$PROJECT_DIR$/p002/src/main/java/ru/mironenko/chesstask/ChessBoard.java" />
         <option value="$PROJECT_DIR$/p002/src/main/java/ru/mironenko/chesstask/Bishop.java" />
-        <option value="$PROJECT_DIR$/p002/src/main/java/ru/mironenko/chesstask/Pawn.java" />
         <option value="$PROJECT_DIR$/p002/src/main/java/ru/mironenko/chesstask/ChessAction.java" />
+        <option value="$PROJECT_DIR$/p002/src/main/java/ru/mironenko/chesstask/Figure.java" />
+        <option value="$PROJECT_DIR$/p002/src/main/java/ru/mironenko/chesstask/ChessBoard.java" />
+        <option value="$PROJECT_DIR$/p002/src/main/java/ru/mironenko/chesstask/Pawn.java" />
       </list>
     </option>
   </component>
@@ -183,7 +139,7 @@
   <component name="ProjectFrameBounds">
     <option name="x" value="-8" />
     <option name="y" value="-8" />
-    <option name="width" value="1378" />
+    <option name="width" value="1370" />
     <option name="height" value="744" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
@@ -233,8 +189,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
       <pane id="Scope" />
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -385,7 +341,7 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -886,7 +842,7 @@
     </history-entry>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1378" height="744" extended-state="0" />
+    <frame x="-8" y="-8" width="1370" height="744" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -900,8 +856,7 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2349486" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.029968454" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23485968" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -913,6 +868,7 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.029968454" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -1234,57 +1190,43 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/p002/src/main/java/ru/mironenko/chesstask/board/Tile.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/p002/src/main/java/ru/mironenko/chesstask/pieces/Piece.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="23" column="85" selection-start-line="5" selection-start-column="4" selection-end-line="23" selection-end-column="85" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/p002/src/main/java/ru/mironenko/chesstask/board/Tile.java" />
+    <entry file="file://$PROJECT_DIR$/p002/src/main/java/ru/mironenko/chesstask/pieces/Piece.java" />
     <entry file="file://$PROJECT_DIR$/p002/src/main/java/ru/mironenko/start/Tracker.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="4" selection-start-line="15" selection-start-column="4" selection-end-line="15" selection-end-column="4" />
+        <state relative-caret-position="1666">
+          <caret line="105" column="68" selection-start-line="105" selection-start-column="68" selection-end-line="105" selection-end-column="68" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="e#501#502#0" expanded="false" />
+            <element signature="e#527#528#0" expanded="false" />
+            <element signature="e#563#564#0" expanded="false" />
+            <element signature="e#597#598#0" expanded="false" />
+            <element signature="e#688#689#0" expanded="false" />
+            <element signature="e#761#762#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/p002/src/main/java/ru/mironenko/chesstask/ChessBoard.java">
+    <entry file="file://$PROJECT_DIR$/p002/src/main/java/ru/mironenko/chesstask/Figure.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="10" selection-start-line="8" selection-start-column="10" selection-end-line="8" selection-end-column="10" />
+        <state relative-caret-position="289">
+          <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/p002/src/main/java/ru/mironenko/chesstask/Pawn.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="53" column="91" selection-start-line="49" selection-start-column="7" selection-end-line="53" selection-end-column="91" />
-          <folding>
-            <element signature="e#218#219#0" expanded="true" />
-            <element signature="e#251#252#0" expanded="true" />
-            <element signature="e#282#283#0" expanded="true" />
-            <element signature="e#309#310#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="529">
+          <caret line="52" column="0" selection-start-line="52" selection-start-column="0" selection-end-line="52" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/p002/src/main/java/ru/mironenko/chesstask/ChessAction.java">
+    <entry file="file://$PROJECT_DIR$/p002/src/main/java/ru/mironenko/chesstask/ChessBoard.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="527">
-          <caret line="31" column="95" selection-start-line="31" selection-start-column="95" selection-end-line="31" selection-end-column="95" />
+        <state relative-caret-position="782">
+          <caret line="46" column="0" selection-start-line="46" selection-start-column="0" selection-end-line="46" selection-end-column="0" />
           <folding />
         </state>
       </provider>

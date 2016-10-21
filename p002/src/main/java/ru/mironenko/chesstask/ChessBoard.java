@@ -8,11 +8,39 @@ public class ChessBoard {
     public final int BOARD_WIDTH = 8;
     public final int BOARD_HEIGHT = 8;
 
-    public ChessAction[][] board = new ChessAction[BOARD_HEIGHT][BOARD_WIDTH];
+    public Figure[][] board = new Figure[BOARD_HEIGHT][BOARD_WIDTH];
 
-    public ChessAction[] figures = new ChessAction[6];
+    public Figure[] figures = new Figure[6];
+
+    /**
+     * A method that determines is destination tile on board
+     * @param finalX
+     * @param finalY
+     * @return a boolean indicating whether the tile on board
+     */
+    public boolean isDestinationTileOnBoard(ChessBoard board, int finalX, int finalY){
+
+        return (finalX < board.BOARD_WIDTH) && (finalY < board.BOARD_HEIGHT); //true if tile on the board
+    }
 
 
+    /**
+     * A method that determines whether the destination tile with figure opposite color
+     * @param board chessboard
+     * @param startX the start x location
+     * @param startY the start y location
+     * @param finalX the final x location
+     * @param finalY the final y location
+     * @return a boolean indicating whether the destination tile with figure opposite color
+     */
+
+    public boolean isTileOccupiedByFigureTheOppositeColor(Figure[][] board, int startX, int startY, int finalX, int finalY) {
+        boolean result = false;
+        if (!board[finalX][finalY].getColor().equals(board[startX][startY].getColor())) {
+            result = true;
+        }
+        return result;  // return true if opposite color
+    }
 
 
 }
