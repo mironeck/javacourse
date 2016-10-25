@@ -6,7 +6,15 @@ package ru.mironenko.chesstask;
 public class Bishop implements Figure {
 
     private String color;
+    private final String name = "Bishop";
 
+    public Bishop(String color){
+        this.color = color;
+    }
+
+    public String getName() {
+        return name;
+    }
     public String getColor() {
         return this.color;
     }

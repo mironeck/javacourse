@@ -6,6 +6,10 @@ package ru.mironenko.chesstask;
 public class Knight implements Figure {
 
     String color;
+    private final String name = "Knight";
+    public String getName() {
+        return name;
+    }
 
     public Knight(String color){
         this.color = color;
@@ -25,4 +29,6 @@ public class Knight implements Figure {
 
         return result;
     }
+
+
 }

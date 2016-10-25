@@ -5,7 +5,7 @@ package ru.mironenko.chesstask;
  */
 public class ChessBoard {
 
-    public final int BOARD_SIZE = 8;
+    public static final int BOARD_SIZE = 8;
 
     public Figure[][] board = new Figure[BOARD_SIZE][BOARD_SIZE];
 
@@ -17,9 +17,9 @@ public class ChessBoard {
      * @param finalY
      * @return a boolean indicating whether the tile on board
      */
-    public boolean isDestinationTileOnBoard(ChessBoard board, int finalX, int finalY){
+    public boolean isDestinationTileOnBoard(Figure[][] board, int finalX, int finalY){
 
-        return (finalX < board.BOARD_SIZE) && (finalY < board.BOARD_SIZE); //true if tile on the board
+        return (finalX < ChessBoard.BOARD_SIZE) && (finalY < ChessBoard.BOARD_SIZE); //true if tile on the board
     }
 
 
@@ -48,9 +48,9 @@ public class ChessBoard {
         board[startX][startY] = null;
     }
 
-    public void initStartPosition(){
+    public Figure[][] initStartPosition(){
 
-        board = new Figure[][]{
+        this.board = new Figure[][]{
                 {new Rook("white"),new Bishop("white"), new Knight("white"), new Queen("white"), new King("white"), new Knight("white"), new Bishop("white"), new Rook("white")},
                 {new Pawn("white"), new Pawn("white"), new Pawn("white"), new Pawn("white"), new Pawn("white"), new Pawn("white"), new Pawn("white"), new Pawn("white")},
                 {null, null, null, null, null, null, null, null},
@@ -60,6 +60,8 @@ public class ChessBoard {
                 {new Pawn("black"), new Pawn("black"), new Pawn("black"), new Pawn("black"),new Pawn("black"), new Pawn("black"), new Pawn("black"), new Pawn("black")},
                 {new Rook("black"),new Bishop("black"), new Knight("black"), new Queen("black"), new King("black"), new Knight("black"), new Bishop("black"), new Rook("black")}
         };
+
+        return board;
     }
 
 }

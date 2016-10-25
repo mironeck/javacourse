@@ -7,7 +7,7 @@ public class Pawn implements Figure {
 
 
     private String color;
-    private final String NAME = "Pawn";
+    private final String name = "Pawn";
     int count = 0;
 
     public Pawn(String color){
@@ -18,8 +18,8 @@ public class Pawn implements Figure {
         return this.color;
     }
 
-    public String getNAME() {
-        return NAME;
+    public String getName() {
+        return name;
     }
 
     /**

@@ -6,7 +6,7 @@ package ru.mironenko.chesstask;
 public interface Figure {
 
         String getColor();
-
+        String getName();
         /**
          * A method that determines can figure move like this
          * @param finalX the final x location

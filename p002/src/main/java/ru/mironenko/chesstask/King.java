@@ -6,6 +6,10 @@ package ru.mironenko.chesstask;
 public class King implements Figure {
 
     String color;
+    private final String name = "King";
+    public String getName() {
+        return name;
+    }
 
     public King(String color){
         this.color = color;

@@ -1,2 +1,9 @@
+ru\mironenko\chesstask\BishopTest.class
+ru\mironenko\chesstask\QueenTest.class
+ru\mironenko\chesstask\RookTest.class
+ru\mironenko\chesstask\ChessBoardTest.class
+ru\mironenko\chesstask\KnightTest.class
 ru\mironenko\start\TrackerTest.class
+ru\mironenko\chesstask\KingTest.class
+ru\mironenko\chesstask\PawnTest.class
 ru\mironenko\start\StartUITest.class
