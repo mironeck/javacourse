@@ -7,6 +7,7 @@ public class Knight implements Figure {
 
     private Color color;
     private String name = Figures.KNIGHT.getName();
+    private int count = 0;
 
     public Knight(Color color){
         this.color = color;
@@ -17,6 +18,9 @@ public class Knight implements Figure {
     }
     public Color getColor() {
         return this.color;
+    }
+    public int getCount(){
+        return this.count;
     }
 
     public boolean isValidPath(int startX, int startY, int finalX, int finalY) {
@@ -31,4 +35,7 @@ public class Knight implements Figure {
         return result;
     }
 
+    public void changeCount(){
+        this.count++;
+    }
 }

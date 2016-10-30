@@ -7,6 +7,7 @@ public class Queen implements Figure {
 
     private Color color;
     private String name = Figures.QUEEN.getName();
+    private int count = 0;
 
     public Queen(Color color){
         this.color = color;
@@ -15,8 +16,13 @@ public class Queen implements Figure {
     public String getName() {
         return name;
     }
+
     public Color getColor() {
         return this.color;
+    }
+
+    public int getCount(){
+        return this.count;
     }
 
     public boolean isValidPath(int startX, int startY, int finalX, int finalY) {
@@ -30,6 +36,10 @@ public class Queen implements Figure {
         }
 
         return result;
+    }
+
+    public void changeCount(){
+        this.count++;
     }
 
 }

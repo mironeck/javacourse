@@ -7,6 +7,7 @@ public class Rook implements Figure {
 
     private Color color;
     private String name = Figures.ROOK.getName();
+    private int count = 0;
 
     public Rook(Color color){
         this.color = color;
@@ -17,6 +18,9 @@ public class Rook implements Figure {
     }
     public Color getColor() {
         return this.color;
+    }
+    public int getCount(){
+        return this.count;
     }
 
     public boolean isValidPath(int startX, int startY, int finalX, int finalY) {
@@ -29,4 +33,7 @@ public class Rook implements Figure {
         return result;
     }
 
+    public void changeCount(){
+        this.count++;
+    }
 }

@@ -6,17 +6,21 @@ package ru.mironenko.chesstask;
 public class King implements Figure {
 
     Color color;
+    private String name = Figures.KING.getName();
+    private int count = 0;
 
     public King(Color color){
         this.color = color;
     }
-    private String name = Figures.KING.getName();
 
     public String getName() {
         return name;
     }
     public Color getColor() {
         return this.color;
+    }
+    public int getCount(){
+        return this.count;
     }
 
     public boolean isValidPath(int startX, int startY, int finalX, int finalY) {
@@ -30,6 +34,10 @@ public class King implements Figure {
         }
 
         return result;
+    }
+
+    public void changeCount(){
+        this.count++;
     }
 
 }

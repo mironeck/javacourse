@@ -7,6 +7,7 @@ public interface Figure {
 
         Color getColor();
         String getName();
+        void changeCount();
         /**
          * A method that determines can figure move like this
          * @param finalX the final x location

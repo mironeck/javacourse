@@ -7,6 +7,7 @@ public class Bishop implements Figure {
 
     private Color color;
     private String name = Figures.BISHOP.getName();
+    private int count = 0;
 
     public Bishop(Color color){
         this.color = color;
@@ -18,6 +19,9 @@ public class Bishop implements Figure {
     public Color getColor() {
         return this.color;
     }
+    public int getCount(){
+        return this.count;
+    }
 
     public boolean isValidPath(int startX, int startY, int finalX, int finalY) {
 
@@ -28,4 +32,7 @@ public class Bishop implements Figure {
         return result;
     }
 
+    public void changeCount(){
+        this.count++;
+    }
 }

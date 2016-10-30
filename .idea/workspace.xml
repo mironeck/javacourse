@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="19d2fbfb-0d4f-4774-a872-f77554d22bd1" name="Default" comment="add trackertest">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/p002/src/main/java/ru/mironenko/chesstask/Bishop.java" afterPath="$PROJECT_DIR$/p002/src/main/java/ru/mironenko/chesstask/Bishop.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/p002/src/main/java/ru/mironenko/chesstask/ChessBoard.java" afterPath="$PROJECT_DIR$/p002/src/main/java/ru/mironenko/chesstask/ChessBoard.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/p002/src/main/java/ru/mironenko/chesstask/Figure.java" afterPath="$PROJECT_DIR$/p002/src/main/java/ru/mironenko/chesstask/Figure.java" />
@@ -11,13 +10,6 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/p002/src/main/java/ru/mironenko/chesstask/Pawn.java" afterPath="$PROJECT_DIR$/p002/src/main/java/ru/mironenko/chesstask/Pawn.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/p002/src/main/java/ru/mironenko/chesstask/Queen.java" afterPath="$PROJECT_DIR$/p002/src/main/java/ru/mironenko/chesstask/Queen.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/p002/src/main/java/ru/mironenko/chesstask/Rook.java" afterPath="$PROJECT_DIR$/p002/src/main/java/ru/mironenko/chesstask/Rook.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/p002/src/test/java/ru/mironenko/chesstask/BishopTest.java" afterPath="$PROJECT_DIR$/p002/src/test/java/ru/mironenko/chesstask/BishopTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/p002/src/test/java/ru/mironenko/chesstask/ChessBoardTest.java" afterPath="$PROJECT_DIR$/p002/src/test/java/ru/mironenko/chesstask/ChessBoardTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/p002/src/test/java/ru/mironenko/chesstask/KingTest.java" afterPath="$PROJECT_DIR$/p002/src/test/java/ru/mironenko/chesstask/KingTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/p002/src/test/java/ru/mironenko/chesstask/KnightTest.java" afterPath="$PROJECT_DIR$/p002/src/test/java/ru/mironenko/chesstask/KnightTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/p002/src/test/java/ru/mironenko/chesstask/PawnTest.java" afterPath="$PROJECT_DIR$/p002/src/test/java/ru/mironenko/chesstask/PawnTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/p002/src/test/java/ru/mironenko/chesstask/QueenTest.java" afterPath="$PROJECT_DIR$/p002/src/test/java/ru/mironenko/chesstask/QueenTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/p002/src/test/java/ru/mironenko/chesstask/RookTest.java" afterPath="$PROJECT_DIR$/p002/src/test/java/ru/mironenko/chesstask/RookTest.java" />
     </list>
     <ignored path="javacourse.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -43,11 +35,11 @@
       <file leaf-file-name="Pawn.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/p002/src/main/java/ru/mironenko/chesstask/Pawn.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="442">
-              <caret line="50" column="21" selection-start-line="50" selection-start-column="21" selection-end-line="50" selection-end-column="21" />
+            <state relative-caret-position="-272">
+              <caret line="8" column="49" selection-start-line="8" selection-start-column="49" selection-end-line="8" selection-end-column="49" />
               <folding>
-                <element signature="e#305#306#0" expanded="true" />
-                <element signature="e#338#339#0" expanded="true" />
+                <element signature="e#312#313#0" expanded="true" />
+                <element signature="e#345#346#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -56,21 +48,50 @@
       <file leaf-file-name="Queen.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/p002/src/main/java/ru/mironenko/chesstask/Queen.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+            <state relative-caret-position="-178">
+              <caret line="9" column="26" selection-start-line="9" selection-start-column="26" selection-end-line="9" selection-end-column="26" />
               <folding>
-                <element signature="e#288#289#0" expanded="true" />
                 <element signature="e#315#316#0" expanded="true" />
+                <element signature="e#342#343#0" expanded="true" />
+                <element signature="e#434#435#0" expanded="true" />
+                <element signature="e#467#468#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ChessBoard.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Rook.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/p002/src/main/java/ru/mironenko/chesstask/Rook.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="264">
+              <caret line="18" column="4" selection-start-line="18" selection-start-column="4" selection-end-line="18" selection-end-column="4" />
+              <folding>
+                <element signature="e#312#313#0" expanded="true" />
+                <element signature="e#339#340#0" expanded="true" />
+                <element signature="e#429#430#0" expanded="true" />
+                <element signature="e#462#463#0" expanded="true" />
+                <element signature="e#732#733#0" expanded="true" />
+                <element signature="e#760#761#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ChessBoard.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/p002/src/main/java/ru/mironenko/chesstask/ChessBoard.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="50" column="91" selection-start-line="50" selection-start-column="91" selection-end-line="50" selection-end-column="91" />
+            <state relative-caret-position="-141">
+              <caret line="52" column="44" selection-start-line="52" selection-start-column="44" selection-end-line="52" selection-end-column="44" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Figure.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/p002/src/main/java/ru/mironenko/chesstask/Figure.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="136">
+              <caret line="8" column="25" selection-start-line="8" selection-start-column="25" selection-end-line="8" selection-end-column="25" />
               <folding />
             </state>
           </provider>
@@ -79,7 +100,7 @@
       <file leaf-file-name="ChessBoardTest.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/p002/src/test/java/ru/mironenko/chesstask/ChessBoardTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-906">
+            <state relative-caret-position="119">
               <caret line="7" column="33" selection-start-line="7" selection-start-column="33" selection-end-line="7" selection-end-column="33" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -88,54 +109,43 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="KnightTest.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/p002/src/test/java/ru/mironenko/chesstask/KnightTest.java">
+      <file leaf-file-name="Bishop.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/p002/src/main/java/ru/mironenko/chesstask/Bishop.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="31" selection-start-line="0" selection-start-column="31" selection-end-line="0" selection-end-column="31" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="KingTest.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/p002/src/test/java/ru/mironenko/chesstask/KingTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="18" column="36" selection-start-line="17" selection-start-column="8" selection-end-line="18" selection-end-column="36" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="PawnTest.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/p002/src/test/java/ru/mironenko/chesstask/PawnTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="52">
-              <caret line="25" column="42" selection-start-line="25" selection-start-column="42" selection-end-line="25" selection-end-column="42" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="QueenTest.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/p002/src/test/java/ru/mironenko/chesstask/QueenTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="846">
-              <caret line="58" column="43" selection-start-line="58" selection-start-column="43" selection-end-line="58" selection-end-column="43" />
+            <state relative-caret-position="213">
+              <caret line="23" column="5" selection-start-line="21" selection-start-column="4" selection-end-line="23" selection-end-column="5" />
               <folding>
-                <element signature="imports" expanded="true" />
+                <element signature="e#435#436#0" expanded="true" />
+                <element signature="e#468#469#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="RookTest.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/p002/src/test/java/ru/mironenko/chesstask/RookTest.java">
+      <file leaf-file-name="King.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/p002/src/main/java/ru/mironenko/chesstask/King.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="9">
-              <caret line="36" column="29" selection-start-line="36" selection-start-column="29" selection-end-line="36" selection-end-column="29" />
-              <folding />
+            <state relative-caret-position="289">
+              <caret line="23" column="5" selection-start-line="21" selection-start-column="4" selection-end-line="23" selection-end-column="5" />
+              <folding>
+                <element signature="e#421#422#0" expanded="true" />
+                <element signature="e#454#455#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Knight.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/p002/src/main/java/ru/mironenko/chesstask/Knight.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="170">
+              <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+              <folding>
+                <element signature="e#253#254#0" expanded="true" />
+                <element signature="e#287#288#0" expanded="true" />
+                <element signature="e#435#436#0" expanded="true" />
+                <element signature="e#468#469#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -197,22 +207,22 @@
         <option value="$PROJECT_DIR$/p002/src/main/java/ru/mironenko/chesstask/ChessAction.java" />
         <option value="$PROJECT_DIR$/p002/src/main/java/ru/mironenko/chesstask/TestClass.java" />
         <option value="$PROJECT_DIR$/p002/src/main/java/ru/mironenko/chesstask/Color.java" />
-        <option value="$PROJECT_DIR$/p002/src/main/java/ru/mironenko/chesstask/Figure.java" />
         <option value="$PROJECT_DIR$/p002/src/main/java/ru/mironenko/chesstask/Figures.java" />
-        <option value="$PROJECT_DIR$/p002/src/main/java/ru/mironenko/chesstask/Queen.java" />
-        <option value="$PROJECT_DIR$/p002/src/main/java/ru/mironenko/chesstask/Rook.java" />
-        <option value="$PROJECT_DIR$/p002/src/main/java/ru/mironenko/chesstask/Bishop.java" />
-        <option value="$PROJECT_DIR$/p002/src/main/java/ru/mironenko/chesstask/Knight.java" />
-        <option value="$PROJECT_DIR$/p002/src/main/java/ru/mironenko/chesstask/Pawn.java" />
-        <option value="$PROJECT_DIR$/p002/src/main/java/ru/mironenko/chesstask/King.java" />
         <option value="$PROJECT_DIR$/p002/src/test/java/ru/mironenko/chesstask/QueenTest.java" />
         <option value="$PROJECT_DIR$/p002/src/test/java/ru/mironenko/chesstask/RookTest.java" />
         <option value="$PROJECT_DIR$/p002/src/test/java/ru/mironenko/chesstask/BishopTest.java" />
         <option value="$PROJECT_DIR$/p002/src/test/java/ru/mironenko/chesstask/KingTest.java" />
         <option value="$PROJECT_DIR$/p002/src/test/java/ru/mironenko/chesstask/PawnTest.java" />
-        <option value="$PROJECT_DIR$/p002/src/main/java/ru/mironenko/chesstask/ChessBoard.java" />
         <option value="$PROJECT_DIR$/p002/src/test/java/ru/mironenko/chesstask/ChessBoardTest.java" />
         <option value="$PROJECT_DIR$/p002/src/test/java/ru/mironenko/chesstask/KnightTest.java" />
+        <option value="$PROJECT_DIR$/p002/src/main/java/ru/mironenko/chesstask/ChessBoard.java" />
+        <option value="$PROJECT_DIR$/p002/src/main/java/ru/mironenko/chesstask/Figure.java" />
+        <option value="$PROJECT_DIR$/p002/src/main/java/ru/mironenko/chesstask/Bishop.java" />
+        <option value="$PROJECT_DIR$/p002/src/main/java/ru/mironenko/chesstask/King.java" />
+        <option value="$PROJECT_DIR$/p002/src/main/java/ru/mironenko/chesstask/Knight.java" />
+        <option value="$PROJECT_DIR$/p002/src/main/java/ru/mironenko/chesstask/Pawn.java" />
+        <option value="$PROJECT_DIR$/p002/src/main/java/ru/mironenko/chesstask/Queen.java" />
+        <option value="$PROJECT_DIR$/p002/src/main/java/ru/mironenko/chesstask/Rook.java" />
       </list>
     </option>
   </component>
@@ -1306,47 +1316,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/p002/src/main/java/ru/mironenko/chesstask/Figure.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="25" selection-start-line="8" selection-start-column="25" selection-end-line="8" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/p002/src/main/java/ru/mironenko/chesstask/Knight.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="12" column="5" selection-start-line="12" selection-start-column="5" selection-end-line="12" selection-end-column="5" />
-          <folding>
-            <element signature="e#291#292#0" expanded="true" />
-            <element signature="e#318#319#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/p002/src/main/java/ru/mironenko/chesstask/Bishop.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="40" selection-start-line="8" selection-start-column="40" selection-end-line="8" selection-end-column="40" />
-          <folding>
-            <element signature="e#291#292#0" expanded="true" />
-            <element signature="e#318#319#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/p002/src/main/java/ru/mironenko/chesstask/Rook.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="16" column="5" selection-start-line="14" selection-start-column="4" selection-end-line="16" selection-end-column="5" />
-          <folding>
-            <element signature="e#285#286#0" expanded="true" />
-            <element signature="e#312#313#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/p002/src/main/java/ru/mironenko/chesstask/Figures.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="340">
@@ -1356,17 +1325,6 @@
             <element signature="e#293#294#0" expanded="true" />
             <element signature="e#323#324#0" expanded="true" />
             <element signature="e#350#351#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/p002/src/main/java/ru/mironenko/chesstask/King.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="13" column="0" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
-          <folding>
-            <element signature="e#277#278#0" expanded="true" />
-            <element signature="e#304#305#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1383,54 +1341,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="238">
           <caret line="17" column="36" selection-start-line="16" selection-start-column="8" selection-end-line="17" selection-end-column="36" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/p002/src/main/java/ru/mironenko/chesstask/Queen.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-          <folding>
-            <element signature="e#288#289#0" expanded="true" />
-            <element signature="e#315#316#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/p002/src/main/java/ru/mironenko/chesstask/Pawn.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="50" column="21" selection-start-line="50" selection-start-column="21" selection-end-line="50" selection-end-column="21" />
-          <folding>
-            <element signature="e#305#306#0" expanded="true" />
-            <element signature="e#338#339#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/p002/src/main/java/ru/mironenko/chesstask/ChessBoard.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="50" column="91" selection-start-line="50" selection-start-column="91" selection-end-line="50" selection-end-column="91" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/p002/src/test/java/ru/mironenko/chesstask/ChessBoardTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-906">
-          <caret line="7" column="33" selection-start-line="7" selection-start-column="33" selection-end-line="7" selection-end-column="33" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/p002/src/test/java/ru/mironenko/chesstask/KnightTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="31" selection-start-line="0" selection-start-column="31" selection-end-line="0" selection-end-column="31" />
           <folding />
         </state>
       </provider>
@@ -1465,6 +1375,114 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="9">
           <caret line="36" column="29" selection-start-line="36" selection-start-column="29" selection-end-line="36" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/p002/src/test/java/ru/mironenko/chesstask/KnightTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="31" selection-start-line="0" selection-start-column="31" selection-end-line="0" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/p002/src/test/java/ru/mironenko/chesstask/ChessBoardTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="33" selection-start-line="7" selection-start-column="33" selection-end-line="7" selection-end-column="33" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/p002/src/main/java/ru/mironenko/chesstask/Figure.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="25" selection-start-line="8" selection-start-column="25" selection-end-line="8" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/p002/src/main/java/ru/mironenko/chesstask/Pawn.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-272">
+          <caret line="8" column="49" selection-start-line="8" selection-start-column="49" selection-end-line="8" selection-end-column="49" />
+          <folding>
+            <element signature="e#312#313#0" expanded="true" />
+            <element signature="e#345#346#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/p002/src/main/java/ru/mironenko/chesstask/Bishop.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="213">
+          <caret line="23" column="5" selection-start-line="21" selection-start-column="4" selection-end-line="23" selection-end-column="5" />
+          <folding>
+            <element signature="e#435#436#0" expanded="true" />
+            <element signature="e#468#469#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/p002/src/main/java/ru/mironenko/chesstask/King.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="23" column="5" selection-start-line="21" selection-start-column="4" selection-end-line="23" selection-end-column="5" />
+          <folding>
+            <element signature="e#421#422#0" expanded="true" />
+            <element signature="e#454#455#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/p002/src/main/java/ru/mironenko/chesstask/Knight.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+          <folding>
+            <element signature="e#253#254#0" expanded="true" />
+            <element signature="e#287#288#0" expanded="true" />
+            <element signature="e#435#436#0" expanded="true" />
+            <element signature="e#468#469#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/p002/src/main/java/ru/mironenko/chesstask/Rook.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="18" column="4" selection-start-line="18" selection-start-column="4" selection-end-line="18" selection-end-column="4" />
+          <folding>
+            <element signature="e#312#313#0" expanded="true" />
+            <element signature="e#339#340#0" expanded="true" />
+            <element signature="e#429#430#0" expanded="true" />
+            <element signature="e#462#463#0" expanded="true" />
+            <element signature="e#732#733#0" expanded="true" />
+            <element signature="e#760#761#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/p002/src/main/java/ru/mironenko/chesstask/Queen.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-178">
+          <caret line="9" column="26" selection-start-line="9" selection-start-column="26" selection-end-line="9" selection-end-column="26" />
+          <folding>
+            <element signature="e#315#316#0" expanded="true" />
+            <element signature="e#342#343#0" expanded="true" />
+            <element signature="e#434#435#0" expanded="true" />
+            <element signature="e#467#468#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/p002/src/main/java/ru/mironenko/chesstask/ChessBoard.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-141">
+          <caret line="52" column="44" selection-start-line="52" selection-start-column="44" selection-end-line="52" selection-end-column="44" />
           <folding />
         </state>
       </provider>

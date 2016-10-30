@@ -7,8 +7,7 @@ public class Pawn implements Figure {
 
     private Color color;
     private String name = Figures.PAWN.getName();
-
-    int count = 0;
+    private int count = 0;
 
     public Pawn(Color color){
         this.color = color;
@@ -20,6 +19,7 @@ public class Pawn implements Figure {
     public String getName() {
         return name;
     }
+
 
     /**
      * A method that determines whether the Pawn is moving
@@ -45,11 +45,11 @@ public class Pawn implements Figure {
     }
 
     public boolean isTheFirstMove(){
-        return count == 0;
+        return this.count == 0;
     }
 
     public void changeCount(){
-        count++;
+        this.count++;
     }
 
 }
