@@ -1,10 +1,11 @@
 package ru.mironenko.chesstask;
 
+import org.junit.Ignore;
 import org.junit.Test;
+
 
 import static org.hamcrest.Matchers.is;
 import static org.junit.Assert.*;
-import static ru.mironenko.chesstask.ChessBoard.BOARD_SIZE;
 
 /**
  * Created by nikita on 25.10.2016.
@@ -14,9 +15,8 @@ public class ChessBoardTest {
     public void whenDestinationTileOnBoard() throws Exception {
 
         ChessBoard chessBoard = new ChessBoard();
-        Figure[][] board = new Figure[BOARD_SIZE][BOARD_SIZE];
 
-        boolean result = chessBoard.isDestinationTileOnBoard(board, 7, 7);
+        boolean result = chessBoard.isDestinationTileOnBoard(7, 7);
         boolean checked = true;
 
         assertThat(result, is(checked));
@@ -26,9 +26,8 @@ public class ChessBoardTest {
     public void whenDestinationTileNotOnBoard() throws Exception {
 
         ChessBoard chessBoard = new ChessBoard();
-        Figure[][] board = new Figure[BOARD_SIZE][BOARD_SIZE];
 
-        boolean result = chessBoard.isDestinationTileOnBoard(board, 7, 8);
+        boolean result = chessBoard.isDestinationTileOnBoard(7, 8);
         boolean checked = false;
 
         assertThat(result, is(checked));
@@ -72,27 +71,25 @@ public class ChessBoardTest {
         assertThat(result, is(checked));
     }
 
-//    @Test
-//    public void whenInitStartPosition() throws Exception {
-//
-//        ChessBoard chessBoard = new ChessBoard();
-//        Figure[][] board = chessBoard.initStartPosition();
-//
-//        Figure[][] checked = new Figure[][]{
-//                {new Rook("white"),new Bishop("white"), new Knight("white"), new Queen("white"), new King("white"), new Knight("white"), new Bishop("white"), new Rook("white")},
-//                {new Pawn("white"), new Pawn("white"), new Pawn("white"), new Pawn("white"), new Pawn("white"), new Pawn("white"), new Pawn("white"), new Pawn("white")},
-//                {null, null, null, null, null, null, null, null},
-//                {null, null, null, null, null, null, null, null},
-//                {null, null, null, null, null, null, null, null},
-//                {null, null, null, null, null, null, null, null},
-//                {new Pawn("black"), new Pawn("black"), new Pawn("black"), new Pawn("black"),new Pawn("black"), new Pawn("black"), new Pawn("black"), new Pawn("black")},
-//                {new Rook("black"),new Bishop("black"), new Knight("black"), new Queen("black"), new King("black"), new Knight("black"), new Bishop("black"), new Rook("black")}
-//        };
-//
-//        boolean result = java.util.Arrays.deepEquals(board, checked);
-//        boolean check = true;
-//
-//        assertThat(result, is(check));
-//    }
+    @Test
+    @Ignore("reason")
+    public void whenInitStartPosition() throws Exception {
+
+        ChessBoard chessBoard = new ChessBoard();
+        Figure[][] board = chessBoard.initStartPosition();
+
+        Figure[][] checked = new Figure[][]{
+                {new Rook(Color.White),new Bishop(Color.White), new Knight(Color.White), new Queen(Color.White), new King(Color.White), new Knight(Color.White), new Bishop(Color.White), new Rook(Color.White)},
+                {new Pawn(Color.White), new Pawn(Color.White), new Pawn(Color.White), new Pawn(Color.White), new Pawn(Color.White), new Pawn(Color.White), new Pawn(Color.White), new Pawn(Color.White)},
+                {null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null},
+                {new Pawn(Color.Black), new Pawn(Color.Black), new Pawn(Color.Black), new Pawn(Color.Black),new Pawn(Color.Black), new Pawn(Color.Black), new Pawn(Color.Black), new Pawn(Color.Black)},
+                {new Rook(Color.Black),new Bishop(Color.Black), new Knight(Color.Black), new Queen(Color.Black), new King(Color.Black), new Knight(Color.Black), new Bishop(Color.Black), new Rook(Color.Black)}
+        };
+
+        assertThat(board, is(checked));
+    }
 
 }

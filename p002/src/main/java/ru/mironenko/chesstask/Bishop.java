@@ -5,17 +5,17 @@ package ru.mironenko.chesstask;
  */
 public class Bishop implements Figure {
 
-    private String color;
-    private final String name = "Bishop";
+    private Color color;
+    private String name = Figures.BISHOP.getName();
 
-    public Bishop(String color){
+    public Bishop(Color color){
         this.color = color;
     }
 
     public String getName() {
         return name;
     }
-    public String getColor() {
+    public Color getColor() {
         return this.color;
     }
 
@@ -27,4 +27,5 @@ public class Bishop implements Figure {
         }
         return result;
     }
+
 }

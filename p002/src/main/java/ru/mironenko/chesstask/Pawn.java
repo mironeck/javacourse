@@ -5,19 +5,18 @@ package ru.mironenko.chesstask;
  */
 public class Pawn implements Figure {
 
+    private Color color;
+    private String name = Figures.PAWN.getName();
 
-    private String color;
-    private final String name = "Pawn";
     int count = 0;
 
-    public Pawn(String color){
+    public Pawn(Color color){
         this.color = color;
     }
 
-    public String getColor() {
+    public Color getColor() {
         return this.color;
     }
-
     public String getName() {
         return name;
     }

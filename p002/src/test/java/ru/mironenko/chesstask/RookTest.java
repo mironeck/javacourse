@@ -12,7 +12,7 @@ public class RookTest {
     @Test
     public void whenPathIsValidOne() throws Exception {
 
-        Rook rook = new Rook("white");
+        Rook rook = new Rook(Color.White);
 
         boolean result = rook.isValidPath(0, 0, 0, 7);
         boolean checked = true;
@@ -23,7 +23,7 @@ public class RookTest {
     @Test
     public void whenPathIsValidTwo() throws Exception {
 
-        Rook rook = new Rook("white");
+        Rook rook = new Rook(Color.White);
 
         boolean result = rook.isValidPath(0, 0, 6, 0);
         boolean checked = true;
@@ -34,7 +34,7 @@ public class RookTest {
     @Test
     public void whenPathIsInvalid() throws Exception {
 
-        Rook rook = new Rook("white");
+        Rook rook = new Rook(Color.White);
 
         boolean result = rook.isValidPath(0, 0, 1, 1);
         boolean checked = false;
@@ -45,10 +45,10 @@ public class RookTest {
     @Test
     public void whenGetColor() throws Exception {
 
-        Rook rook = new Rook("white");
+        Rook rook = new Rook(Color.White);
 
-        String result = "white";
-        String checked = rook.getColor();
+        Color result = rook.getColor();
+        Color checked = Color.White;
 
         assertThat(result, is(checked));
     }

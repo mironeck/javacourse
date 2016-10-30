@@ -12,10 +12,10 @@ public class QueenTest {
     @Test
     public void getColor() throws Exception {
 
-        Queen queen = new Queen("white");
+        Queen queen = new Queen(Color.White);
 
-        String result = "white";
-        String checked = queen.getColor();
+        Color result = queen.getColor();
+        Color checked = Color.White;
 
         assertThat(result, is(checked));
     }
@@ -23,7 +23,7 @@ public class QueenTest {
     @Test
     public void whenPathIsValidOne() throws Exception {
 
-        Queen queen = new Queen("white");
+        Queen queen = new Queen(Color.White);
 
         boolean result = queen.isValidPath(3, 0, 0, 3);
         boolean checked = true;
@@ -34,7 +34,7 @@ public class QueenTest {
     @Test
     public void whenPathIsValidTwo() throws Exception {
 
-        Queen queen = new Queen("white");
+        Queen queen = new Queen(Color.White);
 
         boolean result = queen.isValidPath(0, 3, 7, 3);
         boolean checked = true;
@@ -45,7 +45,7 @@ public class QueenTest {
     @Test
     public void whenPathIsValidThree() throws Exception {
 
-        Queen queen = new Queen("white");
+        Queen queen = new Queen(Color.White);
 
         boolean result = queen.isValidPath(7, 3, 7, 7);
         boolean checked = true;
@@ -56,7 +56,7 @@ public class QueenTest {
     @Test
     public void whenPathIsValidFour() throws Exception {
 
-        Queen queen = new Queen("white");
+        Queen queen = new Queen(Color.White);
 
         boolean result = queen.isValidPath(7, 7, 0, 7);
         boolean checked = true;

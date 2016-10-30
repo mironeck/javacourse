@@ -13,10 +13,10 @@ public class KingTest {
     @Test
     public void whenGetColor() throws Exception {
 
-        King king = new King("white");
+        King king = new King(Color.White);
 
-        String result = "white";
-        String checked = king.getColor();
+        Color result = king.getColor();
+        Color checked = Color.White;
 
         assertThat(result, is(checked));
     }
@@ -24,7 +24,7 @@ public class KingTest {
     @Test
     public void whenPathIsValidOne() throws Exception {
 
-        King king = new King("white");
+        King king = new King(Color.White);
         boolean result = king.isValidPath(4, 0, 5, 1);
 
         boolean checked = true;
@@ -35,7 +35,7 @@ public class KingTest {
     @Test
     public void whenPathIsValidTwo() throws Exception {
 
-        King king = new King("white");
+        King king = new King(Color.White);
         boolean result = king.isValidPath(5, 1, 6, 1);
 
         boolean checked = true;
@@ -46,7 +46,7 @@ public class KingTest {
     @Test
     public void whenPathIsValidThree() throws Exception {
 
-        King king = new King("white");
+        King king = new King(Color.White);
         boolean result = king.isValidPath(6, 1, 6, 2);
 
         boolean checked = true;
@@ -57,7 +57,7 @@ public class KingTest {
     @Test
     public void whenPathIsValidFour() throws Exception {
 
-        King king = new King("white");
+        King king =new King(Color.White);
         boolean result = king.isValidPath(6, 2, 6, 1);
 
         boolean checked = true;

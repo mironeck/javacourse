@@ -12,9 +12,10 @@ import static org.junit.Assert.*;
 public class KnightTest {
     @Test
     public void whenGetColor() throws Exception {
-        Knight knight = new Knight("black");
-        String result = "black";
-        String checked = knight.getColor();
+        Knight knight = new Knight(Color.Black);
+
+        Color result = knight.getColor();
+        Color checked = Color.Black;
 
         assertThat(result, is(checked));
     }
@@ -22,7 +23,7 @@ public class KnightTest {
     @Test
     public void whenPathIsValidOne() throws Exception {
 
-        Knight knight = new Knight("black");
+        Knight knight = new Knight(Color.Black);
 
         boolean result = knight.isValidPath(1, 7, 2, 5);
         boolean checked = true;
@@ -33,7 +34,7 @@ public class KnightTest {
     @Test
     public void whenPathIsValidTwo() throws Exception {
 
-        Knight knight = new Knight("black");
+        Knight knight = new Knight(Color.Black);
 
         boolean result = knight.isValidPath(2, 5, 1, 3);
         boolean checked = true;
@@ -44,7 +45,7 @@ public class KnightTest {
     @Test
     public void whenPathIsInvalid() throws Exception {
 
-        Knight knight = new Knight("black");
+        Knight knight = new Knight(Color.Black);
 
         boolean result = knight.isValidPath(2, 5, 2, 3);
         boolean checked = false;

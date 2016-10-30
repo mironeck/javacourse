@@ -12,9 +12,10 @@ public class BishopTest {
     @Test
     public void whenGetColor() throws Exception {
 
-        Bishop bishop = new Bishop("white");
-        String result = "white";
-        String checked = bishop.getColor();
+        Bishop bishop = new Bishop(Color.White);
+
+        Color result = bishop.getColor();
+        Color checked = Color.White;
 
         assertThat(result, is(checked));
     }
@@ -22,7 +23,7 @@ public class BishopTest {
     @Test
     public void whenPathIsValidValidOne() throws Exception {
 
-        Bishop bishop = new Bishop("white");
+        Bishop bishop = new Bishop(Color.White);
 
         boolean result = bishop.isValidPath(1, 0, 4, 3);
         boolean checked = true;
@@ -33,7 +34,7 @@ public class BishopTest {
     @Test
     public void whenPathIsValidValidTwo() throws Exception {
 
-        Bishop bishop = new Bishop("white");
+        Bishop bishop = new Bishop(Color.White);
 
         boolean result = bishop.isValidPath(4, 3, 2, 5);
         boolean checked = true;
@@ -44,7 +45,7 @@ public class BishopTest {
     @Test
     public void whenPathIsInvalid() throws Exception {
 
-        Bishop bishop = new Bishop("white");
+        Bishop bishop = new Bishop(Color.White);
 
         boolean result = bishop.isValidPath(4, 3, 7, 3);
         boolean checked = false;

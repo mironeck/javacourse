@@ -12,9 +12,9 @@ public class PawnTest {
     @Test
     public void whenPathIsValid() throws Exception {
 
-        Pawn pawn = new Pawn("white");
-        boolean result = pawn.isValidPath(0, 1, 0, 3);
+        Pawn pawn = new Pawn(Color.White);
 
+        boolean result = pawn.isValidPath(0, 1, 0, 3);
         boolean checked = true;
 
         assertThat(result, is(checked));
@@ -23,9 +23,9 @@ public class PawnTest {
     @Test
     public void whenPathIsInvalid() throws Exception {
 
-        Pawn pawn = new Pawn("white");
-        boolean result = pawn.isValidPath(0, 1, 0, 4);
+        Pawn pawn = new Pawn(Color.White);
 
+        boolean result = pawn.isValidPath(0, 1, 0, 4);
         boolean checked = false;
 
         assertThat(result, is(checked));
@@ -34,10 +34,10 @@ public class PawnTest {
     @Test
     public void whenGetColor() throws Exception {
 
-        Pawn pawn = new Pawn("white");
+        Pawn pawn = new Pawn(Color.White);
 
-        String result = "white";
-        String checked = pawn.getColor();
+        Color result = pawn.getColor();
+        Color checked = Color.White;
 
         assertThat(result, is(checked));
     }

@@ -1,11 +1,13 @@
 ru\mironenko\chesstask\Queen.class
 ru\mironenko\start\MenuOutException.class
+ru\mironenko\chesstask\Figures.class
 ru\mironenko\start\MenuTracker$DeleteItem.class
 ru\mironenko\chesstask\Knight.class
 ru\mironenko\start\ConsoleInput.class
 ru\mironenko\chesstask\Figure.class
 ru\mironenko\start\MenuTracker.class
 ru\mironenko\models\Filter.class
+ru\mironenko\chesstask\Color.class
 ru\mironenko\chesstask\Pawn.class
 ru\mironenko\start\MenuTracker$EditItem.class
 ru\mironenko\start\Tracker.class

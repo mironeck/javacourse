@@ -5,16 +5,17 @@ package ru.mironenko.chesstask;
  */
 public class Rook implements Figure {
 
-    private String color;
-    private final String name = "Rook";
+    private Color color;
+    private String name = Figures.ROOK.getName();
+
+    public Rook(Color color){
+        this.color = color;
+    }
+
     public String getName() {
         return name;
     }
-
-    public Rook(String color){
-        this.color = color;
-    }
-    public String getColor() {
+    public Color getColor() {
         return this.color;
     }
 
@@ -27,4 +28,5 @@ public class Rook implements Figure {
         }
         return result;
     }
+
 }

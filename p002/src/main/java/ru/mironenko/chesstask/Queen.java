@@ -5,16 +5,17 @@ package ru.mironenko.chesstask;
  */
 public class Queen implements Figure {
 
-    private String color;
-    private final String name = "Queen";
+    private Color color;
+    private String name = Figures.QUEEN.getName();
+
+    public Queen(Color color){
+        this.color = color;
+    }
+
     public String getName() {
         return name;
     }
-
-    public Queen(String color){
-        this.color = color;
-    }
-    public String getColor() {
+    public Color getColor() {
         return this.color;
     }
 
@@ -30,4 +31,5 @@ public class Queen implements Figure {
 
         return result;
     }
+
 }
