@@ -52,4 +52,22 @@ public class Pawn implements Figure {
         this.count++;
     }
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Pawn)) return false;
+
+        Pawn pawn = (Pawn) o;
+
+        if (getColor() != pawn.getColor()) return false;
+        return getName().equals(pawn.getName());
+
+    }
+
+    @Override
+    public int hashCode() {
+        int result = getColor().hashCode();
+        result = 31 * result + getName().hashCode();
+        return result;
+    }
 }

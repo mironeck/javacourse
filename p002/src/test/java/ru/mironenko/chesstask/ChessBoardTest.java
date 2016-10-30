@@ -72,7 +72,6 @@ public class ChessBoardTest {
     }
 
     @Test
-    @Ignore("reason")
     public void whenInitStartPosition() throws Exception {
 
         ChessBoard chessBoard = new ChessBoard();

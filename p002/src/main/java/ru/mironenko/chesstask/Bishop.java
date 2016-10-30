@@ -35,4 +35,23 @@ public class Bishop implements Figure {
     public void changeCount(){
         this.count++;
     }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Bishop)) return false;
+
+        Bishop bishop = (Bishop) o;
+
+        if (getColor() != bishop.getColor()) return false;
+        return getName().equals(bishop.getName());
+
+    }
+
+    @Override
+    public int hashCode() {
+        int result = getColor().hashCode();
+        result = 31 * result + getName().hashCode();
+        return result;
+    }
 }

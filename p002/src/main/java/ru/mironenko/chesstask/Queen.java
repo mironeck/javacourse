@@ -42,4 +42,22 @@ public class Queen implements Figure {
         this.count++;
     }
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Queen)) return false;
+
+        Queen queen = (Queen) o;
+
+        if (getColor() != queen.getColor()) return false;
+        return getName().equals(queen.getName());
+
+    }
+
+    @Override
+    public int hashCode() {
+        int result = getColor().hashCode();
+        result = 31 * result + getName().hashCode();
+        return result;
+    }
 }

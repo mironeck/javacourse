@@ -36,4 +36,23 @@ public class Rook implements Figure {
     public void changeCount(){
         this.count++;
     }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Rook)) return false;
+
+        Rook rook = (Rook) o;
+
+        if (getColor() != rook.getColor()) return false;
+        return getName().equals(rook.getName());
+
+    }
+
+    @Override
+    public int hashCode() {
+        int result = getColor().hashCode();
+        result = 31 * result + getName().hashCode();
+        return result;
+    }
 }

@@ -40,4 +40,22 @@ public class King implements Figure {
         this.count++;
     }
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof King)) return false;
+
+        King king = (King) o;
+
+        if (getColor() != king.getColor()) return false;
+        return getName().equals(king.getName());
+
+    }
+
+    @Override
+    public int hashCode() {
+        int result = getColor().hashCode();
+        result = 31 * result + getName().hashCode();
+        return result;
+    }
 }
