@@ -18,5 +18,8 @@ public class Client {
 
         Car sccar = new WoodInterior(new SimpleCar());
         System.out.println(sccar.getPrice() + " " + sccar.getDescription());
+
+        String data = "Hello, World!\r\n";
+        System.out.println(data);
     }
 }
