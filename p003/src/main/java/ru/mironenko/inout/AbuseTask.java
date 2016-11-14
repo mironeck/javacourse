@@ -29,23 +29,26 @@ public class AbuseTask {
      */
     public static void dropAbuses(InputStream in, OutputStream out, String[] abuse) throws IOException {
 
+
         BufferedReader reader = new BufferedReader(new InputStreamReader(in));
         BufferedWriter writer = new BufferedWriter(new OutputStreamWriter(out));
 
-        String word;
+        try {
+            //считываем линию
+            String word;
+            while ((word = reader.readLine()) != null) {
 
-        //считываем линию
-        while ((word = reader.readLine()) != null) {
-
-            //проходим по массиву запрещённый слов, и удаляем если таковое имеется
-            for (String str : abuse) {
+                //проходим по массиву запрещённый слов, и удаляем если таковое имеется
+                for (String str : abuse) {
                     word = removeWords(word, str);
+                }
+                writer.write(word);
             }
-            writer.write(word);
+        } finally {
+            if (reader != null) {reader.close();}
+            if (writer != null) {writer.close();}
         }
 
-        reader.close();
-        writer.close();
     }
 
     /**
