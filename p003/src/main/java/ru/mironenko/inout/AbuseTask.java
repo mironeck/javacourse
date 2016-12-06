@@ -29,11 +29,11 @@ public class AbuseTask {
      */
     public static void dropAbuses(InputStream in, OutputStream out, String[] abuse) throws IOException {
 
-
+        try(
         BufferedReader reader = new BufferedReader(new InputStreamReader(in));
-        BufferedWriter writer = new BufferedWriter(new OutputStreamWriter(out));
-
-        try {
+        BufferedWriter writer = new BufferedWriter(new OutputStreamWriter(out))
+        )
+         {
             //считываем линию
             String word;
             while ((word = reader.readLine()) != null) {
@@ -44,9 +44,8 @@ public class AbuseTask {
                 }
                 writer.write(word);
             }
-        } finally {
-            if (reader != null) {reader.close();}
-            if (writer != null) {writer.close();}
+        }catch (IOException e){
+            e.printStackTrace();
         }
 
     }
