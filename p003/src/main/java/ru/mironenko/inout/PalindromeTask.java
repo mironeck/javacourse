@@ -15,21 +15,21 @@ public class PalindromeTask {
      */
     public static boolean isPalindrome(){
         boolean result = false;
-
         System.out.println("Enter a word with 5 letters :");
-        Scanner scan = new Scanner(System.in);
-        String word = scan.next();
+        try ( Scanner scan = new Scanner(System.in) )
+        {
+            String word = scan.next();
+            char[] symbols = word.toLowerCase().toCharArray();
 
-        char[] symbols = word.toLowerCase().toCharArray();
-
-        if (symbols.length != 5) {
-            System.out.println("Error. You entered a wrong word ");
-        } else {
-            if ((symbols[0] == symbols[4]) && (symbols[1] == symbols[3])) {
-                result = true;
+            if (symbols.length != 5) {
+                System.out.println("Error. You entered a wrong word ");
+            } else {
+                if ((symbols[0] == symbols[4]) && (symbols[1] == symbols[3])) {
+                    result = true;
+                }
             }
+            return result;
         }
-        return result;
     }
 
 }
