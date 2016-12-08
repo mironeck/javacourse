@@ -1,6 +1,5 @@
 package ru.mironenko.inout;
 
-import java.io.InputStream;
 import java.util.Scanner;
 
 /**
@@ -10,26 +9,40 @@ import java.util.Scanner;
 public class PalindromeTask {
 
     /**
-     * The method ask user to enter a word and check it is palindrome
-     * @return true if word is palindrome and return false if not
+     * The method ask user to enter the word with odd letters and check it word.
+     * @return this word, If word with even letter return "".
      */
-    public static boolean isPalindrome(){
-        boolean result = false;
-        System.out.println("Enter a word with 5 letters :");
-        try ( Scanner scan = new Scanner(System.in) )
-        {
-            String word = scan.next();
-            char[] symbols = word.toLowerCase().toCharArray();
+    public String enterTheWord(){
+        String result;
+        System.out.println("Enter a word with odd number of letters :");
+        try ( Scanner scan = new Scanner(System.in) ) {
+            result = scan.next();
+            char[] symbols = result.toCharArray();
 
-            if (symbols.length != 5) {
+            if ((symbols.length % 2) == 0) {
                 System.out.println("Error. You entered a wrong word ");
-            } else {
-                if ((symbols[0] == symbols[4]) && (symbols[1] == symbols[3])) {
-                    result = true;
-                }
+                result = "" ;
             }
             return result;
         }
+    }
+
+    /**
+     * The method check word is palindrome
+     * @return true if word is palindrome and return false if not
+     */
+    public boolean isPalindrome(String word) {
+        boolean result = false;
+        char[] letters = word.toLowerCase().toCharArray();
+        for (int i = 0; i < letters.length/2 - 1; i++) {
+            if (letters[i] == letters[letters.length - i -1]) {
+                result = true;
+            } else {
+                result = false;
+                break;
+            }
+        }
+        return result;
     }
 
 }
