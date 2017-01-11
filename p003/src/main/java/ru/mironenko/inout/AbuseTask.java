@@ -54,7 +54,7 @@ public class AbuseTask {
      * The method to remove word from sentence
      * @param message input sentence
      * @param wordToRemove word to remove
-     * @return sentence without word to remove
+     * @return sen tence without word to remove
      */
     public static String removeWords(String message ,String wordToRemove) {
         return message.replace(wordToRemove,"");
