@@ -38,8 +38,7 @@ public class SortTask {
             list = sortLinesInArrayList(list);
 
             for(String liner : list) {
-                fileWriter.write(liner);
-                fileWriter.write("\r\n");
+                fileWriter.write(liner + "\r\n");
             }
         }
 
