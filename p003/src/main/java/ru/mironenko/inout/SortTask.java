@@ -13,14 +13,8 @@ import java.util.*;
  */
 public class SortTask {
 
-    public static void main(String[] args) throws IOException {
 
-        File source = new File("d:\\source.txt");
-        File distance = new File("d:\\distance.txt");
-        sort(source, distance);
-    }
-
-    public static void sort(File source, File distance) throws IOException {
+    public void sort(File source, File distance) throws IOException {
 
         try (
                 FileReader fileReader = new FileReader(source);
@@ -50,7 +44,7 @@ public class SortTask {
      *      arrayList for sort
      * @return return sorting list
      */
-    public static List<String> sortLinesInArrayList(List<String> list) {
+    private List<String> sortLinesInArrayList(List<String> list) {
         Collections.sort(list, new Comparator<String>() {
             public int compare(String o1, String o2) {
                 return Integer.compare(o1.length(), o2.length());

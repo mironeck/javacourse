@@ -12,31 +12,31 @@ package ru.mironenko.inout;
 import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Random;
+import java.util.Properties;
 import java.util.Scanner;
 
 /**
  * The class simulates chat
  * Created by nikita on 11.01.2017.
  */
-public class ConsolChat {
+public class ConsoleChat {
 
-    private String stopAnswer = "стоп";
-    private String continueAnswer = "продолжить";
-    private String endChat = "закончить";
+    private static final String STOP_ANSWER = "стоп";
+    private static final String CONTINUE_ANSWER = "продолжить";
+    private static final String END_CHAT = "закончить";
 
-    private boolean isStoped = false;
+    private boolean isStopped = false;
     private boolean isEnded = false;
 
-    private String logFile =  String.format("%s%s%s", System.getProperty("user.dir"),
-        File.separator, "src/test/java/ru/mironenko/inout/temp/Log.txt");
+    private String logFile;
+    private String phrasesFile;
 
-    private String phrasesFile = String.format("%s%s%s", System.getProperty("user.dir"),
-            File.separator, "src/test/java/ru/mironenko/inout/temp/Phrases.txt");
-
+    
     private List<String> phrasesFromFileForAnswers = new ArrayList<>();
 
-    public ConsolChat(){
+    public ConsoleChat(String phrasesFile, String logFile){
+        this.phrasesFile = phrasesFile;
+        this.logFile = logFile;
     }
 
     /**
@@ -53,23 +53,29 @@ public class ConsolChat {
         {
             while(!isEnded && (scanner.hasNext())) {
                 String line = scanner.nextLine();
-
-                if(line.equals(endChat)) {
-                    isEnded = true;
-                }
-                if(line.equals(stopAnswer)) {
-                    isStoped = true;
-                }
-                if(line.equals(continueAnswer)) {
-                    isStoped = false;
-                }
-
+                equalPhraseWithKeyWords(line);
                 writer.write(line + "\r\n");
 
-                if (!isStoped && !isEnded) {
+                if (!isStopped && !isEnded) {
                     writer.write(getRandomPhraseFromList() + "\r\n");
                 }
             }
+        }
+    }
+
+    /**
+     * The method equals phrase with key words and changes flags if it needs
+     * @param line
+     */
+    private void equalPhraseWithKeyWords(String line) {
+        if(END_CHAT.equals(line)) {
+            isEnded = true;
+        }
+        if(STOP_ANSWER.equals(line)) {
+            isStopped = true;
+        }
+        if(CONTINUE_ANSWER.equals(line)) {
+            isStopped = false;
         }
     }
 

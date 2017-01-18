@@ -3,10 +3,8 @@ package ru.mironenko.inout;
 import org.junit.Before;
 import org.junit.Test;
 
-import java.io.ByteArrayInputStream;
-import java.io.ByteArrayOutputStream;
-import java.io.IOException;
-import java.io.PrintStream;
+import java.io.*;
+import java.util.Properties;
 
 import static org.hamcrest.CoreMatchers.is;
 import static org.junit.Assert.*;
@@ -14,7 +12,7 @@ import static org.junit.Assert.*;
 /**
  * Created by nikita on 13.01.2017.
  */
-public class ConsolChatTest {
+public class ConsoleChatTest {
 
     ByteArrayOutputStream baos;
 
@@ -29,7 +27,15 @@ public class ConsolChatTest {
         String someword = String.format("word%sword", "\r\n");
         System.setIn(new ByteArrayInputStream(someword.getBytes()));
         try {
-            new ConsolChat().isChatting();
+
+            Properties prop = new Properties();
+            InputStream io = getClass().getClassLoader().getResourceAsStream("consolechat.properties");
+            prop.load(io);
+            String phrasesFileName = prop.getProperty("phrases.path");
+            String logFileName = prop.getProperty("log.path");
+
+            new ConsoleChat(phrasesFileName, logFileName).isChatting();
+
         } catch (IOException ioe) {
             ioe.printStackTrace();
         }
@@ -41,7 +47,14 @@ public class ConsolChatTest {
         String stopWord = String.format("стоп%sword", "\r\n");
         System.setIn(new ByteArrayInputStream(stopWord.getBytes()));
         try {
-            new ConsolChat().isChatting();
+
+            Properties prop = new Properties();
+            InputStream io = getClass().getClassLoader().getResourceAsStream("consolechat.properties");
+            prop.load(io);
+            String phrasesFileName = prop.getProperty("phrases.path");
+            String logFileName = prop.getProperty("log.path");
+
+            new ConsoleChat(phrasesFileName, logFileName).isChatting();
         } catch (IOException ioe) {
             ioe.printStackTrace();
         }
@@ -53,7 +66,14 @@ public class ConsolChatTest {
         String continueWord = String.format("стоп%sword%sпродолжить", "\r\n", "\r\n");
         System.setIn(new ByteArrayInputStream(continueWord.getBytes()));
         try {
-            new ConsolChat().isChatting();
+
+            Properties prop = new Properties();
+            InputStream io = getClass().getClassLoader().getResourceAsStream("consolechat.properties");
+            prop.load(io);
+            String phrasesFileName = prop.getProperty("phrases.path");
+            String logFileName = prop.getProperty("log.path");
+
+            new ConsoleChat(phrasesFileName, logFileName).isChatting();
         } catch (IOException ioe) {
             ioe.printStackTrace();
         }
@@ -65,7 +85,14 @@ public class ConsolChatTest {
         String endWord = String.format("закончить%sword", "\r\n");
         System.setIn(new ByteArrayInputStream(endWord.getBytes()));
         try {
-            new ConsolChat().isChatting();
+
+            Properties prop = new Properties();
+            InputStream io = getClass().getClassLoader().getResourceAsStream("consolechat.properties");
+            prop.load(io);
+            String phrasesFileName = prop.getProperty("phrases.path");
+            String logFileName = prop.getProperty("log.path");
+
+            new ConsoleChat(phrasesFileName, logFileName).isChatting();
         } catch (IOException ioe) {
             ioe.printStackTrace();
         }

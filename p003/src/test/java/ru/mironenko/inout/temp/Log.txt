@@ -1,4 +1,4 @@
 стоп
 word
 продолжить
-Hello)))
+Do you speak English?
