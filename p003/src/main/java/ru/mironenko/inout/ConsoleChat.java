@@ -31,7 +31,7 @@ public class ConsoleChat {
     private String logFile;
     private String phrasesFile;
 
-    
+
     private List<String> phrasesFromFileForAnswers = new ArrayList<>();
 
     public ConsoleChat(String phrasesFile, String logFile){

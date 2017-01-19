@@ -17,7 +17,7 @@ public class Client {
         try {
 
             InetAddress inetAddress = InetAddress.getByName(interAdress);
-            System.out.println("Подключаемся к серверу");
+            System.out.println("Подключаемся к серверу" + servPort);
             Socket socket = new Socket(inetAddress, servPort);
 
             InputStream socketInStr = socket.getInputStream();
