@@ -4,11 +4,21 @@ package ru.mironenko.socket;
  * Created by nikita on 18.01.2017.
  */
 public interface ServerSideActions {
+    /*
+	* ключ, который будет запрашиваться у пользователя для определения действия, которое он хочет выполнить
+	*/
+    int key();
 
-    String[] getRootDirectoryList();
-    void goToSubDirectory();
-    void goToParentDirectory();
-    void downloadFile();
-    void upLoadFile();
+    /*
+    * метод, который будет выполнять основное действие (добавление, редактирование, поиск, ...)
+    * т.к. действия связаны с системой ввода-вывода, то надо передать в качестве параметра
+    * интерфейс Input и трекер.
+    */
+    void execute();
+
+    /*
+    * этот метод будет сообщать пользователю, что данный метод (execute) делает
+    */
+    String info();
 
 }

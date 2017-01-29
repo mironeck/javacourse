@@ -1,4 +1,4 @@
-package ru.mironenko.socket;
+package ru.mironenko.socket.clientside;
 
 import java.io.*;
 import java.net.InetAddress;
@@ -7,13 +7,13 @@ import java.net.Socket;
 /**
  * Created by nikita on 18.01.2017.
  */
-public class ClientSide {
+public class Client {
 
     int serverPort = 10000;
     String interAdress = "127.0.0.1";
 
     public static void main(String[] args) throws IOException {
-        new ClientSide().init();
+        new Client().init();
     }
 
     public void init() throws IOException{
@@ -33,17 +33,27 @@ public class ClientSide {
         )
         {
             String string = null;
-            System.out.println("Введите фразу для передачи серверу: ");
+
+
+            System.out.println(shownMenu());
+            System.out.println("Выберите действие: ");
             while(true) {
                 string = reader.readLine();
                 out.writeUTF(string);
                 out.flush();
                 string = in.readUTF();
                 System.out.println("Сервер прислал в ответ " + string);
-                System.out.println("Введите фразу для отправки на сервер:");
+                System.out.println("Выберите действие:" + "\r\n" + shownMenu());
             }
         }
+    }
 
+    private String shownMenu() {
+        return "1 - получить список корневого каталога" + "\r\n" +
+                "2 - перейти в подкаталог" + "\r\n" +
+                "3 - спуститься в родительский каталог" + "\r\n" +
+                "4 - скачать файл" + "\r\n" +
+                "5 - загрузить файл";
     }
 }
 

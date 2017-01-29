@@ -1,4 +1,4 @@
-package ru.mironenko.socket;
+package ru.mironenko.socket.serverside;
 
 //Перед реализацией в коде. Составить каркас приложения на интерфейсах. С описанием.
 //        1. Разработать клиент серверное приложение на сокетах.
@@ -18,13 +18,18 @@ import java.net.Socket;
 /**
  * Created by nikita on 18.01.2017.
  */
-public class Serverside {
+public class Server {
 
     int port = 10000;
+    private static String rootDirectory = "C:";
 
-    public static void main(String[] args) throws IOException {
+    public Server(String rootDirectory) {
+        this.rootDirectory = rootDirectory;
+    }
 
-        new Serverside().init();
+    public static void main(String[] args) throws IOException, InterruptedException {
+
+        new Server(Server.rootDirectory).init();
 
     }
 
@@ -43,26 +48,22 @@ public class Serverside {
             String line = null;
             while(true) {
                 line = in.readUTF();
-                if ("меню".equals(line)) {
-                    out.writeUTF(shownMenu());
-                } else {
-                    out.writeUTF(chooseMenuItem(line));
-                    out.flush();
-                }
+
+                out.writeUTF(chooseMenuItem(line, in, out));
+                out.flush();
             }
-
-
         }
     }
 
-    private String chooseMenuItem(String line) {
+
+    private String chooseMenuItem(String line, DataInputStream in, DataOutputStream out) throws IOException{
         String result = null;
         if("1".equals(line)) {
             result = getRootDirectoryList();
         } else if ("2".equals(line)) {
-            result = goToSubDirectory();
+            result = goToSubDirectory(in, out);
         }else if ("3".equals(line)) {
-            result = goToParentDirectory();
+            result = goToParentDirectory(in, out);
         }else if("4".equals(line)) {
             result = downloadFile();
         }else if("5".equals(line)) {
@@ -73,17 +74,40 @@ public class Serverside {
     }
 
     private String getRootDirectoryList() {
-        System.out.println("Список корневого каталога");
-        return "Список корневого каталога";
+        String result = null;
+        File file = new File("C://");
+        for(File item : file.listFiles()){
+            if(item.isDirectory()){
+                result = result + item.getName() + "\r\n";
+            }
+        }
+        return result;
     }
 
-    private String goToSubDirectory() {
-        System.out.println("Подкаталог");
-        return "Подкаталог";
+    private String goToSubDirectory(DataInputStream in, DataOutputStream out) throws IOException {
+
+        out.writeUTF("Введите имя каталога");
+        out.flush();
+        String nameSubDirectory = in.readUTF();
+
+        String result = null;
+        File file = new File("C:" + File.separator + nameSubDirectory);
+        for(File item : file.listFiles()){
+            if(item.isDirectory()){
+                result = result + item.getName() + "\r\n";
+            }
+        }
+        return result;
     }
-    private String goToParentDirectory() {
-        System.out.println("Родительский каталог");
-        return "Родительский каталог";
+    private String goToParentDirectory(DataInputStream in, DataOutputStream out) throws IOException {
+        out.writeUTF("Введите имя каталога");
+        out.flush();
+        String nameSubDirectory = in.readUTF();
+
+        String result = null;
+        File file = new File("C:" + File.separator + nameSubDirectory);
+        result = file.getParentFile().toString();
+        return result;
     }
 
     private String uploadFile() {
@@ -96,13 +120,7 @@ public class Serverside {
         return "Скачали файл";
     }
 
-    private String shownMenu() {
-        return "1 - получить список корневого каталога" + "\r\n" +
-                "2 - перейти в подкаталог" + "\r\n" +
-                "3 - спуститься в родительский каталог" + "\r\n" +
-                "4 - скачать файл" + "\r\n" +
-                "4 - загрузить файл";
-    }
+
 
 
 
