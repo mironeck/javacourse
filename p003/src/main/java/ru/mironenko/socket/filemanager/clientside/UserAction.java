@@ -1,9 +1,9 @@
-package ru.mironenko.socket;
+package ru.mironenko.socket.filemanager.clientside;
 
 /**
- * Created by nikita on 18.01.2017.
+ * Created by nikita on 03.02.2017.
  */
-public interface ServerSideActions {
+public interface UserAction {
     /*
 	* ключ, который будет запрашиваться у пользователя для определения действия, которое он хочет выполнить
 	*/
@@ -11,14 +11,11 @@ public interface ServerSideActions {
 
     /*
     * метод, который будет выполнять основное действие (добавление, редактирование, поиск, ...)
-    * т.к. действия связаны с системой ввода-вывода, то надо передать в качестве параметра
-    * интерфейс Input и трекер.
     */
-    void execute();
+    void execute(Input input);
 
     /*
     * этот метод будет сообщать пользователю, что данный метод (execute) делает
     */
     String info();
-
 }

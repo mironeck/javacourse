@@ -1,4 +1,4 @@
-package ru.mironenko.socket.serverside;
+package ru.mironenko.socket.filemanager.serverside;
 
 //Перед реализацией в коде. Составить каркас приложения на интерфейсах. С описанием.
 //        1. Разработать клиент серверное приложение на сокетах.
@@ -21,15 +21,14 @@ import java.net.Socket;
 public class Server {
 
     int port = 10000;
-    private static String rootDirectory = "C:";
 
-    public Server(String rootDirectory) {
-        this.rootDirectory = rootDirectory;
-    }
+    private static String DIRECTORYNAME = "C:";
+    private static String NAMESUBDIRECTORY = null;
 
     public static void main(String[] args) throws IOException, InterruptedException {
 
-        new Server(Server.rootDirectory).init();
+       // System.out.println(new Server().getRootDirectoryName());
+         new Server().init();
 
     }
 
@@ -56,10 +55,18 @@ public class Server {
     }
 
 
+//    private String getRootDirectoryName() throws IOException {
+//
+//        Properties prop = new Properties();
+//        InputStream io = getClass().getClassLoader().getResourceAsStream("servertask.properties");
+//        prop.load(io);
+//        return prop.getProperty("rootdirectory.path");
+//    }
+
     private String chooseMenuItem(String line, DataInputStream in, DataOutputStream out) throws IOException{
         String result = null;
         if("1".equals(line)) {
-            result = getRootDirectoryList();
+            getRootDirectoryList(out);
         } else if ("2".equals(line)) {
             result = goToSubDirectory(in, out);
         }else if ("3".equals(line)) {
@@ -73,25 +80,26 @@ public class Server {
         return result;
     }
 
-    private String getRootDirectoryList() {
+    private void getRootDirectoryList(DataOutputStream out) throws IOException {
         String result = null;
-        File file = new File("C://");
+        File file = new File(DIRECTORYNAME);
         for(File item : file.listFiles()){
             if(item.isDirectory()){
                 result = result + item.getName() + "\r\n";
             }
         }
-        return result;
+        out.writeUTF(result);
     }
 
     private String goToSubDirectory(DataInputStream in, DataOutputStream out) throws IOException {
 
         out.writeUTF("Введите имя каталога");
         out.flush();
-        String nameSubDirectory = in.readUTF();
+        NAMESUBDIRECTORY = in.readUTF();
 
         String result = null;
-        File file = new File("C:" + File.separator + nameSubDirectory);
+        DIRECTORYNAME = File.separator + NAMESUBDIRECTORY;
+        File file = new File(DIRECTORYNAME);
         for(File item : file.listFiles()){
             if(item.isDirectory()){
                 result = result + item.getName() + "\r\n";
@@ -99,20 +107,12 @@ public class Server {
         }
         return result;
     }
+
     private String goToParentDirectory(DataInputStream in, DataOutputStream out) throws IOException {
-        out.writeUTF("Введите имя каталога");
-        out.flush();
-        String nameSubDirectory = in.readUTF();
 
-        String result = null;
-        File file = new File("C:" + File.separator + nameSubDirectory);
-        result = file.getParentFile().toString();
-        return result;
-    }
+        File file = new File(DIRECTORYNAME.replace(NAMESUBDIRECTORY, ""));
 
-    private String uploadFile() {
-        System.out.println("Загрузили файл");
-        return "Загрузили файл";
+        return file.getAbsolutePath();
     }
 
     private String downloadFile() {
@@ -120,10 +120,9 @@ public class Server {
         return "Скачали файл";
     }
 
-
-
-
-
-
+    private String uploadFile() {
+        System.out.println("Загрузили файл");
+        return "Загрузили файл";
+    }
 
 }

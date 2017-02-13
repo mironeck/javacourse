@@ -1,4 +1,4 @@
-package ru.mironenko.socket.clientside;
+package ru.mironenko.socket.filemanager.clientside;
 
 import java.io.*;
 import java.net.InetAddress;
@@ -22,13 +22,10 @@ public class Client {
 
         try (
                 Socket socket = new Socket(inetAddress, serverPort);
-
                 InputStream socketInStr = socket.getInputStream();
                 OutputStream socketOutStr = socket.getOutputStream();
-
                 DataInputStream in = new DataInputStream(socketInStr);
                 DataOutputStream out= new DataOutputStream(socketOutStr);
-
                 BufferedReader reader = new BufferedReader(new InputStreamReader(System.in))
         )
         {

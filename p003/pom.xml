@@ -12,7 +12,7 @@
         <artifactId>javacourse</artifactId>
         <version>1.0</version>
     </parent>
-
+	
 	<build>
        	    <plugins>
 	      <plugin>
