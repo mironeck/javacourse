@@ -96,38 +96,12 @@ public class TimeOfCollectionsWork {
 
         System.out.println("TreeSet " + addTimeTreeSet + " " + removeTimeTreeSet);
 
+        checkAddWinner(addTimeArrayList, addTimeLinkedList, addTimeTreeSet);
+        checkRemoveWinner(removeTimeArrayList, removeTimeLinkedList, removeTimeTreeSet);
 
-        System.out.println("Добавление ");
-        if ( (addTimeLinkedList < addTimeArrayList) && (addTimeLinkedList < addTimeTreeSet)) {
-            System.out.println("1. LinkedList");
-            if ( addTimeArrayList < addTimeTreeSet ) {
-                System.out.println("2. ArrayList");
-                System.out.println("3. TreeSet");
-            } else {
-                System.out.println("2. TreeSet");
-                System.out.println("3. ArrayList");
-            }
-        } else if ( (addTimeArrayList < addTimeLinkedList) && (addTimeArrayList < addTimeTreeSet )) {
-            System.out.println("1. ArrayList");
-            if (addTimeLinkedList < addTimeTreeSet) {
-                System.out.println("2. LinkedList");
-                System.out.println("3. TreeSet");
-            } else {
-                System.out.println("2. TreeSet");
-                System.out.println("3. LinkedList");
-            }
-        } else if ((addTimeTreeSet < addTimeArrayList) && (addTimeTreeSet < addTimeLinkedList)) {
-            System.out.println("1. TreeSet");
-            if (addTimeArrayList < addTimeLinkedList) {
-                System.out.println("2. ArrayList");
-                System.out.println("3. LinkedList");
-            } else {
-                System.out.println("2. LinkedList");
-                System.out.println("3. ArrayList");
-            }
-        }
+    }
 
-
+    private static void checkRemoveWinner(long removeTimeArrayList, long removeTimeLinkedList, long removeTimeTreeSet) {
         System.out.println("Удаление ");
         if ( (removeTimeLinkedList < removeTimeArrayList) && (removeTimeLinkedList < removeTimeTreeSet)) {
             System.out.println("1. LinkedList");
@@ -150,6 +124,38 @@ public class TimeOfCollectionsWork {
         } else if ((removeTimeTreeSet < removeTimeArrayList) && (removeTimeTreeSet < removeTimeLinkedList)) {
             System.out.println("1. TreeSet");
             if (removeTimeArrayList < removeTimeLinkedList) {
+                System.out.println("2. ArrayList");
+                System.out.println("3. LinkedList");
+            } else {
+                System.out.println("2. LinkedList");
+                System.out.println("3. ArrayList");
+            }
+        }
+    }
+
+    private static void checkAddWinner(long addTimeArrayList, long addTimeLinkedList, long addTimeTreeSet) {
+        System.out.println("Добавление ");
+        if ( (addTimeLinkedList < addTimeArrayList) && (addTimeLinkedList < addTimeTreeSet)) {
+            System.out.println("1. LinkedList");
+            if ( addTimeArrayList < addTimeTreeSet ) {
+                System.out.println("2. ArrayList");
+                System.out.println("3. TreeSet");
+            } else {
+                System.out.println("2. TreeSet");
+                System.out.println("3. ArrayList");
+            }
+        } else if ( (addTimeArrayList < addTimeLinkedList) && (addTimeArrayList < addTimeTreeSet )) {
+            System.out.println("1. ArrayList");
+            if (addTimeLinkedList < addTimeTreeSet) {
+                System.out.println("2. LinkedList");
+                System.out.println("3. TreeSet");
+            } else {
+                System.out.println("2. TreeSet");
+                System.out.println("3. LinkedList");
+            }
+        } else if ((addTimeTreeSet < addTimeArrayList) && (addTimeTreeSet < addTimeLinkedList)) {
+            System.out.println("1. TreeSet");
+            if (addTimeArrayList < addTimeLinkedList) {
                 System.out.println("2. ArrayList");
                 System.out.println("3. LinkedList");
             } else {
