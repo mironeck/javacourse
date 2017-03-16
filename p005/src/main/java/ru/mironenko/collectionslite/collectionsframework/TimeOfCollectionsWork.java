@@ -29,7 +29,7 @@ public class TimeOfCollectionsWork {
         long startTime = System.currentTimeMillis();
 
         for(int i = 0; i < amount; i++) {
-            collection.add(generateString("0123456789", 1000));
+            collection.add(generateString("0123456789", 10));
         }
 
         long spentTime = System.currentTimeMillis() - startTime;
@@ -76,7 +76,7 @@ public class TimeOfCollectionsWork {
     public static void main(String[] args) {
 
         Collection<String> linkedList = new LinkedList<>();
-        Collection<String> arrayList = new ArrayList<>();
+        ArrayList<String> arrayList = new ArrayList<>();
         Collection<String> treeSet = new TreeSet<>();
 
         TimeOfCollectionsWork time = new TimeOfCollectionsWork();
@@ -87,6 +87,9 @@ public class TimeOfCollectionsWork {
         System.out.println("LinkedList " + addTimeLinkedList + " " + removeTimeLinkedList);
 
         long addTimeArrayList = time.add(arrayList, 100000);
+        for (int i = 0; i < 10; i++) {
+            System.out.println(arrayList.get(i));
+        }
         long removeTimeArrayList = time.remove(arrayList, 100000);
 
         System.out.println("ArrayList " + addTimeArrayList + " " + removeTimeArrayList);
