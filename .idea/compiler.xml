@@ -24,13 +24,17 @@
         <processorPath useClasspath="true" />
         <module name="p001" />
         <module name="p003" />
+        <module name="p004" />
+        <module name="p005" />
         <module name="tracker" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="javacourse" target="1.5" />
       <module name="p001" target="1.5" />
-      <module name="p003" target="1.5" />
+      <module name="p003" target="1.7" />
+      <module name="p004" target="1.7" />
+      <module name="p005" target="1.7" />
       <module name="tracker" target="1.5" />
     </bytecodeTargetLevel>
   </component>

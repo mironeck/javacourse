@@ -52,4 +52,45 @@ public class SortTask {
         });
         return list;
     }
+
+
+    //******************************************
+
+    private String[] readLinesFromFileWriteItToArrayAndSort(RandomAccessFile raf) throws IOException {
+        String[] result = new String[10];
+        for(int i = 0; i < 10; i++) {
+            result[i] = raf.readLine();
+        }
+        Arrays.sort(result);
+        return result;
+    }
+
+    private void writeLinesFromArrayToTempFile(String[] array, RandomAccessFile raf) throws IOException {
+
+        for (String line: array) {
+            raf.write(line.getBytes());
+        }
+    }
+
+    private void readLinesFromFileSortAndWriteToTwoTempFiles(RandomAccessFile srcFileRaf,
+                                                             RandomAccessFile tmpFileOne,
+                                                             RandomAccessFile tmoFileTwo) throws IOException {
+
+        RandomAccessFile currentFile = tmpFileOne;
+
+        while (srcFileRaf.getFilePointer() != srcFileRaf.length()) {
+
+            String[] tmpArray = readLinesFromFileWriteItToArrayAndSort(currentFile);
+            writeLinesFromArrayToTempFile(tmpArray, currentFile);
+
+            if (currentFile == tmpFileOne) {
+                currentFile = tmoFileTwo;
+            } else {
+                currentFile = tmpFileOne;
+            }
+        }
+    }
+
+    private void mergeFiles() {}
+
 }

@@ -41,7 +41,7 @@ public class MenuTracker{
 	}
 	
 	/**
-	*the method to do action that choose user
+	*the method does action that user chooses
 	*@return void
 	*/
 	public void select(int key){
@@ -115,8 +115,7 @@ public class MenuTracker{
 		* */
 		public void execute(Input input, Tracker tracker){
 			for (Item item : tracker.getAll()){
-				System.out.println(item)
-				;
+				System.out.println(item);
 			}
 		}
 	}

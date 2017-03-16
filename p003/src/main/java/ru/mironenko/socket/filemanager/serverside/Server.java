@@ -89,6 +89,7 @@ public class Server {
             }
         }
         out.writeUTF(result);
+        out.flush();
     }
 
     private String goToSubDirectory(DataInputStream in, DataOutputStream out) throws IOException {
