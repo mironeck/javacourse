@@ -52,4 +52,21 @@ public class ConvertListTest {
         int [][] checked = convertList.toArray(list, 3);
         assertThat(checked, is (result));
     }
+
+    @Test
+    public void whenListOfArraysConvertToListReturnListOfIntegers() {
+        ConvertList convertList = new ConvertList();
+
+        List<int[]> list = new ArrayList<>();
+        list.add(new int[]{1, 2});
+        list.add(new int[]{3, 4, 5, 6});
+        List<Integer> checked = new ArrayList<>();
+        for (int i = 1; i <= 6; i++) {
+            checked.add(i);
+        }
+
+        List<Integer> result = convertList.convert(list);
+
+        assertThat(checked, is(result));
+    }
 }

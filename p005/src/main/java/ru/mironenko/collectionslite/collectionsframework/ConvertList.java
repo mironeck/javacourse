@@ -68,4 +68,32 @@ public class ConvertList {
         }
         return array;
     }
+
+
+    /**
+     * Method return list of Integers from list of int arrays
+     * @param list
+     * @return arrayList of Integers
+     */
+    public List<Integer> convert (List<int[]> list) {
+
+        List<Integer> result = new ArrayList<>();
+        for(int[] array : list) {
+            for (int i = 0; i < array.length; i++) {
+                result.add(array[i]);
+            }
+        }
+        return result;
+    }
+
+    public static void main(String[] args) {
+        List<int[]> list = new ArrayList<>();
+        list.add(new int[]{1, 2});
+        list.add(new int[]{3, 4, 5, 6});
+
+        ConvertList convertList = new ConvertList();
+        List<Integer> result = convertList.convert(list);
+
+        System.out.println(result);
+    }
 }
