@@ -86,14 +86,4 @@ public class ConvertList {
         return result;
     }
 
-    public static void main(String[] args) {
-        List<int[]> list = new ArrayList<>();
-        list.add(new int[]{1, 2});
-        list.add(new int[]{3, 4, 5, 6});
-
-        ConvertList convertList = new ConvertList();
-        List<Integer> result = convertList.convert(list);
-
-        System.out.println(result);
-    }
 }
