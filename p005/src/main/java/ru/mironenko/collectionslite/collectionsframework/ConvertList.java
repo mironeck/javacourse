@@ -68,32 +68,4 @@ public class ConvertList {
         }
         return array;
     }
-
-    public static void main(String[] args) {
-
-        ConvertList convertList = new ConvertList();
-
-        int[][] twoDarray = new int[][] {
-                {1, 2, 3},
-                {4, 5 ,6},
-                {7, 8, 9}
-        };
-
-        List<Integer> list = convertList.toList(twoDarray);
-
-        System.out.println(list);
-
-        List<Integer> testList = new ArrayList<>();
-        for(int i = 1; i <= 7; i++) {
-            testList.add(i);
-        }
-
-        int[][] testArray = convertList.toArray(testList, 3);
-
-        for(int i = 0; i < testArray.length; i++) {
-            for (int j = 0; j <testArray.length; j++) {
-                System.out.print(testArray[i][j]);
-            }
-        }
-    }
 }

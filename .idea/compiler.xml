@@ -34,7 +34,7 @@
       <module name="p001" target="1.5" />
       <module name="p003" target="1.7" />
       <module name="p004" target="1.7" />
-      <module name="p005" target="1.7" />
+      <module name="p005" target="1.8" />
       <module name="tracker" target="1.5" />
     </bytecodeTargetLevel>
   </component>

@@ -52,5 +52,4 @@ public class ConvertListTest {
         int [][] checked = convertList.toArray(list, 3);
         assertThat(checked, is (result));
     }
-
 }

@@ -5,10 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="19d2fbfb-0d4f-4774-a872-f77554d22bd1" name="Default" comment="add palindrome task">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/p005/src/main/java/ru/mironenko/collectionslite/collectionsframework/ConvertList.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/p005/src/main/java/ru/mironenko/collectionslite/collectionsframework/ConvertListTest.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/p005/src/test/java/ru/mironenko/collectionslite/collectionsframework/ConvertListTest.java" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/p005/src/main/java/ru/mironenko/collectionslite/collectionsframework/ConvertListTest.java" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/compiler.xml" afterPath="$PROJECT_DIR$/.idea/compiler.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/p005/src/main/java/ru/mironenko/collectionslite/collectionsframework/TimeOfCollectionsWork.java" afterPath="$PROJECT_DIR$/p005/src/main/java/ru/mironenko/collectionslite/collectionsframework/TimeOfCollectionsWork.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/p005/p005.iml" afterPath="$PROJECT_DIR$/p005/p005.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/p005/pom.xml" afterPath="$PROJECT_DIR$/p005/pom.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/p005/src/main/java/ru/mironenko/collectionslite/collectionsframework/ConvertList.java" afterPath="$PROJECT_DIR$/p005/src/main/java/ru/mironenko/collectionslite/collectionsframework/ConvertList.java" />
     </list>
     <ignored path="javacourse.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -37,7 +40,7 @@
       <file leaf-file-name="TimeOfCollectionsWork.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/p005/src/main/java/ru/mironenko/collectionslite/collectionsframework/TimeOfCollectionsWork.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1275">
+            <state relative-caret-position="0">
               <caret line="75" column="14" selection-start-line="75" selection-start-column="14" selection-end-line="75" selection-end-column="14" />
               <folding />
             </state>
@@ -47,8 +50,8 @@
       <file leaf-file-name="ConvertList.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/p005/src/main/java/ru/mironenko/collectionslite/collectionsframework/ConvertList.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="99">
-              <caret line="79" column="10" selection-start-line="75" selection-start-column="8" selection-end-line="79" selection-end-column="10" />
+            <state relative-caret-position="834">
+              <caret line="69" column="5" selection-start-line="69" selection-start-column="5" selection-end-line="69" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -57,10 +60,10 @@
         </entry>
       </file>
       <file leaf-file-name="ConvertListTest.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/p005/src/main/java/ru/mironenko/collectionslite/collectionsframework/ConvertListTest.java">
+        <entry file="file://$PROJECT_DIR$/p005/src/test/java/ru/mironenko/collectionslite/collectionsframework/ConvertListTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="583">
-              <caret line="36" column="25" selection-start-line="36" selection-start-column="25" selection-end-line="36" selection-end-column="25" />
+            <state relative-caret-position="-152">
+              <caret line="16" column="6" selection-start-line="16" selection-start-column="6" selection-end-line="16" selection-end-column="6" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -71,9 +74,11 @@
       <file leaf-file-name="AbuseTaskTest.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/p003/src/test/java/ru/mironenko/inout/AbuseTaskTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
+            <state relative-caret-position="323">
               <caret line="19" column="47" selection-start-line="18" selection-start-column="8" selection-end-line="19" selection-end-column="47" />
-              <folding />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -101,9 +106,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/p003/src/test/java/ru/mironenko/inout/ConsolChatMain.java" />
-        <option value="$PROJECT_DIR$/p003/src/test/java/ru/mironenko/inout/ConsolChatTest.java" />
-        <option value="$PROJECT_DIR$/p003/src/main/java/ru/mironenko/codefromlesson/ClientExample.java" />
         <option value="$PROJECT_DIR$/p003/src/main/java/ru/mironenko/codefromlesson/SocketTest.java" />
         <option value="$PROJECT_DIR$/p003/src/main/java/ru/mironenko/inout/ConsolChat.java" />
         <option value="$PROJECT_DIR$/p003/src/test/resources/consolechat.properties" />
@@ -150,8 +152,11 @@
         <option value="$PROJECT_DIR$/p003/src/main/java/ru/mironenko/codefromlesson/RandomAccessFileCodeExemple.java" />
         <option value="$PROJECT_DIR$/p003/src/main/java/ru/mironenko/inout/SortTask.java" />
         <option value="$PROJECT_DIR$/p005/src/main/java/ru/mironenko/collectionslite/collectionsframework/TimeOfCollectionsWork.java" />
-        <option value="$PROJECT_DIR$/p005/src/main/java/ru/mironenko/collectionslite/collectionsframework/ConvertList.java" />
         <option value="$PROJECT_DIR$/p005/src/main/java/ru/mironenko/collectionslite/collectionsframework/ConvertListTest.java" />
+        <option value="$PROJECT_DIR$/p005/src/main/java/test/java/ru/mironenko/collectionslite/collectionsframework/ConvertListTest.java" />
+        <option value="$PROJECT_DIR$/p005/src/test/java/ru/mironenko/collectionslite/collectionsframework/ConvertListTest.java" />
+        <option value="$PROJECT_DIR$/p005/src/main/java/ru/mironenko/collectionslite/collectionsframework/ConvertList.java" />
+        <option value="$PROJECT_DIR$/p005/pom.xml" />
       </list>
     </option>
   </component>
@@ -273,6 +278,18 @@
               <option name="myItemId" value="src" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="test" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="collectionsframework" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -314,64 +331,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="p004" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="javacourse" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="javacourse" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="p004" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="test" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="javacourse" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="javacourse" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="p004" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="javacourse" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="javacourse" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="p003" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -386,15 +345,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="p003" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="test" />
+              <option name="myItemId" value="p002" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -408,7 +359,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="p003" />
+              <option name="myItemId" value="p002" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -438,7 +389,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="p003" />
+              <option name="myItemId" value="p002" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -458,7 +409,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="inout" />
+              <option name="myItemId" value="chesstask" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -472,7 +423,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="p003" />
+              <option name="myItemId" value="p002" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -481,6 +432,10 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -497,17 +452,17 @@
     <property name="settings.editor.splitter.proportion" value="0.2" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
-    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.2" />
     <property name="SearchEverywhereHistoryKey" value="plugi&#9;PSI&#9;JAVA://com.sun.webkit.plugin.Plugin&#10;git&#9;ACTION&#9;Github.Open.In.Browser&#10;maven&#9;ACTION&#9;ActivateMavenProjectsToolWindow&#10;mave&#9;ACTION&#9;ActivateMavenProjectsToolWindow&#10;vcs&#9;ACTION&#9;Vcs.Browse&#10;мсы&#9;ACTION&#9;VcsToobarActions" />
     <property name="last_directory_selection" value="$PROJECT_DIR$/p002/src/main/java/ru/mironenko/chesstask" />
   </component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.RecentsKey">
       <recent name="ru.mironenko.collectionslite.collectionsframework" />
+      <recent name="ru.mironenko.chesstask" />
+      <recent name="test.java.ru.mironenko.collectionslite.collectionsframework" />
       <recent name="ru.mironenko.socket.botoracle" />
       <recent name="ru.mironenko.inout" />
-      <recent name="ru.mironenko.chesstask" />
-      <recent name="ru.mironenko.start" />
     </key>
     <key name="CreateClassDialog.RecentsKey">
       <recent name="ru.mironenko.chesstask.pieces" />
@@ -523,53 +478,14 @@
       <recent name="groovy.util.GroovyTestCase" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\javacourse\p005\src\test\java" />
+      <recent name="C:\javacourse\p005\src\test\ru.mironenko.collectionslite.collectionsframework" />
       <recent name="C:\javacourse\p003\src\test\resources" />
       <recent name="C:\javacourse\p003\src\test\java\ru\mironenko\inout" />
       <recent name="C:\javacourse\p001\src\main\java\ru\mironenko\cycles" />
-      <recent name="C:\javacourse\p001\src\test\java\ru\mironenko\cycles" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.ConvertListTest.whenListconvertToTwoDimensionalArrayReturnTDA">
-    <configuration default="false" name="RandomAccessFileCodeExemple" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="ru.mironenko.codefromlesson.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="MAIN_CLASS_NAME" value="ru.mironenko.codefromlesson.RandomAccessFileCodeExemple" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="ENABLE_SWING_INSPECTOR" value="false" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="p003" />
-      <envs />
-      <method />
-    </configuration>
-    <configuration default="false" name="TimeOfCollectionsWork" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="ru.mironenko.collectionslite.collectionsframework.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="MAIN_CLASS_NAME" value="ru.mironenko.collectionslite.collectionsframework.TimeOfCollectionsWork" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="ENABLE_SWING_INSPECTOR" value="false" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="p005" />
-      <envs />
-      <method />
-    </configuration>
+  <component name="RunManager" selected="JUnit.ConvertListTest.whenListConvertToTwoDimensionalArrayReturnTDA">
     <configuration default="false" name="ConvertList" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
@@ -629,6 +545,58 @@
       <option name="PACKAGE_NAME" value="ru.mironenko.collectionslite.collectionsframework" />
       <option name="MAIN_CLASS_NAME" value="ru.mironenko.collectionslite.collectionsframework.ConvertListTest" />
       <option name="METHOD_NAME" value="whenListconvertToTwoDimensionalArrayReturnTDA" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
+    <configuration default="false" name="ConvertListTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="ru.mironenko.collectionslite.collectionsframework.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="p005" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="ru.mironenko.collectionslite.collectionsframework" />
+      <option name="MAIN_CLASS_NAME" value="ru.mironenko.collectionslite.collectionsframework.ConvertListTest" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
+    <configuration default="false" name="ConvertListTest.whenListConvertToTwoDimensionalArrayReturnTDA" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="ru.mironenko.collectionslite.collectionsframework.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="p005" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="ru.mironenko.collectionslite.collectionsframework" />
+      <option name="MAIN_CLASS_NAME" value="ru.mironenko.collectionslite.collectionsframework.ConvertListTest" />
+      <option name="METHOD_NAME" value="whenListConvertToTwoDimensionalArrayReturnTDA" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -887,19 +855,19 @@
       <method />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="Application.RandomAccessFileCodeExemple" />
-      <item index="1" class="java.lang.String" itemvalue="Application.TimeOfCollectionsWork" />
-      <item index="2" class="java.lang.String" itemvalue="Application.ConvertList" />
-      <item index="3" class="java.lang.String" itemvalue="JUnit.ConvertListTest.whenTwoDimensionalArrayConvertToListReturnList" />
-      <item index="4" class="java.lang.String" itemvalue="JUnit.ConvertListTest.whenListconvertToTwoDimensionalArrayReturnTDA" />
+      <item index="0" class="java.lang.String" itemvalue="Application.ConvertList" />
+      <item index="1" class="java.lang.String" itemvalue="JUnit.ConvertListTest.whenTwoDimensionalArrayConvertToListReturnList" />
+      <item index="2" class="java.lang.String" itemvalue="JUnit.ConvertListTest.whenListconvertToTwoDimensionalArrayReturnTDA" />
+      <item index="3" class="java.lang.String" itemvalue="JUnit.ConvertListTest" />
+      <item index="4" class="java.lang.String" itemvalue="JUnit.ConvertListTest.whenListConvertToTwoDimensionalArrayReturnTDA" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="JUnit.ConvertListTest.whenListconvertToTwoDimensionalArrayReturnTDA" />
+        <item index="0" class="java.lang.String" itemvalue="JUnit.ConvertListTest.whenListConvertToTwoDimensionalArrayReturnTDA" />
         <item index="1" class="java.lang.String" itemvalue="JUnit.ConvertListTest.whenTwoDimensionalArrayConvertToListReturnList" />
-        <item index="2" class="java.lang.String" itemvalue="Application.ConvertList" />
-        <item index="3" class="java.lang.String" itemvalue="Application.TimeOfCollectionsWork" />
-        <item index="4" class="java.lang.String" itemvalue="Application.RandomAccessFileCodeExemple" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.ConvertListTest" />
+        <item index="3" class="java.lang.String" itemvalue="JUnit.ConvertListTest.whenListconvertToTwoDimensionalArrayReturnTDA" />
+        <item index="4" class="java.lang.String" itemvalue="Application.ConvertList" />
       </list>
     </recent_temporary>
   </component>
@@ -998,6 +966,9 @@
     <servers />
   </component>
   <component name="TestHistory">
+    <history-entry file="ConvertListTest_whenListConvertToTwoDimensionalArrayReturnTDA - 2017.03.17 at 15h 11m 22s.xml">
+      <configuration name="ConvertListTest.whenListConvertToTwoDimensionalArrayReturnTDA" configurationId="JUnit" />
+    </history-entry>
     <history-entry file="ConvertListTest_whenListconvertToTwoDimensionalArrayReturnTDA - 2017.03.17 at 14h 43m 00s.xml">
       <configuration name="ConvertListTest.whenListconvertToTwoDimensionalArrayReturnTDA" configurationId="JUnit" />
     </history-entry>
@@ -1007,11 +978,8 @@
     <history-entry file="ConvertListTest_whenTwoDimensionalArrayConvertToListReturnList - 2017.03.17 at 14h 39m 29s.xml">
       <configuration name="ConvertListTest.whenTwoDimensionalArrayConvertToListReturnList" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ServerTest_whenAskHelloThenAnswerHello - 2017.02.11 at 20h 56m 56s.xml">
-      <configuration name="ServerTest.whenAskHelloThenAnswerHello" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="ServerTest_whenAskHelloThenAnswerHello - 2017.02.11 at 20h 57m 59s.xml">
-      <configuration name="ServerTest.whenAskHelloThenAnswerHello" configurationId="JUnit" />
+    <history-entry file="ConvertListTest_whenTwoDimensionalArrayConvertToListReturnList - 2017.03.17 at 15h 11m 14s.xml">
+      <configuration name="ConvertListTest.whenTwoDimensionalArrayConvertToListReturnList" configurationId="JUnit" />
     </history-entry>
     <history-entry file="ServerTest_whenAskHelloThenAnswerHello - 2017.02.11 at 20h 59m 44s.xml">
       <configuration name="ServerTest.whenAskHelloThenAnswerHello" configurationId="JUnit" />
@@ -1044,17 +1012,17 @@
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289689" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3535188" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.22749591" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.18330605" sideWeight="0.5030257" order="10" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32900763" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18003273" sideWeight="0.4969743" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.09819967" sideWeight="0.4969743" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289689" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289689" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23969465" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.33053434" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24886535" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1141,37 +1109,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/p003/src/test/resources/servertask.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="21" selection-start-line="0" selection-start-column="21" selection-end-line="0" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/p003/src/main/java/ru/mironenko/inout/EvenNumber.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/p003/src/main/java/ru/mironenko/socket/ServerSideActions.java" />
-    <entry file="file://$PROJECT_DIR$/p003/src/main/java/ru/mironenko/socket/filemanager/clientside/UserAction.java" />
-    <entry file="file://$PROJECT_DIR$/p003/src/main/java/ru/mironenko/socket/filemanager/clientside/Input.java" />
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_91/src.zip!/java/net/AbstractPlainSocketImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="82">
-          <caret line="386" column="0" selection-start-line="386" selection-start-column="0" selection-end-line="386" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/p003/src/main/java/ru/mironenko/codefromlesson/Client.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="561">
-          <caret line="35" column="37" selection-start-line="35" selection-start-column="37" selection-end-line="35" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/p003/src/main/java/ru/mironenko/codefromlesson/Server.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
@@ -1442,7 +1379,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/p005/src/main/java/ru/mironenko/collectionslite/collectionsframework/TimeOfCollectionsWork.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1275">
+        <state relative-caret-position="0">
           <caret line="75" column="14" selection-start-line="75" selection-start-column="14" selection-end-line="75" selection-end-column="14" />
           <folding />
         </state>
@@ -1450,26 +1387,84 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/p003/src/test/java/ru/mironenko/inout/AbuseTaskTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
+        <state relative-caret-position="323">
           <caret line="19" column="47" selection-start-line="18" selection-start-column="8" selection-end-line="19" selection-end-column="47" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/p005/src/main/java/ru/mironenko/collectionslite/collectionsframework/ConvertList.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="99">
-          <caret line="79" column="10" selection-start-line="75" selection-start-column="8" selection-end-line="79" selection-end-column="10" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/p003/p003.iml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/p003/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/p005/src/test/java/ru.mironenko.collectionslite.collectionsframework/ConvertListTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="324">
+          <caret line="44" column="0" selection-start-line="44" selection-start-column="0" selection-end-line="44" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/p005/src/main/java/ru/mironenko/collectionslite/collectionsframework/ConvertListTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="583">
-          <caret line="36" column="25" selection-start-line="36" selection-start-column="25" selection-end-line="36" selection-end-column="25" />
+        <state relative-caret-position="119">
+          <caret line="7" column="29" selection-start-line="7" selection-start-column="29" selection-end-line="7" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/p005/src/main/java/test/java/ru/mironenko/collectionslite/collectionsframework/ConvertListTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="29" selection-start-line="7" selection-start-column="29" selection-end-line="7" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/p002/src/main/java/ru/mironenko/chesstask/King.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="30" column="10" selection-start-line="30" selection-start-column="10" selection-end-line="30" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/p005/src/main/java/ru/mironenko/collectionslite/collectionsframework/ConvertList.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="834">
+          <caret line="69" column="5" selection-start-line="69" selection-start-column="5" selection-end-line="69" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/p005/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="45" column="35" selection-start-line="45" selection-start-column="35" selection-end-line="45" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/p005/src/test/java/ru/mironenko/collectionslite/collectionsframework/ConvertListTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-152">
+          <caret line="16" column="6" selection-start-line="16" selection-start-column="6" selection-end-line="16" selection-end-column="6" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1528,11 +1523,12 @@
       </state>
       <state key="ModuleStructureConfigurable.UI">
         <settings>
-          <last-edited>p004</last-edited>
+          <last-edited>p005</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
                 <option value="0.2" />
+                <option value="0.6" />
               </list>
             </option>
           </splitter-proportions>
