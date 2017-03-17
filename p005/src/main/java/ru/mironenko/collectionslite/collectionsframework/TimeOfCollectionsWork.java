@@ -87,9 +87,6 @@ public class TimeOfCollectionsWork {
         System.out.println("LinkedList " + addTimeLinkedList + " " + removeTimeLinkedList);
 
         long addTimeArrayList = time.add(arrayList, 100000);
-        for (int i = 0; i < 10; i++) {
-            System.out.println(arrayList.get(i));
-        }
         long removeTimeArrayList = time.remove(arrayList, 100000);
 
         System.out.println("ArrayList " + addTimeArrayList + " " + removeTimeArrayList);
