@@ -1,6 +1,10 @@
 package ru.mironenko.start;
 
 import ru.mironenko.models.*;
+
+import java.util.ArrayList;
+import java.util.List;
+
 /**
 * Class MenuTracker consist all actions and show menu
 *@author mironenko
@@ -14,8 +18,8 @@ public class MenuTracker{
 	 */
 	private Input input;
 	private Tracker tracker;
-	private UserAction[] actions = new UserAction[6];
-	
+	private List<UserAction> actions = new ArrayList<UserAction>();
+
 	public MenuTracker(Input input, Tracker tracker){
 		this.input = input;
 		this.tracker = tracker;
@@ -28,15 +32,15 @@ public class MenuTracker{
 	*/
 	public void fillActions(){
 		//how to fill it.
-		this.actions[0] = this.new AddItem();
-		this.actions[1] = this.new ShowItems();
-		this.actions[2] = this.new EditItem();
-		this.actions[3] = this.new DeleteItem();
-		this.actions[4] = this.new AddComment();
-		this.actions[5] = this.new FilterItem();
+		this.actions.add(this.new AddItem());
+		this.actions.add(this.new ShowItems());
+		this.actions.add(this.new EditItem());
+		this.actions.add(this.new DeleteItem());
+		this.actions.add(this.new AddComment());
+		this.actions.add(this.new FilterItem());
 	}
 	
-	public UserAction[] getActions(){
+	public List<UserAction> getActions(){
 		return this.actions;
 	}
 	
@@ -45,7 +49,7 @@ public class MenuTracker{
 	*@return void
 	*/
 	public void select(int key){
-		this.actions[key-1].execute(this.input, this.tracker);
+		this.actions.get(key - 1).execute(this.input, this.tracker);
 	}
 
 	/**
@@ -53,7 +57,7 @@ public class MenuTracker{
 	*@return void
 	*/
 	public void show(){
-		for (UserAction action : actions){
+		for (UserAction action : this.actions){
 			if (action != null){
 			System.out.println(action.info());
 			}
@@ -226,7 +230,7 @@ public class MenuTracker{
 		* */
 		public void execute(Input input, Tracker tracker){
 			String filter = input.ask("Please, enter a filter word: ");
-			Item[] result  = tracker.filterItems(new Filter(filter));
+			List<Item> result  = tracker.filterItems(new Filter(filter));
 			for (Item item : result){
 				System.out.println(item)
 				;

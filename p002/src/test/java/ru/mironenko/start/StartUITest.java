@@ -27,8 +27,8 @@ public class StartUITest{
 
 			new StartUI(input, tracker).initTest();
 
-			assertThat(tracker.getAll()[0].getName(),is("name1"));
-			assertThat(tracker.getAll()[0].getDescription(),is("desc1"));
+			assertThat(tracker.getAll().get(0).getName(),is("name1"));
+			assertThat(tracker.getAll().get(0).getDescription(),is("desc1"));
 		}
 
 		@Test
@@ -45,15 +45,15 @@ public class StartUITest{
 
 			Input input2 = new StubInput(new String[]{
 					"3",
-					tracker.getAll()[0].getId(),
+					tracker.getAll().get(0).getId(),
 					"editName",
 					"editDesc",
 					"y"
 			});
 			new StartUI(input2, tracker).initTest();
 
-			assertThat(tracker.getAll()[0].getName(),is("editName"));
-			assertThat(tracker.getAll()[0].getDescription(),is("editDesc"));
+			assertThat(tracker.getAll().get(0).getName(),is("editName"));
+			assertThat(tracker.getAll().get(0).getDescription(),is("editDesc"));
 		}
 
 	@Test
@@ -75,13 +75,13 @@ public class StartUITest{
 
 		Input input2 = new StubInput(new String[]{
 				"4",
-				tracker.getAll()[1].getId(),
+				tracker.getAll().get(1).getId(),
 				"y"
 		});
 		new StartUI(input2, tracker).initTest();
 
-		assertThat(tracker.getAll().length, is(1));
-		assertThat(tracker.getAll()[0].getName(), is("name1"));
+		assertThat(tracker.getAll().size(), is(1));
+		assertThat(tracker.getAll().get(0).getName(), is("name1"));
 
 	}
 
@@ -100,13 +100,13 @@ public class StartUITest{
 
 		Input input2 = new StubInput(new String[]{
 				"5",
-				tracker.getAll()[0].getId(),
+				tracker.getAll().get(0).getId(),
 				"comment",
 				"y"
 		});
 		new StartUI(input2, tracker).initTest();
 
-		assertThat(tracker.getAll()[0].getComment()[0].getComment(), is("comment"));
+		assertThat(tracker.getAll().get(0).getComment().get(0).getComment(), is("comment"));
 	}
 
 	@Test
@@ -137,8 +137,8 @@ public class StartUITest{
 		});
 		new StartUI(input2, tracker).initTest();
 
-		assertThat(tracker.getFilteredItems().length, is(2));
-		assertThat(tracker.getFilteredItems()[0].getName(), is("name1"));
-		assertThat(tracker.getFilteredItems()[1].getName(), is("name2"));
+		assertThat(tracker.getFilteredItems().size(), is(2));
+		assertThat(tracker.getFilteredItems().get(0).getName(), is("name1"));
+		assertThat(tracker.getFilteredItems().get(1).getName(), is("name2"));
 	}
 }

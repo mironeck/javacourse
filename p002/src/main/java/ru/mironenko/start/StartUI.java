@@ -29,13 +29,14 @@ public class StartUI{
 	public void init(){
 		
 		Tracker tracker = new Tracker();
-		MenuTracker menu = new MenuTracker(this.input, tracker);
-		int[] ranges = new int[menu.getActions().length];
-		for(int index = 0; index < menu.getActions().length; index++){
+		MenuTracker menu = new MenuTracker(this.input, this.tracker);
+		menu.fillActions();
+		int[] ranges = new int[menu.getActions().size()];
+		for(int index = 0; index < menu.getActions().size(); index++){
 			ranges[index] = index+1;
 		}
 		
-		menu.fillActions();
+
 
 		do{
 			menu.show();
@@ -51,12 +52,11 @@ public class StartUI{
 	 */
 	public void initTest(){
 		MenuTracker menu = new MenuTracker(this.input, this.tracker);
-		int[] ranges = new int[menu.getActions().length];
-		for(int index = 0; index < menu.getActions().length; index++){
+		menu.fillActions();
+		int[] ranges = new int[menu.getActions().size()];
+		for(int index = 0; index < menu.getActions().size(); index++){
 			ranges[index] = index+1;
 		}
-
-		menu.fillActions();
 
 		do{
 			menu.show();
@@ -70,7 +70,11 @@ public class StartUI{
 	 */
 
 	public static void main(String[] args){
+	//	Input input = new ConsoleInput();
 		Input input = new ValidateInput();
+		Tracker tracker = new Tracker();
+
 		new StartUI(input).init();
+//		new StartUI(input, tracker).init();
 	}
 }

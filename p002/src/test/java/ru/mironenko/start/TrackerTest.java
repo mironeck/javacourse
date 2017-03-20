@@ -6,6 +6,9 @@ import ru.mironenko.models.Comment;
 import ru.mironenko.models.Filter;
 import ru.mironenko.models.Item;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import static org.hamcrest.Matchers.is;
 import static org.junit.Assert.*;
 
@@ -33,7 +36,7 @@ public class TrackerTest {
 
         tracker.edit(checked);
 
-        assertThat(tracker.getItems()[0], is(checked));
+        assertThat(tracker.getItems().get(0), is(checked));
     }
 
     @Test
@@ -48,9 +51,11 @@ public class TrackerTest {
         tracker.add(itemTwo);
         tracker.add(itemThree);
 
-        Item[] checked = new Item[]{
-            itemOne, itemTwo, itemThree
-        };
+        List<Item> checked = new ArrayList<Item>();
+        checked.add(itemOne);
+        checked.add(itemTwo);
+        checked.add(itemThree);
+
 
         assertThat(tracker.getAll(), is(checked));
     }
@@ -69,7 +74,9 @@ public class TrackerTest {
         tracker.add(itemThree);
         tracker.deleteItem(itemTwo);
 
-        Item[] checked = new Item[]{itemOne, itemThree};
+        List<Item> checked = new ArrayList<Item>();
+        checked.add(itemOne);
+        checked.add(itemThree);
 
         assertThat(tracker.getAll(), is(checked));
     }
@@ -83,7 +90,7 @@ public class TrackerTest {
         Comment comment = new Comment("Comment");
         tracker.addComment(itemOne.getId(), comment);
 
-        assertThat(tracker.findById(itemOne.getId()).getComment()[0], is(comment));
+        assertThat(tracker.findById(itemOne.getId()).getComment().get(0), is(comment));
     }
 
     @Test
@@ -96,7 +103,9 @@ public class TrackerTest {
         tracker.add(itemTwo);
         tracker.add(itemThree);
 
-        Item [] checked = new Item[]{itemOne, itemTwo};
+        List<Item> checked = new ArrayList<Item>();
+        checked.add(itemOne);
+        checked.add(itemTwo);
 
         assertThat(tracker.filterItems(new Filter("desc")), is(checked));
     }

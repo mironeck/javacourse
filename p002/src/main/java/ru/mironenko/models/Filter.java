@@ -20,7 +20,4 @@ public class Filter {
         return filter;
     }
 
-    public void setFilter(String filter){
-        this.filter = filter;
-    }
 }
