@@ -112,38 +112,4 @@ public class MapForBank {
         return result;
     }
 
-
-    public static void main(String[] args) {
-
-        MapForBank mfb = new MapForBank();
-
-        User userOne = new User("1", "hb001");
-        User userTwo = new User("2", "hb002");
-        User userThree = new User("3", "hb003");
-
-        mfb.addUser(userOne);
-        mfb.addUser(userTwo);
-        mfb.addUser(userThree);
-
-        Account accountOne = new Account(1000, 123456);
-        Account accountTwo = new Account(100, 1234567);
-        Account accountThree = new Account(50, 12345678);
-        Account accountFour = new Account(10, 123456789);
-        Account accountFive = new Account(1, 123);
-
-        mfb.addAccountToUser(userOne, accountOne);
-        mfb.addAccountToUser(userOne, accountFour);
-        mfb.addAccountToUser(userTwo, accountTwo);
-        mfb.addAccountToUser(userThree, accountThree);
-
-        System.out.println(mfb.transferMoney(userOne, accountOne, userThree, accountThree, 500));
-
-        System.out.println(mfb.getMap().get(userOne).get(mfb.getMap().get(userOne).indexOf(accountOne)).getValue());
-        System.out.println(mfb.getMap().get(userThree).get (mfb.getMap().get(userThree).indexOf(accountThree)).getValue());
-
-        for(Account account : mfb.getUserAccounts(userOne)) {
-            System.out.println(account.getRequisites() + " " + account.getValue());
-        }
-
-    }
 }
