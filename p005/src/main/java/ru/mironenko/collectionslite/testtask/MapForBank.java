@@ -105,7 +105,7 @@ public class MapForBank {
             int moneyOnDstAccount = this.map.get(dstUser).get(indexOfDstAccount).getValue();
 
             this.map.get(srcUser).get(indexOfSrcAccount).setValue(moneyOnSrcAccount - value);
-            this.map.get(dstUser).get(indexOfDstAccount).setValue(moneyOnDstAccount += value);
+            this.map.get(dstUser).get(indexOfDstAccount).setValue(moneyOnDstAccount + value);
             result = true;
         }
 
