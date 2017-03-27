@@ -68,19 +68,4 @@ public class TDAIterator implements Iterable {
         return it;
     }
 
-
-    public static void main(String[] args) {
-        int [][] array = new int[][]{
-                {1, 2},
-                {3, 4}
-        };
-
-        TDAIterator tda = new TDAIterator(array);
-
-        Iterator iterator = tda.iterator();
-
-        while(iterator.hasNext()) {
-            System.out.print(iterator.next());
-        }
-    }
 }
