@@ -5,9 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="19d2fbfb-0d4f-4774-a872-f77554d22bd1" name="Default" comment="add palindrome task">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/p005/src/main/java/ru/mironenko/collectionslite/generalizations/User.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/p005/src/main/java/ru/mironenko/collectionslite/generalizations/UserConvert.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/p005/src/test/java/ru/mironenko/collectionslite/generalizations/UserConvertTest.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/p005/src/main/java/ru/mironenko/collectionspro/iterator/EvenIterator.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/p005/src/main/java/ru/mironenko/collectionspro/iterator/SimpleNumbersIterator.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/p005/src/main/java/ru/mironenko/collectionspro/iterator/TDAIterator.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/p005/src/main/java/ru/mironenko/collectionspro/iterator/converttask/ConvertIterator.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/p005/src/main/java/ru/mironenko/collectionspro/iterator/converttask/IteratorOfIterators.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/p005/src/main/java/ru/mironenko/collectionspro/iterator/converttask/IteratorRealisation.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/p005/src/test/java/ru/mironenko/collectionspro/iterator/EvenIteratorTest.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/p005/src/test/java/ru/mironenko/collectionspro/iterator/SimpleNumbersIteratorTest.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/p005/src/test/java/ru/mironenko/collectionspro/iterator/TDAIteratorTest.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/p005/src/test/java/ru/mironenko/collectionspro/iterator/converttask/ConvertIteratorTest.java" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Test Results - MapForBankTest.html" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="javacourse.iws" />
@@ -25,59 +33,29 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="CoverageDataManager">
+    <SUITE FILE_PATH="coverage/javacourse$SortUserTest.coverage" NAME="SortUserTest Coverage Results" MODIFIED="1490030224828" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>ru.mironenko.collectionslite.sortings.*</FILTER>
+    </SUITE>
+  </component>
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
+  <component name="ExportTestResults" outputFolder="$PROJECT_DIR$" userTempatePath="" />
   <component name="FavoritesManager">
     <favorites_list name="javacourse" />
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="ConvertListTest.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/p005/src/test/java/ru/mironenko/collectionslite/collectionsframework/ConvertListTest.java">
+      <file leaf-file-name="TDAIterator.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/p005/src/main/java/ru/mironenko/collectionspro/iterator/TDAIterator.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="341">
-              <caret line="69" column="40" selection-start-line="69" selection-start-column="40" selection-end-line="69" selection-end-column="40" />
+            <state relative-caret-position="119">
+              <caret line="7" column="19" selection-start-line="7" selection-start-column="19" selection-end-line="7" selection-end-column="19" />
               <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="User.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/p005/src/main/java/ru/mironenko/collectionslite/generalizations/User.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="27" column="5" selection-start-line="27" selection-start-column="5" selection-end-line="27" selection-end-column="5" />
-              <folding>
-                <element signature="e#647#648#0" expanded="true" />
-                <element signature="e#672#673#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="UserConvert.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/p005/src/main/java/ru/mironenko/collectionslite/generalizations/UserConvert.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="21" column="0" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="UserConvertTest.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/p005/src/test/java/ru/mironenko/collectionslite/generalizations/UserConvertTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="23" column="21" selection-start-line="23" selection-start-column="21" selection-end-line="23" selection-end-column="21" />
-              <folding>
-                <element signature="imports" expanded="true" />
+                <element signature="e#771#772#0" expanded="true" />
+                <element signature="e#846#847#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -106,39 +84,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/p003/src/test/java/ru/mironenko/inout/ConsoleChatTest.java" />
-        <option value="$PROJECT_DIR$/p003/src/main/java/ru/mironenko/codefromlesson/Server.java" />
-        <option value="$PROJECT_DIR$/p003/src/main/java/ru/mironenko/codefromlesson/Client.java" />
-        <option value="$PROJECT_DIR$/p003/src/main/java/ru/mironenko/socket/Serverside.java" />
-        <option value="$PROJECT_DIR$/p003/src/main/java/ru/mironenko/socket/ClientSide.java" />
-        <option value="$PROJECT_DIR$/p003/src/main/java/ru/mironenko/socket/Command.java" />
-        <option value="$PROJECT_DIR$/p003/src/main/java/ru/mironenko/socket/serverside/Serverside.java" />
-        <option value="$PROJECT_DIR$/p003/src/main/java/ru/mironenko/socket/clientside/ClientSide.java" />
-        <option value="$PROJECT_DIR$/p003/src/main/java/ru/mironenko/socket/ServerSideActions.java" />
-        <option value="$PROJECT_DIR$/p003/src/test/resources/servertask.properties" />
-        <option value="$PROJECT_DIR$/p003/src/main/java/ru/mironenko/socket/serverside/Server.java" />
-        <option value="$PROJECT_DIR$/p003/src/main/java/ru/mironenko/socket/serverside/Action.java" />
-        <option value="$PROJECT_DIR$/p003/src/main/java/ru/mironenko/socket/serverside/UserAction.java" />
-        <option value="$PROJECT_DIR$/p003/src/main/java/ru/mironenko/socket/clientside/Action.java" />
-        <option value="$PROJECT_DIR$/p002/src/main/java/ru/mironenko/start/StartUI.java" />
-        <option value="$PROJECT_DIR$/p003/src/main/java/ru/mironenko/socket/clientside/Input.java" />
-        <option value="$PROJECT_DIR$/p003/src/main/java/ru/mironenko/socket/clientside/UserAction.java" />
-        <option value="$PROJECT_DIR$/p002/src/main/java/ru/mironenko/start/MenuTracker.java" />
-        <option value="$PROJECT_DIR$/p003/src/main/java/ru/mironenko/socket/clientside/Client.java" />
-        <option value="$PROJECT_DIR$/p003/src/main/java/ru/mironenko/socket/clientside/MenuClient.java" />
-        <option value="$PROJECT_DIR$/p003/src/main/java/ru/mironenko/socket/botoracle/server.java" />
-        <option value="$PROJECT_DIR$/p003/src/main/java/ru/mironenko/socket/filemanager/clientside/Client.java" />
-        <option value="$PROJECT_DIR$/p003/src/test/java/ru/mironenko/inout/temp/PhrasesForOracle.txt" />
-        <option value="$PROJECT_DIR$/p003/src/test/resources/oracle.properties.properties" />
-        <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/p003/src/test/java/ru/mironenko/socket/botoracle/ServerTest.java" />
-        <option value="$PROJECT_DIR$/p003/src/main/java/ru/mironenko/socket/botoracle/Server.java" />
-        <option value="$PROJECT_DIR$/p003/src/test/java/ru/mironenko/socket/botoracle/ClientTest.java" />
-        <option value="$PROJECT_DIR$/p003/src/main/java/ru/mironenko/socket/botoracle/Client.java" />
-        <option value="$PROJECT_DIR$/p003/src/main/java/ru/mironenko/socket/filemanager/serverside/Server.java" />
-        <option value="$PROJECT_DIR$/p003/src/main/java/ru/mironenko/socket/filemanager/clientside/Action.java" />
-        <option value="$PROJECT_DIR$/p004/src/main/java/ru/mironenko/calculator/InterractCalculator.java" />
-        <option value="$PROJECT_DIR$/p004/src/main/java/ru/mironenko/calculator/Calculator.java" />
         <option value="$PROJECT_DIR$/p004/src/main/java/ru/mironenko/srp/Input.java" />
         <option value="$PROJECT_DIR$/p004/src/main/java/ru/mironenko/srp/ConsoleInput.java" />
         <option value="$PROJECT_DIR$/p004/src/main/java/ru/mironenko/srp/MenuCalculator.java" />
@@ -157,6 +102,39 @@
         <option value="$PROJECT_DIR$/p005/src/main/java/ru/mironenko/collectionslite/generalizations/User.java" />
         <option value="$PROJECT_DIR$/p005/src/test/java/ru/mironenko/collectionslite/generalizations/UserConvertTest.java" />
         <option value="$PROJECT_DIR$/p005/src/main/java/ru/mironenko/collectionslite/generalizations/UserConvert.java" />
+        <option value="$PROJECT_DIR$/p002/src/test/java/ru/mironenko/start/StartUITest.java" />
+        <option value="$PROJECT_DIR$/p002/src/test/java/ru/mironenko/start/TrackerTest.java" />
+        <option value="$PROJECT_DIR$/p002/src/main/java/ru/mironenko/start/MenuTracker.java" />
+        <option value="$PROJECT_DIR$/p002/src/main/java/ru/mironenko/models/Filter.java" />
+        <option value="$PROJECT_DIR$/p002/src/main/java/ru/mironenko/start/StubInput.java" />
+        <option value="$PROJECT_DIR$/p002/src/main/java/ru/mironenko/start/Tracker.java" />
+        <option value="$PROJECT_DIR$/p002/src/main/java/ru/mironenko/models/Item.java" />
+        <option value="$PROJECT_DIR$/p002/src/main/java/ru/mironenko/start/StartUI.java" />
+        <option value="$PROJECT_DIR$/p005/src/main/java/ru/mironenko/collectionslite/sortings/User.java" />
+        <option value="$PROJECT_DIR$/p005/src/main/java/ru/mironenko/collectionslite/sortings/UserComparator.java" />
+        <option value="$PROJECT_DIR$/p005/src/main/java/ru/mironenko/collectionslite/sortings/UserSortedByName.java" />
+        <option value="$PROJECT_DIR$/p005/src/main/java/ru/mironenko/collectionslite/sortings/UserSortedByHashCode.java" />
+        <option value="$PROJECT_DIR$/p005/src/main/java/ru/mironenko/collectionslite/sortings/UserSortedByNameLength.java" />
+        <option value="$PROJECT_DIR$/p005/src/test/java/ru/mironenko/collectionslite/sortings/SortUserTest.java" />
+        <option value="$PROJECT_DIR$/p005/src/main/java/ru/mironenko/collectionslite/sortings/SortUser.java" />
+        <option value="$PROJECT_DIR$/p005/src/main/java/ru/mironenko/collectionslite/testtask/Account.java" />
+        <option value="$PROJECT_DIR$/p005/src/test/java/ru/mironenko/collectionslite/testtask/MapForBankTest.java" />
+        <option value="$PROJECT_DIR$/p005/src/main/java/ru/mironenko/collectionslite/testtask/MapForBank.java" />
+        <option value="$PROJECT_DIR$/p005/src/main/java/ru/mironenko/collectionslite/testtask/User.java" />
+        <option value="$PROJECT_DIR$/p005/src/main/java/ru/mironenko/collectionspro/iterator/TDAItarator.java" />
+        <option value="$PROJECT_DIR$/p005/src/main/java/ru/mironenko/collectionspro/iterator/TDAIterator.java" />
+        <option value="$PROJECT_DIR$/p005/src/test/java/ru/mironenko/collectionspro/iterator/TDAIteratorTest.java" />
+        <option value="$PROJECT_DIR$/p005/src/main/java/ru/mironenko/collectionspro/iterator/EvenIterator.java" />
+        <option value="$PROJECT_DIR$/p005/src/test/java/ru/mironenko/collectionspro/iterator/EvenIteratorTest.java" />
+        <option value="$PROJECT_DIR$/p005/src/test/java/ru/mironenko/collectionspro/iterator/SimpleNumbersIteratorTest.java" />
+        <option value="$PROJECT_DIR$/p005/src/main/java/ru/mironenko/collectionspro/iterator/ConvertIterator.java" />
+        <option value="$PROJECT_DIR$/p005/src/main/java/ru/mironenko/collectionspro/iterator/IteratorOfIterators.java" />
+        <option value="$PROJECT_DIR$/p005/src/main/java/ru/mironenko/collectionspro/iterator/IteratorRealisation.java" />
+        <option value="$PROJECT_DIR$/p005/src/main/java/ru/mironenko/collectionspro/iterator/converttask/IteratorOfIterators.java" />
+        <option value="$PROJECT_DIR$/p005/src/test/java/ru/mironenko/collectionspro/iterator/converttask/ConvertIteratorTest.java" />
+        <option value="$PROJECT_DIR$/p005/src/main/java/ru/mironenko/collectionspro/iterator/converttask/ConvertIterator.java" />
+        <option value="$PROJECT_DIR$/p005/src/main/java/ru/mironenko/collectionspro/iterator/converttask/IteratorRealisation.java" />
+        <option value="$PROJECT_DIR$/p005/src/main/java/ru/mironenko/collectionspro/iterator/SimpleNumbersIterator.java" />
       </list>
     </option>
   </component>
@@ -228,7 +206,9 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
       <pane id="Scratches" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -287,11 +267,11 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="collectionslite" />
+              <option name="myItemId" value="mironenko" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="generalizations" />
+              <option name="myItemId" value="iterator" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -321,45 +301,15 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="collectionslite" />
+              <option name="myItemId" value="mironenko" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="collectionsframework" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="javacourse" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="javacourse" />
+              <option name="myItemId" value="iterator" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="p005" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="collectionslite" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="generalizations" />
+              <option name="myItemId" value="converttask" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -374,68 +324,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="p005" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="collectionslite" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="collectionsframework" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="javacourse" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="javacourse" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="p003" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="javacourse" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="javacourse" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="p002" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="javacourse" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="javacourse" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="p002" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -465,7 +353,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="p002" />
+              <option name="myItemId" value="p005" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -473,7 +361,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="test" />
+              <option name="myItemId" value="main" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -485,7 +373,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="chesstask" />
+              <option name="myItemId" value="collectionspro" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -499,7 +387,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="p002" />
+              <option name="myItemId" value="p005" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -512,17 +400,23 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mironenko" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="collectionslite" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="C:/javatasks" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
@@ -534,15 +428,18 @@
   </component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.RecentsKey">
+      <recent name="ru.mironenko.collectionspro.iterator.converttask" />
+      <recent name="ru.mironenko.collectionspro.iterator" />
+      <recent name="ru.mironenko.collectionslite.testtask" />
+      <recent name="ru.mironenko.collectionslite.sortings" />
       <recent name="ru.mironenko.collectionslite.generalizations" />
-      <recent name="ru.mironenko.collectionslite.collectionsframework" />
-      <recent name="ru.mironenko.chesstask" />
-      <recent name="test.java.ru.mironenko.collectionslite.collectionsframework" />
-      <recent name="ru.mironenko.socket.botoracle" />
     </key>
-    <key name="CreateClassDialog.RecentsKey">
-      <recent name="ru.mironenko.chesstask.pieces" />
-      <recent name="ru.mironenko.chesstask" />
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\javacourse\p005\src\test\java" />
+      <recent name="C:\javacourse\p005\src\test\ru.mironenko.collectionslite.collectionsframework" />
+      <recent name="C:\javacourse\p003\src\test\resources" />
+      <recent name="C:\javacourse\p003\src\test\java\ru\mironenko\inout" />
+      <recent name="C:\javacourse\p001\src\main\java\ru\mironenko\cycles" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="ru.mironenko.chesstask" />
@@ -553,48 +450,26 @@
       <recent name="ru.mironenko.cycles.Square" />
       <recent name="groovy.util.GroovyTestCase" />
     </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\javacourse\p005\src\test\java" />
-      <recent name="C:\javacourse\p005\src\test\ru.mironenko.collectionslite.collectionsframework" />
-      <recent name="C:\javacourse\p003\src\test\resources" />
-      <recent name="C:\javacourse\p003\src\test\java\ru\mironenko\inout" />
-      <recent name="C:\javacourse\p001\src\main\java\ru\mironenko\cycles" />
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="ru.mironenko.collectionspro.iterator" />
+      <recent name="ru.mironenko.chesstask.pieces" />
+      <recent name="ru.mironenko.chesstask" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.UserConvertTest.whenGetListOfUsersAndConvertItToHashMap">
-    <configuration default="false" name="ConvertList" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.ConvertIteratorTest.whenConvertIteratorOfIteratorsThenReturnIntegers">
+    <configuration default="false" name="ConvertIteratorTest.whenConvertIteratorOfIteratorsThenReturnIntegers" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
-          <option name="PATTERN" value="ru.mironenko.collectionslite.collectionsframework.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="MAIN_CLASS_NAME" value="ru.mironenko.collectionslite.collectionsframework.ConvertList" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="ENABLE_SWING_INSPECTOR" value="false" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="p005" />
-      <envs />
-      <method />
-    </configuration>
-    <configuration default="false" name="ConvertListTest.whenTwoDimensionalArrayConvertToListReturnList" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="ru.mironenko.collectionslite.collectionsframework.*" />
+          <option name="PATTERN" value="ru.mironenko.collectionspro.iterator.converttask.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
       <module name="p005" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="ru.mironenko.collectionslite.collectionsframework" />
-      <option name="MAIN_CLASS_NAME" value="ru.mironenko.collectionslite.collectionsframework.ConvertListTest" />
-      <option name="METHOD_NAME" value="whenTwoDimensionalArrayConvertToListReturnList" />
+      <option name="PACKAGE_NAME" value="ru.mironenko.collectionspro.iterator.converttask" />
+      <option name="MAIN_CLASS_NAME" value="ru.mironenko.collectionspro.iterator.converttask.ConvertIteratorTest" />
+      <option name="METHOD_NAME" value="whenConvertIteratorOfIteratorsThenReturnIntegers" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -608,19 +483,19 @@
       <patterns />
       <method />
     </configuration>
-    <configuration default="false" name="ConvertListTest.whenListConvertToTwoDimensionalArrayReturnTDA" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration default="false" name="EvenIteratorTest.whenNextThenReturnEvenNumber" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
-          <option name="PATTERN" value="ru.mironenko.collectionslite.collectionsframework.*" />
+          <option name="PATTERN" value="ru.mironenko.collectionspro.iterator.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
       <module name="p005" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="ru.mironenko.collectionslite.collectionsframework" />
-      <option name="MAIN_CLASS_NAME" value="ru.mironenko.collectionslite.collectionsframework.ConvertListTest" />
-      <option name="METHOD_NAME" value="whenListConvertToTwoDimensionalArrayReturnTDA" />
+      <option name="PACKAGE_NAME" value="ru.mironenko.collectionspro.iterator" />
+      <option name="MAIN_CLASS_NAME" value="ru.mironenko.collectionspro.iterator.EvenIteratorTest" />
+      <option name="METHOD_NAME" value="whenNextThenReturnEvenNumber" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -634,19 +509,45 @@
       <patterns />
       <method />
     </configuration>
-    <configuration default="false" name="ConvertListTest.whenListOfArraysConvertToListReturnListOfIntegers" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration default="false" name="EvenIteratorTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
-          <option name="PATTERN" value="ru.mironenko.collectionslite.collectionsframework.*" />
+          <option name="PATTERN" value="ru.mironenko.collectionspro.iterator.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
       <module name="p005" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="ru.mironenko.collectionslite.collectionsframework" />
-      <option name="MAIN_CLASS_NAME" value="ru.mironenko.collectionslite.collectionsframework.ConvertListTest" />
-      <option name="METHOD_NAME" value="whenListOfArraysConvertToListReturnListOfIntegers" />
+      <option name="PACKAGE_NAME" value="ru.mironenko.collectionspro.iterator" />
+      <option name="MAIN_CLASS_NAME" value="ru.mironenko.collectionspro.iterator.EvenIteratorTest" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
+    <configuration default="false" name="SimpleNumbersIteratorTest.whenNextThenReturnSimpleNumber" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="ru.mironenko.collectionspro.iterator.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="p005" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="ru.mironenko.collectionspro.iterator" />
+      <option name="MAIN_CLASS_NAME" value="ru.mironenko.collectionspro.iterator.SimpleNumbersIteratorTest" />
+      <option name="METHOD_NAME" value="whenNextThenReturnSimpleNumber" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -660,19 +561,19 @@
       <patterns />
       <method />
     </configuration>
-    <configuration default="false" name="UserConvertTest.whenGetListOfUsersAndConvertItToHashMap" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration default="false" name="TDAIteratorTest.whenNextThenReturnNextElementInTwoDmnsArray" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
-          <option name="PATTERN" value="ru.mironenko.collectionslite.generalizations.*" />
+          <option name="PATTERN" value="ru.mironenko.collectionspro.iterator.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
       <module name="p005" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="ru.mironenko.collectionslite.generalizations" />
-      <option name="MAIN_CLASS_NAME" value="ru.mironenko.collectionslite.generalizations.UserConvertTest" />
-      <option name="METHOD_NAME" value="whenGetListOfUsersAndConvertItToHashMap" />
+      <option name="PACKAGE_NAME" value="ru.mironenko.collectionspro.iterator" />
+      <option name="MAIN_CLASS_NAME" value="ru.mironenko.collectionspro.iterator.TDAIteratorTest" />
+      <option name="METHOD_NAME" value="whenNextThenReturnNextElementInTwoDmnsArray" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -931,19 +832,19 @@
       <method />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="Application.ConvertList" />
-      <item index="1" class="java.lang.String" itemvalue="JUnit.ConvertListTest.whenTwoDimensionalArrayConvertToListReturnList" />
-      <item index="2" class="java.lang.String" itemvalue="JUnit.ConvertListTest.whenListConvertToTwoDimensionalArrayReturnTDA" />
-      <item index="3" class="java.lang.String" itemvalue="JUnit.ConvertListTest.whenListOfArraysConvertToListReturnListOfIntegers" />
-      <item index="4" class="java.lang.String" itemvalue="JUnit.UserConvertTest.whenGetListOfUsersAndConvertItToHashMap" />
+      <item index="0" class="java.lang.String" itemvalue="JUnit.ConvertIteratorTest.whenConvertIteratorOfIteratorsThenReturnIntegers" />
+      <item index="1" class="java.lang.String" itemvalue="JUnit.EvenIteratorTest.whenNextThenReturnEvenNumber" />
+      <item index="2" class="java.lang.String" itemvalue="JUnit.EvenIteratorTest" />
+      <item index="3" class="java.lang.String" itemvalue="JUnit.SimpleNumbersIteratorTest.whenNextThenReturnSimpleNumber" />
+      <item index="4" class="java.lang.String" itemvalue="JUnit.TDAIteratorTest.whenNextThenReturnNextElementInTwoDmnsArray" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="JUnit.UserConvertTest.whenGetListOfUsersAndConvertItToHashMap" />
-        <item index="1" class="java.lang.String" itemvalue="JUnit.ConvertListTest.whenListOfArraysConvertToListReturnListOfIntegers" />
-        <item index="2" class="java.lang.String" itemvalue="Application.ConvertList" />
-        <item index="3" class="java.lang.String" itemvalue="JUnit.ConvertListTest.whenListConvertToTwoDimensionalArrayReturnTDA" />
-        <item index="4" class="java.lang.String" itemvalue="JUnit.ConvertListTest.whenTwoDimensionalArrayConvertToListReturnList" />
+        <item index="0" class="java.lang.String" itemvalue="JUnit.ConvertIteratorTest.whenConvertIteratorOfIteratorsThenReturnIntegers" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.TDAIteratorTest.whenNextThenReturnNextElementInTwoDmnsArray" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.SimpleNumbersIteratorTest.whenNextThenReturnSimpleNumber" />
+        <item index="3" class="java.lang.String" itemvalue="JUnit.EvenIteratorTest.whenNextThenReturnEvenNumber" />
+        <item index="4" class="java.lang.String" itemvalue="JUnit.EvenIteratorTest" />
       </list>
     </recent_temporary>
   </component>
@@ -1042,35 +943,35 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="ConvertListTest_whenListConvertToTwoDimensionalArrayReturnTDA - 2017.03.17 at 15h 11m 22s.xml">
-      <configuration name="ConvertListTest.whenListConvertToTwoDimensionalArrayReturnTDA" configurationId="JUnit" />
+    <history-entry file="ConvertIteratorTest_whenConvertIteratorOfIteratorsThenReturnIntegers - 2017.03.27 at 15h 12m 31s.xml">
+      <configuration name="ConvertIteratorTest.whenConvertIteratorOfIteratorsThenReturnIntegers" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ConvertListTest_whenListOfArraysConvertToListReturnListOfIntegers - 2017.03.17 at 15h 35m 00s.xml">
-      <configuration name="ConvertListTest.whenListOfArraysConvertToListReturnListOfIntegers" configurationId="JUnit" />
+    <history-entry file="ConvertIteratorTest_whenConvertIteratorOfIteratorsThenReturnIntegers - 2017.03.27 at 15h 13m 58s.xml">
+      <configuration name="ConvertIteratorTest.whenConvertIteratorOfIteratorsThenReturnIntegers" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ConvertListTest_whenListOfArraysConvertToListReturnListOfIntegers - 2017.03.17 at 15h 37m 32s.xml">
-      <configuration name="ConvertListTest.whenListOfArraysConvertToListReturnListOfIntegers" configurationId="JUnit" />
+    <history-entry file="EvenIteratorTest - 2017.03.27 at 15h 13m 18s.xml">
+      <configuration name="EvenIteratorTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ConvertListTest_whenListconvertToTwoDimensionalArrayReturnTDA - 2017.03.17 at 14h 43m 00s.xml">
-      <configuration name="ConvertListTest.whenListconvertToTwoDimensionalArrayReturnTDA" configurationId="JUnit" />
+    <history-entry file="EvenIteratorTest_whenNextThenReturnEvenNumber - 2017.03.27 at 15h 13m 03s.xml">
+      <configuration name="EvenIteratorTest.whenNextThenReturnEvenNumber" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ConvertListTest_whenTwoDimensionalArrayConvertToListReturnList - 2017.03.17 at 14h 39m 13s.xml">
-      <configuration name="ConvertListTest.whenTwoDimensionalArrayConvertToListReturnList" configurationId="JUnit" />
+    <history-entry file="EvenIteratorTest_whenNextThenReturnEvenNumber - 2017.03.27 at 15h 13m 32s.xml">
+      <configuration name="EvenIteratorTest.whenNextThenReturnEvenNumber" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ConvertListTest_whenTwoDimensionalArrayConvertToListReturnList - 2017.03.17 at 14h 39m 29s.xml">
-      <configuration name="ConvertListTest.whenTwoDimensionalArrayConvertToListReturnList" configurationId="JUnit" />
+    <history-entry file="MapForBankTest_whenTransferMoneyFailedBecauseNotEnoughMoney - 2017.03.21 at 15h 03m 19s.xml">
+      <configuration name="MapForBankTest.whenTransferMoneyFailedBecauseNotEnoughMoney" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ConvertListTest_whenTwoDimensionalArrayConvertToListReturnList - 2017.03.17 at 15h 11m 14s.xml">
-      <configuration name="ConvertListTest.whenTwoDimensionalArrayConvertToListReturnList" configurationId="JUnit" />
+    <history-entry file="MapForBankTest_whenTransferMoneySucceed - 2017.03.21 at 14h 57m 52s.xml">
+      <configuration name="MapForBankTest.whenTransferMoneySucceed" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ServerTest_whenUnsupportedAskToRepeat - 2017.02.11 at 21h 11m 27s.xml">
-      <configuration name="ServerTest.whenUnsupportedAskToRepeat" configurationId="JUnit" />
+    <history-entry file="MapForBankTest_whenTransferMoneySucceed - 2017.03.21 at 15h 00m 01s.xml">
+      <configuration name="MapForBankTest.whenTransferMoneySucceed" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="UserConvertTest_whenGetListOfUsersAndConvertItToHashMap - 2017.03.17 at 16h 01m 15s.xml">
-      <configuration name="UserConvertTest.whenGetListOfUsersAndConvertItToHashMap" configurationId="JUnit" />
+    <history-entry file="SimpleNumbersIteratorTest_whenNextThenReturnSimpleNumber - 2017.03.27 at 15h 13m 39s.xml">
+      <configuration name="SimpleNumbersIteratorTest.whenNextThenReturnSimpleNumber" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="UserConvertTest_whenGetListOfUsersAndConvertItToHashMap - 2017.03.17 at 16h 02m 54s.xml">
-      <configuration name="UserConvertTest.whenGetListOfUsersAndConvertItToHashMap" configurationId="JUnit" />
+    <history-entry file="TDAIteratorTest_whenNextThenReturnNextElementInTwoDmnsArray - 2017.03.27 at 15h 13m 45s.xml">
+      <configuration name="TDAIteratorTest.whenNextThenReturnNextElementInTwoDmnsArray" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TodoView">
@@ -1084,26 +985,26 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1370" height="744" extended-state="0" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289689" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.22749591" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.43535188" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.18330605" sideWeight="0.5030257" order="10" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32900763" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2618658" sideWeight="0.4969743" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289689" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.1309329" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19476268" sideWeight="0.4969743" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289689" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.33053434" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2755725" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24886535" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39934534" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39934534" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -1111,6 +1012,7 @@
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection Results" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289689" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32977098" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.17184943" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
@@ -1176,7 +1078,7 @@
           <properties />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="9" />
+      <option name="time" value="13" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -1185,239 +1087,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/p003/src/test/java/ru/mironenko/socket/botoracle/ClientTest.java" />
-    <entry file="file://$PROJECT_DIR$/p003/src/main/java/ru/mironenko/socket/botoracle/Server.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/p003/src/main/java/ru/mironenko/socket/filemanager/clientside/MenuClient.java" />
-    <entry file="file://$PROJECT_DIR$/p001/src/main/java/ru/mironenko/jvmbytecode/Calculator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="25" column="5" selection-start-line="5" selection-start-column="4" selection-end-line="25" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/p001/src/main/java/ru/mironenko/jvmbytecode/Calculate.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/p003/src/main/java/ru/mironenko/socket/filemanager/clientside/Action.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="11" selection-start-line="9" selection-start-column="11" selection-end-line="9" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/p001/src/main/java/ru/mironenko/jvmbytecode/CalcInit.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="13" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_91/src.zip!/java/util/Scanner.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1325">
-          <caret line="303" column="19" selection-start-line="303" selection-start-column="19" selection-end-line="303" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/p003/src/main/java/ru/mironenko/socket/botoracle/Client.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
-          <caret line="42" column="17" selection-start-line="42" selection-start-column="17" selection-end-line="42" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/p003/src/main/java/ru/mironenko/socket/filemanager/serverside/Server.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1428">
-          <caret line="129" column="0" selection-start-line="129" selection-start-column="0" selection-end-line="129" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/p002/src/main/java/ru/mironenko/start/StartUI.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="999">
-          <caret line="65" column="0" selection-start-line="65" selection-start-column="0" selection-end-line="65" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/p004/src/main/java/ru/mironenko/srp/InterractCalculator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/p002/src/main/java/ru/mironenko/start/UserAction.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="16" column="14" selection-start-line="16" selection-start-column="14" selection-end-line="16" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/p004/src/main/java/ru/mironenko/srp/Calculator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="223">
-          <caret line="41" column="29" selection-start-line="41" selection-start-column="29" selection-end-line="41" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/p002/src/main/java/ru/mironenko/start/BaseAction.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="34" selection-start-line="6" selection-start-column="34" selection-end-line="6" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/p004/src/main/java/ru/mironenko/srp/Action.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="22" column="51" selection-start-line="22" selection-start-column="51" selection-end-line="22" selection-end-column="51" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/p002/src/main/java/ru/mironenko/start/Tracker.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="28" column="6" selection-start-line="28" selection-start-column="6" selection-end-line="28" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/p004/src/main/java/ru/mironenko/srp/MenuCalculator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="782">
-          <caret line="48" column="20" selection-start-line="48" selection-start-column="20" selection-end-line="48" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/p002/src/main/java/ru/mironenko/start/MenuTracker.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1785">
-          <caret line="117" column="40" selection-start-line="117" selection-start-column="40" selection-end-line="117" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/p002/src/main/java/ru/mironenko/start/Input.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="17" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/p004/src/main/java/ru/mironenko/srp/Input.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/p004/src/main/java/ru/mironenko/srp/ConsoleInput.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="33" selection-start-line="12" selection-start-column="33" selection-end-line="12" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/p003/src/test/resources/consolechat.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="54" selection-start-line="1" selection-start-column="54" selection-end-line="1" selection-end-column="54" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/p003/src/test/java/ru/mironenko/inout/PalindromeTaskTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" column="14" selection-start-line="10" selection-start-column="4" selection-end-line="14" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/p001/src/main/java/ru/mironenko/cycles/Factorial.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="149">
-          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/p001/src/test/java/ru/mironenko/cycles/FactorialTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/p003/src/test/java/ru/mironenko/inout/EvenNumberTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/p003/src/main/java/ru/mironenko/inout/ConsoleChat.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1734">
-          <caret line="106" column="0" selection-start-line="106" selection-start-column="0" selection-end-line="106" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/p003/src/main/java/ru/mironenko/inout/AbuseTask.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="986">
-          <caret line="58" column="73" selection-start-line="58" selection-start-column="73" selection-end-line="58" selection-end-column="73" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/p003/src/test/java/ru/mironenko/inout/ConsoleChatTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="43" selection-start-line="8" selection-start-column="43" selection-end-line="8" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/p003/src/test/java/ru/mironenko/inout/SortTaskTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/p003/src/main/java/ru/mironenko/codefromlesson/RandomAccessFileCodeExemple.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="663">
-          <caret line="40" column="33" selection-start-line="40" selection-start-column="33" selection-end-line="40" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/p003/src/main/java/ru/mironenko/inout/SortTask.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1377">
-          <caret line="84" column="0" selection-start-line="84" selection-start-column="0" selection-end-line="84" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/p003/src/test/java/ru/mironenko/socket/botoracle/ServerTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="731">
-          <caret line="54" column="5" selection-start-line="54" selection-start-column="5" selection-end-line="54" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/p003/src/main/java/ru/mironenko/codefromlesson/ClientExample.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="238">
@@ -1436,7 +1105,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="75" column="14" selection-start-line="75" selection-start-column="14" selection-end-line="75" selection-end-column="14" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1444,7 +1112,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1452,39 +1119,16 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/p005/src/test/java/ru.mironenko.collectionslite.collectionsframework/ConvertListTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="324">
-          <caret line="44" column="0" selection-start-line="44" selection-start-column="0" selection-end-line="44" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/p005/src/main/java/ru/mironenko/collectionslite/collectionsframework/ConvertListTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="29" selection-start-line="7" selection-start-column="29" selection-end-line="7" selection-end-column="29" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/p005/src/main/java/test/java/ru/mironenko/collectionslite/collectionsframework/ConvertListTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="29" selection-start-line="7" selection-start-column="29" selection-end-line="7" selection-end-column="29" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/p005/src/test/java/ru.mironenko.collectionslite.collectionsframework/ConvertListTest.java" />
+    <entry file="file://$PROJECT_DIR$/p005/src/main/java/ru/mironenko/collectionslite/collectionsframework/ConvertListTest.java" />
+    <entry file="file://$PROJECT_DIR$/p005/src/main/java/test/java/ru/mironenko/collectionslite/collectionsframework/ConvertListTest.java" />
     <entry file="file://$PROJECT_DIR$/p002/src/main/java/ru/mironenko/chesstask/King.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="374">
           <caret line="30" column="10" selection-start-line="30" selection-start-column="10" selection-end-line="30" selection-end-column="10" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1492,38 +1136,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="306">
           <caret line="45" column="35" selection-start-line="45" selection-start-column="35" selection-end-line="45" selection-end-column="35" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/p005/src/test/java/ru/mironenko/collectionslite/collectionsframework/ConvertListTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="341">
-          <caret line="69" column="40" selection-start-line="69" selection-start-column="40" selection-end-line="69" selection-end-column="40" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/p005/src/main/java/ru/mironenko/collectionslite/collectionsframework/ConvertList.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="341">
-          <caret line="87" column="0" selection-start-line="87" selection-start-column="0" selection-end-line="87" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/p005/src/main/java/ru/mironenko/collectionslite/generalizations/User.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
+        <state relative-caret-position="425">
           <caret line="27" column="5" selection-start-line="27" selection-start-column="5" selection-end-line="27" selection-end-column="5" />
-          <folding>
-            <element signature="e#647#648#0" expanded="true" />
-            <element signature="e#672#673#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1531,28 +1150,302 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="323">
           <caret line="19" column="47" selection-start-line="18" selection-start-column="8" selection-end-line="19" selection-end-column="47" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/p005/src/main/java/ru/mironenko/collectionslite/generalizations/UserConvert.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="21" column="0" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/p005/src/test/java/ru/mironenko/collectionslite/generalizations/UserConvertTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
+        <state relative-caret-position="240">
           <caret line="23" column="21" selection-start-line="23" selection-start-column="21" selection-end-line="23" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/p005/src/test/java/ru/mironenko/collectionslite/collectionsframework/ConvertListTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="421">
+          <caret line="69" column="40" selection-start-line="69" selection-start-column="40" selection-end-line="69" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/p002/src/main/java/ru/mironenko/models/Comment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/p002/src/main/java/ru/mironenko/models/Bug.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/p002/src/main/java/ru/mironenko/models/Filter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="21" column="4" selection-start-line="21" selection-start-column="4" selection-end-line="21" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/p002/src/main/java/ru/mironenko/models/Item.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="21" column="62" selection-start-line="21" selection-start-column="62" selection-end-line="21" selection-end-column="62" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/p002/src/main/java/ru/mironenko/start/BaseAction.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="34" selection-start-line="6" selection-start-column="34" selection-end-line="6" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/p002/src/main/java/ru/mironenko/start/ConsoleInput.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-118">
+          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/p002/src/main/java/ru/mironenko/start/Input.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="17" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/p002/src/main/java/ru/mironenko/start/MenuOutException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/p002/src/main/java/ru/mironenko/start/MenuTracker.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2991">
+          <caret line="19" column="28" selection-start-line="19" selection-start-column="28" selection-end-line="19" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/p002/src/main/java/ru/mironenko/start/StubInput.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-152">
+          <caret line="3" column="13" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/p002/src/main/java/ru/mironenko/start/UserAction.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="137">
+          <caret line="16" column="14" selection-start-line="16" selection-start-column="14" selection-end-line="16" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/p002/src/main/java/ru/mironenko/start/ValidateInput.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/p002/src/test/java/ru/mironenko/start/StartUITest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2091">
+          <caret line="125" column="18" selection-start-line="125" selection-start-column="18" selection-end-line="125" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/p002/src/main/java/ru/mironenko/start/StartUI.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="28">
+          <caret line="59" column="0" selection-start-line="59" selection-start-column="0" selection-end-line="59" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/p005/src/main/java/ru/mironenko/collectionslite/sortings/UserSortedByHashCode.java" />
+    <entry file="file://$PROJECT_DIR$/p005/src/main/java/ru/mironenko/collectionslite/sortings/UserSortedByNameLength.java" />
+    <entry file="file://$PROJECT_DIR$/p005/src/test/java/ru/mironenko/collectionslite/sortings/SortUserTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="680">
+          <caret line="55" column="11" selection-start-line="55" selection-start-column="11" selection-end-line="55" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/p005/src/main/java/ru/mironenko/collectionslite/collectionsframework/ConvertList.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1220">
+          <caret line="87" column="0" selection-start-line="87" selection-start-column="0" selection-end-line="87" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/p005/src/main/java/ru/mironenko/collectionslite/sortings/SortUser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/p005/src/main/java/ru/mironenko/collectionslite/generalizations/UserConvert.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="21" column="0" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/p005/src/main/java/ru/mironenko/collectionslite/sortings/User.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-89">
+          <caret line="6" column="3" selection-start-line="6" selection-start-column="3" selection-end-line="6" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/p002/src/main/java/ru/mironenko/start/Tracker.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1563">
+          <caret line="14" column="44" selection-start-line="14" selection-start-column="44" selection-end-line="14" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/p002/src/test/java/ru/mironenko/start/TrackerTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1649">
+          <caret line="107" column="29" selection-start-line="107" selection-start-column="29" selection-end-line="107" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/p005/src/main/java/ru/mironenko/collectionslite/testtask/Account.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="22" column="21" selection-start-line="22" selection-start-column="21" selection-end-line="22" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/p005/src/main/java/ru/mironenko/collectionslite/testtask/MapForBank.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1785">
+          <caret line="107" column="85" selection-start-line="107" selection-start-column="85" selection-end-line="107" selection-end-column="85" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/p005/src/main/java/ru/mironenko/collectionslite/testtask/User.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="31" column="37" selection-start-line="31" selection-start-column="37" selection-end-line="31" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/p005/src/test/java/ru/mironenko/collectionslite/testtask/MapForBankTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="546">
+          <caret line="48" column="16" selection-start-line="48" selection-start-column="16" selection-end-line="48" selection-end-column="16" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/p005/src/test/java/ru/mironenko/collectionspro/iterator/converttask/ConvertIteratorTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="387">
+          <caret line="31" column="9" selection-start-line="31" selection-start-column="9" selection-end-line="31" selection-end-column="9" />
           <folding>
             <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/p005/src/test/java/ru/mironenko/collectionspro/iterator/TDAIteratorTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="379">
+          <caret line="30" column="0" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/p005/src/main/java/ru/mironenko/collectionspro/iterator/converttask/IteratorRealisation.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="629">
+          <caret line="37" column="37" selection-start-line="37" selection-start-column="37" selection-end-line="37" selection-end-column="37" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#480#481#0" expanded="true" />
+            <element signature="e#508#509#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/p005/src/main/java/ru/mironenko/collectionspro/iterator/converttask/IteratorOfIterators.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/p005/src/main/java/ru/mironenko/collectionspro/iterator/converttask/ConvertIterator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="277">
+          <caret line="28" column="4" selection-start-line="28" selection-start-column="4" selection-end-line="28" selection-end-column="4" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/p005/src/main/java/ru/mironenko/collectionspro/iterator/EvenIterator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="36" selection-start-line="11" selection-start-column="36" selection-end-line="11" selection-end-column="36" />
+          <folding>
+            <element signature="e#236#237#0" expanded="true" />
+            <element signature="e#270#271#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/p005/src/main/java/ru/mironenko/collectionspro/iterator/SimpleNumbersIterator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="867">
+          <caret line="55" column="5" selection-start-line="55" selection-start-column="5" selection-end-line="55" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/p005/src/test/java/ru/mironenko/collectionspro/iterator/SimpleNumbersIteratorTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="319">
+          <caret line="26" column="5" selection-start-line="26" selection-start-column="5" selection-end-line="26" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/p005/src/test/java/ru/mironenko/collectionspro/iterator/EvenIteratorTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="328">
+          <caret line="27" column="0" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/p005/src/main/java/ru/mironenko/collectionspro/iterator/TDAIterator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="19" selection-start-line="7" selection-start-column="19" selection-end-line="7" selection-end-column="19" />
+          <folding>
+            <element signature="e#771#772#0" expanded="true" />
+            <element signature="e#846#847#0" expanded="true" />
           </folding>
         </state>
       </provider>
