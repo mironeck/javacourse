@@ -5,6 +5,8 @@ import java.util.Iterator;
 /**
  * Created by nikita on 27.03.2017.
  */
+//Создать итератор возвращающий только четные цифры
+
 public class EvenIterator implements Iterable{
 
     final private int[] array;
@@ -20,11 +22,18 @@ public class EvenIterator implements Iterable{
 
             private int index = 0;
             /**
-             * Hasnext as long as the indexes are not out of limits
+             * Hasnext as array has even elements
              */
             @Override
             public boolean hasNext() {
-                return array.length > index;
+                boolean result = false;
+                for(int i = this.index; i < array.length; i++) {
+                    int irr = array[i];
+                    if ((irr % 2) == 0) {
+                        result = true;
+                    }
+                }
+                return result;
             }
 
             @Override
