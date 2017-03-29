@@ -5,23 +5,11 @@ import ru.mironenko.collectionspro.generic.SimpleList;
 /**
  * Created by nikita on 28.03.2017.
  */
-public class UserStore implements Store {
-
-    SimpleList<Base> list;
+public class UserStore extends BaseStore implements Store {
 
     public UserStore(int size) {
-        this.list = new SimpleList<>(size);
+        super(size);
     }
 
-    public void add(Base item){
-        list.add(item);
-    }
 
-    public void update(int position, Base newItem) {
-        list.update(position, newItem);
-    }
-
-    public void delete(int position) {
-        list.delete(position);
-    }
 }

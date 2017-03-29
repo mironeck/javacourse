@@ -5,13 +5,12 @@ package ru.mironenko.collectionspro.generic.store;
  */
 public class User extends Base {
 
-    @Override
-    String getID() {
-        return this.id;
+    /**
+     * constructor
+     * @param id
+     */
+    public User(String id) {
+        setID(id);
     }
 
-    @Override
-    void setID(String id) {
-        id = this.id;
-    }
 }

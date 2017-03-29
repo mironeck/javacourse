@@ -5,14 +5,12 @@ package ru.mironenko.collectionspro.generic.store;
  */
 public class Role extends Base {
 
-
-    @Override
-    String getID() {
-        return this.id;
+    /**
+     * constructor
+     * @param id
+     */
+    public Role(String id) {
+        setID(id);
     }
 
-    @Override
-    void setID(String id) {
-        id = this.id;
-    }
 }
