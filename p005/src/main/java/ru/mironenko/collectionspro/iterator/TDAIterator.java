@@ -35,7 +35,7 @@ public class TDAIterator implements Iterable {
              */
             @Override
             public boolean hasNext() {
-                return i < value.length && j < value.length;
+                return i < value.length && j < value[i].length;
             }
 
             /**
