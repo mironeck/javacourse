@@ -20,11 +20,29 @@ public class SimpleNumbersIterator implements Iterable {
 
             private int index = 0;
             /**
-             * Hasnext as long as the indexes are not out of limits
+             * HasNext as long as the array has simple digits
              */
             @Override
             public boolean hasNext() {
-                return index < array.length;
+                boolean result = false;
+                for (int i = index; i < array.length; i++) {
+                    int irr = array[i];
+                    /**
+                     * Count of denominators
+                     */
+                    int denominators = 0;
+                    if (irr > 1) {
+                        for (int j = 2; j < irr; j++) {
+                            if ((irr % j) == 0) {
+                                denominators++;
+                            }
+                        }
+                        if (denominators == 0) {
+                            result = true;
+                        }
+                    }
+                }
+                return result;
             }
 
             @Override
