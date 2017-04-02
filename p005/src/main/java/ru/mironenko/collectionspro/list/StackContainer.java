@@ -20,7 +20,7 @@ public class StackContainer<E> extends LinkedListContainer{
      * Removes first element
      */
     public void pull(){
-        removeFirst();
+        removeLast();
     }
 
 
