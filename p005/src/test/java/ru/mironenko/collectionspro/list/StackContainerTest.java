@@ -31,7 +31,8 @@ public class StackContainerTest {
 
         sc.pull();
 
-        assertThat(sc.get(0), is(2));
+        assertThat(sc.get(1), is(2));
+        assertThat(sc.getSize(), is(2));
     }
 
 }
