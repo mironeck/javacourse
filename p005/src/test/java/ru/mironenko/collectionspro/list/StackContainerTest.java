@@ -22,7 +22,7 @@ public class StackContainerTest {
     }
 
     @Test
-    public void whenPullElementsShouldRemovedFromTheHead(){
+    public void whenPullElementsShouldRemovedFromTheTail(){
 
         StackContainer<Integer> sc = new StackContainer<>();
         sc.push(1);
