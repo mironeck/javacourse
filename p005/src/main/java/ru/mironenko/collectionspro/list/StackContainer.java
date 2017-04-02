@@ -17,12 +17,10 @@ public class StackContainer<E> extends LinkedListContainer{
     }
 
     /**
-     * Removes first element
+     * Removes last element
      */
     public void pull(){
         removeLast();
     }
-
-
 
 }
