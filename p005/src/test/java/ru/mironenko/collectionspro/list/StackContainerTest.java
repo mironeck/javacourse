@@ -11,12 +11,12 @@ import static org.junit.Assert.*;
 public class StackContainerTest {
 
     @Test
-    public void whenPushElementsShouldAddInTheHead(){
+    public void whenPushElementsShouldAddInTheTail(){
 
         StackContainer<Integer> sc = new StackContainer<>();
-        sc.push(3);
-        sc.push(2);
         sc.push(1);
+        sc.push(2);
+        sc.push(3);
 
         assertThat(sc.get(0), is(1));
     }
@@ -25,13 +25,13 @@ public class StackContainerTest {
     public void whenPullElementsShouldRemovedFromTheHead(){
 
         StackContainer<Integer> sc = new StackContainer<>();
-        sc.push(3);
-        sc.push(2);
         sc.push(1);
+        sc.push(2);
+        sc.push(3);
 
         sc.pull();
 
-        assertThat(sc.get(1), is(2));
+        assertThat(sc.get(0), is(1));
         assertThat(sc.getSize(), is(2));
     }
 
