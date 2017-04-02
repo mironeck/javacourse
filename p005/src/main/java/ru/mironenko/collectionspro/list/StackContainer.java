@@ -13,7 +13,7 @@ public class StackContainer<E> extends LinkedListContainer{
      * @param e
      */
     public void push(E e) {
-        addFirst(e);
+        add(e);
     }
 
     /**
