@@ -31,36 +31,6 @@ public class LinkedListContainer<E> implements SimpleContainer<E>{
     }
 
     /**
-     * Inner class to create new elements
-     * @param <E>
-     */
-    private static class Node<E> {
-        E element;
-        Node<E> previous;
-        Node<E> next;
-
-        /**
-         * Constructor
-         * @param element
-         */
-        Node (E element){
-            this.element = element;
-        }
-
-        /**
-         * Constructor
-         * @param element
-         * @param previous
-         * @param next
-         */
-        Node(E element, Node<E> previous, Node<E> next) {
-            this.element = element;
-            this.next = next;
-            this.previous = previous;
-        }
-    }
-
-    /**
      * test, list is empty
      * @return boolean
      */
@@ -117,7 +87,7 @@ public class LinkedListContainer<E> implements SimpleContainer<E>{
      * Adds element in the head of list
      * @param e adding element
      */
-    private void addFirst(E e) {
+    public void addFirst(E e) {
 
         Node<E> newNode = new Node<E>(e);
         if(first == null) {
@@ -192,7 +162,7 @@ public class LinkedListContainer<E> implements SimpleContainer<E>{
      * removes last element in list
      * @return removed element
      */
-    private E removeLast() {
+    public E removeLast() {
         Node<E> l = last;
         if(l == null) {
             throw new NoSuchElementException();
@@ -215,7 +185,7 @@ public class LinkedListContainer<E> implements SimpleContainer<E>{
      * removes first element in list
      * @return removed element
      */
-    private E removeFirst() {
+    public E removeFirst() {
 
         Node<E> f = first;
         if(f == null) {
