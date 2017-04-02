@@ -9,7 +9,7 @@ import java.util.NoSuchElementException;
 public class StackContainer<E> extends LinkedListContainer{
 
     /**
-     * Adds element in the head of list
+     * Adds element in the tail of list
      * @param e
      */
     public void push(E e) {
