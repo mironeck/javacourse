@@ -18,9 +18,10 @@ public class StackContainer<E> extends LinkedListContainer{
 
     /**
      * Removes last element
+     * @return E element
      */
-    public void pull(){
-        removeLast();
+    public E pull(){
+        return (E) removeLast();
     }
 
 }
