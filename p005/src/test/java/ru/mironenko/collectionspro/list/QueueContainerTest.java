@@ -29,8 +29,9 @@ public class QueueContainerTest {
         qc.push(2);
         qc.push(3);
 
-        qc.pull();
+        Integer result = qc.pull();
 
+        assertThat(result, is(1));
         assertThat(qc.get(0), is(2));
         assertThat(qc.getSize(), is(2));
     }
