@@ -15,8 +15,10 @@ public class QueueContainer<E> extends LinkedListContainer {
 
     /**
      * Removes first element
+     * @return E element
      */
-    public void pull(){
-        removeFirst();
+
+    public E pull(){
+        return (E) removeFirst();
     }
 }
