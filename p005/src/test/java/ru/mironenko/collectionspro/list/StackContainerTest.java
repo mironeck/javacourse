@@ -29,10 +29,10 @@ public class StackContainerTest {
         sc.push(2);
         sc.push(3);
 
-        sc.pull();
+        Integer result = sc.pull();
 
-        assertThat(sc.get(0), is(1));
         assertThat(sc.getSize(), is(2));
+        assertThat(result, is(3));
     }
 
 }
