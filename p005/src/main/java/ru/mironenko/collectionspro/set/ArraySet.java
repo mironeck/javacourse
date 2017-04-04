@@ -49,7 +49,6 @@ public class ArraySet<E> {
 
         for(int i = 0; i < this.array.length; i++) {
             if (e.equals(this.array[i])) {
-                this.array[i] = e;
                 flag = true;
                 break;
             }
