@@ -5,6 +5,9 @@ package ru.mironenko.collectionspro.map;
  */
 //Создать модель User и три поля String name, int children, Calendar birthday,
 
+import java.util.HashMap;
+import java.util.Map;
+
 /**
  * Class User
  */
@@ -24,6 +27,18 @@ public class User {
         this.name = name;
         this.children = children;
         this.birthday = birthday;
+    }
+
+    public static void main(String[] args) {
+
+        User one = new User("Mike", 2, 30);
+        User two = new User("Mike", 2, 30);
+
+        Map<User, Object> map = new HashMap<>();
+        map.put(one, "one");
+        map.put(two, "two");
+
+        System.out.println(map);
     }
 
 }
