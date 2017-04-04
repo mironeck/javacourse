@@ -57,5 +57,6 @@ public class UserHashCode {
         System.out.println(set);
         System.out.println(one.hashCode());
         System.out.println(two.hashCode());
+        System.out.println(one.equals(two));
     }
 }
