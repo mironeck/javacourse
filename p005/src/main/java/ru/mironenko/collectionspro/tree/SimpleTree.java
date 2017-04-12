@@ -1,6 +1,7 @@
 package ru.mironenko.collectionspro.tree;
 
 import java.util.ArrayList;
+import java.util.LinkedList;
 import java.util.List;
 
 /**
@@ -33,6 +34,37 @@ public class SimpleTree<E> {
         return (List<E>) treeRoot.getChildren();
     }
 
+    /**
+     * search leaves with element e
+     * @param leaf
+     * @param e
+     * @return list of elements
+     */
+    public List<Leaf<E>> get(Leaf<E> leaf, E e){
+
+        List<Leaf<E>> result = new LinkedList<>();
+        result = getResult((LinkedList<Leaf<E>>)result, leaf, e);
+        return result;
+    }
+
+    /**
+     * Saves leaves with element e into list
+     * @param result
+     * @param leaf
+     * @param e
+     * @return list
+     */
+    private List<Leaf<E>> getResult(LinkedList<Leaf<E>> result, Leaf<E> leaf, E e){
+
+        for(Leaf<E> tmp : leaf.getChildren()){
+            if(tmp.element.equals(e)) {
+                result.add(tmp);
+            }
+            getResult(result, tmp, e);
+        }
+
+        return result;
+    }
 
      static class Leaf<E> {
         E element;
