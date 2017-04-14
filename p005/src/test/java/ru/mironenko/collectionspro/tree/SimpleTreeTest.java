@@ -5,7 +5,7 @@ import org.junit.Test;
 
 import java.util.ArrayList;
 import java.util.List;
-import ru.mironenko.collectionspro.tree.SimpleTree.Leaf;
+
 import static org.hamcrest.CoreMatchers.is;
 import static org.junit.Assert.*;
 
@@ -15,7 +15,7 @@ import static org.junit.Assert.*;
 public class SimpleTreeTest {
 
     SimpleTree<Integer> simpleTree = new SimpleTree<>();
-    SimpleTree.Leaf<Integer> root = new SimpleTree.Leaf<>(1);
+    SimpleTree.Node<Integer> root = new SimpleTree.Node<>(1);
 
     @Before
     public void init() {
@@ -50,7 +50,7 @@ public class SimpleTreeTest {
         simpleTree.addChild(root.getChildren().get(1), 2);
 
         List<Integer> result = new ArrayList<>();
-        for(Leaf<Integer> tmp : simpleTree.get(root, 2)){
+        for(SimpleTree.Node<Integer> tmp : simpleTree.get(root, 2)){
             result.add(tmp.element);
         }
 
@@ -92,6 +92,32 @@ public class SimpleTreeTest {
         boolean result = simpleTree.isBalanced(root);
 
         assertThat(result, is (false));
+
+    }
+
+    @Test
+    public void checksSpeedGetMethod(){
+
+        SimpleTree<String> st = new SimpleTree<>();
+        SimpleTree.Node<String> root = new SimpleTree.Node<>("Root");
+
+        for(int i = 0; i < 5000; i++) {
+            st.addChild(root, "One");
+            st.addChild(root, "Two");
+            st.addChild(root, "Three");
+            st.addChild(root.getChildren().get(0), "Four");
+            st.addChild(root.getChildren().get(0), "Five");
+            st.addChild(root.getChildren().get(0), "One");
+            st.addChild(root.getChildren().get(1), "Six");
+            st.addChild(root.getChildren().get(1), "Seven");
+            st.addChild(root.getChildren().get(0).getChildren().get(0), "One");
+            st.addChild(root.getChildren().get(0).getChildren().get(0), "One");
+        }
+
+        long start = System.currentTimeMillis();
+        List<SimpleTree.Node<String>> result = st.get(root, "One");
+        long finish = System.currentTimeMillis();
+        System.out.println(finish - start);
 
     }
 }
