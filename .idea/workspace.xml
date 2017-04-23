@@ -5,21 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="19d2fbfb-0d4f-4774-a872-f77554d22bd1" name="Default" comment="add linked list set task">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/p005/src/main/java/ru/mironenko/collectionspro/controltasks/trend/ExtraTestTask.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/p005/src/main/java/ru/mironenko/collectionspro/controltasks/trend/Operation.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/p005/src/main/java/ru/mironenko/collectionspro/controltasks/trend/State.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/p005/src/main/java/ru/mironenko/collectionspro/controltasks/trend/Task.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/p005/src/main/java/ru/mironenko/collectionspro/list/SimpleContainer.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/p005/src/test/java/ru/mironenko/collectionspro/generic/store/UserStoreTest.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/p005/src/test/java/ru/mironenko/collectionspro/map/UserTest.java" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/p005/src/main/java/ru/mironenko/collectionspro/controltasks/orderbook/OrdersDOMBuilder.java" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/p005/src/main/java/ru/mironenko/collectionspro/controltasks/orderbook/Book.java" afterPath="$PROJECT_DIR$/p005/src/main/java/ru/mironenko/collectionspro/controltasks/orderbook/Book.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/p005/src/main/java/ru/mironenko/collectionspro/generic/SimpleList.java" afterPath="$PROJECT_DIR$/p005/src/main/java/ru/mironenko/collectionspro/generic/SimpleList.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/p005/src/main/java/ru/mironenko/collectionspro/list/ArrayListContainer.java" afterPath="$PROJECT_DIR$/p005/src/main/java/ru/mironenko/collectionspro/list/ArrayListContainer.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/p005/src/main/java/ru/mironenko/collectionspro/map/User.java" afterPath="$PROJECT_DIR$/p005/src/main/java/ru/mironenko/collectionspro/map/User.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/p005/src/main/java/ru/mironenko/collectionspro/tree/SimpleTree.java" afterPath="$PROJECT_DIR$/p005/src/main/java/ru/mironenko/collectionspro/tree/SimpleTree.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/p005/src/test/java/ru/mironenko/collectionspro/tree/SimpleBinarySearchTreeTest.java" afterPath="$PROJECT_DIR$/p005/src/test/java/ru/mironenko/collectionspro/tree/SimpleBinarySearchTreeTest.java" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/p005/src/main/java/ru/mironenko/collectionspro/controltasks/orderbook/Book.java" afterPath="" />
     </list>
     <ignored path="javacourse.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -51,7 +37,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Order.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Order.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/p005/src/main/java/ru/mironenko/collectionspro/controltasks/orderbook/Order.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="204">
@@ -74,21 +60,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Book.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/p005/src/main/java/ru/mironenko/collectionspro/controltasks/orderbook/Book.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
-              <folding>
-                <element signature="e#187#188#0" expanded="true" />
-                <element signature="e#219#220#0" expanded="true" />
-                <element signature="e#249#250#0" expanded="true" />
-                <element signature="e#281#282#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="OrdersHandler.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/p005/src/main/java/ru/mironenko/collectionspro/controltasks/orderbook/OrdersHandler.java">
           <provider selected="true" editor-type-id="text-editor">
@@ -103,7 +74,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="OrdersSAXBuilder.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="OrdersSAXBuilder.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/p005/src/main/java/ru/mironenko/collectionspro/controltasks/orderbook/OrdersSAXBuilder.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="326">
@@ -1285,7 +1256,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1370" height="744" extended-state="0" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289689" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -1299,7 +1270,7 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289689" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.30305344" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.30305344" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.17557251" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1709,19 +1680,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/p005/src/main/java/ru/mironenko/collectionspro/controltasks/orderbook/Book.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
-          <folding>
-            <element signature="e#187#188#0" expanded="true" />
-            <element signature="e#219#220#0" expanded="true" />
-            <element signature="e#249#250#0" expanded="true" />
-            <element signature="e#281#282#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/p005/src/main/java/ru/mironenko/collectionspro/controltasks/orderbook/SimpleMain.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="177">
@@ -1780,6 +1738,14 @@
             <element signature="e#850#851#0" expanded="true" />
             <element signature="e#879#880#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/p005/src/main/java/ru/mironenko/collectionspro/controltasks/orderbook/Book.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
