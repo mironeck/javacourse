@@ -21,7 +21,7 @@ public class SimpleList<E> {
     }
 
     /**
-     * Method add value to simplelist
+     * Method adds value to simplelist
      * @param value
      */
     public void add(E value) {

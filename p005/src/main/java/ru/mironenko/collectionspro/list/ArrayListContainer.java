@@ -1,7 +1,5 @@
 package ru.mironenko.collectionspro.list;
 
-import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Iterator;
 
 /**
@@ -12,6 +10,7 @@ public class ArrayListContainer<E> implements SimpleContainer<E> {
     private static final int DEFAULT_CAPACITY = 10;
     private Object[] array;
     private int countOfElements = 0;
+
 
     /**
      * Default constructor of ArrayListContainer
@@ -29,7 +28,7 @@ public class ArrayListContainer<E> implements SimpleContainer<E> {
     }
 
     /**
-     * Method increase capacity in two fold
+     * Method increases capacity in two fold
      */
     private void increaseCapacity(){
         Object[] newArray = new Object[this.array.length * 2];

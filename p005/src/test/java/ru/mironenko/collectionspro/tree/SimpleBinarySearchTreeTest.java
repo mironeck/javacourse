@@ -34,7 +34,7 @@ public class SimpleBinarySearchTreeTest {
 
         SimpleBinarySearchTree<String> sbstree = new SimpleBinarySearchTree<>();
 
-        for(int i = 0; i < 1000; i++) {
+        for(int i = 0; i < 5000; i++) {
             sbstree.addChild("One");
             sbstree.addChild("Two");
             sbstree.addChild("Three");

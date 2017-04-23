@@ -39,6 +39,8 @@ public class User {
         map.put(two, "two");
 
         System.out.println(map);
+        System.out.println(one.hashCode());
+        System.out.println(two.hashCode());
     }
 
 }

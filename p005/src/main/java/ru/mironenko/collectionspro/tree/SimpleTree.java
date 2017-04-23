@@ -6,16 +6,16 @@ import java.util.List;
 /**
  * Created by nikita on 11.04.2017.
  */
-//Создать простую структуру дерева. Методы addChild(Leaf, E), List<E> getChildren()
+//Создать простую структуру дерева. Методы addChild(Node, E), List<E> getChildren()
 
 public class SimpleTree<E> {
 
-    Leaf<E> treeRoot;
+    Node<E> treeRoot;
 
-    public boolean addChild(Leaf<E> parent, E element){
+    public boolean addChild(Node<E> parent, E element){
 
         boolean result = false;
-        Leaf<E> leaf = new Leaf<E>(element);
+        Node<E> leaf = new Node<E>(element);
         if(treeRoot == null) {
             treeRoot = parent;
             result = true;
@@ -37,13 +37,13 @@ public class SimpleTree<E> {
      * @param e
      * @return list of elements
      */
-    public List<Leaf<E>> get(Leaf<E> leaf, E e){
+    public List<Node<E>> get(Node<E> leaf, E e){
 
-        List<Leaf<E>> result = new ArrayList<>();
+        List<Node<E>> result = new ArrayList<>();
         if(treeRoot.element.equals(e)){
             result.add(treeRoot);
         }
-        result = getResult((ArrayList<Leaf<E>>)result, leaf, e);
+        result = getResult((ArrayList<Node<E>>)result, leaf, e);
         return result;
     }
 
@@ -54,11 +54,11 @@ public class SimpleTree<E> {
      * @param e
      * @return list
      */
-    private ArrayList<Leaf<E>> getResult(ArrayList<Leaf<E>> result, Leaf<E> leaf, E e){
+    private ArrayList<Node<E>> getResult(ArrayList<Node<E>> result, Node<E> leaf, E e){
 
-        for(Leaf<E> tmp : leaf.getChildren()){
+        for(Node<E> tmp : leaf.getChildren()){
             if(tmp.element.equals(e)) {
-                result.add((Leaf<E>) tmp);
+                result.add((Node<E>) tmp);
             }
             if(!leaf.getChildren().isEmpty()) {
                 getResult(result, tmp, e);
@@ -72,7 +72,7 @@ public class SimpleTree<E> {
      * Checks tree is balanced
      * @return boolean
      */
-    public boolean isBalanced(Leaf<E> leaf){
+    public boolean isBalanced(Node<E> leaf){
 
         return checkBalance(leaf);
     }
@@ -82,7 +82,7 @@ public class SimpleTree<E> {
      * @param root
      * @return boolean
      */
-    private boolean checkBalance(Leaf<E> root) {
+    private boolean checkBalance(Node<E> root) {
 
         int countOfLeaves = root.getChildren().size();
         if(countOfLeaves == 0) {
@@ -95,37 +95,37 @@ public class SimpleTree<E> {
     }
 
     /**
-     * Class Leaf to create tree
+     * Class Node to create tree
      * @param <E>
      */
-     public static class Leaf<E> implements Comparable<Leaf<E>>{
+     public static class Node<E> implements Comparable<Node<E>>{
 
          E element;
 
-        private final List<Leaf<E>> children = new ArrayList<>();
+        private final List<Node<E>> children = new ArrayList<>();
 
 
-        public Leaf(E element) {
+        public Node(E element) {
             this.element = element;
         }
 
 
-        public List<Leaf<E>> getChildren() {
+        public List<Node<E>> getChildren() {
             return children;
         }
 
 
          @Override
-         public int compareTo(Leaf<E> o) {
+         public int compareTo(Node<E> o) {
              return hashCode() - o.hashCode();
          }
 
          @Override
          public boolean equals(Object o) {
              if (this == o) return true;
-             if (!(o instanceof Leaf)) return false;
+             if (!(o instanceof SimpleTree.Node)) return false;
 
-             Leaf<?> leaf = (Leaf<?>) o;
+             Node<?> leaf = (Node<?>) o;
 
              return element != null ? element.equals(leaf.element) : leaf.element == null;
 
