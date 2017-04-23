@@ -51,7 +51,7 @@ public class OrdersSAXBuilder  {
     public static void main(String[] args) {
 
         OrdersSAXBuilder ordersSAXBuilder = new OrdersSAXBuilder();
-        ordersSAXBuilder.buildMapOrders("D:\\orders.xml");
+        ordersSAXBuilder.buildMapOrders("D:\\ordersTest.xml");
 
     }
 
