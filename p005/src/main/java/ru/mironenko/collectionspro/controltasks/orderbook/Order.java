@@ -5,20 +5,43 @@ package ru.mironenko.collectionspro.controltasks.orderbook;
  */
 public class Order implements Comparable<Order>{
 
-    private final String book;
-    private final int id;
-    private final String operation;
-    private final double price;
-    private final int volume;
+    private String book;
+    private int id;
+    private String operation;
+    private double price;
+    private int volume;
+
+    public Order(){}
 
 
-    public Order(String book, int id, String operation, double price, int volume) {
+    public void setBook(String book) {
         this.book = book;
+    }
+
+    public void setId(int id) {
         this.id = id;
+    }
+
+    public void setOperation(String operation) {
         this.operation = operation;
+    }
+
+    public void setPrice(double price) {
         this.price = price;
+    }
+
+    public void setVolume(int volume) {
         this.volume = volume;
     }
+
+
+//    public Order(String book, int id, String operation, double price, int volume) {
+//        this.book = book;
+//        this.id = id;
+//        this.operation = operation;
+//        this.price = price;
+//        this.volume = volume;
+//    }
 
     public String getBook() {
         return book;
