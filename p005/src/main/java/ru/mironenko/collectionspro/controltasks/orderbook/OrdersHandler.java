@@ -3,31 +3,22 @@ import org.xml.sax.SAXException;
 import org.xml.sax.helpers.DefaultHandler;
 import org.xml.sax.Attributes;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Map;
-import java.util.TreeMap;
+import java.util.*;
 
 /**
  * Created by nikita on 19.04.2017.
  */
 public class OrdersHandler extends DefaultHandler{
 
-    private Map<String, List<Order>> orders;
-    private List<Order> bookOneList;
-    private List<Order> bookTwoList;
-    private List<Order> bookThreeList;
+    private Map<String, ArrayList<Order>> orders;
 
     private Order current = null;
 
     public OrdersHandler() {
         orders = new TreeMap<>();
-        bookOneList = new ArrayList<>();
-        bookTwoList = new ArrayList<>();
-        bookThreeList = new ArrayList<>();
     }
 
-    public Map<String, List<Order>> getOrders() {
+    public Map<String, ArrayList<Order>> getOrders() {
         return orders;
     }
 
@@ -41,14 +32,14 @@ public class OrdersHandler extends DefaultHandler{
     public void startElement(String uri, String localName, String qName, Attributes attributes) throws SAXException {
 
         if("AddOrder".equals(localName)) {
-            current = new Order();
-            current.setBook(attributes.getValue("book"));
-            current.setOperation(attributes.getValue("operation"));
-            current.setPrice(Double.parseDouble(attributes.getValue("price")));
-            current.setVolume(Integer.parseInt(attributes.getValue("volume")));
-            current.setId(Integer.parseInt(attributes.getValue("orderId")));
 
+            String book = attributes.getValue("book");
+            String operation = attributes.getValue("operation");
+            double price = Double.parseDouble(attributes.getValue("price"));
+            int volume = Integer.parseInt(attributes.getValue("volume"));
+            int orderID = Integer.parseInt(attributes.getValue("orderId"));
 
+            current = new Order(book, operation, price, volume, orderID);
         }
 
     }
@@ -63,22 +54,18 @@ public class OrdersHandler extends DefaultHandler{
     public void endElement(String uri, String localName, String qName) throws SAXException {
 
         if("AddOrder".equals(localName)) {
-            if(current.getBook().equals("book-1")){
-                bookOneList.add(current);
-            } else if(current.getBook().equals("book-2")) {
-                bookTwoList.add(current);
-            } else if(current.getBook().equals("book-3")) {
-                bookThreeList.add(current);
+            ArrayList<Order> list = orders.get(current.getBook());
+            if(list == null) {
+                list = new ArrayList<>();
+                orders.put(current.getBook(), list);
             }
+            list.add(current);
         }
     }
 
     @Override
     public void endDocument() throws SAXException {
 
-        orders.put("book-1", bookOneList);
-        orders.put("book-2", bookTwoList);
-        orders.put("book-3", bookThreeList);
         System.out.println("\nParsing ended");
     }
 
