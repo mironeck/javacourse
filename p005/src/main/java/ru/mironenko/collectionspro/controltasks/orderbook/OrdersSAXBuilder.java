@@ -5,6 +5,7 @@ import org.xml.sax.XMLReader;
 import org.xml.sax.helpers.XMLReaderFactory;
 
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
@@ -13,7 +14,7 @@ import java.util.Map;
  */
 public class OrdersSAXBuilder  {
 
-    private Map<String, List<Order>> orders;
+    private Map<String, ArrayList<Order>> orders;
     private OrdersHandler ordersHandler;
     private XMLReader reader;
 
@@ -29,7 +30,7 @@ public class OrdersSAXBuilder  {
         }
     }
 
-    public Map<String, List<Order>> getOrders() {
+    public Map<String, ArrayList<Order>> getOrders() {
         return orders;
     }
 
@@ -51,7 +52,7 @@ public class OrdersSAXBuilder  {
     public static void main(String[] args) {
 
         OrdersSAXBuilder ordersSAXBuilder = new OrdersSAXBuilder();
-        ordersSAXBuilder.buildMapOrders("D:\\ordersTest.xml");
+        ordersSAXBuilder.buildMapOrders("D:\\orders.xml");
 
     }
 
