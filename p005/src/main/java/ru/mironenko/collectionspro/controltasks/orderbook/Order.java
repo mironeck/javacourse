@@ -5,43 +5,20 @@ package ru.mironenko.collectionspro.controltasks.orderbook;
  */
 public class Order implements Comparable<Order>{
 
-    private String book;
-    private int id;
-    private String operation;
-    private double price;
-    private int volume;
+    private final String book;
+    private final int id;
+    private final String operation;
+    private final Double price;
+    private final int volume;
 
-    public Order(){}
-
-
-    public void setBook(String book) {
+    public Order(String book, String operation, double price, int volume, int id){
         this.book = book;
-    }
-
-    public void setId(int id) {
+        this.operation = operation;
+        this.price = price;
+        this.volume = volume;
         this.id = id;
     }
 
-    public void setOperation(String operation) {
-        this.operation = operation;
-    }
-
-    public void setPrice(double price) {
-        this.price = price;
-    }
-
-    public void setVolume(int volume) {
-        this.volume = volume;
-    }
-
-
-//    public Order(String book, int id, String operation, double price, int volume) {
-//        this.book = book;
-//        this.id = id;
-//        this.operation = operation;
-//        this.price = price;
-//        this.volume = volume;
-//    }
 
     public String getBook() {
         return book;
@@ -76,27 +53,31 @@ public class Order implements Comparable<Order>{
 
     @Override
     public boolean equals(Object o) {
-        if (this == o) return true;
-        if (!(o instanceof Order)) return false;
+        if (this == o) {
+            return true;
+        }
+        if (o == null || getClass() != o.getClass()) {
+            return false;
+        }
 
         Order order = (Order) o;
 
-        if (getId() != order.getId()) return false;
-        if (Double.compare(order.getPrice(), getPrice()) != 0) return false;
-        if (getVolume() != order.getVolume()) return false;
-        return getOperation() != null ? getOperation().equals(order.getOperation()) : order.getOperation() == null;
+        if (id != order.id) {
+            return false;
+        }
 
+        return true;
     }
 
     @Override
     public int hashCode() {
-        int result;
-        long temp;
-        result = getId();
-        result = 31 * result + (getOperation() != null ? getOperation().hashCode() : 0);
-        temp = Double.doubleToLongBits(getPrice());
-        result = 31 * result + (int) (temp ^ (temp >>> 32));
-        result = 31 * result + getVolume();
-        return result;
+//        int result;
+//        long temp;
+//        result = getId();
+//        result = 31 * result + (getOperation() != null ? getOperation().hashCode() : 0);
+//        temp = Double.doubleToLongBits(getPrice());
+//        result = 31 * result + (int) (temp ^ (temp >>> 32));
+//        result = 31 * result + getVolume();
+        return id;
     }
 }

@@ -18,6 +18,11 @@ public class OrdersSAXBuilder  {
     private OrdersHandler ordersHandler;
     private XMLReader reader;
 
+    public Map<String, ArrayList<Order>> getOrders() {
+        return orders;
+    }
+
+
     public OrdersSAXBuilder() {
         //создание SAX-анализатора
         ordersHandler = new OrdersHandler();
@@ -30,11 +35,8 @@ public class OrdersSAXBuilder  {
         }
     }
 
-    public Map<String, ArrayList<Order>> getOrders() {
-        return orders;
-    }
 
-    public void buildMapOrders(String fileName) {
+    public Map<String, ArrayList<Order>> buildMapOrders(String fileName) {
 
         try{
             // разбор XML-документа
@@ -45,15 +47,15 @@ public class OrdersSAXBuilder  {
             System.err.println("IOException" + e);
         }
 
-        orders = ordersHandler.getOrders();
+        return ordersHandler.getOrders();
     }
 
 
-    public static void main(String[] args) {
-
-        OrdersSAXBuilder ordersSAXBuilder = new OrdersSAXBuilder();
-        ordersSAXBuilder.buildMapOrders("D:\\orders.xml");
-
-    }
+//    public static void main(String[] args) {
+//
+//        OrdersSAXBuilder ordersSAXBuilder = new OrdersSAXBuilder();
+//        ordersSAXBuilder.buildMapOrders("D:\\orders.xml");
+//
+//    }
 
 }

@@ -22,7 +22,6 @@ public class OrdersHandler extends DefaultHandler{
         return orders;
     }
 
-
     @Override
     public void startDocument() throws SAXException {
         System.out.println("Parsing started");
@@ -41,7 +40,6 @@ public class OrdersHandler extends DefaultHandler{
 
             current = new Order(book, operation, price, volume, orderID);
         }
-
     }
 
     @Override
