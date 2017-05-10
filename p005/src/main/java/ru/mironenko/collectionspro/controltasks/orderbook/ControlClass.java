@@ -16,12 +16,12 @@ public class ControlClass {
         /**
          * Set for BID
          */
-        Set<Order> setForBID = new TreeSet<>();
+        Set<Order> setForBID = new HashSet<>(1000);
 
         /**
          * Set for ASK
          */
-        Set<Order> setForASK = new TreeSet<>();
+        Set<Order> setForASK = new HashSet<>(1000);
 
         /**
          * SAXBuilder for Orders
@@ -73,7 +73,7 @@ public class ControlClass {
     private Set<Order> checkForSamePrice(Set<Order> orders) {
 
         int volume = 0;
-        Set<Order> result = new TreeSet<Order>();
+        Set<Order> result = new HashSet<Order>(1000);
         Order newOrder = null;
         boolean flag = false;
         for(Order temp : orders) {
@@ -143,6 +143,6 @@ public class ControlClass {
 
     public static void main(String[] args) {
 
-        new ControlClass().getBIDandASK("D:\\orders.xml");
+        new ControlClass().getBIDandASK("D:\\ordersTest.xml");
     }
 }
