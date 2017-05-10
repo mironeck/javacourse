@@ -14,6 +14,10 @@ public class OrdersHandler extends DefaultHandler{
 
     private Order current = null;
 
+    int orderIDToDelete;
+    String bookToDelete;
+    Order orderToDelete;
+
     public OrdersHandler() {
         orders = new TreeMap<>();
     }
@@ -40,6 +44,13 @@ public class OrdersHandler extends DefaultHandler{
 
             current = new Order(book, operation, price, volume, orderID);
         }
+
+        if("DeleteOrder".equals(localName)) {
+            bookToDelete = attributes.getValue("book");
+            orderIDToDelete = Integer.parseInt(attributes.getValue("orderId"));
+
+            orderToDelete = new Order(bookToDelete, orderIDToDelete);
+        }
     }
 
     @Override
@@ -58,6 +69,11 @@ public class OrdersHandler extends DefaultHandler{
                 orders.put(current.getBook(), list);
             }
             list.add(current);
+        }
+
+        if("DeleteOrder".equals(localName)) {
+            orders.get(bookToDelete).remove(orderToDelete);
+
         }
     }
 
