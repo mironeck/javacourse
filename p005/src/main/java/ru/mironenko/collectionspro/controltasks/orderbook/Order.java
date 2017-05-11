@@ -5,11 +5,16 @@ package ru.mironenko.collectionspro.controltasks.orderbook;
  */
 public class Order implements Comparable<Order>{
 
-    private final String book;
-    private final int id;
-    private final String operation;
-    private final Double price;
-    private final int volume;
+    private  String book;
+    private  int id;
+    private  String operation;
+    private  Double price;
+    private  int volume;
+
+    public Order(String book, int id){
+        this.book = book;
+        this.id = id;
+    }
 
     public Order(String book, String operation, double price, int volume, int id){
         this.book = book;
@@ -18,6 +23,8 @@ public class Order implements Comparable<Order>{
         this.volume = volume;
         this.id = id;
     }
+
+
 
 
     public String getBook() {
