@@ -27,25 +27,16 @@ public class ControlClass {
          * SAXBuilder for Orders
          */
         OrdersSAXBuilder ordersSAXBuilder = new OrdersSAXBuilder();
-        Map<String, ArrayList<Order>> mapOrders = ordersSAXBuilder.buildMapOrders(fileName);
+        //Map<String, ArrayList<Order>> mapOrders = ordersSAXBuilder.buildMapOrders(fileName);
+        Map<String, Book> mapOrdersBook = ordersSAXBuilder.buildMapOrders(fileName);
 
-        for(String tmp : mapOrders.keySet()) {
+        for(String tmp : mapOrdersBook.keySet()) {
 
-            for(Order order : mapOrders.get(tmp)) {
-
-                if("BUY".equals(order.getOperation())) {
-
-                        setForBID.add(order);
-                }
-
-                if("SELL".equals(order.getOperation())) {
-
-                    setForASK.add(order);
-                }
-
-            }
+            setForBID = mapOrdersBook.get(tmp).getBuy();
+            setForASK = mapOrdersBook.get(tmp).getSell() ;
 
             System.out.println("BUY " +  " PRICE " + "  SELL " + "for book = " + tmp);
+
             Set<Order> setBID = checkForSamePrice(setForBID);
             Set<Order> sortedSetForBID = sortSetFromHightoLow(setBID);
 

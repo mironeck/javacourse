@@ -5,8 +5,6 @@ import org.xml.sax.XMLReader;
 import org.xml.sax.helpers.XMLReaderFactory;
 
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Map;
 
 /**
@@ -14,14 +12,8 @@ import java.util.Map;
  */
 public class OrdersSAXBuilder  {
 
-    private Map<String, ArrayList<Order>> orders;
     private OrdersHandler ordersHandler;
     private XMLReader reader;
-
-    public Map<String, ArrayList<Order>> getOrders() {
-        return orders;
-    }
-
 
     public OrdersSAXBuilder() {
         //создание SAX-анализатора
@@ -36,7 +28,7 @@ public class OrdersSAXBuilder  {
     }
 
 
-    public Map<String, ArrayList<Order>> buildMapOrders(String fileName) {
+    public Map<String, Book> buildMapOrders(String fileName) {
 
         try{
             // разбор XML-документа
@@ -47,15 +39,8 @@ public class OrdersSAXBuilder  {
             System.err.println("IOException" + e);
         }
 
-        return ordersHandler.getOrders();
+        return ordersHandler.getStringBookMap();
     }
 
-
-//    public static void main(String[] args) {
-//
-//        OrdersSAXBuilder ordersSAXBuilder = new OrdersSAXBuilder();
-//        ordersSAXBuilder.buildMapOrders("D:\\orders.xml");
-//
-//    }
 
 }
