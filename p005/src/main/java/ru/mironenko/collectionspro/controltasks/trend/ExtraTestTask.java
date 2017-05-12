@@ -1,5 +1,9 @@
 package ru.mironenko.collectionspro.controltasks.trend;
 
+import java.time.Period;
+import java.util.Calendar;
+import java.util.List;
+
 /**
  * Created by nikita on 16.04.2017.
  */
@@ -14,7 +18,12 @@ package ru.mironenko.collectionspro.controltasks.trend;
 
 public class ExtraTestTask {
 
-    
+
+    public void generateTrend(List<Task> list, Calendar start, Calendar finish, Period period) {
+
+
+
+    }
 
 
 }

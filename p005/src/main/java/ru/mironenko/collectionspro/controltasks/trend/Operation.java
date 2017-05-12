@@ -5,16 +5,17 @@ import java.util.Date;
 /**
  * Created by nikita on 18.04.2017.
  */
+//Operation - начальное состояние, конечное состояние, дату выполнения.
 public class Operation {
 
-    final State firstState;
-    final State finalState;
-    final Date dateOfOperation;
+    private String nameOfOperation;
+    private State firstState;
+    private State finalState;
+    private Date dateOfOperation;
 
-    public Operation(State firstState, State finalState, Date dateOfOperation) {
-        this.firstState = firstState;
-        this.finalState = finalState;
-        this.dateOfOperation = dateOfOperation;
+    public Operation(String nameOfOperation) {
+        this.nameOfOperation = nameOfOperation;
+        this.dateOfOperation = new Date();
     }
 
     public State getFirstState() {
@@ -29,4 +30,15 @@ public class Operation {
         return dateOfOperation;
     }
 
+    public String getNameOfOperation() {
+        return nameOfOperation;
+    }
+
+    public void setFirstState(State firstState) {
+        this.firstState = firstState;
+    }
+
+    public void setFinalState(State finalState) {
+        this.finalState = finalState;
+    }
 }
