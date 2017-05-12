@@ -23,6 +23,9 @@ public class ControlClass {
          */
         Set<Order> setForASK = new HashSet<>(1000);
 
+        Set<Order> buyResult = new TreeSet<>();
+        Set<Order> sellResult = new TreeSet<>();
+
         /**
          * SAXBuilder for Orders
          */
@@ -38,14 +41,18 @@ public class ControlClass {
             System.out.println("BUY " +  " PRICE " + "  SELL " + "for book = " + tmp);
 
             Set<Order> setBID = checkForSamePrice(setForBID);
-            Set<Order> sortedSetForBID = sortSetFromHightoLow(setBID);
+            Set<Order> setASK = checkForSamePrice(setForASK);
+
+            buyResult = checkForBuySell(setBID, setASK)[0];
+            sellResult = checkForBuySell(setBID, setASK)[1];
+
+            Set<Order> sortedSetForBID = sortSetFromHightoLow(buyResult);
+            Set<Order> sortedSetForASK = sortSetFromLowHighto(sellResult);
 
             for(Order temp : sortedSetForBID) {
                 System.out.println(temp.getPrice() + " " + temp.getVolume());
             }
 
-            Set<Order> setASK = checkForSamePrice(setForASK);
-            Set<Order> sortedSetForASK = sortSetFromLowHighto(setASK);
 
             for(Order temp : sortedSetForASK) {
                 System.out.println("           " + temp.getPrice() + " " + temp.getVolume());
@@ -86,6 +93,36 @@ public class ControlClass {
         }
         return result;
     }
+
+
+    public Set<Order>[] checkForBuySell(Set<Order> buy, Set<Order> sell){
+
+        Set<Order> buyResult = new TreeSet<>();
+        Set<Order> sellResult = new TreeSet<>();
+        Set<Order>[] result = new Set[2];
+
+        boolean flag = false;
+
+        for(Order buyTemp : buy) {
+
+            for(Order sellTemp : sell) {
+
+                if( !(buyTemp.getPrice() >= sellTemp.getPrice()) ) {
+                    sellResult.add(sellTemp);
+                    flag = true;
+                }
+            }
+            if(flag) {
+                buyResult.add(buyTemp);
+                flag = false;
+            }
+        }
+
+        result[0] = buyResult;
+        result[1] = sellResult;
+        return result;
+    }
+
 
     /**
      * Sorts set of orders from higher price to lower price
@@ -134,6 +171,6 @@ public class ControlClass {
 
     public static void main(String[] args) {
 
-        new ControlClass().getBIDandASK("D:\\ordersTest.xml");
+        new ControlClass().getBIDandASK("D:\\ordersTest2.xml");
     }
 }
