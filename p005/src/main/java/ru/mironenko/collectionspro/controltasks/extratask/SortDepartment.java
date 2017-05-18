@@ -65,30 +65,4 @@ public class SortDepartment {
         return result;
     }
 
-
-    public static void main(String[] args) {
-
-        List<String> departments = new ArrayList<>();
-        departments.add("K1\\SK1");
-        departments.add("K1\\SK2");
-        departments.add("K1\\SK1\\SSK1");
-        departments.add("K1\\SK1\\SSK2");
-        departments.add("K2");
-        departments.add("K2\\SK1\\SSK1");
-        departments.add("K2\\SK1\\SSK2");
-
-
-        SortDepartment sortDepartment = new SortDepartment();
-        Set<String> primer = sortDepartment.addDepartmentIfNecessary(departments);
-        for(String temp : primer) {
-            System.out.println(temp);
-        }
-
-        System.out.println();
-        Set<String> primerf = sortDepartment.sortDepartmentDescending(primer);
-
-        for(String temp : primerf) {
-            System.out.println(temp);
-        }
-    }
 }
