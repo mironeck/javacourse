@@ -10,14 +10,19 @@ package ru.mironenko.threads;
 //        Вывести результат на экран.
 //        Продемонстрировать, что программа выполняется параллельно. Это будет видно по выводу.
 
-
+/**
+ * Class CountWords has a test as a parameter of the constructor and counts words in the text
+ */
 public class CountWords implements Runnable {
 
     String text;
 
-
-    public CountWords(String fileName) {
-        this.text = fileName;
+    /**
+     * Constructor of CountWords
+     * @param text
+     */
+    public CountWords(String text) {
+        this.text = text;
 
     }
 
