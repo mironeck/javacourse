@@ -11,13 +11,15 @@ package ru.mironenko.threads;
 public class CountSpaces implements Runnable {
 
     String text;
-
+    Thread t;
     /**
      * CountSpaces constructor
      * @param text
      */
     public CountSpaces(String text) {
         this.text = text;
+        t = new Thread(this);
+        t.start();
     }
 
     @Override

@@ -16,19 +16,20 @@ package ru.mironenko.threads;
 public class CountWords implements Runnable {
 
     String text;
-
+    Thread t;
     /**
      * Constructor of CountWords
      * @param text
      */
     public CountWords(String text) {
         this.text = text;
-
+        t = new Thread(this);
+        t.start();
     }
 
     @Override
     public void run() {
-
+        long startTime = System.currentTimeMillis();
         String [] words = text.split(" ");
         System.out.println(String.format("The text consists of %s words", words.length));
         try {
@@ -36,11 +37,10 @@ public class CountWords implements Runnable {
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
+        long time = System.currentTimeMillis() - startTime;
+        if(time >= 1000){
+            ;
+        }
     }
 
-    public static void main(String[] args) {
-
-        new Thread(new CountSpaces("This text includes five simple spaces")).start();
-        new Thread(new CountWords("This text consist of six words")).start();
-    }
 }
