@@ -12,6 +12,7 @@ public class CountSpaces implements Runnable {
 
     String text;
     Thread t;
+
     /**
      * CountSpaces constructor
      * @param text
@@ -25,12 +26,9 @@ public class CountSpaces implements Runnable {
     @Override
     public void run() {
 
-        String [] words = text.split(" ");
-        System.out.println(String.format("The text includes %s spaces",words.length - 1));
-        try {
-            Thread.sleep(200);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
+        String [] words = this.text.split(" +");
+        int spacesCount = words.length;
+        System.out.format("Number of spaces in the text is %s . \n", spacesCount - 1);
+
     }
 }

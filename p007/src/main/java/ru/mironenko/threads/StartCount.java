@@ -16,39 +16,52 @@ import ru.mironenko.threads.CountWords;
 
 
 
-public class StartCount {
+public class StartCount{
 
     String text;
     CountWords countWords;
     CountSpaces countSpaces;
 
 
+
     public StartCount(String text) {
         this.text = text;
-
     }
 
-    public void countWordsAndSpaces() {
+
+    public void count() throws InterruptedException {
+
+        long startTime = System.currentTimeMillis();
 
         this.countWords = new CountWords(this.text);
         this.countSpaces = new CountSpaces(this.text);
 
-        try{
-            System.out.println("Program to count words and spaces if started");
+        System.out.println("Program to count words and spaces if started");
+
+        while(this.countWords.t.isAlive() && this.countSpaces.t.isAlive()) {
 
             this.countWords.t.join();
             this.countSpaces.t.join();
 
-        } catch (InterruptedException e) {
-            e.printStackTrace();
+            if(System.currentTimeMillis() - startTime > 1000) {
+                if(this.countWords.t.isAlive()) {
+                    this.countWords.t.interrupt();
+                    this.countWords.t.join();
+                }
+                if(this.countSpaces.t.isAlive()){
+                    this.countSpaces.t.interrupt();
+                    this.countSpaces.t.join();
+                }
+            }
         }
 
         System.out.println("Counting is finished");
 
     }
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InterruptedException{
 
-        new StartCount("This text includes five simple spaces").countWordsAndSpaces();
+        String text = "";
+        new StartCount(text).count();
     }
 }

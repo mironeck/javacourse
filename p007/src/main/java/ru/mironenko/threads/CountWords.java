@@ -10,13 +10,17 @@ package ru.mironenko.threads;
 //        Вывести результат на экран.
 //        Продемонстрировать, что программа выполняется параллельно. Это будет видно по выводу.
 
+import java.io.*;
+import java.util.Scanner;
+
 /**
  * Class CountWords has a test as a parameter of the constructor and counts words in the text
  */
 public class CountWords implements Runnable {
 
-    String text;
+    private String text;
     Thread t;
+
     /**
      * Constructor of CountWords
      * @param text
@@ -29,18 +33,11 @@ public class CountWords implements Runnable {
 
     @Override
     public void run() {
-        long startTime = System.currentTimeMillis();
-        String [] words = text.split(" ");
-        System.out.println(String.format("The text consists of %s words", words.length));
-        try {
-            Thread.sleep(100);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
-        long time = System.currentTimeMillis() - startTime;
-        if(time >= 1000){
-            ;
-        }
+
+        String [] words = this.text.split(" +");
+        int wordsCount = words.length;
+        System.out.format("Number of words in the text is %s . \n", wordsCount);
+
     }
 
 }
