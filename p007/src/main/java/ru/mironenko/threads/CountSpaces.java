@@ -10,8 +10,8 @@ package ru.mironenko.threads;
  */
 public class CountSpaces implements Runnable {
 
-    String text;
-    Thread t;
+    private String text;
+    protected Thread t;
 
     /**
      * CountSpaces constructor
@@ -40,6 +40,7 @@ public class CountSpaces implements Runnable {
             }
 
         }
+
         System.out.format("Number of spaces in the text is %s . \n", spaceCount);
 
     }

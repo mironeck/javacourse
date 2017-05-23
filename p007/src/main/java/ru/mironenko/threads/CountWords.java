@@ -19,7 +19,7 @@ import java.util.Scanner;
 public class CountWords implements Runnable {
 
     private String text;
-    Thread t;
+    protected Thread t;
 
     /**
      * Constructor of CountWords
@@ -48,6 +48,7 @@ public class CountWords implements Runnable {
             }
 
         }
+
         System.out.format("Number of words in the text is %s . \n", wordsCount);
 
     }
