@@ -26,9 +26,21 @@ public class CountSpaces implements Runnable {
     @Override
     public void run() {
 
-        String [] words = this.text.split(" +");
-        int spacesCount = words.length;
-        System.out.format("Number of spaces in the text is %s . \n", spacesCount - 1);
+        int spaceCount = 0;
+
+        int endOfLine = this.text.length() - 1;
+
+        for(int i = 0; i < this.text.length(); i++) {
+
+            if(this.text.charAt(i) == ' ') {
+                spaceCount++;
+                while(this.text.charAt(i) == ' ' && i < endOfLine) {
+                    i++;
+                }
+            }
+
+        }
+        System.out.format("Number of spaces in the text is %s . \n", spaceCount);
 
     }
 }

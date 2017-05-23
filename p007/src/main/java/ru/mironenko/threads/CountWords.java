@@ -34,8 +34,20 @@ public class CountWords implements Runnable {
     @Override
     public void run() {
 
-        String [] words = this.text.split(" +");
-        int wordsCount = words.length;
+        int wordsCount = 0;
+
+        int endOfLine = this.text.length() - 1;
+
+        for(int i = 0; i < this.text.length(); i++) {
+
+            if(this.text.charAt(i) != ' ') {
+                wordsCount++;
+                while(this.text.charAt(i) != ' ' && i < endOfLine) {
+                    i++;
+                }
+            }
+
+        }
         System.out.format("Number of words in the text is %s . \n", wordsCount);
 
     }
