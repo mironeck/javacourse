@@ -18,17 +18,22 @@ import ru.mironenko.threads.CountWords;
 
 public class StartCount{
 
-    String text;
-    CountWords countWords;
-    CountSpaces countSpaces;
+    private String text;
+    private CountWords countWords;
+    private CountSpaces countSpaces;
 
-
-
+    /**
+     * Constructor of StartCount
+     * @param text
+     */
     public StartCount(String text) {
         this.text = text;
     }
 
-
+    /**
+     * Counts words and spaces in the text.
+     * @throws InterruptedException
+     */
     public void count() throws InterruptedException {
 
         long startTime = System.currentTimeMillis();
@@ -62,6 +67,7 @@ public class StartCount{
     public static void main(String[] args) throws InterruptedException{
 
         String text = "one two three";
+
         new StartCount(text).count();
     }
 }
