@@ -40,16 +40,13 @@ public class CountWords implements Runnable {
 
         for(int i = 0; i < this.text.length(); i++) {
 
-            if(this.text.charAt(i) != ' ') {
+            if(this.text.charAt(i) == ' ') {
                 wordsCount++;
-                while(this.text.charAt(i) != ' ' && i < endOfLine) {
-                    i++;
-                }
             }
 
         }
 
-        System.out.format("Number of words in the text is %s . \n", wordsCount);
+        System.out.format("Number of words in the text is %s . \n", wordsCount + 1);
 
     }
 
