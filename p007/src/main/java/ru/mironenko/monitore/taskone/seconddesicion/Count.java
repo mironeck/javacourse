@@ -15,6 +15,8 @@ public class Count {
     }
 
     public int getC(){
-        return c;
+        synchronized (this) {
+            return c;
+        }
     }
 }

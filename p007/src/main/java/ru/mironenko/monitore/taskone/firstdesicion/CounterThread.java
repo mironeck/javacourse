@@ -13,10 +13,12 @@ public class CounterThread implements Runnable {
 
     @Override
     public void run() {
-        for(int i = 0; i < 100000; i++) {
-            count.increment();
-        }
-        System.out.println(Thread.currentThread().getName() + " " + count.getC());
+
+            for (int i = 0; i < 10; i++) {
+                count.increment();
+            }
+            System.out.println(Thread.currentThread().getName() + " " + count.getC());
+
     }
 
 

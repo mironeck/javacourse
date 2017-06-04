@@ -5,14 +5,14 @@ package ru.mironenko.monitore.taskone.fourthdesicion;
  */
 public class Count {
 
-    private int c = 0;
+    private volatile int c = 0;
 
     public int increment() {
         c++;
         return c;
     }
 
-    public int getC(){
+    public synchronized int getC(){
         return c;
     }
 }
