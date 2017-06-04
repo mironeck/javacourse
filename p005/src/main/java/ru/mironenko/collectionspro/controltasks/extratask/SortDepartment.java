@@ -7,62 +7,65 @@ import java.util.*;
  */
 public class SortDepartment {
 
-    private List<String> departments;
+    Set<Department> departmentSet = new TreeSet<>();
 
-    /**
-     * Getter of departments
-     * @return List<E>
-     */
-    public List<String> getDepartments(){
-        return this.departments;
+
+    public Set<Department> getDepartmentSet() {
+        return this.departmentSet;
     }
 
     /**
-     * Adds department
+     * Adds departments and sorts it in natural sorting in set
      * @param departments
      * @return
      */
-    public Set<String> addDepartmentIfNecessary(List<String> departments){
 
-        Set<String> result = new TreeSet<>();
+//    public Set<String> addDepartmentIfNecessaryAndSortAscending(List<String> departments){
+//
+//        Set<String> result = new TreeSet<>();
+//        String temp;
+//        for(int i = 0; i < departments.size(); i++) {
+//
+//            if(departments.get(i).contains("\\")) {
+//                temp = departments.get(i).substring(0, departments.get(i).lastIndexOf("\\"));
+//                result.add(temp);
+//            }
+//            result.add(departments.get(i));
+//        }
+//        return result;
+//    }
+
+    public Set<Department> addDepartmentIfNecessaryAndSortAscendingVersionTwo(List<String> departments){
+
         String temp;
         for(int i = 0; i < departments.size(); i++) {
 
             if(departments.get(i).contains("\\")) {
                 temp = departments.get(i).substring(0, departments.get(i).lastIndexOf("\\"));
-                result.add(temp);
+                this.departmentSet.add(new Department(temp));
             }
-            result.add(departments.get(i));
+            this.departmentSet.add(new Department(departments.get(i)));
         }
 
-        return result;
+        return this.departmentSet;
     }
 
-    /**
-     * По сути не нужный метод, т.к. в treeset данные уже сортируются в соответствии с natural sorting
-     * @param departments
-     * @return
-     */
-    public Set<String> sortDepartmentsAscending(Set<String> departments){
 
-        return departments;
+    public Set<Department> sortDepartmentsAscending(Set<Department> departments){
+
+        Set<Department> result = new TreeSet<>(new DepartmentsComparatorAscending());
+        result.addAll(departments);
+        return result;
     }
 
     /**
      * Sorts departments descending
      * @param departments
      */
-    public Set<String> sortDepartmentDescending(Set<String> departments){
+    public Set<Department> sortDepartmentDescending(Set<Department> departments){
 
-        Set<String> result =  new TreeSet<>(new Comparator<String>() {
-            @Override
-            public int compare(String o1, String o2) {
-                return o2.compareTo(o1);
-            }
-        });
-
+        Set<Department> result = new TreeSet<>(new DepartmentsComparatorDescending());
         result.addAll(departments);
         return result;
     }
-
 }
