@@ -42,9 +42,22 @@ public class SortDepartmentTest {
         result.add("K2\\SK1\\SSK1");
         result.add("K2\\SK1\\SSK2");
 
-        Set<String> checked = sortDepartment.addDepartmentIfNecessary(departments);
+//        Set<String> checked = sortDepartment.addDepartmentIfNecessaryAndSortAscending(departments);
+//
+//        assertThat(result, is(checked));
 
-        assertThat(result, is(checked));
+        Set<Department> ascending = sortDepartment.sortDepartmentsAscending(
+                sortDepartment.addDepartmentIfNecessaryAndSortAscendingVersionTwo(departments));
+
+        for(Department tmp : ascending) {
+            System.out.println(tmp.getName());
+        }
+
+        System.out.println();
+        Set<Department> descending = sortDepartment.sortDepartmentDescending(ascending);
+        for(Department tmp : descending) {
+            System.out.println(tmp.getName());
+        }
     }
 
 
@@ -62,8 +75,10 @@ public class SortDepartmentTest {
         checked.add("K1\\SK1\\SSK2");
         checked.add("K1\\SK1\\SSK1");
 
-        List<String> result = new ArrayList<>(sortDepartment.sortDepartmentDescending(sortDepartment.addDepartmentIfNecessary(departments)));
+        sortDepartment.addDepartmentIfNecessaryAndSortAscendingVersionTwo(departments);
 
-        assertThat(result, is(checked));
+      //  List<String> result
+
+      //  assertThat(result, is(checked));
     }
 }
