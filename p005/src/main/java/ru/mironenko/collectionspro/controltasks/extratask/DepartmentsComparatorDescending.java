@@ -13,15 +13,15 @@ public class DepartmentsComparatorDescending implements Comparator<Department> {
         String s1 = o1.getName().substring(0, 2);
         String s2 = o2.getName().substring(0, 2);
 
-        String s3 = null;
-        String s4 = null;
-
-        if (o1.getName().length() == 6) {
-            s3 = o1.getName().substring(3);
-        }
-        if (o2.getName().length() == 6) {
-            s4 = o2.getName().substring(3);
-        }
+//        String s3 = null;
+//        String s4 = null;
+//
+//        if (o1.getName().length() == 6) {
+//            s3 = o1.getName().substring(3);
+//        }
+//        if (o2.getName().length() == 6) {
+//            s4 = o2.getName().substring(3);
+//        }
 
 
         if( !(s1.equals(s2)) ) {
