@@ -83,7 +83,7 @@ public class ArrayListContainer<E> implements SimpleContainer<E> {
              */
             private int index = 0;
             /**
-             * Hasnext as long as the indexes are not out of limits and not equals to null
+             * HasNext as long as the indexes are not out of limits and not equals to null
              */
             @Override
             public boolean hasNext() {

@@ -66,7 +66,7 @@ public class StartCount{
 
     public static void main(String[] args) throws InterruptedException{
 
-        String text = "one two three";
+        String text = "one two three four";
 
         new StartCount(text).count();
     }

@@ -25,12 +25,11 @@ public class DepartmentsComparatorDescending implements Comparator<Department> {
 
 
         if( !(s1.equals(s2)) ) {
-            return o2.getName().compareToIgnoreCase(o1.getName());
-        }
-        else {
-            return o1.getName().compareToIgnoreCase(o2.getName());
+            k = o2.getName().compareToIgnoreCase(o1.getName());
+        } else {
+            k = o1.getName().compareToIgnoreCase(o2.getName());
         }
 
-
+        return k;
     }
 }

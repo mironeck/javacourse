@@ -16,6 +16,14 @@ public class Book {
         this.sell = new TreeSet<>();
     }
 
+    public void setBuy(TreeSet<Order> buy) {
+        this.buy = buy;
+    }
+
+    public void setSell(TreeSet<Order> sell) {
+        this.sell = sell;
+    }
+
     public Set<Order> getBuy() {
         return this.buy;
     }

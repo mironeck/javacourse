@@ -60,10 +60,10 @@ public class UserStorage {
 
 
     /**
-     * Transfer money from one user to another
-     * @param srcUser
-     * @param dstUser
-     * @param value - money to transfer
+     * Transfer money from srcUser to dstUser
+     * @param srcUser - user from whom transfers money
+     * @param dstUser - user to whom transfers money
+     * @param value - amount of money to transfer
      */
     public synchronized boolean transferMoney(final User srcUser, final User dstUser, final double value) {
 

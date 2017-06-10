@@ -4,7 +4,7 @@ package ru.mironenko.collectionspro.list;
  * Created by nikita on 02.04.2017.
  */
 /**
- * Inner class to create new elements
+ * Class to create new elements
  * @param <E>
  */
 class Node<E> {
