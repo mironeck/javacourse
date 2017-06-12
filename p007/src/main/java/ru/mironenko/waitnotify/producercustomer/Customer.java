@@ -1,4 +1,4 @@
-package ru.mironenko.waitnotify;
+package ru.mironenko.waitnotify.producercustomer;
 
 import java.util.LinkedList;
 import java.util.List;
@@ -19,15 +19,12 @@ public class Customer implements Runnable {
     /**
      * Object lock for thread
      */
-    private Object lock;
 
     /**
      * Constructor of the class.
      * @param list - store of elements
-     * @param lock - object lock for thread
      */
-    public Customer(final LinkedList list, Object lock) {
-        this.lock = lock;
+    public Customer(final LinkedList list) {
         this.list = list;
     }
 
@@ -40,14 +37,14 @@ public class Customer implements Runnable {
     private void consume() throws InterruptedException {
 
         while(true) {
-            synchronized (lock){
+            synchronized (list){
                 while(list.size() == 0){
-                    lock.wait();
+                    list.wait();
                 }
                 System.out.print("List size is " + list.size());
                 int value = list.removeFirst();
                 System.out.println(" ; value is " + value);
-                lock.notify();
+                list.notify();
             }
             Thread.sleep(1000);
         }

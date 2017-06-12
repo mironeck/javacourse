@@ -1,4 +1,4 @@
-package ru.mironenko.waitnotify;
+package ru.mironenko.waitnotify.producercustomer;
 
 import java.util.LinkedList;
 import java.util.List;
@@ -20,18 +20,12 @@ public class Producer implements Runnable{
      * Limit of elements in list
      */
     private final int LIMIT = 10;
-    /**
-     * Object lock for thread
-     */
-    private Object lock;
 
     /**
      * Constructor of the class
      * @param list - store of elements
-     * @param lock - lock object for thread
      */
-    public Producer(final LinkedList list, Object lock){
-        this.lock= lock;
+    public Producer(final LinkedList list){
         this.list = list;
     }
 
@@ -45,12 +39,12 @@ public class Producer implements Runnable{
         int value = 0;
 
         while(true) {
-            synchronized (lock){
+            synchronized (list){
                 while(list.size() == LIMIT) {
-                    lock.wait();
+                    list.wait();
                 }
                 list.add(value++);
-                lock.notify();
+                list.notify();
             }
         }
     }
