@@ -6,28 +6,16 @@ import java.util.List;
 /**
  * Created by nikita on 02.06.2017.
  */
-public class Department implements Comparable<Department>{
+public class Department{
 
-    private List<String> departments = new ArrayList<>();
+    private List<String> departments;
 
-    private String name;
-    private int hierarchy;
-
-    public Department(String name) {
-        this.name = name;
+    public Department() {
+        this.departments = new ArrayList();
     }
+
 
     public List<String> getDepartments() {
-
-        return this.departments;
-    }
-
-    public String getName() {
-        return this.name;
-    }
-
-    @Override
-    public int compareTo(Department o) {
-        return name.compareToIgnoreCase(o.getName());
+        return departments;
     }
 }

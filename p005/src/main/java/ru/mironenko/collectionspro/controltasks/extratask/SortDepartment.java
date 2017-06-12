@@ -7,8 +7,9 @@ import java.util.*;
  */
 public class SortDepartment {
 
-    Set<Department> departmentSet = new TreeSet<>();
+    Department department = new Department();
 
+    private Set<Department> departmentSet = new TreeSet<>();
 
     public Set<Department> getDepartmentSet() {
         return this.departmentSet;
@@ -20,52 +21,66 @@ public class SortDepartment {
      * @return
      */
 
-//    public Set<String> addDepartmentIfNecessaryAndSortAscending(List<String> departments){
-//
-//        Set<String> result = new TreeSet<>();
-//        String temp;
-//        for(int i = 0; i < departments.size(); i++) {
-//
-//            if(departments.get(i).contains("\\")) {
-//                temp = departments.get(i).substring(0, departments.get(i).lastIndexOf("\\"));
-//                result.add(temp);
-//            }
-//            result.add(departments.get(i));
-//        }
-//        return result;
-//    }
-
-    public Set<Department> addDepartmentIfNecessaryAndSortAscendingVersionTwo(List<String> departments){
+    public Department addDepartmentIfNecessary(List<String> departments){
 
         String temp;
         for(int i = 0; i < departments.size(); i++) {
 
             if(departments.get(i).contains("\\")) {
                 temp = departments.get(i).substring(0, departments.get(i).lastIndexOf("\\"));
-                this.departmentSet.add(new Department(temp));
+                this.department.getDepartments().add(temp);
             }
-            this.departmentSet.add(new Department(departments.get(i)));
+            this.department.getDepartments().add(departments.get(i));
         }
 
-        return this.departmentSet;
+        return this.department;
     }
 
 
-    public Set<Department> sortDepartmentsAscending(Set<Department> departments){
+    public Set<String> sortDepartmentsAscending(Department department){
 
-        Set<Department> result = new TreeSet<>(new DepartmentsComparatorAscending());
-        result.addAll(departments);
+        Set<String> result = new TreeSet<String>(new DepartmentsComparatorAscending());
+        result.addAll(department.getDepartments());
         return result;
     }
 
     /**
      * Sorts departments descending
-     * @param departments
+     * @param department
      */
-    public Set<Department> sortDepartmentDescending(Set<Department> departments){
+    public Set<String> sortDepartmentDescending(Department department){
 
-        Set<Department> result = new TreeSet<>(new DepartmentsComparatorDescending());
-        result.addAll(departments);
+        Set<String> result = new TreeSet<>(new DepartmentsComparatorDescending());
+        result.addAll(department.getDepartments());
         return result;
+    }
+
+    public static void main(String[] args) {
+
+        SortDepartment sortDepartment = new SortDepartment();
+        List<String> departments = new ArrayList<>();
+
+        departments.add("K1\\SK1");
+        departments.add("K1\\SK2");
+        departments.add("K1\\SK1\\SSK1");
+        departments.add("K1\\SK1\\SSK2");
+        departments.add("K2");
+        departments.add("K2\\SK1\\SSK1");
+        departments.add("K2\\SK1\\SSK2");
+
+        Department department = sortDepartment.addDepartmentIfNecessary(departments);
+
+        Set<String> ascending = sortDepartment.sortDepartmentsAscending(department);
+
+        for(String tmp : ascending) {
+            System.out.println(tmp);
+        }
+
+        System.out.println();
+
+        Set<String> descending = sortDepartment.sortDepartmentDescending(department);
+        for(String tmp : descending) {
+            System.out.println(tmp);
+        }
     }
 }

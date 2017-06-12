@@ -5,29 +5,18 @@ import java.util.Comparator;
 /**
  * Created by nikita on 04.06.2017.
  */
-public class DepartmentsComparatorDescending implements Comparator<Department> {
+public class DepartmentsComparatorDescending implements Comparator<String> {
     @Override
-    public int compare(Department o1, Department o2) {
+    public int compare(String o1, String o2) {
 
         int k = 0;
-        String s1 = o1.getName().substring(0, 2);
-        String s2 = o2.getName().substring(0, 2);
-
-//        String s3 = null;
-//        String s4 = null;
-//
-//        if (o1.getName().length() == 6) {
-//            s3 = o1.getName().substring(3);
-//        }
-//        if (o2.getName().length() == 6) {
-//            s4 = o2.getName().substring(3);
-//        }
-
+        String s1 = o1.substring(0, 2);
+        String s2 = o2.substring(0, 2);
 
         if( !(s1.equals(s2)) ) {
-            k = o2.getName().compareToIgnoreCase(o1.getName());
+            k = o2.compareToIgnoreCase(o1);
         } else {
-            k = o1.getName().compareToIgnoreCase(o2.getName());
+            k = o1.compareToIgnoreCase(o2);
         }
 
         return k;
