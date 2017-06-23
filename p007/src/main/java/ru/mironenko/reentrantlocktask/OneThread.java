@@ -9,28 +9,42 @@ public class OneThread extends Thread implements BoardItem {
 
     private int x;
     private int y;
-    private ReentrantLock[][] board;
+    private volatile ReentrantLock[][] board;
 
     public OneThread(int x, int y, ReentrantLock[][] board) {
         this.x = x;
         this.y = y;
         this.board = board;
-        this.board[x][y].lock();
+        //this.board[x][y].lock();
     }
 
     @Override
     public void run() {
 
-        System.out.println("Thread one smth doing...");
+        makeAMove();
 
     }
 
-    public void makeMove(int newX, int newY){
+    private void makeAMove(){
+
+        System.out.println(Thread.currentThread().getName() + "  on " + this.x + ":" + this.y);
+        int newX = 1;
+        int newY = 0;
 
         this.board[newX][newY].lock();
-        this.board[this.x][this.y].unlock();
+//        this.board[this.x][this.y].unlock();
+        //получаю IllegalMonitorStateException
         setX(newX);
         setY(newY);
+        System.out.println(Thread.currentThread().getName() + " on " + this.x + ":" + this.y);
+    }
+
+    public int getX() {
+        return x;
+    }
+
+    public int getY() {
+        return y;
     }
 
     public void setX(int x) {

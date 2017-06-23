@@ -17,25 +17,43 @@ public class Movethreads implements Runnable {
 
     ReentrantLock[][] board = new ReentrantLock[5][5];
 
+    OneThread oneThread = new OneThread(0, 0, board);
+    TwoThread twoThread = new TwoThread(1, 1, board);
+
+    Thread threadOne = new Thread(oneThread);
+    Thread threadTwo = new Thread(twoThread);
+
+    Movethreads(){
+
+        System.out.println("Create board");
+        for(int i = 0; i < board.length; i++){
+            for(int j = 0; j < board[0].length; j++){
+                board[i][j] = new ReentrantLock();
+            }
+        }
+        board[0][0].lock();
+        board[1][1].lock();
+
+
+    }
     @Override
     public void run() {
 
+        boolean isMove = true;
+        while(isMove){
+            threadOne.start();
+            threadTwo.start();
+            isMove = false;
+        }
+
     }
 
-
-    public void makeMoveOnBoard(BoardItem r, int newX, int newY){
-
-        r.makeMove(newX, newY);
-
-    }
 
     public static void main(String[] args) {
 
-        ReentrantLock[][] board = new ReentrantLock[5][5];
+        Thread thread = new Thread(new Movethreads());
 
-        Thread threadOne = new Thread(new OneThread(0, 0, board));
-        Thread threadTwo = new Thread(new TwoThread(1, 1, board));
-
+        thread.start();
 
     }
 

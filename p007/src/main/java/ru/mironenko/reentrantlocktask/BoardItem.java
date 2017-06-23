@@ -5,5 +5,4 @@ package ru.mironenko.reentrantlocktask;
  */
 public interface BoardItem {
 
-    void makeMove(int x, int y);
 }

@@ -11,28 +11,33 @@ public class TwoThread extends Thread implements BoardItem{
 
     private int x;
     private int y;
-    private ReentrantLock[][] board;
+    private volatile ReentrantLock[][] board;
 
     public TwoThread(int x, int y, ReentrantLock[][] board) {
         this.x = x;
         this.y = y;
         this.board = board;
-        this.board[x][y].lock();
     }
 
     @Override
     public void run() {
 
-        System.out.println("Thread two smth doing...");
+        makeAMove();
 
     }
 
-    public void makeMove(int newX, int newY){
+    private void makeAMove(){
+
+        System.out.println(Thread.currentThread().getName() + " on " + this.x + ":" + this.y);
+        int newX = 2;
+        int newY = 2;
 
         this.board[newX][newY].lock();
-        this.board[this.x][this.y].unlock();
+        //this.board[this.x][this.y].unlock();
+
         setX(newX);
         setY(newY);
+        System.out.println(Thread.currentThread().getName() + " on " + this.x + ":" + this.y);
     }
 
     public void setX(int x) {
