@@ -15,12 +15,13 @@ public class OneThread extends Thread implements BoardItem {
         this.x = x;
         this.y = y;
         this.board = board;
-        //this.board[x][y].lock();
+
     }
 
     @Override
     public void run() {
 
+        this.board[x][y].lock();
         makeAMove();
 
     }
@@ -32,8 +33,8 @@ public class OneThread extends Thread implements BoardItem {
         int newY = 0;
 
         this.board[newX][newY].lock();
-//        this.board[this.x][this.y].unlock();
-        //получаю IllegalMonitorStateException
+        this.board[this.x][this.y].unlock();
+
         setX(newX);
         setY(newY);
         System.out.println(Thread.currentThread().getName() + " on " + this.x + ":" + this.y);

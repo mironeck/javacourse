@@ -22,6 +22,7 @@ public class TwoThread extends Thread implements BoardItem{
     @Override
     public void run() {
 
+        this.board[x][y].lock();
         makeAMove();
 
     }
@@ -33,7 +34,7 @@ public class TwoThread extends Thread implements BoardItem{
         int newY = 2;
 
         this.board[newX][newY].lock();
-        //this.board[this.x][this.y].unlock();
+        this.board[this.x][this.y].unlock();
 
         setX(newX);
         setY(newY);

@@ -17,11 +17,6 @@ public class Movethreads implements Runnable {
 
     ReentrantLock[][] board = new ReentrantLock[5][5];
 
-    OneThread oneThread = new OneThread(0, 0, board);
-    TwoThread twoThread = new TwoThread(1, 1, board);
-
-    Thread threadOne = new Thread(oneThread);
-    Thread threadTwo = new Thread(twoThread);
 
     Movethreads(){
 
@@ -31,13 +26,16 @@ public class Movethreads implements Runnable {
                 board[i][j] = new ReentrantLock();
             }
         }
-        board[0][0].lock();
-        board[1][1].lock();
-
 
     }
     @Override
     public void run() {
+
+        OneThread oneThread = new OneThread(0, 0, board);
+        TwoThread twoThread = new TwoThread(1, 1, board);
+
+        Thread threadOne = new Thread(oneThread);
+        Thread threadTwo = new Thread(twoThread);
 
         boolean isMove = true;
         while(isMove){
@@ -56,6 +54,5 @@ public class Movethreads implements Runnable {
         thread.start();
 
     }
-
 
 }
