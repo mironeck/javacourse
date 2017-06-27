@@ -12,12 +12,19 @@ import java.util.concurrent.locks.ReentrantLock;
 //        Два треда стоят на точках 00  и 11. Эти точки должны быть залочены.
 //        когда мы двигаемся, мы должны блокировать новую и освобождать текущую.
 
-
+/**
+ * Class MoveThread makes moves of two threads
+ */
 public class Movethreads implements Runnable {
 
+    /**
+     * array of ReentrantLock, board.
+     */
     ReentrantLock[][] board = new ReentrantLock[5][5];
 
-
+    /**
+     * Constructor of class. Creates new instances of ReentrantLock on the board.
+     */
     Movethreads(){
 
         System.out.println("Create board");
@@ -28,14 +35,19 @@ public class Movethreads implements Runnable {
         }
 
     }
+
     @Override
     public void run() {
 
+        /**
+         * Creates two threads
+         */
         OneThread oneThread = new OneThread(0, 0, board);
         TwoThread twoThread = new TwoThread(1, 1, board);
 
         Thread threadOne = new Thread(oneThread);
         Thread threadTwo = new Thread(twoThread);
+
 
         boolean isMove = true;
         while(isMove){
