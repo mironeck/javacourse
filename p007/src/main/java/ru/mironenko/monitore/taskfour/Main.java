@@ -12,7 +12,7 @@ public class Main {
     public static void main(String[] args) {
 
 
-        Main.init(args[0]);
+       Main.init("Java");
 
     }
 
@@ -21,7 +21,7 @@ public class Main {
         String directory = "D:/Test";
 
         final int FILE_QUEUE_SIZE = 10;
-        final int SEARCH_TREADS = 5;
+        final int SEARCH_TREADS = 10;
 
         BlockingQueue<File> queue = new ArrayBlockingQueue<File>(FILE_QUEUE_SIZE);
         ProducerFiles producerFiles = new ProducerFiles(queue, new File(directory));

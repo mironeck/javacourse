@@ -16,6 +16,6 @@ public class Department{
 
 
     public List<String> getDepartments() {
-        return departments;
+        return this.departments;
     }
 }

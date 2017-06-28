@@ -72,9 +72,10 @@ public class SortDepartment {
 
         Set<String> ascending = sortDepartment.sortDepartmentsAscending(department);
 
-        for(String tmp : ascending) {
-            System.out.println(tmp);
-        }
+//        for(String tmp : ascending) {
+//            System.out.println(tmp);
+//        }
+
 
         System.out.println();
 

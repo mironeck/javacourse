@@ -6,7 +6,6 @@ import org.junit.Test;
 import java.util.*;
 
 import static org.hamcrest.CoreMatchers.is;
-import static org.junit.Assert.*;
 
 /**
  * Created by nikita on 18.05.2017.
@@ -46,17 +45,19 @@ public class SortDepartmentTest {
 //
 //        assertThat(result, is(checked));
 
-        Set<Department> ascending = sortDepartment.sortDepartmentsAscending(
-                sortDepartment.addDepartmentIfNecessaryAndSortAscendingVersionTwo(departments));
+        Department department = sortDepartment.addDepartmentIfNecessary(departments);
 
-        for(Department tmp : ascending) {
-            System.out.println(tmp.getName());
+        Set<String> ascending = sortDepartment.sortDepartmentsAscending(department);
+
+        for(String tmp : ascending) {
+            System.out.println(tmp);
         }
 
         System.out.println();
-        Set<Department> descending = sortDepartment.sortDepartmentDescending(ascending);
-        for(Department tmp : descending) {
-            System.out.println(tmp.getName());
+
+        Set<String> descending = sortDepartment.sortDepartmentDescending(department);
+        for(String tmp : descending) {
+            System.out.println(tmp);
         }
     }
 
@@ -75,7 +76,7 @@ public class SortDepartmentTest {
         checked.add("K1\\SK1\\SSK2");
         checked.add("K1\\SK1\\SSK1");
 
-        sortDepartment.addDepartmentIfNecessaryAndSortAscendingVersionTwo(departments);
+        sortDepartment.addDepartmentIfNecessary(departments);
 
       //  List<String> result
 

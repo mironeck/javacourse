@@ -5,5 +5,7 @@ package ru.mironenko.bomberman.figuresOfTheGame;
  */
 public class BomberMan {
 
+    private int lives;
+
     public BomberMan(){}
 }

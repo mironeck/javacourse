@@ -9,16 +9,25 @@ public class DepartmentsComparatorDescending implements Comparator<String> {
     @Override
     public int compare(String o1, String o2) {
 
-        int k = 0;
-        String s1 = o1.substring(0, 2);
-        String s2 = o2.substring(0, 2);
+        int result = 0;
+        int one = o1.length();
+        int two = o2.length();
 
-        if( !(s1.equals(s2)) ) {
-            k = o2.compareToIgnoreCase(o1);
-        } else {
-            k = o1.compareToIgnoreCase(o2);
+        int size = one > two ? one : two;
+        for(int index = 0; index != size; index++){
+            if(one > index && two > index){
+                result = - o1.compareToIgnoreCase(o2);
+                if(result != 0){
+                    break;
+                }
+            } else if(one > index){
+                result = 1;
+                break;
+            } else {
+                result = -1;
+                break;
+            }
         }
-
-        return k;
+        return result;
     }
 }

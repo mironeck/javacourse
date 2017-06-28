@@ -5,9 +5,9 @@ package ru.mironenko.bomberman.field;
  */
 public class Field {
 
-    private int[][] field;
-    private int countOfMonsters;
-    private int countOfBlocks;
+    private final int[][] field;
+    private final int countOfMonsters;
+    private final int countOfBlocks;
 
     public Field(int x, int y, int countOfMonsters, int countOfBlocks){
         this.field = new int[x][y];
