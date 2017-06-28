@@ -6,7 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="19d2fbfb-0d4f-4774-a872-f77554d22bd1" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/p008sql/src/main/java/ru/mironenko/createupdateinsert/orders.sql" afterPath="$PROJECT_DIR$/p008sql/src/main/java/ru/mironenko/createupdateinsert/orders.sql" />
     </list>
     <ignored path="javacourse.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -724,13 +723,6 @@
       <option name="presentableId" value="Default" />
       <updated>1470248751683</updated>
     </task>
-    <task id="LOCAL-00076" summary="add test task">
-      <created>1493919765626</created>
-      <option name="number" value="00076" />
-      <option name="presentableId" value="LOCAL-00076" />
-      <option name="project" value="LOCAL" />
-      <updated>1493919765626</updated>
-    </task>
     <task id="LOCAL-00077" summary="add control class">
       <created>1494065266202</created>
       <option name="number" value="00077" />
@@ -1067,7 +1059,14 @@
       <option name="project" value="LOCAL" />
       <updated>1498675005861</updated>
     </task>
-    <option name="localTasksCounter" value="125" />
+    <task id="LOCAL-00125" summary="added uml">
+      <created>1498675527465</created>
+      <option name="number" value="00125" />
+      <option name="presentableId" value="LOCAL-00125" />
+      <option name="project" value="LOCAL" />
+      <updated>1498675527466</updated>
+    </task>
+    <option name="localTasksCounter" value="126" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1185,7 +1184,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="add some changes" />
     <MESSAGE value="add synchronize to method get" />
     <MESSAGE value="add task two, User Storage" />
     <MESSAGE value="add User class" />
@@ -1210,7 +1208,8 @@
     <MESSAGE value="add interrupttask" />
     <MESSAGE value="added tryLock method" />
     <MESSAGE value="added sql script" />
-    <option name="LAST_COMMIT_MESSAGE" value="added sql script" />
+    <MESSAGE value="added uml" />
+    <option name="LAST_COMMIT_MESSAGE" value="added uml" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
