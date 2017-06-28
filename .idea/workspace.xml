@@ -4,10 +4,9 @@
     <option name="SCOPE_TYPE" value="4" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="19d2fbfb-0d4f-4774-a872-f77554d22bd1" name="Default" comment="add linked list set task">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/p008sql/src/main/java/ru/mironenko/createupdateinsert/orders.sql" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/p008sql/src/main/java/ru/mironenko/createupdateinsert/scripts.txt" afterPath="" />
+    <list default="true" id="19d2fbfb-0d4f-4774-a872-f77554d22bd1" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/p008sql/src/main/java/ru/mironenko/createupdateinsert/orders.sql" afterPath="$PROJECT_DIR$/p008sql/src/main/java/ru/mironenko/createupdateinsert/orders.sql" />
     </list>
     <ignored path="javacourse.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -42,8 +41,8 @@
       <file leaf-file-name="Movethreads.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/p007/src/main/java/ru/mironenko/reentrantlocktask/Movethreads.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="138">
-              <caret line="50" column="0" selection-start-line="50" selection-start-column="0" selection-end-line="50" selection-end-column="0" />
+            <state relative-caret-position="257">
+              <caret line="57" column="0" selection-start-line="57" selection-start-column="0" selection-end-line="57" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -290,7 +289,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="mironenko" />
+              <option name="myItemId" value="createupdateinsert" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -725,13 +724,6 @@
       <option name="presentableId" value="Default" />
       <updated>1470248751683</updated>
     </task>
-    <task id="LOCAL-00075" summary="add control class">
-      <created>1493919727403</created>
-      <option name="number" value="00075" />
-      <option name="presentableId" value="LOCAL-00075" />
-      <option name="project" value="LOCAL" />
-      <updated>1493919727404</updated>
-    </task>
     <task id="LOCAL-00076" summary="add test task">
       <created>1493919765626</created>
       <option name="number" value="00076" />
@@ -1068,7 +1060,14 @@
       <option name="project" value="LOCAL" />
       <updated>1498615253497</updated>
     </task>
-    <option name="localTasksCounter" value="124" />
+    <task id="LOCAL-00124" summary="added sql script">
+      <created>1498675005860</created>
+      <option name="number" value="00124" />
+      <option name="presentableId" value="LOCAL-00124" />
+      <option name="project" value="LOCAL" />
+      <updated>1498675005861</updated>
+    </task>
+    <option name="localTasksCounter" value="125" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1578,8 +1577,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/p007/src/main/java/ru/mironenko/reentrantlocktask/Movethreads.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="138">
-          <caret line="50" column="0" selection-start-line="50" selection-start-column="0" selection-end-line="50" selection-end-column="0" />
+        <state relative-caret-position="257">
+          <caret line="57" column="0" selection-start-line="57" selection-start-column="0" selection-end-line="57" selection-end-column="0" />
           <folding />
         </state>
       </provider>
