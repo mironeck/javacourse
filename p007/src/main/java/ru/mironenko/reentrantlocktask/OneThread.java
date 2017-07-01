@@ -1,5 +1,6 @@
 package ru.mironenko.reentrantlocktask;
 
+import java.util.concurrent.TimeUnit;
 import java.util.concurrent.locks.ReentrantLock;
 
 /**
@@ -9,7 +10,7 @@ public class OneThread extends Thread implements BoardItem {
 
     private int x;
     private int y;
-    private volatile ReentrantLock[][] board;
+    private ReentrantLock[][] board;
 
     public OneThread(int x, int y, ReentrantLock[][] board) {
         this.x = x;
@@ -21,41 +22,39 @@ public class OneThread extends Thread implements BoardItem {
     public void run() {
 
         this.board[x][y].lock();
-        makeAMove();
+        try {
+            makeAMove();
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
 
     }
 
     /**
-     * Makes a move of thread
+     * Makes a move of thread. Waiting for lock for seconds. If lock on new coordinates
+     * succeed unlock last coordinates, sets new x and y.
      */
-    private void makeAMove(){
+    private void makeAMove() throws InterruptedException {
 
         System.out.println(Thread.currentThread().getName() + "  on " + this.x + ":" + this.y);
         int newX = 1;
-        int newY = 0;
+        int newY = 1;
 
-        if (!tryLock(newX, newY)){
-            this.board[newX][newY].lock();
-            this.board[this.x][this.y].unlock();
+        if(this.board[newX][newY].tryLock(1, TimeUnit.SECONDS)) {
+            try{
+                this.board[x][y].unlock();
+                setX(newX);
+                setY(newY);
+                System.out.println(Thread.currentThread().getName() + " on " + this.x + ":" + this.y);
+            } finally {
+                this.board[newX][newY].unlock();
+            }
         } else {
             System.out.println("Move is not possible");
         }
 
-
-        setX(newX);
-        setY(newY);
-        System.out.println(Thread.currentThread().getName() + " on " + this.x + ":" + this.y);
     }
 
-    /**
-     * Checks if this cell is locked
-     * @param newX
-     * @param newY
-     * @return true if locked false if not
-     */
-    private boolean tryLock(int newX, int newY){
-        return this.board[newX][newY].isLocked();
-    }
 
     public int getX() {
         return x;

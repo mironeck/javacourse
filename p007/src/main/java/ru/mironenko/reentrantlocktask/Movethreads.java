@@ -20,7 +20,7 @@ public class Movethreads implements Runnable {
     /**
      * array of ReentrantLock, board.
      */
-    ReentrantLock[][] board = new ReentrantLock[5][5];
+    public volatile ReentrantLock[][] board = new ReentrantLock[5][5];
 
     /**
      * Constructor of class. Creates new instances of ReentrantLock on the board.
@@ -48,14 +48,8 @@ public class Movethreads implements Runnable {
         Thread threadOne = new Thread(oneThread);
         Thread threadTwo = new Thread(twoThread);
 
-
-        boolean isMove = true;
-        while(isMove){
             threadOne.start();
             threadTwo.start();
-            isMove = false;
-        }
-
     }
 
 
