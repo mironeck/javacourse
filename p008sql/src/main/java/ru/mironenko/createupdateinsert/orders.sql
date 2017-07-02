@@ -1,11 +1,11 @@
 ﻿create table users (
 	id serial primary key,
-	name character varying (50)
+	name character varying (50),
+	role_id integer references roles(id)
 );
 
 create table roles (
 	id serial primary key,
-	user_id integer references users(id),
 	role character varying (50)
 );
 
