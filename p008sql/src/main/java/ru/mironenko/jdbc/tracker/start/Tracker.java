@@ -49,7 +49,7 @@ import java.util.*;
 		String username = prop.getProperty("db.login");
 		String password = prop.getProperty("db.password");
 		try {
-			conn = DriverManager.getConnection(url, username, password);
+			this.conn = DriverManager.getConnection(url, username, password);
 		} catch (SQLException e) {
 			log.error(e.getMessage(), e);
 		}
@@ -61,13 +61,15 @@ import java.util.*;
 	 */
 	private void createTablesIfNotExist() {
 		try {
-			PreparedStatement prItems = conn.prepareStatement("create table if not exists items(id serial primary key,name varchar(200),description varchar(500),create_time timestamp);" );
-			PreparedStatement prComments = conn.prepareStatement("create table if not exists comments(" +
+			PreparedStatement prItems = this.conn.prepareStatement("create table if not exists items(id serial primary key,name varchar(200),description varchar(500),create_time timestamp);" );
+			PreparedStatement prComments = this.conn.prepareStatement("create table if not exists comments(" +
 					"id serial primary key," +
 					"items_id integer references items(id)," +
 					"text varchar(2000));");
 			prItems.execute();
 			prComments.execute();
+			prItems.close();
+			prComments.close();
 		} catch (SQLException e) {
 			log.error(e.getMessage(), e);
 		}
@@ -83,12 +85,13 @@ import java.util.*;
 		boolean result = false;
 
 		try {
-			PreparedStatement pr = conn.prepareStatement("insert into items(name, description, create_time) values(?, ?, ?)");
+			PreparedStatement pr = this.conn.prepareStatement("insert into items(name, description, create_time) values(?, ?, ?)");
 			pr.setString(1, item.getName());
 			pr.setString(2, item.getDescription());
 			pr.setTimestamp(3, new java.sql.Timestamp(item.getTimeOfCreation().getTime()));
 			pr.executeUpdate();
 			result = true;
+			pr.close();
 		} catch (SQLException e) {
 			log.error(e.getMessage(), e);
 		}
@@ -107,12 +110,13 @@ import java.util.*;
 		boolean result = false;
 
 		try {
-			PreparedStatement prEdit = conn.prepareStatement("update items set name = ?, description = ? where id = ?");
+			PreparedStatement prEdit = this.conn.prepareStatement("update items set name = ?, description = ? where id = ?");
 			prEdit.setString(1, fresh.getName());
 			prEdit.setString(2, fresh.getDescription());
 			prEdit.setInt(3, fresh.getId());
 			prEdit.executeUpdate();
 			result = true;
+			prEdit.close();
 		} catch (SQLException e) {
 			log.error(e.getMessage(), e);
 		}
@@ -128,8 +132,8 @@ import java.util.*;
 		Item result = null;
 
 		try {
-			PreparedStatement prFind = conn.prepareStatement("select * from items where id = ?");
-			PreparedStatement prComment = conn.prepareStatement("select * from comments where item_id = ?");
+			PreparedStatement prFind = this.conn.prepareStatement("select * from items where id = ?");
+			PreparedStatement prComment = this.conn.prepareStatement("select * from comments where item_id = ?");
 			prFind.setInt(1, id);
 			ResultSet rs = prFind.executeQuery();
 			if(rs.next()) {
@@ -142,6 +146,9 @@ import java.util.*;
 					result.addComment(new Comment(rs.getString("text")));
 				}
 			}
+			prFind.close();
+			prComment.close();
+			rs.close();
 		} catch (SQLException e) {
 			log.error(e.getMessage(), e);
 		}
@@ -156,13 +163,15 @@ import java.util.*;
 
 		List<Item> resultList = new ArrayList<>();
 		try {
-			PreparedStatement prAll = conn.prepareStatement("select * from items");
+			PreparedStatement prAll = this.conn.prepareStatement("select * from items");
 			ResultSet rs = prAll.executeQuery();
 			while(rs.next()) {
 				Item item = new Item(rs.getInt("id"), rs.getString("name"), rs.getString("description"), rs.getTimestamp("create_time"));
 				item.setComments(getComment(item));
 				resultList.add(item);
 			}
+			prAll.close();
+			rs.close();
 		} catch (SQLException e) {
 			log.error(e.getMessage(), e);
 		}
@@ -180,12 +189,14 @@ import java.util.*;
 
 		PreparedStatement prComment = null;
 		try {
-			prComment = conn.prepareStatement("select * from comments as c where c.items_id = ?");
+			prComment = this.conn.prepareStatement("select * from comments as c where c.items_id = ?");
 			prComment.setInt(1, item.getId());
 			ResultSet rsComm = prComment.executeQuery();
 			while(rsComm.next()) {
 				result.add(new Comment(rsComm.getString("text")));
 			}
+			prComment.close();
+			rsComm.close();
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
@@ -202,10 +213,11 @@ import java.util.*;
 		boolean result = false;
 
 		try {
-			PreparedStatement prDel = conn.prepareStatement("delete from items where id = ?");
+			PreparedStatement prDel = this.conn.prepareStatement("delete from items where id = ?");
 			prDel.setInt(1, id);
 			prDel.executeUpdate();
 			result = true;
+			prDel.close();
 		} catch (SQLException e) {
 			log.error(e.getMessage(), e);
 		}
@@ -222,11 +234,12 @@ import java.util.*;
 
 		boolean result = false;
 		try {
-			PreparedStatement prAddComm = conn.prepareStatement("insert into comments(items_id, text) values(?, ?)");
+			PreparedStatement prAddComm = this.conn.prepareStatement("insert into comments(items_id, text) values(?, ?)");
 			prAddComm.setInt(1, itemId);
 			prAddComm.setString(2, comment.getComment());
 			prAddComm.executeUpdate();
 			result = true;
+			prAddComm.close();
 		} catch (SQLException e) {
 			log.error(e.getMessage(), e);
 		}
@@ -245,7 +258,7 @@ import java.util.*;
 		this.filteredItems.clear();
 		String text = filter.getFilter();
 		try {
-			PreparedStatement prFilt = conn.prepareStatement("select * from items where name like ? or description like ?");
+			PreparedStatement prFilt = this.conn.prepareStatement("select * from items where name like ? or description like ?");
 			prFilt.setString(1, String.format("%s%s%s", "%", text, "%"));
 			prFilt.setString(2, String.format("%s%s%s", "%", text, "%"));
 			ResultSet rs = prFilt.executeQuery();
@@ -254,10 +267,23 @@ import java.util.*;
 				item.setComments(getComment(item));
 				this.filteredItems.add(item);
 			}
+			prFilt.close();
+			rs.close();
 		} catch (SQLException e) {
 			log.error(e.getMessage(), e);
 		}
 
 		return  this.filteredItems;
+	}
+
+	public void closeConnection() {
+
+		if(this.conn != null) {
+			try {
+				this.conn.close();
+			} catch (SQLException e) {
+				log.error(e.getMessage(), e);
+			}
+		}
 	}
 }
