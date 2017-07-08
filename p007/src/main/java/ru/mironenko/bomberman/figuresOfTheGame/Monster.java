@@ -1,18 +1,16 @@
 package ru.mironenko.bomberman.figuresOfTheGame;
 
+
 import ru.mironenko.bomberman.field.Field;
 
+import java.util.concurrent.TimeUnit;
 import java.util.concurrent.locks.ReentrantLock;
 
 /**
- * Created by nikita on 15.06.2017.
+ * Created by nikita on 05.07.2017.
  */
-public class BomberMan implements Runnable{
+public class Monster implements BoardItem, Runnable {
 
-    /**
-     * Count of lives of bomberman
-     */
-    public static int lives = 3;
     /**
      * X-coordinate
      */
@@ -27,26 +25,27 @@ public class BomberMan implements Runnable{
     private final ReentrantLock[][] board;
 
     /**
-     * Constructor of BomberMan
+     * Constructor of Monster
      * @param x x-coordinate
      * @param y y-coordinate
-     * @param board game field
+     * @param board - game field
      */
-    public BomberMan(int x, int y, ReentrantLock[][] board){
+    public Monster(int x, int y, ReentrantLock[][] board) {
         this.x = x;
         this.y = y;
         this.board = board;
     }
 
     /**
-     * Setter of x-coordinate
+     * Setter of coordinate x
      * @param x x-coordinate
      */
     public void setX(int x) {
         this.x = x;
     }
 
-    /**Setter of y-coordinate
+    /**
+     * Setter of coordinate y
      * @param y y-coordinate
      */
     public void setY(int y) {
@@ -54,111 +53,118 @@ public class BomberMan implements Runnable{
     }
 
     /**
-     * Moves bomberman up.
+     * Moves monster up while move is available. If move not available moves on the other side(to the right).
+     * Tries lock new cell in 5 seconds, if it not possible move on the other side(to the right).
      * @throws InterruptedException
      */
-    public void bomberManMoveUp() throws InterruptedException {
+    private void monstersMoveUp() throws InterruptedException {
 
+//        this.board[this.x][this.y].lock();
+        System.out.println(Thread.currentThread().getName() + "  on " + this.x + ":" + this.y);
+        int newX = this.x;
+        int newY = this.y + 1;
+
+        while(isMoveAvailable(newX, newY)) {
+            this.board[this.x][this.y].lock();
+            if(this.board[newX][newY].tryLock(5, TimeUnit.SECONDS)) {
+                try {
+                    this.board[x][y].unlock();
+                    setX(newX);
+                    setY(newY);
+                    Thread.currentThread().sleep(500);
+                    System.out.println(Thread.currentThread().getName() + " move up on " + this.x + ":" + this.y);
+                } finally {
+                    this.board[newX][newY].unlock();
+                }
+            }
+            newY++;
+        }
+    }
+
+    /**
+     * Moves monster down while move is available. If move not available moves on the other side(to the left).
+     * Tries lock new cell in 5 seconds, if it not possible move on the other side(to the left).
+     * @throws InterruptedException
+     */
+    private void monstersMoveDown() throws InterruptedException {
+
+//        this.board[this.x][this.y].lock();
         System.out.println(Thread.currentThread().getName() + "  on " + this.x + ":" + this.y);
         int newX = this.x;
         int newY = this.y - 1;
 
-        if(isMoveAvailable(newX, newY)) {
+        while(isMoveAvailable(newX, newY)) {
             this.board[this.x][this.y].lock();
-            if(this.board[newX][newY].tryLock()) {
+            if(this.board[newX][newY].tryLock(5, TimeUnit.SECONDS)) {
                 try {
                     this.board[x][y].unlock();
                     setX(newX);
                     setY(newY);
                     Thread.currentThread().sleep(500);
-                    System.out.println("BM moves up");
+                    System.out.println(Thread.currentThread().getName() + " move down on " + this.x + ":" + this.y);
                 } finally {
                     this.board[newX][newY].unlock();
                 }
             }
-        } else {
-            return;
+            newY--;
         }
     }
 
     /**
-     * Moves bomberman down.
+     * Moves monster left while move is available. If move not available moves on the other side(to the up).
+     * Tries lock new cell in 5 seconds, if it not possible move on the other side(to the up).
      * @throws InterruptedException
      */
-    public void bomberManMoveDown() throws InterruptedException {
+    private void monstersMoveLeft() throws InterruptedException {
 
-        int newX = this.x;
-        int newY = this.y + 1;
-
-        if(isMoveAvailable(newX, newY)) {
-            this.board[this.x][this.y].lock();
-            if(this.board[newX][newY].tryLock()) {
-                try {
-                    this.board[x][y].unlock();
-                    setX(newX);
-                    setY(newY);
-                    Thread.currentThread().sleep(500);
-                    System.out.println("BM moves down");
-                } finally {
-                    this.board[newX][newY].unlock();
-                }
-            }
-        } else {
-            return;
-        }
-    }
-
-    /**
-     * Moves bomberman left.
-     * @throws InterruptedException
-     */
-    public void bomberManMoveLeft() throws InterruptedException {
-
+//        this.board[this.x][this.y].lock();
+        System.out.println(Thread.currentThread().getName() + "  on " + this.x + ":" + this.y);
         int newX = this.x - 1;
         int newY = this.y;
 
-        if(isMoveAvailable(newX, newY)) {
+        while(isMoveAvailable(newX, newY)) {
             this.board[this.x][this.y].lock();
-            if(this.board[newX][newY].tryLock()) {
+            if(this.board[newX][newY].tryLock(5, TimeUnit.SECONDS)) {
                 try {
                     this.board[x][y].unlock();
                     setX(newX);
                     setY(newY);
                     Thread.currentThread().sleep(500);
-                    System.out.println("BM moves left");
+                    System.out.println(Thread.currentThread().getName() + " move left on " + this.x + ":" + this.y);
                 } finally {
                     this.board[newX][newY].unlock();
                 }
             }
-        } else {
-            return;
+            newX--;
         }
     }
 
     /**
-     * Moves bomberman right.
+     * Moves monster right while move is available. If move not available moves on the other side(to the down).
+     * Tries lock new cell in 5 seconds, if it not possible move on the other side(to the down).
      * @throws InterruptedException
      */
-    public void bomberManMoveRight() throws InterruptedException {
+    private void monstersMoveRight() throws InterruptedException {
 
+//        this.board[this.x][this.y].lock();
+        System.out.println(Thread.currentThread().getName() + "  on " + this.x + ":" + this.y);
         int newX = this.x + 1;
         int newY = this.y;
 
-        if(isMoveAvailable(newX, newY)) {
+        while(isMoveAvailable(newX, newY)) {
             this.board[this.x][this.y].lock();
-            if(this.board[newX][newY].tryLock()) {
+            if(this.board[newX][newY].tryLock(5, TimeUnit.SECONDS)) {
                 try {
                     this.board[x][y].unlock();
                     setX(newX);
                     setY(newY);
                     Thread.currentThread().sleep(500);
-                    System.out.println("BM moves right");
+                    System.out.println(Thread.currentThread().getName() + " move right on " + this.x + ":" + this.y);
                 } finally {
                     this.board[newX][newY].unlock();
                 }
             }
-        } else {
-            return;
+            newX++;
         }
     }
 
@@ -176,34 +182,20 @@ public class BomberMan implements Runnable{
         return result;
     }
 
-    /**
-     * Drops a bomb. Creates new instance of Bomb and starts it.
-     */
-    public void dropTheBomb() {
-
-        new Thread(new Bomb(this.x, this.y, this.board)).start();
-    }
-
-    /**
-     * Decrements lives.
-     * */
-    public static void livesDecrement() {
-        BomberMan.lives--;
-        if(BomberMan.lives == 0) {
-            Field.gameOver();
-        }
-    }
-
 
     @Override
     public void run() {
 
+//        this.board[this.x][this.y].lock();
+
         try {
-            bomberManMoveRight();
-            bomberManMoveDown();
-            bomberManMoveLeft();
-            bomberManMoveLeft();
-            bomberManMoveLeft();
+            while(true) {
+                monstersMoveDown();
+                monstersMoveLeft();
+                monstersMoveUp();
+                monstersMoveRight();
+            }
+
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
