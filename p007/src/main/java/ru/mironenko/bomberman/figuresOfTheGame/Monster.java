@@ -67,15 +67,16 @@ public class Monster implements BoardItem, Runnable {
         while(isMoveAvailable(newX, newY)) {
             this.board[this.x][this.y].lock();
             if(this.board[newX][newY].tryLock(5, TimeUnit.SECONDS)) {
-                try {
-                    this.board[x][y].unlock();
+//                try {
+                    Thread.currentThread().sleep(500);
+                    this.board[this.x][this.y].unlock();
                     setX(newX);
                     setY(newY);
-                    Thread.currentThread().sleep(500);
                     System.out.println(Thread.currentThread().getName() + " move up on " + this.x + ":" + this.y);
-                } finally {
-                    this.board[newX][newY].unlock();
-                }
+//                }
+//                finally {
+//                    this.board[newX][newY].unlock();
+//                }
             }
             newY++;
         }
@@ -96,15 +97,16 @@ public class Monster implements BoardItem, Runnable {
         while(isMoveAvailable(newX, newY)) {
             this.board[this.x][this.y].lock();
             if(this.board[newX][newY].tryLock(5, TimeUnit.SECONDS)) {
-                try {
-                    this.board[x][y].unlock();
-                    setX(newX);
-                    setY(newY);
-                    Thread.currentThread().sleep(500);
-                    System.out.println(Thread.currentThread().getName() + " move down on " + this.x + ":" + this.y);
-                } finally {
-                    this.board[newX][newY].unlock();
-                }
+//                try {
+                Thread.currentThread().sleep(500);
+                this.board[this.x][this.y].unlock();
+                setX(newX);
+                setY(newY);
+                System.out.println(Thread.currentThread().getName() + " move up on " + this.x + ":" + this.y);
+//                }
+//                finally {
+//                    this.board[newX][newY].unlock();
+//                }
             }
             newY--;
         }
@@ -125,15 +127,16 @@ public class Monster implements BoardItem, Runnable {
         while(isMoveAvailable(newX, newY)) {
             this.board[this.x][this.y].lock();
             if(this.board[newX][newY].tryLock(5, TimeUnit.SECONDS)) {
-                try {
-                    this.board[x][y].unlock();
-                    setX(newX);
-                    setY(newY);
-                    Thread.currentThread().sleep(500);
-                    System.out.println(Thread.currentThread().getName() + " move left on " + this.x + ":" + this.y);
-                } finally {
-                    this.board[newX][newY].unlock();
-                }
+//                try {
+                Thread.currentThread().sleep(500);
+                this.board[this.x][this.y].unlock();
+                setX(newX);
+                setY(newY);
+                System.out.println(Thread.currentThread().getName() + " move up on " + this.x + ":" + this.y);
+//                }
+//                finally {
+//                    this.board[newX][newY].unlock();
+//                }
             }
             newX--;
         }
@@ -154,15 +157,16 @@ public class Monster implements BoardItem, Runnable {
         while(isMoveAvailable(newX, newY)) {
             this.board[this.x][this.y].lock();
             if(this.board[newX][newY].tryLock(5, TimeUnit.SECONDS)) {
-                try {
-                    this.board[x][y].unlock();
-                    setX(newX);
-                    setY(newY);
-                    Thread.currentThread().sleep(500);
-                    System.out.println(Thread.currentThread().getName() + " move right on " + this.x + ":" + this.y);
-                } finally {
-                    this.board[newX][newY].unlock();
-                }
+//                try {
+                Thread.currentThread().sleep(500);
+                this.board[this.x][this.y].unlock();
+                setX(newX);
+                setY(newY);
+                System.out.println(Thread.currentThread().getName() + " move up on " + this.x + ":" + this.y);
+//                }
+//                finally {
+//                    this.board[newX][newY].unlock();
+//                }
             }
             newX++;
         }

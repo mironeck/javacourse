@@ -66,15 +66,15 @@ public class BomberMan implements Runnable{
         if(isMoveAvailable(newX, newY)) {
             this.board[this.x][this.y].lock();
             if(this.board[newX][newY].tryLock()) {
-                try {
-                    this.board[x][y].unlock();
+//                try {
+                    Thread.currentThread().sleep(500);
+                    this.board[this.x][this.y].unlock();
                     setX(newX);
                     setY(newY);
-                    Thread.currentThread().sleep(500);
                     System.out.println("BM moves up");
-                } finally {
-                    this.board[newX][newY].unlock();
-                }
+//                } finally {
+//                    this.board[newX][newY].unlock();
+//                }
             }
         } else {
             return;
@@ -93,15 +93,15 @@ public class BomberMan implements Runnable{
         if(isMoveAvailable(newX, newY)) {
             this.board[this.x][this.y].lock();
             if(this.board[newX][newY].tryLock()) {
-                try {
-                    this.board[x][y].unlock();
+//                try {
+                    Thread.currentThread().sleep(500);
+                    this.board[this.x][this.y].unlock();
                     setX(newX);
                     setY(newY);
-                    Thread.currentThread().sleep(500);
-                    System.out.println("BM moves down");
-                } finally {
-                    this.board[newX][newY].unlock();
-                }
+                    System.out.println("BM moves up");
+//                } finally {
+//                    this.board[newX][newY].unlock();
+//                }
             }
         } else {
             return;
@@ -120,15 +120,15 @@ public class BomberMan implements Runnable{
         if(isMoveAvailable(newX, newY)) {
             this.board[this.x][this.y].lock();
             if(this.board[newX][newY].tryLock()) {
-                try {
-                    this.board[x][y].unlock();
-                    setX(newX);
-                    setY(newY);
-                    Thread.currentThread().sleep(500);
-                    System.out.println("BM moves left");
-                } finally {
-                    this.board[newX][newY].unlock();
-                }
+//                try {
+                Thread.currentThread().sleep(500);
+                this.board[this.x][this.y].unlock();
+                setX(newX);
+                setY(newY);
+                System.out.println("BM moves up");
+//                } finally {
+//                    this.board[newX][newY].unlock();
+//                }
             }
         } else {
             return;
@@ -147,15 +147,15 @@ public class BomberMan implements Runnable{
         if(isMoveAvailable(newX, newY)) {
             this.board[this.x][this.y].lock();
             if(this.board[newX][newY].tryLock()) {
-                try {
-                    this.board[x][y].unlock();
-                    setX(newX);
-                    setY(newY);
-                    Thread.currentThread().sleep(500);
-                    System.out.println("BM moves right");
-                } finally {
-                    this.board[newX][newY].unlock();
-                }
+//                try {
+                Thread.currentThread().sleep(500);
+                this.board[this.x][this.y].unlock();
+                setX(newX);
+                setY(newY);
+                System.out.println("BM moves up");
+//                } finally {
+//                    this.board[newX][newY].unlock();
+//                }
             }
         } else {
             return;
