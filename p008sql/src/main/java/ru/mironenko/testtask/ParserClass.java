@@ -74,7 +74,7 @@ public class ParserClass {
                 Elements cols = row.select("td");
                 String position = cols.get(1).text(); //vacancy
                 String day = cols.get(5).text(); //day of vacancy's creation
-                if (position.contains("Java")) {
+                if (position.toLowerCase().contains("java")) {
                     if(position.toLowerCase().contains("script")) {
                         break;
                     } else {

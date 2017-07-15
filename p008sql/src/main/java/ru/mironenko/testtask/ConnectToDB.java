@@ -28,6 +28,14 @@ public class ConnectToDB {
     private final Properties prop = new Properties();
 
     /**
+     * Getter of Connection
+     * @return instance of Connection
+     */
+    public Connection getConn() {
+        return this.conn;
+    }
+
+    /**
      * Link to Connection.
      */
     private Connection conn;
@@ -43,12 +51,13 @@ public class ConnectToDB {
         String url = prop.getProperty("db.host");
         String login = prop.getProperty("db.login");
         String pass = prop.getProperty("db.password");
-
+        io.close();
         try {
             conn = DriverManager.getConnection(url, login, pass);
         } catch (SQLException e) {
             log.error(e.getMessage());
         }
+
         createTableIfNotExist();
     }
 
@@ -58,14 +67,14 @@ public class ConnectToDB {
     private void createTableIfNotExist() {
 
         try {
-            PreparedStatement pr = this.conn.prepareStatement("create table if not exists testThree(id serial primary key, position varchar(500), date timestamp);");
-            PreparedStatement prRule = this.conn.prepareStatement("CREATE UNIQUE INDEX index_unique" +
-                    "  ON testThree" +
-                    "  USING btree(position, date);");
+            PreparedStatement pr = this.conn.prepareStatement("create table if not exists testThree(id serial primary key, position varchar(500), date timestamp, unique (position, date));");
+//            PreparedStatement prRule = this.conn.prepareStatement("CREATE UNIQUE INDEX index_unique" +
+//                    "  ON testThree" +
+//                    "  USING btree(position, date);");
             pr.execute();
-            prRule.execute();
+//            prRule.execute();
             pr.close();
-            prRule.close();
+//            prRule.close();
         } catch (SQLException e) {
             log.error(e.getMessage());
         }
@@ -87,6 +96,7 @@ public class ConnectToDB {
             prAdd.setTimestamp(2, new java.sql.Timestamp(date.getTime()));
             prAdd.executeUpdate();
             result = true;
+            prAdd.close();
         } catch (SQLException e) {
             log.error(e.getMessage());
         }
@@ -105,15 +115,30 @@ public class ConnectToDB {
         try {
             PreparedStatement prCheck = this.conn.prepareStatement("SELECT CASE WHEN EXISTS (SELECT * FROM testThree LIMIT 1) THEN 1 ELSE 0 END");
             ResultSet rs = prCheck.executeQuery();
-
             if(rs.next()) {
                 result = rs.getInt(1);
             }
+            prCheck.close();
+            rs.close();
         } catch (SQLException e) {
             log.error(e.getMessage());
         }
 
        return (result == 0) ? true : false;
+    }
+
+    /**
+     * Closes connection to DB
+     */
+    public void closeConnection() {
+
+        if(this.conn != null) {
+            try {
+                this.conn.close();
+            } catch (SQLException e) {
+                log.error(e.getMessage(), e);
+            }
+        }
     }
 
 }

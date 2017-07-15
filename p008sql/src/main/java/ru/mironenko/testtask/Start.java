@@ -4,6 +4,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import java.io.IOException;
+import java.sql.SQLException;
 import java.text.ParseException;
 
 /**
@@ -54,11 +55,22 @@ public class Start implements Runnable {
         } catch (InterruptedException e) {
             log.error(e.getMessage());
         }
+
+        closeConnection();
+    }
+
+    /**
+     * Closes connection to DB
+     */
+    public void closeConnection() {
+
+        this.parserClass.connectToDB.closeConnection();
     }
 
     public static void main(String[] args) {
 
         Thread thread = new Thread(new Start("http://www.sql.ru/forum/job-offers/"));
         thread.start();
+
     }
 }
