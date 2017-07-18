@@ -7,6 +7,7 @@ import org.jsoup.select.Elements;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import java.io.IOException;
+import java.sql.SQLException;
 import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -53,6 +54,8 @@ public class ParserClass {
             this.connectToDB = new ConnectToDB();
         } catch (IOException e) {
             log.error(e.getMessage());
+        } catch (SQLException e) {
+            e.printStackTrace();
         }
     }
 
@@ -61,7 +64,7 @@ public class ParserClass {
      * @throws IOException
      * @throws ParseException
      */
-    public void parseTableFromBeginingOfTheYear() throws IOException, ParseException {
+    public void parseTableFromBeginingOfTheYear() throws IOException, ParseException, SQLException {
 
         int i = 1;
         boolean flag = true;
@@ -98,7 +101,7 @@ public class ParserClass {
      * @throws ParseException
      * @throws IOException
      */
-    public void parseTableInOneDay() throws ParseException, IOException {
+    public void parseTableInOneDay() throws ParseException, IOException, SQLException {
 
         this.doc = Jsoup.connect(this.url + 1).get();
         Element table = this.doc.select("table.forumTable").first();
@@ -123,7 +126,7 @@ public class ParserClass {
      * Checks of table of vacancies in DB is empty
      * @return true if empty
      */
-    public boolean checkIsTableEmpty() {
+    public boolean checkIsTableEmpty() throws SQLException {
         return this.connectToDB.isTableEmpty();
     }
 

@@ -28,14 +28,6 @@ public class ConnectToDB {
     private final Properties prop = new Properties();
 
     /**
-     * Getter of Connection
-     * @return instance of Connection
-     */
-    public Connection getConn() {
-        return this.conn;
-    }
-
-    /**
      * Link to Connection.
      */
     private Connection conn;
@@ -44,18 +36,17 @@ public class ConnectToDB {
      * Constructor of ConnectionToDB. Reads prop, connects to DB, creates table "vacancies" if it not exists.
      * @throws IOException
      */
-    public ConnectToDB() throws IOException{
+    public ConnectToDB() throws IOException, SQLException {
 
-        InputStream io = getClass().getClassLoader().getResourceAsStream("resources.properties");
-        prop.load(io);
-        String url = prop.getProperty("db.host");
-        String login = prop.getProperty("db.login");
-        String pass = prop.getProperty("db.password");
-        io.close();
-        try {
+        try (
+                InputStream io = getClass().getClassLoader().getResourceAsStream("resources.properties")
+
+        ) {
+            prop.load(io);
+            String url = prop.getProperty("db.host");
+            String login = prop.getProperty("db.login");
+            String pass = prop.getProperty("db.password");
             conn = DriverManager.getConnection(url, login, pass);
-        } catch (SQLException e) {
-            log.error(e.getMessage());
         }
 
         createTableIfNotExist();
@@ -64,19 +55,13 @@ public class ConnectToDB {
     /**
      * Creates table in DB "vacancies" if it not exists.
      */
-    private void createTableIfNotExist() {
+    private void createTableIfNotExist() throws SQLException {
 
-        try {
+        try (
             PreparedStatement pr = this.conn.prepareStatement("create table if not exists testThree(id serial primary key, position varchar(500), date timestamp, unique (position, date));");
-//            PreparedStatement prRule = this.conn.prepareStatement("CREATE UNIQUE INDEX index_unique" +
-//                    "  ON testThree" +
-//                    "  USING btree(position, date);");
+        )
+        {
             pr.execute();
-//            prRule.execute();
-            pr.close();
-//            prRule.close();
-        } catch (SQLException e) {
-            log.error(e.getMessage());
         }
     }
 
@@ -86,21 +71,18 @@ public class ConnectToDB {
      * @param date - date of vacancy's creation.
      * @return true if addition is succeed.
      */
-    public boolean addVacancyToDB(String vacancy, Date date) {
+    public boolean addVacancyToDB(String vacancy, Date date) throws SQLException {
 
-        boolean result = false;
+        boolean result;
 
-        try {
+        try (
             PreparedStatement prAdd = this.conn.prepareStatement("insert into testThree(position, date) values(?, ?)");
+        ){
             prAdd.setString(1, vacancy);
             prAdd.setTimestamp(2, new java.sql.Timestamp(date.getTime()));
             prAdd.executeUpdate();
             result = true;
-            prAdd.close();
-        } catch (SQLException e) {
-            log.error(e.getMessage());
         }
-
         return result;
     }
 
@@ -108,22 +90,19 @@ public class ConnectToDB {
      * Checks is table is empty
      * @return true if empty, false if not
      */
-    public boolean isTableEmpty() {
+    public boolean isTableEmpty() throws SQLException{
 
         int result = -1;
 
-        try {
+        try (
             PreparedStatement prCheck = this.conn.prepareStatement("SELECT CASE WHEN EXISTS (SELECT * FROM testThree LIMIT 1) THEN 1 ELSE 0 END");
-            ResultSet rs = prCheck.executeQuery();
+            ResultSet rs = prCheck.executeQuery()
+        )
+        {
             if(rs.next()) {
                 result = rs.getInt(1);
             }
-            prCheck.close();
-            rs.close();
-        } catch (SQLException e) {
-            log.error(e.getMessage());
         }
-
        return (result == 0) ? true : false;
     }
 

@@ -33,22 +33,26 @@ public class Start implements Runnable {
     @Override
     public void run() {
 
-        if(this.parserClass.checkIsTableEmpty()) {
-            try {
-                this.parserClass.parseTableFromBeginingOfTheYear();
-            } catch (IOException e) {
-                log.error(e.getMessage());
-            } catch (ParseException e) {
-                log.error(e.getMessage());
+        try {
+            if(this.parserClass.checkIsTableEmpty()) {
+                try {
+                    this.parserClass.parseTableFromBeginingOfTheYear();
+                } catch (IOException e) {
+                    log.error(e.getMessage());
+                } catch (ParseException e) {
+                    log.error(e.getMessage());
+                }
+            } else {
+                try {
+                    this.parserClass.parseTableInOneDay();
+                } catch (ParseException e) {
+                    log.error(e.getMessage());
+                } catch (IOException e) {
+                    log.error(e.getMessage());
+                }
             }
-        } else {
-            try {
-                this.parserClass.parseTableInOneDay();
-            } catch (ParseException e) {
-                log.error(e.getMessage());
-            } catch (IOException e) {
-                log.error(e.getMessage());
-            }
+        } catch (SQLException e) {
+            e.printStackTrace();
         }
         try {
             Thread.currentThread().sleep(24*60*60*1000);
