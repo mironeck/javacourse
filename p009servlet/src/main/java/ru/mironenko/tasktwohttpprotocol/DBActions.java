@@ -47,11 +47,12 @@ public class DBActions {
         } catch (IOException e) {
             e.printStackTrace();
         }
-        String url = prop.getProperty("db.host");
-        String username = prop.getProperty("db.login");
-        String password = prop.getProperty("db.password");
+//        String url = prop.getProperty("db.host");
+//        String username = prop.getProperty("db.login");
+//        String password = prop.getProperty("db.password");
         try {
-            this.conn = DriverManager.getConnection(url, username, password);
+//            this.conn = DriverManager.getConnection(url, username, password);
+            this.conn = ConnectionFactory.getConnection();
         } catch (SQLException e) {
             log.error(e.getMessage(), e);
         }
@@ -64,15 +65,17 @@ public class DBActions {
      */
     private void createTablesIfNotExist() {
 
-        try {
+        try (
             PreparedStatement prUsers = this.conn.prepareStatement("create table if not exists users(id serial primary key, name varchar(200), " +
-                    "login varchar(20), email varchar(30), createDate timestamp);" );
-
+                    "login varchar(20), email varchar(30), createDate timestamp);" )
+        )
+        {
             prUsers.execute();
-            prUsers.close();
         } catch (SQLException e) {
             log.error(e.getMessage(), e);
         }
+
+
     }
 
 
@@ -84,10 +87,12 @@ public class DBActions {
      */
     public void createUser(String name, String login, String email) {
 
-        try {
+        try (
             PreparedStatement pr = this.conn.prepareStatement("INSERT INTO users(name, login, email, createdate) values(?, ?, ?, ?) " +
                     "WHERE NOT EXISTS (SELECT name, login FROM users " +
                     "WHERE name = ? AND login = ?)");
+            )
+        {
             pr.setString(1, name);
             pr.setString(2, login);
             pr.setString(3, email);
@@ -95,7 +100,7 @@ public class DBActions {
             pr.setString(5, name);
             pr.setString(6, login);
             pr.executeUpdate();
-            pr.close();
+
         } catch (SQLException e) {
             log.error(e.getMessage(), e);
         }
@@ -110,15 +115,16 @@ public class DBActions {
      */
     public void editUser(String name, String login, String newLogin, String newEmail) {
 
-        try {
+        try (
             PreparedStatement pr = this.conn.prepareStatement("UPDATE users SET login = ?, email = ? " +
-                    "WHERE name = ? AND login = ?");
+                    "WHERE name = ? AND login = ?")
+        )
+        {
             pr.setString(1, newLogin);
             pr.setString(2, newEmail);
             pr.setString(3, name);
             pr.setString(4, login);
             pr.executeUpdate();
-            pr.close();
         } catch (SQLException e) {
             log.error(e.getMessage(), e);
         }
@@ -132,22 +138,19 @@ public class DBActions {
     public User getUser(String name, String login) {
 
         User user = null;
-        try {
-            PreparedStatement pr = this.conn.prepareStatement("SELECT from users WHERE name = ? AND login = ?");
+        try (
+            PreparedStatement pr = this.conn.prepareStatement("SELECT from users WHERE name = ? AND login = ?")
+        )
+        {
             pr.setString(1, name);
             pr.setString(2, login);
-
             ResultSet rs = pr.executeQuery();
-            while(rs.next()) {
+            while (rs.next()) {
                 user = new User(rs.getString("name"), rs.getString("login"), rs.getString("email"), rs.getTimestamp("createdate"));
             }
-
-            pr.close();
-            rs.close();
         } catch (SQLException e) {
             log.error(e.getMessage(), e);
         }
-
         return user;
     }
 
@@ -159,12 +162,14 @@ public class DBActions {
      */
     public void deleteUser(String name, String login) {
 
-        try {
+        try (
             PreparedStatement pr = this.conn.prepareStatement("DELETE from users WHERE name = ? AND login = ?");
+        )
+        {
             pr.setString(1, name);
             pr.setString(2, login);
             pr.executeUpdate();
-            pr.close();
+
         } catch (SQLException e) {
             log.error(e.getMessage(), e);
         }
