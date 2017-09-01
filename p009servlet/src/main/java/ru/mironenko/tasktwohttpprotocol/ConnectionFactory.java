@@ -10,7 +10,7 @@ import javax.sql.DataSource;
 import java.sql.Connection;
 import java.sql.SQLException;
 
-public class ConnectionFactory {
+public final class ConnectionFactory {
 
     /**
      * Logger
@@ -33,7 +33,7 @@ public class ConnectionFactory {
 
     }
 
-    public static Connection getConnection() throws SQLException {
+    public static synchronized Connection getConnection() throws SQLException {
         Connection conn = ds.getConnection();
         return conn;
     }
