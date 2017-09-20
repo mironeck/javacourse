@@ -1,0 +1,49 @@
+<web-app>
+    <servlet>
+        <servlet-name>index</servlet-name>
+        <servlet-class>ru.mironenko.servlets.IndexServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>index</servlet-name>
+        <url-pattern>/index</url-pattern>
+    </servlet-mapping>
+
+
+    <servlet>
+        <servlet-name>CreateUser</servlet-name>
+        <servlet-class>ru.mironenko.servlets.CreateUserServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>createuser</servlet-name>
+        <url-pattern>/createuser</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>EditUser</servlet-name>
+        <servlet-class>ru.mironenko.servlets.EditUserServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>edituser</servlet-name>
+        <url-pattern>/edituser</url-pattern>
+    </servlet-mapping>
+
+
+    <servlet>
+        <servlet-name>DeleteUser</servlet-name>
+        <servlet-class>ru.mironenko.servlets.DeleteUserServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>deleteuser</servlet-name>
+        <url-pattern>/deleteuser</url-pattern>
+    </servlet-mapping>
+
+
+    <servlet>
+        <servlet-name>GetUser</servlet-name>
+        <servlet-class>ru.mironenko.servlets.GetUserServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>getuser</servlet-name>
+        <url-pattern>/getuser</url-pattern>
+    </servlet-mapping>
+</web-app>
