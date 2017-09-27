@@ -14,7 +14,7 @@
         <servlet-class>ru.mironenko.servlets.CreateUserServlet</servlet-class>
     </servlet>
     <servlet-mapping>
-        <servlet-name>createuser</servlet-name>
+        <servlet-name>CreateUser</servlet-name>
         <url-pattern>/createuser</url-pattern>
     </servlet-mapping>
 
@@ -23,7 +23,7 @@
         <servlet-class>ru.mironenko.servlets.EditUserServlet</servlet-class>
     </servlet>
     <servlet-mapping>
-        <servlet-name>edituser</servlet-name>
+        <servlet-name>EditUser</servlet-name>
         <url-pattern>/edituser</url-pattern>
     </servlet-mapping>
 
@@ -33,7 +33,7 @@
         <servlet-class>ru.mironenko.servlets.DeleteUserServlet</servlet-class>
     </servlet>
     <servlet-mapping>
-        <servlet-name>deleteuser</servlet-name>
+        <servlet-name>DeleteUser</servlet-name>
         <url-pattern>/deleteuser</url-pattern>
     </servlet-mapping>
 
@@ -43,7 +43,7 @@
         <servlet-class>ru.mironenko.servlets.GetUserServlet</servlet-class>
     </servlet>
     <servlet-mapping>
-        <servlet-name>getuser</servlet-name>
+        <servlet-name>GetUser</servlet-name>
         <url-pattern>/getuser</url-pattern>
     </servlet-mapping>
 </web-app>
