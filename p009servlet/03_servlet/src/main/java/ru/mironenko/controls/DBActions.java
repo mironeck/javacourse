@@ -26,6 +26,10 @@ public class DBActions {
      */
     private Connection conn;
 
+    public DBActions() {
+        init();
+    }
+
     /**
      * Connects to database
      */
