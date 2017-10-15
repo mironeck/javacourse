@@ -35,18 +35,18 @@ public class DBActions {
      */
     public void init() {
 
-        InputStream io = getClass().getClassLoader().getResourceAsStream("resources.properties");
+        InputStream io = getClass().getClassLoader().getResourceAsStream("resources.resources.properties");
         try {
             prop.load(io);
         } catch (IOException e) {
             e.printStackTrace();
         }
-//        String url = prop.getProperty("db.host");
-//        String username = prop.getProperty("db.login");
-//        String password = prop.getProperty("db.password");
+        String url = prop.getProperty("db.host");
+        String username = prop.getProperty("db.login");
+        String password = prop.getProperty("db.password");
         try {
-//            this.conn = DriverManager.getConnection(url, username, password);
-            this.conn = ConnectionFactory.getConnection();
+            this.conn = DriverManager.getConnection(url, username, password);
+//            this.conn = ConnectionFactory.getConnection();
         } catch (SQLException e) {
             LOG.error(e.getMessage(), e);
         }
