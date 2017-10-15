@@ -35,7 +35,7 @@ public class DBActions {
      */
     public void init() {
 
-        InputStream io = getClass().getClassLoader().getResourceAsStream("resources.resources.properties");
+        InputStream io = getClass().getClassLoader().getResourceAsStream("resources.properties");
         try {
             prop.load(io);
         } catch (IOException e) {
