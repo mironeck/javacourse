@@ -26,6 +26,8 @@ public class DBActions {
      */
     private Connection conn;
 
+    private PreparedStatement pr = null;
+
     public DBActions() {
         init();
     }
@@ -35,7 +37,8 @@ public class DBActions {
      */
     public void init() {
 
-        InputStream io = getClass().getClassLoader().getResourceAsStream("resources.properties");
+        InputStream io = getClass().getClassLoader().getResourceAsStream("config.properties");
+
         try {
             prop.load(io);
         } catch (IOException e) {
@@ -45,9 +48,12 @@ public class DBActions {
         String username = prop.getProperty("db.login");
         String password = prop.getProperty("db.password");
         try {
+            Class.forName("org.postgresql.Driver");
             this.conn = DriverManager.getConnection(url, username, password);
 //            this.conn = ConnectionFactory.getConnection();
         } catch (SQLException e) {
+            LOG.error(e.getMessage(), e);
+        } catch (ClassNotFoundException e) {
             LOG.error(e.getMessage(), e);
         }
         createTablesIfNotExist();
@@ -57,11 +63,11 @@ public class DBActions {
     private void createTablesIfNotExist() {
 
         try (
-                PreparedStatement prUsers = this.conn.prepareStatement("create table if not exists users(id serial primary key, name varchar(200), " +
-                        "login varchar(20), email varchar(30), createDate timestamp);" )
+                PreparedStatement pr = this.conn.prepareStatement("create table if not exists users(id serial primary key, name varchar(200), " +
+                        "login varchar(20), email varchar(30), createdate timestamp);" )
         )
         {
-            prUsers.execute();
+            pr.execute();
         } catch (SQLException e) {
             LOG.error(e.getMessage(), e);
         }
@@ -76,7 +82,7 @@ public class DBActions {
     public void createUser(String name, String login, String email) {
 
         try(
-                PreparedStatement pr = this.conn.prepareStatement("INSERT INTO users(name, login, email, createate) VALUES (?, ?, ?, ?)" +
+                PreparedStatement pr = this.conn.prepareStatement("INSERT INTO users(name, login, email, createdate) VALUES (?, ?, ?, ?)" +
                 "WHERE NOT EXISTS (SELECT name, login FROM users " +
                         "WHERE name = ? AND login = ?)")
         )
@@ -91,6 +97,7 @@ public class DBActions {
         }catch (SQLException e) {
             LOG.error(e.getMessage(), e);
         }
+
     }
 
 
