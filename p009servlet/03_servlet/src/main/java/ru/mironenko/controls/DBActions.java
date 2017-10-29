@@ -137,6 +137,7 @@ public class DBActions {
                 PreparedStatement pr = this.conn.prepareStatement("SELECT FROM users WHERE name = ? AND login = ?")
            )
         {
+
             pr.setString(1, name);
             pr.setString(2, login);
             ResultSet rs = pr.executeQuery();
@@ -147,9 +148,12 @@ public class DBActions {
                 user.setEmail(rs.getString("email"));
                 user.setCreateDate(rs.getTimestamp("createdate"));
             }
+
+
         } catch (SQLException e) {
             LOG.error(e.getMessage(), e);
         }
+
 
         return user;
     }

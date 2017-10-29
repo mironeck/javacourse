@@ -43,7 +43,7 @@ public class IndexServlet extends HttpServlet {
         }
         writer.append("</table>" +
                 "<p>Create new user:</p>" +
-                "<form action=" + req.getContextPath() + "/create method='post'>" +
+                "<form action=" + req.getContextPath() + "/createuser method='post'>" +
                 "User name : <input type=text name='name'>" +
                 "User login : <input type=text name='login'>" +
                 "User email : <input type=text name='email'>" +
@@ -51,7 +51,7 @@ public class IndexServlet extends HttpServlet {
                 "</form>" +
                 "<br>" +
                 "<p>Edit user:</p>" +
-                "<form action=" + req.getContextPath() + "/edit method='post'>" +
+                "<form action=" + req.getContextPath() + "/edituser method='post'>" +
                 "User name : <input type=text name='name'>" +
                 "User login : <input type=text name='login'>" +
                 "User new user login : <input type=text name='newName'>" +
@@ -60,7 +60,7 @@ public class IndexServlet extends HttpServlet {
                 "</form>" +
                 "<br>" +
                 "<p>Delete user:</p>" +
-                "<form action=" + req.getContextPath() + "/delete method='post'>" +
+                "<form action=" + req.getContextPath() + "/deleteuser method='post'>" +
                 "User name : <input type=text name='name'>" +
                 "User login : <input type=text name='login'>" +
                 "<input type='submit'>" +

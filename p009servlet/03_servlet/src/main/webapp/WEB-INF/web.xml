@@ -10,11 +10,11 @@
 
 
     <servlet>
-        <servlet-name>CreateUser</servlet-name>
+        <servlet-name>createuser</servlet-name>
         <servlet-class>ru.mironenko.servlets.CreateUserServlet</servlet-class>
     </servlet>
     <servlet-mapping>
-        <servlet-name>CreateUser</servlet-name>
+        <servlet-name>createuser</servlet-name>
         <url-pattern>/createuser</url-pattern>
     </servlet-mapping>
 

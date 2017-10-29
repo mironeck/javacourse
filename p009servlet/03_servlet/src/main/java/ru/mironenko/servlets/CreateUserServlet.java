@@ -20,8 +20,8 @@ public class CreateUserServlet extends HttpServlet {
         String userName = req.getParameter("name");
         String userLogin = req.getParameter("login");
         String userEmail = req.getParameter("email");
-        dbActions.createUser(userName, userLogin, userEmail);
-        User user = dbActions.getUser(userName, userLogin);
+        this.dbActions.createUser(userName, userLogin, userEmail);
+        User user = this.dbActions.getUser(userName, userLogin);
 
         PrintWriter writer = new PrintWriter(resp.getOutputStream());
         writer.append("<!DOCTYPE html>" +
@@ -33,13 +33,19 @@ public class CreateUserServlet extends HttpServlet {
                 "<body>");
         if (user != null) {
             writer.append(String.format("<p>User %s is created.</p>", user.toString()));
-        } else {
+        }
+        else {
             writer.append(String.format("<p>User with name %s and login %s is not created.</p>",  userName, userLogin));
         }
         writer.append("<p><a href=" + req.getContextPath() + "/index method='get'>Go to main page.</a></p>" +
                 "</body>" +
                 "</html>");
         writer.flush();
+    }
+
+    @Override
+    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        this.doPost(req, resp);
     }
 
     @Override
