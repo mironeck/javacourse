@@ -10,6 +10,7 @@ import java.util.Date;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Properties;
+import java.util.concurrent.CopyOnWriteArrayList;
 
 
 public class DBActions {
@@ -184,7 +185,7 @@ public class DBActions {
 
     public List<User> getUserList() {
 
-        List<User> userList = new LinkedList<>();
+        List<User> userList = new CopyOnWriteArrayList<>();
 
         try (
                 PreparedStatement pr = this.conn.prepareStatement("SELECT * FROM users")
