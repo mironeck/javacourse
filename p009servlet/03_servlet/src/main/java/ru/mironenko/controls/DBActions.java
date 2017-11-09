@@ -37,7 +37,7 @@ public class DBActions {
      */
     public void init() {
 
-        InputStream io = getClass().getClassLoader().getResourceAsStream("config.properties");
+        InputStream io = getClass().getClassLoader().getResourceAsStream("log4j.properties");
 
         try {
             prop.load(io);
