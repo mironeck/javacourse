@@ -1,0 +1,32 @@
+<web-app>
+
+    <servlet>
+        <servlet-name>CreateUser</servlet-name>
+        <servlet-class>ru.mironenko.servlets.CreateUserServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>CreateUser</servlet-name>
+        <url-pattern>/createuser</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>EditUser</servlet-name>
+        <servlet-class>ru.mironenko.servlets.EditUserServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>EditUser</servlet-name>
+        <url-pattern>/edituser</url-pattern>
+    </servlet-mapping>
+
+
+    <servlet>
+        <servlet-name>DeleteUser</servlet-name>
+        <servlet-class>ru.mironenko.servlets.DeleteUserServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>DeleteUser</servlet-name>
+        <url-pattern>/deleteuser</url-pattern>
+    </servlet-mapping>
+
+
+</web-app>
