@@ -3,6 +3,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import ru.mironenko.models.User;
 
+import javax.sql.DataSource;
 import java.io.IOException;
 import java.io.InputStream;
 import java.sql.*;
@@ -29,16 +30,21 @@ public class DBActions {
     private PreparedStatement pr = null;
 
     public DBActions() {
-        init();
+        try {
+            init();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 
     /**
      * Connects to database
      */
-    public void init() {
+    public void init() throws Exception {
 
         InputStream io = getClass().getClassLoader().getResourceAsStream("resources.properties");
-
+        ConnectionPoolClass connectionPoolClass = new ConnectionPoolClass();
+        DataSource dataSource = connectionPoolClass.setUp();
         try {
             prop.load(io);
         } catch (IOException e) {
@@ -49,12 +55,11 @@ public class DBActions {
         String password = prop.getProperty("db.password");
         try {
             Class.forName("org.postgresql.Driver");
-            this.conn = DriverManager.getConnection(url, username, password);
-//            this.conn = ConnectionFactory.getConnection();
-        } catch (SQLException e) {
-            LOG.error(e.getMessage(), e);
-        } catch (ClassNotFoundException e) {
-            LOG.error(e.getMessage(), e);
+//            this.conn = DriverManager.getConnection(url, username, password);
+            this.conn = dataSource.getConnection();
+        } catch (Exception e) {
+//            LOG.error(e.getMessage(), e);
+            e.printStackTrace();
         }
         createTablesIfNotExist();
 
@@ -82,20 +87,19 @@ public class DBActions {
     public void createUser(String name, String login, String email) {
 
         try(
-                PreparedStatement pr = this.conn.prepareStatement("INSERT INTO users(name, login, email, createdate) VALUES (?, ?, ?, ?)" +
-                "WHERE NOT EXISTS (SELECT name, login FROM users " +
-                        "WHERE name = ? AND login = ?)")
+                PreparedStatement pr = this.conn.prepareStatement("INSERT INTO users(name, login, email, createdate) VALUES (?, ?, ?, ?)"
+                )
         )
         {
             pr.setString(1, name);
             pr.setString(2, login);
             pr.setString(3, email);
             pr.setTimestamp(4, new Timestamp(new Date().getTime()));
-            pr.setString(5, name);
-            pr.setString(6, login);
+
             pr.executeUpdate();
         }catch (SQLException e) {
-            LOG.error(e.getMessage(), e);
+//            LOG.error(e.getMessage(), e);
+            e.printStackTrace();
         }
 
     }
@@ -137,23 +141,24 @@ public class DBActions {
                 PreparedStatement pr = this.conn.prepareStatement("SELECT FROM users WHERE name = ? AND login = ?")
            )
         {
-
             pr.setString(1, name);
             pr.setString(2, login);
             ResultSet rs = pr.executeQuery();
             while (rs.next()) {
+//                user = new User(rs.getString("name"),
+//                        rs.getString("login"),
+//                        rs.getString("email"),
+//                        rs.getTimestamp("createdate") );
                 user = new User();
                 user.setName(rs.getString("name"));
                 user.setLogin(rs.getString("login"));
                 user.setEmail(rs.getString("email"));
                 user.setCreateDate(rs.getTimestamp("createdate"));
+                System.out.println(user.getName());
             }
-
-
         } catch (SQLException e) {
             LOG.error(e.getMessage(), e);
         }
-
 
         return user;
     }
@@ -189,11 +194,11 @@ public class DBActions {
         {
             ResultSet rs = pr.executeQuery();
             while(rs.next()) {
-                User user = new User();
-                user.setName(rs.getString("name"));
-                user.setLogin(rs.getString("login"));
-                user.setEmail(rs.getString("email"));
-                user.setCreateDate(rs.getTimestamp("createdate"));
+               User user = new User(rs.getString("name"), rs.getString("login"), rs.getString("email"), rs.getTimestamp("createdate") );
+//                user.setName(rs.getString("name"));
+//                user.setLogin(rs.getString("login"));
+//                user.setEmail(rs.getString("email"));
+//                user.setCreateDate(rs.getTimestamp("createdate"));
                 userList.add(user);
             }
         } catch (SQLException e){
