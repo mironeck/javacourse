@@ -1,0 +1,28 @@
+<project>
+
+    <version>1.0</version>
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>ru.mironenko</groupId>
+    <artifactId>00_mvclesson</artifactId>
+    <packaging>war</packaging>
+
+
+    <parent>
+        <version>1.0</version>
+        <groupId>ru.mironenko</groupId>
+        <artifactId>p009servlet</artifactId>
+    </parent>
+
+    <dependencies>
+        <dependency>
+            <groupId>jstl</groupId>
+            <artifactId>jstl</artifactId>
+            <version>1.2</version>
+        </dependency>
+        <dependency>
+            <groupId>taglibs</groupId>
+            <artifactId>standard</artifactId>
+            <version>1.1.2</version>
+        </dependency>
+    </dependencies>
+</project>
