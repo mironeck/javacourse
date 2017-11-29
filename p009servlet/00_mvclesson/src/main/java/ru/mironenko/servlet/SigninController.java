@@ -24,7 +24,7 @@ public class SigninController extends HttpServlet {
             synchronized (session) {
                 session.setAttribute("login", login);
             }
-            resp.sendRedirect(String.format("%s/items", req.getContextPath()));
+            resp.sendRedirect(String.format("%s/", req.getContextPath()));
         } else {
             req.setAttribute("error", "Credential invalid");
             doGet(req, resp);
