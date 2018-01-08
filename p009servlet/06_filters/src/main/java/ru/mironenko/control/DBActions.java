@@ -8,10 +8,8 @@ import javax.sql.DataSource;
 import java.io.IOException;
 import java.io.InputStream;
 import java.sql.*;
+import java.util.*;
 import java.util.Date;
-import java.util.LinkedList;
-import java.util.List;
-import java.util.Properties;
 
 
 public class DBActions {
@@ -67,14 +65,15 @@ public class DBActions {
             e.printStackTrace();
         }
         createTablesIfNotExist();
+        createRolesTableIfNotExist();
     }
 
     private void createTablesIfNotExist() {
 
         try (
-                PreparedStatement pr = this.conn.prepareStatement("create table if not exists " +
-                        "userspas(id serial primary key, name varchar(200), " +
-                        "login varchar(20), email varchar(30), password VARCHAR(30), role VARCHAR(30), createdate timestamp);" )
+                PreparedStatement pr = this.conn.prepareStatement("CREATE TABLE if not exists " +
+                        "userstable(id serial PRIMARY KEY , name VARCHAR(200), " +
+                        "login VARCHAR(20), email VARCHAR(30), password VARCHAR(30), createdate TIMESTAMP, role_id INTEGER);" )
         )
         {
             pr.execute();
@@ -82,59 +81,80 @@ public class DBActions {
             LOG.error(e.getMessage(), e);
         }
 
-//        createUser("admin", "admin", "admin", "admin", "admin");
+//        createUser("admin", "admin", "admin@admin", "admin", "1");
+    }
 
+    private void createRolesTableIfNotExist() {
+
+        try (
+                PreparedStatement pr = this.conn.prepareStatement("CREATE TABLE if not exists " +
+                        "roles(role_id serial primary key, name varchar(200)" )
+        )
+        {
+            pr.execute();
+        } catch (SQLException e) {
+            LOG.error(e.getMessage(), e);
+        }
+
+//        createRole("admin");
     }
 
     /**
      * Creates user.
-     * @param name user's name
-     * @param login user's login
-     * @param email user's email
      */
-    public void createUser(String name, String login, String email, String password, String role) {
+    public void createUser(User user) {
 
         try(
                 PreparedStatement pr = this.conn.prepareStatement("INSERT INTO " +
-                        "userspas(name, login, email, password, role, createdate) VALUES (?, ?, ?, ?, ?, ?)"
+                        "userstable(name, login, email, password, createdate) VALUES (?, ?, ?, ?, ?, ?)"
                 )
         )
         {
-            pr.setString(1, name);
-            pr.setString(2, login);
-            pr.setString(3, email);
-            pr.setString(4, password);
-            pr.setString(5, role);
-            pr.setTimestamp(6, new Timestamp(new Date().getTime()));
+            pr.setString(1, user.getName());
+            pr.setString(2, user.getLogin());
+            pr.setString(3, user.getEmail());
+            pr.setString(4, user.getPassword());
+            pr.setTimestamp(5, user.getCreateDate());
+            pr.setInt(6, user.getRole().getId());
 
             pr.executeUpdate();
         }catch (SQLException e) {
 //            LOG.error(e.getMessage(), e);
             e.printStackTrace();
         }
+    }
 
+    public void createRole(String name) {
+
+        try(
+                PreparedStatement pr = this.conn.prepareStatement("INSERT INTO " +
+                        "roles(name) VALUES (?)"
+                )
+        )
+        {
+            pr.setString(1, name);
+            pr.executeUpdate();
+        }catch (SQLException e) {
+//            LOG.error(e.getMessage(), e);
+            e.printStackTrace();
+        }
     }
 
 
     /**
      * Edits users.
-     * @param name user's name to edit
-     * @param login user's login to edit
-     * @param newLogin user's new login
-     * @param newEmail user's new email
      */
-    public void editUser(String name, String login, String newLogin, String newEmail, String newRole) {
+    public void editUser(String email, String newLogin, String newEmail, int newRoleId) {
 
         try(
-                PreparedStatement pr = this.conn.prepareStatement("UPDATE userspas SET login = ?, email = ?, role = ? " +
-                        "WHERE name = ? AND login = ?")
+                PreparedStatement pr = this.conn.prepareStatement("UPDATE userstable SET login = ?, email = ?, roleid = ? " +
+                        "WHERE email = ?")
            )
         {
             pr.setString(1 , newLogin);
             pr.setString(2 , newEmail);
-            pr.setString(3 , newRole);
-            pr.setString(4 , name);
-            pr.setString(5 , login);
+            pr.setInt(3 , newRoleId);
+            pr.setString(4 , email);
             pr.executeUpdate();
         } catch (SQLException e) {
             LOG.error(e.getMessage(), e);
@@ -142,78 +162,21 @@ public class DBActions {
     }
 
 
-    public void editUsersRole(String name, String login, String newRole) {
+    public void editUsersRole(int roleId, String name) {
 
         try(
-                PreparedStatement pr = this.conn.prepareStatement("UPDATE userspas SET role = ? " +
-                        "WHERE name = ? AND login = ?")
+                PreparedStatement pr = this.conn.prepareStatement("UPDATE roles SET role = ? " +
+                        "WHERE roleid = ?")
         )
         {
-            pr.setString(1 , newRole);
-            pr.setString(2 , name);
-            pr.setString(3 , login);
+            pr.setString(1 , name);
+            pr.setInt(2 , roleId);
             pr.executeUpdate();
         } catch (SQLException e) {
             LOG.error(e.getMessage(), e);
         }
     }
-    /**
-     * Gets user from the table.
-     * @param name user's name to get
-     * @param login user's login to get
-     */
-    public User getUser(String name, String login) {
 
-        User user = null;
-        try(
-                PreparedStatement pr = this.conn.prepareStatement("SELECT FROM userspas WHERE name = ? AND login = ?")
-           )
-        {
-            pr.setString(1, name);
-            pr.setString(2, login);
-            ResultSet rs = pr.executeQuery();
-            while (rs.next()) {
-                user = new User();
-                user.setName(rs.getString("name"));
-                user.setLogin(rs.getString("login"));
-                user.setEmail(rs.getString("email"));
-                user.setEmail(rs.getString("password"));
-                user.setEmail(rs.getString("role"));
-                user.setCreateDate(rs.getTimestamp("createdate"));
-                System.out.println(user.getName());
-            }
-        } catch (SQLException e) {
-            LOG.error(e.getMessage(), e);
-        }
-
-        return user;
-    }
-
-    public User getUserByLogin(String login) {
-
-        User user = null;
-        try(
-                PreparedStatement pr = this.conn.prepareStatement("SELECT FROM userspas WHERE login = ?")
-        )
-        {
-            pr.setString(1, login);
-            ResultSet rs = pr.executeQuery();
-            while (rs.next()) {
-                user = new User();
-                user.setName(rs.getString("name"));
-                user.setLogin(rs.getString("login"));
-                user.setEmail(rs.getString("email"));
-                user.setEmail(rs.getString("password"));
-                user.setEmail(rs.getString("role"));
-                user.setCreateDate(rs.getTimestamp("createdate"));
-                System.out.println(user.getName());
-            }
-        } catch (SQLException e) {
-            LOG.error(e.getMessage(), e);
-        }
-
-        return user;
-    }
 
     /**
      * Deletes user from table.
@@ -223,7 +186,7 @@ public class DBActions {
     public void deleteUser(String name, String login) {
 
         try (
-                PreparedStatement pr = this.conn.prepareStatement("DELETE from userspas WHERE name = ? AND login = ?")
+                PreparedStatement pr = this.conn.prepareStatement("DELETE from userstable WHERE name = ? AND login = ?")
         )
         {
             pr.setString(1, name);
@@ -238,18 +201,19 @@ public class DBActions {
 
     public List<User> getUserList() {
 
-        List<User> userList = new LinkedList<>();
-
+        List<User> userList = new ArrayList<>();
+        ResultSet rs = null;
         try (
-                PreparedStatement pr = this.conn.prepareStatement("SELECT * FROM userspas")
-                )
-        {
-            ResultSet rs = pr.executeQuery();
-            while(rs.next()) {
-               User user = new User(rs.getString("name"), rs.getString("login"),
-                       rs.getString("email"), rs.getString("password"),
-                       new Role(rs.getString("role")), rs.getTimestamp("createdate") );
-
+                PreparedStatement pr = this.conn.prepareStatement("SELECT u.name as name, u.login as login, " +
+                        "u.email as email, u.password as pass, u.createdate as create,  r.name as rname, " +
+                        "r.role_id as roleid FROM userstable as u left join role as r on u.role_id = r.role_id") ) {
+            rs = pr.executeQuery();
+            while (rs.next()) {
+                User user = new User(rs.getString("name"),rs.getString("login"),
+                        rs.getString("email") , rs.getString("password"), rs.getTimestamp("createdate"));
+                Role role = new Role(rs.getString("rname"));
+                role.setId(rs.getInt("roleid"));
+                user.setRole(role);
                 userList.add(user);
             }
         } catch (SQLException e){
@@ -257,6 +221,29 @@ public class DBActions {
         }
         return userList;
     }
+
+
+    public List<Role> getRoles() {
+
+        List<Role> result = new ArrayList<>();
+        ResultSet rs = null;
+
+        try( PreparedStatement pr = this.conn.prepareStatement("SELECT FROM roles") )
+        {
+
+            rs = pr.executeQuery();
+            while(rs.next()) {
+                Role role = new Role(rs.getString("name"));
+                role.setId(rs.getInt("role_id"));
+                result.add(role);
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+        return result;
+    }
+
 
     /**
      * Closes connection to database.

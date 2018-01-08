@@ -4,35 +4,24 @@ import java.sql.Timestamp;
 
 public class User {
 
-    private String name;
-    private String login;
-    private String email;
+    private final String name;
+    private final String login;
+    private final String email;
     private Timestamp createDate;
     private String password;
     private Role role;
 
-    public User() {}
-
-    public User(String name, String login, String email, String password, Role role, Timestamp createDate) {
+    public User(String name, String login, String email, String password, Timestamp createDate) {
         this.name = name;
         this.login = login;
         this.email = email;
         this.createDate = createDate;
         this.password = password;
-        this.role = role;
     }
 
 
     public String getEmail() {
         return email;
-    }
-
-    public Role getRole() {
-        return role;
-    }
-
-    public void setRole(Role role) {
-        this.role = role;
     }
 
     public String getPassword() {
@@ -43,37 +32,25 @@ public class User {
         return this.name;
     }
 
-    public void setName(String name) {
-        this.name = name;
-    }
-
     public String getLogin() {
         return this.login;
-    }
-
-    public void setLogin(String login) {
-        this.login = login;
-    }
-
-    public void setEmail(String email) {
-        this.email = email;
-    }
-
-    public void setCreateDate(Timestamp createDate) {
-        this.createDate = createDate;
     }
 
     public Timestamp getCreateDate() {
         return createDate;
     }
 
+    public Role getRole() {
+        return role;
+    }
+
+    public void setRole(Role role) {
+        this.role = role;
+    }
+
     @Override
     public String toString() {
-        return "User{" +
-                "name='" + name + '\'' +
-                ", login='" + login + '\'' +
-                ", email='" + email + '\'' +
-                ", createDate=" + createDate +
-                '}';
+        return String.format("User : name - %s, login - %s, email - %s, password - %s, create - %s",
+                name, login, email, password, createDate);
     }
 }

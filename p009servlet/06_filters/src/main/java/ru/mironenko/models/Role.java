@@ -10,20 +10,26 @@ package ru.mironenko.models;
 
 public class Role {
 
-    public static final String ADMIN = "admin";
-    public static final String USER = "user";
+    private String name;
+    private int id;
 
-    private String role;
-
-    public Role(String role) {
-        this.role = role;
+    public Role(String name) {
+        this.name = name;
     }
 
-    public void setRole(String role) {
-        this.role = role;
+    public void setRole(String name) {
+        this.name = name;
     }
 
     public String getRole() {
-        return role;
+        return name;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 }

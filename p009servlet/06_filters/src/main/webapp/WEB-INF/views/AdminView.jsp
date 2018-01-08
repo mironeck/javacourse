@@ -37,12 +37,18 @@
             <td><c:out value="${user.createDate}"></c:out></td>
             <td>
                 <form action="${pageContext.servletContext.contextPath}/edituser" method="post">
-                    <input type="submit" value="edit user">
+                    <input type="image" value="edit user"
+                    <%--style="background-image: url(http://localhost:8089/images/edit.jpg) ; border: solid 0px #000000; width: 100px; height: 40px;" />--%>
+                    src="http://localhost:8089/images/edit.jpg" WIDTH="120"  HEIGHT="30"
+                           BORDER="0" ALT="SUBMIT!">
                 </form>
             </td>
             <td>
                 <form action="${pageContext.servletContext.contextPath}/deleteuser" method="post">
-                    <input type="submit" value="delete user">
+                    <input type="submit" value="delete user"
+                           <%--style="background-image: url(edit.jpg) ; border: solid 0px #000000; width: 100px; height: 40px;" />--%>
+                           src="http://localhost:8089/images/delete.jpg" WIDTH="120"  HEIGHT="30"
+                           BORDER="0" ALT="SUBMIT!">
                 </form>
             </td>
         </tr>
