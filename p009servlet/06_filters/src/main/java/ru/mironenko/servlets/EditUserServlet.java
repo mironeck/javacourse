@@ -21,12 +21,11 @@ public class EditUserServlet extends HttpServlet {
 
         doGet(req, resp);
 
-            String name = req.getParameter("name");
-            String login = req.getParameter("login");
+            String email = req.getParameter("name");
             String newLogin = req.getParameter("newLogin");
             String newEmail = req.getParameter("newEmail");
-            String newRole = req.getParameter("newRole");
+            int newRoleId = Integer.parseInt(req.getParameter("newRoleId"));
 
-        DBActions.getInstance().editUser(name, login, newLogin, newEmail, newRole);
+        DBActions.getInstance().editUser(email, newLogin, newEmail, newRoleId);
     }
 }

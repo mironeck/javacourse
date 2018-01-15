@@ -9,7 +9,6 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.sql.*;
 import java.util.*;
-import java.util.Date;
 
 
 public class DBActions {
@@ -53,22 +52,31 @@ public class DBActions {
         } catch (IOException e) {
             e.printStackTrace();
         }
-        String url = prop.getProperty("db.host");
-        String username = prop.getProperty("db.login");
-        String password = prop.getProperty("db.password");
+
         try {
             Class.forName("org.postgresql.Driver");
-//            this.conn = DriverManager.getConnection(url, username, password);
             this.conn = dataSource.getConnection();
         } catch (Exception e) {
-//            LOG.error(e.getMessage(), e);
             e.printStackTrace();
         }
-        createTablesIfNotExist();
+        createUserTableIfNotExist();
         createRolesTableIfNotExist();
+
+
+//        Role roleAdmin = new Role("admin");
+//        Role roleUser =  new Role("user");
+//        roleAdmin.setId(1);
+//        roleUser.setId(2);
+//        User admin = new User("admin", "admin", "admin@admin", "admin", new Timestamp(new Date().getTime()));
+//        User user = new User("user", "user", "user@user", "user", new Timestamp(new Date().getTime()));
+//        admin.setRole(roleAdmin);
+//        user.setRole(roleUser);
+//        createUser(admin);
+//        createUser(user);
+
     }
 
-    private void createTablesIfNotExist() {
+    private void createUserTableIfNotExist() {
 
         try (
                 PreparedStatement pr = this.conn.prepareStatement("CREATE TABLE if not exists " +
@@ -80,15 +88,13 @@ public class DBActions {
         } catch (SQLException e) {
             LOG.error(e.getMessage(), e);
         }
-
-//        createUser("admin", "admin", "admin@admin", "admin", "1");
     }
 
     private void createRolesTableIfNotExist() {
 
         try (
                 PreparedStatement pr = this.conn.prepareStatement("CREATE TABLE if not exists " +
-                        "roles(role_id serial primary key, name varchar(200)" )
+                        "rolestable(id serial PRIMARY KEY, name VARCHAR(200)" )
         )
         {
             pr.execute();
@@ -96,7 +102,6 @@ public class DBActions {
             LOG.error(e.getMessage(), e);
         }
 
-//        createRole("admin");
     }
 
     /**
@@ -106,7 +111,7 @@ public class DBActions {
 
         try(
                 PreparedStatement pr = this.conn.prepareStatement("INSERT INTO " +
-                        "userstable(name, login, email, password, createdate) VALUES (?, ?, ?, ?, ?, ?)"
+                        "userstable(name, login, email, password, createdate, role_id) VALUES (?, ?, ?, ?, ?, ?)"
                 )
         )
         {
@@ -199,6 +204,28 @@ public class DBActions {
     }
 
 
+    public User getUser(String name, String login) {
+
+        User user = null;
+
+        try( PreparedStatement pr = this.conn.prepareStatement("SELECT from userstable WHERE name = ? AND login = ?"))
+        {
+            pr.setString(1, name);
+            pr.setString(2, login);
+            ResultSet rs = pr.executeQuery();
+            while(rs.next()) {
+
+                user = new User(rs.getString("name"), rs.getString("login"), rs.getString("email"),
+                        rs.getString("password"), rs.getTimestamp("createdate"));
+
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return user;
+    }
+
+
     public List<User> getUserList() {
 
         List<User> userList = new ArrayList<>();
@@ -206,13 +233,13 @@ public class DBActions {
         try (
                 PreparedStatement pr = this.conn.prepareStatement("SELECT u.name as name, u.login as login, " +
                         "u.email as email, u.password as pass, u.createdate as create,  r.name as rname, " +
-                        "r.role_id as roleid FROM userstable as u left join role as r on u.role_id = r.role_id") ) {
+                        "r.role_id as roleid FROM userstable as u left join rolestable as r on u.role_id = r.id") ) {
             rs = pr.executeQuery();
             while (rs.next()) {
                 User user = new User(rs.getString("name"),rs.getString("login"),
                         rs.getString("email") , rs.getString("password"), rs.getTimestamp("createdate"));
                 Role role = new Role(rs.getString("rname"));
-                role.setId(rs.getInt("roleid"));
+                role.setId(rs.getInt("role_id"));
                 user.setRole(role);
                 userList.add(user);
             }
@@ -220,6 +247,27 @@ public class DBActions {
             LOG.error(e.getMessage(), e);
         }
         return userList;
+    }
+
+
+    public int getRoleId(String login) {
+
+        int result = 1;
+
+        try(
+                PreparedStatement pr = this.conn.prepareStatement("SELECT FROM userstable WHERE login = ?")
+        )
+        {
+            pr.setString(1, login);
+            ResultSet rs = pr.executeQuery();
+            while (rs.next()) {
+                result = rs.getInt("role_id");
+            }
+        } catch (SQLException e) {
+            LOG.error(e.getMessage(), e);
+        }
+
+        return result;
     }
 
 

@@ -26,7 +26,11 @@ public class SigninController extends HttpServlet {
             HttpSession session = req.getSession();
             synchronized (session) {
                 session.setAttribute("login", login);
-                resp.sendRedirect(String.format("%s/main", req.getContextPath()));
+                if(DBActions.getInstance().getRoleId(login) == 1) {
+                    resp.sendRedirect("/WEB-INF/views/AdminView.jsp");
+                } else if(DBActions.getInstance().getRoleId(login) == 2){
+                    resp.sendRedirect("/WEB-INF/views/UserView.jsp");
+                }
             }
         } else {
             req.setAttribute("error", "Credential invalid");
