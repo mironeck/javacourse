@@ -10,6 +10,9 @@ public class User {
     private Timestamp createDate;
     private String password;
     private Role role;
+    private int roleId;
+
+
 
     public User(String name, String login, String email, String password, Timestamp createDate) {
         this.name = name;
@@ -46,6 +49,14 @@ public class User {
 
     public void setRole(Role role) {
         this.role = role;
+    }
+
+    public int getRoleId() {
+        return roleId;
+    }
+
+    public void setRoleId(int roleId) {
+        this.roleId = roleId;
     }
 
     @Override

@@ -20,6 +20,12 @@ public class DBActions {
      */
     private final Properties prop = new Properties();
 
+    private final String createUserTableQuery = "CREATE TABLE if not exists " +
+            "userstable(id serial PRIMARY KEY , name VARCHAR(200), " +
+            "login VARCHAR(20), email VARCHAR(30), password VARCHAR(30), createdate TIMESTAMP, role_id INTEGER);";
+
+    private final String createRolesTableQuery = "CREATE TABLE if not exists " +
+            "rolestable(id serial PRIMARY KEY, name VARCHAR(200)";
     /**
      * Reference to Connection of database
      */
@@ -59,8 +65,8 @@ public class DBActions {
         } catch (Exception e) {
             e.printStackTrace();
         }
-        createUserTableIfNotExist();
-        createRolesTableIfNotExist();
+        createTableIfNotExist(createUserTableQuery);
+        createTableIfNotExist(createRolesTableQuery);
 
 
 //        Role roleAdmin = new Role("admin");
@@ -73,36 +79,24 @@ public class DBActions {
 //        user.setRole(roleUser);
 //        createUser(admin);
 //        createUser(user);
+        createRole("admin");
+        createRole("user");
 
     }
 
-    private void createUserTableIfNotExist() {
+    private void createTableIfNotExist(String query) {
 
         try (
-                PreparedStatement pr = this.conn.prepareStatement("CREATE TABLE if not exists " +
-                        "userstable(id serial PRIMARY KEY , name VARCHAR(200), " +
-                        "login VARCHAR(20), email VARCHAR(30), password VARCHAR(30), createdate TIMESTAMP, role_id INTEGER);" )
+                PreparedStatement pr = this.conn.prepareStatement(query)
         )
         {
             pr.execute();
         } catch (SQLException e) {
             LOG.error(e.getMessage(), e);
+            e.printStackTrace();
         }
     }
 
-    private void createRolesTableIfNotExist() {
-
-        try (
-                PreparedStatement pr = this.conn.prepareStatement("CREATE TABLE if not exists " +
-                        "rolestable(id serial PRIMARY KEY, name VARCHAR(200)" )
-        )
-        {
-            pr.execute();
-        } catch (SQLException e) {
-            LOG.error(e.getMessage(), e);
-        }
-
-    }
 
     /**
      * Creates user.
@@ -124,7 +118,7 @@ public class DBActions {
 
             pr.executeUpdate();
         }catch (SQLException e) {
-//            LOG.error(e.getMessage(), e);
+            LOG.error(e.getMessage(), e);
             e.printStackTrace();
         }
     }
@@ -197,7 +191,6 @@ public class DBActions {
             pr.setString(1, name);
             pr.setString(2, login);
             pr.executeUpdate();
-
         } catch (SQLException e) {
             LOG.error(e.getMessage(), e);
         }
@@ -226,21 +219,42 @@ public class DBActions {
     }
 
 
+//    public List<User> getUserList() {
+//
+//        List<User> userList = new ArrayList<>();
+//        ResultSet rs = null;
+//        try (
+//                PreparedStatement pr = this.conn.prepareStatement("SELECT u.name as name, u.login as login, " +
+//                        "u.email as email, u.password as pass, u.createdate as create,  r.name as rname, " +
+//                        "r.role_id as roleid FROM userstable as u left join rolestable as r on u.role_id = r.id") ) {
+//            rs = pr.executeQuery();
+//            while (rs.next()) {
+//                User user = new User(rs.getString("name"),rs.getString("login"),
+//                        rs.getString("email") , rs.getString("password"), rs.getTimestamp("createdate"));
+//                Role role = new Role(rs.getString("rname"));
+//                role.setId(rs.getInt("role_id"));
+//                user.setRole(role);
+//                userList.add(user);
+//            }
+//        } catch (SQLException e){
+//            LOG.error(e.getMessage(), e);
+//        }
+//        return userList;
+//    }
+
     public List<User> getUserList() {
 
         List<User> userList = new ArrayList<>();
         ResultSet rs = null;
+
         try (
-                PreparedStatement pr = this.conn.prepareStatement("SELECT u.name as name, u.login as login, " +
-                        "u.email as email, u.password as pass, u.createdate as create,  r.name as rname, " +
-                        "r.role_id as roleid FROM userstable as u left join rolestable as r on u.role_id = r.id") ) {
+                PreparedStatement pr = this.conn.prepareStatement("SELECT FROM userstable") ) {
             rs = pr.executeQuery();
             while (rs.next()) {
                 User user = new User(rs.getString("name"),rs.getString("login"),
                         rs.getString("email") , rs.getString("password"), rs.getTimestamp("createdate"));
-                Role role = new Role(rs.getString("rname"));
-                role.setId(rs.getInt("role_id"));
-                user.setRole(role);
+
+                user.setRoleId(Integer.parseInt(rs.getString("role_id")));
                 userList.add(user);
             }
         } catch (SQLException e){
@@ -278,7 +292,6 @@ public class DBActions {
 
         try( PreparedStatement pr = this.conn.prepareStatement("SELECT FROM roles") )
         {
-
             rs = pr.executeQuery();
             while(rs.next()) {
                 Role role = new Role(rs.getString("name"));
