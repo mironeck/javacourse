@@ -25,7 +25,7 @@ public class DBActions {
             "login VARCHAR(20), email VARCHAR(30), password VARCHAR(30), createdate TIMESTAMP, role_id INTEGER);";
 
     private final String createRolesTableQuery = "CREATE TABLE if not exists " +
-            "rolestable(id serial PRIMARY KEY, name VARCHAR(200)";
+            "rolestable(id serial PRIMARY KEY, name VARCHAR(200));";
     /**
      * Reference to Connection of database
      */
@@ -90,7 +90,7 @@ public class DBActions {
                 PreparedStatement pr = this.conn.prepareStatement(query)
         )
         {
-            pr.execute();
+            pr.executeUpdate();
         } catch (SQLException e) {
             LOG.error(e.getMessage(), e);
             e.printStackTrace();
@@ -127,7 +127,7 @@ public class DBActions {
 
         try(
                 PreparedStatement pr = this.conn.prepareStatement("INSERT INTO " +
-                        "roles(name) VALUES (?)"
+                        "rolestable(name) VALUES (?)"
                 )
         )
         {
@@ -164,7 +164,7 @@ public class DBActions {
     public void editUsersRole(int roleId, String name) {
 
         try(
-                PreparedStatement pr = this.conn.prepareStatement("UPDATE roles SET role = ? " +
+                PreparedStatement pr = this.conn.prepareStatement("UPDATE rolestable SET role = ? " +
                         "WHERE roleid = ?")
         )
         {
@@ -290,7 +290,7 @@ public class DBActions {
         List<Role> result = new ArrayList<>();
         ResultSet rs = null;
 
-        try( PreparedStatement pr = this.conn.prepareStatement("SELECT FROM roles") )
+        try( PreparedStatement pr = this.conn.prepareStatement("SELECT FROM rolestable") )
         {
             rs = pr.executeQuery();
             while(rs.next()) {
