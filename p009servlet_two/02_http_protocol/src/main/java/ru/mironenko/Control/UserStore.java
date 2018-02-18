@@ -45,17 +45,21 @@ public class UserStore {
 
         InputStream io = getClass().getClassLoader().getResourceAsStream("resources.properties");
         try {
+
             prop.load(io);
-        } catch (IOException e) {
+        } catch (Exception e) {
             e.printStackTrace();
         }
         String url = prop.getProperty("db.host");
         String username = prop.getProperty("db.login");
         String password = prop.getProperty("db.password");
         try {
+            Class.forName("org.postgresql.Driver");
             this.conn = DriverManager.getConnection(url, username, password);
         } catch (SQLException e) {
             LOG.error(e.getMessage(), e);
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
         }
         createTablesIfNotExist();
 
@@ -170,19 +174,35 @@ public class UserStore {
         }
     }
 
+    /**
+     * Closes connection to database.
+     */
+    public void closeConnection() {
 
-//    public static void main(String[] args) {
-//
-//        UserStore userStore = UserStore.getInstance();
-////        userStore.createUser("admin", "admin", "admin@admin");
-////        userStore.createUser("user", "user", "user@user");
-//        User user = userStore.getUser("admin", "admin");
-//        User userTwo = userStore.getUser("user", "user");
+        if(this.conn != null) {
+            try {
+                this.conn.close();
+            } catch (SQLException e) {
+                LOG.error(e.getMessage(), e);
+            }
+        }
+    }
+
+    public static void main(String[] args) {
+
+        UserStore userStore = UserStore.getInstance();
+//        userStore.createUser("admin", "admin", "admin@admin");
+//        userStore.createUser("user", "user", "user@user");
+        User user = userStore.getUser("admin", "admin");
+        User userTwo = userStore.getUser("user", "user");
+        System.out.println(user);
+        System.out.println(userTwo);
+//        userStore.editUser("admin", "admin", "admin test", "adminTest@admin");
+//        user = userStore.getUser("admin", "admin test");
 //        System.out.println(user);
-//        System.out.println(userTwo);
-////        userStore.editUser("admin", "admin", "admin test", "adminTest@admin");
-////        user = userStore.getUser("admin", "admin test");
-////        System.out.println(user);
-////        userStore.deleteUser("admin", "admin test");
-//    }
+//        userStore.deleteUser("admin", "admin test");
+        userStore.closeConnection();
+    }
+
+
 }
