@@ -1,0 +1,53 @@
+<web-app>
+
+    <servlet>
+        <servlet-name>userscontroller</servlet-name>
+        <servlet-class>ru.mironenko.servlets.UsersController</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>userscontroller</servlet-name>
+        <url-pattern>/</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>Signin</servlet-name>
+        <servlet-class>ru.mironenko.servlets.SinginController</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>Signin</servlet-name>
+        <url-pattern>/signin</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>createuser</servlet-name>
+        <servlet-class>ru.mironenko.servlets.CreateUserServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>createuser</servlet-name>
+        <url-pattern>/createuser</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>edituser</servlet-name>
+        <servlet-class>ru.mironenko.servlets.EditUserServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>edituser</servlet-name>
+        <url-pattern>/edituser</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>deleteuser</servlet-name>
+        <servlet-class>ru.mironenko.servlets.DeleteUserServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>deleteuser</servlet-name>
+        <url-pattern>/deleteuser</url-pattern>
+    </servlet-mapping>
+
+</web-app>
