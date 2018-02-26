@@ -212,7 +212,7 @@ public class UserStore {
         boolean exist = false;
         List<User> userList = UserStore.getInstance().getUserList();
         for(User user : userList) {
-            if(user.getName().equals(login) && user.getPassword().equals(password)) {
+            if(user.getLogin().equals(login) && user.getPassword().equals(password)) {
                 exist = true;
                 break;
             }
@@ -234,4 +234,13 @@ public class UserStore {
             }
         }
     }
+
+//    public static void main(String[] args) {
+//
+//        List<User> list = UserStore.getInstance().getUserList();
+//
+//        for(User user : list) {
+//            System.out.println(user);
+//        }
+//    }
 }

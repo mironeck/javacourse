@@ -60,7 +60,7 @@ public class User {
 
     @Override
     public String toString() {
-        return String.format("User : name - %s, login - %s, email - %s, date of creation - %s",
-                name, login, email, createDate);
+        return String.format("User : name - %s, login - %s, password - %s, email - %s, role_id - %s, date of creation - %s",
+                name, login, password, email, role_id, createDate);
     }
 }
