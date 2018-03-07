@@ -26,15 +26,20 @@ public class SinginController extends HttpServlet {
 
         String login = req.getParameter("login");
         String password = req.getParameter("password");
-        if(UserStore.getInstance().isCredential(login, password)) {
-            HttpSession session = req.getSession();
-            synchronized (session) {
-                session.setAttribute("login", login);
+
+        try {
+            if (UserStore.getInstance().isCredential(login, password)) {
+                HttpSession session = req.getSession();
+                synchronized (session) {
+                    session.setAttribute("login", login);
+                }
+                resp.sendRedirect(String.format("%s/", req.getContextPath()));
+            } else {
+                req.setAttribute("error", "Credential invalid");
+                doGet(req, resp);
             }
-            resp.sendRedirect(String.format("%s/", req.getContextPath()));
-        } else {
-            req.setAttribute("error", "Credential invalid");
-            doGet(req, resp);
+        }catch (Exception e) {
+            LOG.error(e.getMessage(), e);
         }
     }
 }
