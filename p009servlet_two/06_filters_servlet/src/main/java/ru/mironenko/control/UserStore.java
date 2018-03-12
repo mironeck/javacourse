@@ -2,6 +2,7 @@ package ru.mironenko.control;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import ru.mironenko.models.Role;
 import ru.mironenko.models.User;
 
 import javax.sql.DataSource;
@@ -106,7 +107,7 @@ public class UserStore {
             pr.setString(2, user.getLogin());
             pr.setString(3, user.getPassword());
             pr.setString(4, user.getEmail());
-            pr.setInt(5, user.getRole_id());
+            pr.setInt(5, user.getRole().getId());
             pr.setTimestamp(6, (Timestamp) user.getCreateDate());
             pr.executeUpdate();
         }catch (SQLException e) {
@@ -140,30 +141,31 @@ public class UserStore {
     }
 
 
-    /**
-     * Gets user from the table.
-     * @param name user's name to get
-     * @param login user's login to get
-     */
-    public User getUser(String name, String login) {
-
-        User result = null;
-        try(
-                PreparedStatement pr = this.conn.prepareStatement("SELECT * FROM userswithpass WHERE name = ? AND login = ?")
-        )
-        {
-            pr.setString(1, name);
-            pr.setString(2, login);
-            ResultSet rs = pr.executeQuery();
-            while (rs.next()) {
-                result = new User(rs.getString("name"), rs.getString("login"),
-                        rs.getString("password"), rs.getString("email"), rs.getInt("role_id"), rs.getTimestamp("createdate"));
-            }
-        } catch (SQLException e) {
-            LOG.error(e.getMessage(), e);
-        }
-        return result;
-    }
+//    /**
+//     * Gets user from the table.
+//     * @param name user's name to get
+//     * @param login user's login to get
+//     */
+//    public User getUser(String name, String login) {
+//
+//        User result = null;
+//        try(
+//                PreparedStatement pr = this.conn.prepareStatement("SELECT * FROM userswithpass WHERE name = ? AND login = ?")
+//        )
+//        {
+//            pr.setString(1, name);
+//            pr.setString(2, login);
+//            ResultSet rs = pr.executeQuery();
+//            while (rs.next()) {
+//                result = new User(rs.getString("name"), rs.getString("login"),
+//                        rs.getString("password"), rs.getString("email"), rs.getTimestamp("createdate"));
+//
+//            }
+//        } catch (SQLException e) {
+//            LOG.error(e.getMessage(), e);
+//        }
+//        return result;
+//    }
 
 
     /**
@@ -192,13 +194,17 @@ public class UserStore {
         List<User> result = new ArrayList<>();
 
         try (
-                PreparedStatement pr = this.conn.prepareStatement("SELECT * FROM userswithpass;")
+                PreparedStatement pr = this.conn.prepareStatement("select u.name, u.login, u.password, u.email, u.createdate, r.name as role, r.role_id as \"role id\" from \n" +
+                        "userswithpass as u inner join roles as r\n" +
+                        "on u.role_id = r.role_id;")
         )
         {
             ResultSet rs = pr.executeQuery();
             while(rs.next()) {
                 User user =  new User(rs.getString("name"), rs.getString("login"),
-                        rs.getString("password"), rs.getString("email"), rs.getInt("role_id"), rs.getTimestamp("createdate"));
+                        rs.getString("password"), rs.getString("email"), rs.getTimestamp("createdate"));
+                Role role = new Role(Integer.parseInt(rs.getString("role id")), rs.getString("name"));
+                user.setRole(role);
                 result.add(user);
             }
         } catch (SQLException e) {
@@ -235,12 +241,81 @@ public class UserStore {
         }
     }
 
-//    public static void main(String[] args) {
-//
-//        List<User> list = UserStore.getInstance().getUserList();
-//
-//        for(User user : list) {
-//            System.out.println(user);
-//        }
-//    }
+
+    public List<Role> getRoles() {
+
+        List<Role> roles = new ArrayList<>();
+        try (
+                PreparedStatement pr = this.conn.prepareStatement("SELECT * FROM roles;")
+        )
+        {
+            ResultSet rs = pr.executeQuery();
+            while(rs.next()) {
+                Role role =  new Role(rs.getInt("role_id"), rs.getString("name"));
+                roles.add(role);
+            }
+        } catch (SQLException e) {
+            LOG.error(e.getMessage(), e);
+        }
+
+        return roles;
+    }
+
+
+    public void createNewRole(int role_id, String name) {
+
+        try(
+                PreparedStatement pr = this.conn.prepareStatement("INSERT INTO roles(role_id, name) VALUES (?, ?)")
+        )
+        {
+            pr.setInt(1, role_id);
+            pr.setString(2, name);
+            pr.executeUpdate();
+        }catch (SQLException e) {
+            LOG.error(e.getMessage(), e);
+        }
+    }
+
+
+    public void editRole(int roleId, String name, int newRoleId, String newName) {
+
+        try(
+                PreparedStatement pr = this.conn.prepareStatement("UPDATE roles SET role_id = ?, name = ? " +
+                        "WHERE role_id = ? AND name = ?")
+        )
+        {
+            pr.setInt(1 , newRoleId);
+            pr.setString(2 , newName);
+            pr.setInt(3 , roleId);
+            pr.setString(4 , name);
+            pr.executeUpdate();
+        } catch (SQLException e) {
+            LOG.error(e.getMessage(), e);
+        }
+    }
+
+    public void deleteRole(int id, String name) {
+
+        try (
+                PreparedStatement pr = this.conn.prepareStatement("DELETE FROM role WHERE role_id = ? AND name = ?");
+        )
+        {
+            pr.setInt(1, id);
+            pr.setString(2, name);
+            pr.executeUpdate();
+
+        } catch (SQLException e) {
+            LOG.error(e.getMessage(), e);
+        }
+
+    }
+
+    public static void main(String[] args) {
+
+        List<User> list = UserStore.getInstance().getUserList();
+
+        for(User user : list) {
+            System.out.println(user);
+        }
+    }
 }

@@ -15,7 +15,7 @@
 <body>
 <c:if test="${error != ''}">
     <div style="background-color: red">
-        <c:out value="${error}"></c:out>
+        <c:out value="${error}"/>
     </div>
 </c:if>
     <p>Login</p>

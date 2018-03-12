@@ -19,41 +19,53 @@
             <th>Name</th>
             <th>Login</th>
             <th>Email</th>
+            <th>Password</th>
             <th>Create Date</th>
+            <th>Role</th>
         </tr>
         <c:forEach items="${users}" var="user">
             <tr>
                 <td><c:out value="${user.name}"></c:out></td>
                 <td><c:out value="${user.login}"></c:out></td>
                 <td><c:out value="${user.email}"></c:out></td>
+                <td><c:out value="${user.password}"></c:out></td>
                 <td><c:out value="${user.createDate}"></c:out></td>
+                <td><c:out value="${user.role}"></c:out></td>
             </tr>
         </c:forEach>
     </table>
 
     <p>Create new user</p>
     <form action="${pageContext.servletContext.contextPath}/createuser" method="post" >
-        User name : <input type="text" name="name">
-        User login : <input type="text" name="login">
-        User email : <input type="text" name="email">
+        User name : <input type="text" name="name"><br>
+        User login : <input type="text" name="login"><br>
+        User password : <input type="text" name="password"><br>
+        User email : <input type="text" name="email"><br>
+        role:<br>
+        <select name="role" size="1">
+            <c:forEach items="${roles}" var = "role">
+                <option value = "${role.id}"> <c:out value="${role.name}"></c:out></option>
+            </c:forEach>
+        </select>
+        <br>
         <input type="submit">
     </form>
 
     <br/>
     <p>Edit user</p>
     <form action="${pageContext.servletContext.contextPath}/edituser" method="post" >
-        User name : <input type="text" name="name">
-        User login : <input type="text" name="login">
-        User new login : <input type="text" name="newLogin">
-        User new email : <input type="text" name="newEmail">
+        User name : <input type="text" name="name"><br>
+        User login : <input type="text" name="login"><br>
+        User new login : <input type="text" name="newLogin"><br>
+        User new email : <input type="text" name="newEmail"><br>
         <input type="submit">
     </form>
 
     <br/>
     <p>Delete user</p>
     <form action="${pageContext.servletContext.contextPath}/deleteuser" method="post" >
-        User name : <input type="text" name="name">
-        User login : <input type="text" name="login">
+        User name : <input type="text" name="name"><br>
+        User login : <input type="text" name="login"><br>
         <input type="submit">
     </form>
 

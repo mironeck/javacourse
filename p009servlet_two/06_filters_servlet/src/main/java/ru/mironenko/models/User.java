@@ -10,13 +10,14 @@ public class User {
     private String email;
     private int role_id;
     private final Date createDate;
+    private Role role;
 
-    public User(String name, String login, String password, String email, int role_id, Date createDate) {
+
+    public User(String name, String login, String password, String email, Date createDate) {
         this.name = name;
         this.login = login;
         this.password = password;
         this.email = email;
-        this.role_id = role_id;
         this.createDate = createDate;
     }
 
@@ -56,6 +57,13 @@ public class User {
         return createDate;
     }
 
+    public Role getRole() {
+        return role;
+    }
+
+    public void setRole(Role role) {
+        this.role = role;
+    }
 
 
     @Override

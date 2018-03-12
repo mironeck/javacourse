@@ -18,6 +18,7 @@ public class UsersController extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         req.setAttribute("users", UserStore.getInstance().getUserList());
+        req.setAttribute("roles", UserStore.getInstance().getRoles());
         req.getRequestDispatcher("/WEB-INF/views/UsersView.jsp").forward(req, resp);
     }
 
