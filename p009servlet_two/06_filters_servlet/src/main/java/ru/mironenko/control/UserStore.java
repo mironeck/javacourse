@@ -203,7 +203,7 @@ public class UserStore {
             while(rs.next()) {
                 User user =  new User(rs.getString("name"), rs.getString("login"),
                         rs.getString("password"), rs.getString("email"), rs.getTimestamp("createdate"));
-                Role role = new Role(Integer.parseInt(rs.getString("role id")), rs.getString("name"));
+                Role role = new Role(Integer.parseInt(rs.getString("role id")), rs.getString("role"));
                 user.setRole(role);
                 result.add(user);
             }
@@ -297,7 +297,7 @@ public class UserStore {
     public void deleteRole(int id, String name) {
 
         try (
-                PreparedStatement pr = this.conn.prepareStatement("DELETE FROM role WHERE role_id = ? AND name = ?");
+                PreparedStatement pr = this.conn.prepareStatement("DELETE FROM roles WHERE role_id = ? AND name = ?")
         )
         {
             pr.setInt(1, id);
