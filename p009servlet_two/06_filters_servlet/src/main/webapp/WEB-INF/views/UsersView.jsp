@@ -74,5 +74,7 @@
     <p><a href="${pageContext.servletContext.contextPath}/createrole">CREATE NEW ROLE</a>
     <p><a href="${pageContext.servletContext.contextPath}/editrole">EDIT ROLE</a>
     <p><a href="${pageContext.servletContext.contextPath}/deleterole">DELETE ROLE</a>
+    <br/>
+    <p><a href="${pageContext.servletContext.contextPath}/signin">LOG OUT</a>
 </body>
 </html>

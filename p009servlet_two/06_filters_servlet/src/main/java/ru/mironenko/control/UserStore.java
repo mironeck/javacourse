@@ -310,6 +310,34 @@ public class UserStore {
 
     }
 
+
+    public User getUser(String login, String password) {
+        User result = null;
+
+        try (
+                PreparedStatement pr = this.conn.prepareStatement("select u.name, u.login, u.password, u.email, u.createdate, r.name as role, r.role_id as \"role id\" from \n" +
+                        "userswithpass as u \n" +
+                        "inner join roles as r\n" +
+                        "on u.role_id = r.role_id\n" +
+                        "where u.login = ? and u.password = ?;")
+        )
+        {
+            pr.setString(1, login);
+            pr.setString(2, password);
+            ResultSet rs = pr.executeQuery();
+            while(rs.next()) {
+                result =  new User(rs.getString("name"), rs.getString("login"),
+                        rs.getString("password"), rs.getString("email"), rs.getTimestamp("createdate"));
+                Role role = new Role(Integer.parseInt(rs.getString("role id")), rs.getString("role"));
+                result.setRole(role);
+            }
+        } catch (SQLException e) {
+            LOG.error(e.getMessage(), e);
+        }
+
+        return result;
+    }
+
     public static void main(String[] args) {
 
         List<User> list = UserStore.getInstance().getUserList();
@@ -317,5 +345,11 @@ public class UserStore {
         for(User user : list) {
             System.out.println(user);
         }
+
+        boolean test = UserStore.getInstance().isCredential("admin", "admin");
+        System.out.println(test);
+
+        User ggg = UserStore.getInstance().getUser("user", "user");
+        System.out.println(ggg);
     }
 }

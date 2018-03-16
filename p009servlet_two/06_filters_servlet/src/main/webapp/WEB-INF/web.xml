@@ -62,6 +62,16 @@
     </servlet-mapping>
 
     <servlet>
+        <servlet-name>editsimpleuser</servlet-name>
+        <servlet-class>ru.mironenko.servlets.EditUserServletForSimpleUser</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>editsimpleuser</servlet-name>
+        <url-pattern>/editsimpleuser</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
         <servlet-name>createrole</servlet-name>
         <servlet-class>ru.mironenko.servlets.CreateRole</servlet-class>
     </servlet>
