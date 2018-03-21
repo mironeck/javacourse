@@ -141,33 +141,6 @@ public class UserStore {
     }
 
 
-//    /**
-//     * Gets user from the table.
-//     * @param name user's name to get
-//     * @param login user's login to get
-//     */
-//    public User getUser(String name, String login) {
-//
-//        User result = null;
-//        try(
-//                PreparedStatement pr = this.conn.prepareStatement("SELECT * FROM userswithpass WHERE name = ? AND login = ?")
-//        )
-//        {
-//            pr.setString(1, name);
-//            pr.setString(2, login);
-//            ResultSet rs = pr.executeQuery();
-//            while (rs.next()) {
-//                result = new User(rs.getString("name"), rs.getString("login"),
-//                        rs.getString("password"), rs.getString("email"), rs.getTimestamp("createdate"));
-//
-//            }
-//        } catch (SQLException e) {
-//            LOG.error(e.getMessage(), e);
-//        }
-//        return result;
-//    }
-
-
     /**
      * Deletes user from table.
      * @param name user's name to delete.
@@ -261,6 +234,24 @@ public class UserStore {
         return roles;
     }
 
+    public Role getRole(String roleName) {
+
+        Role result = null;
+        try (
+                PreparedStatement pr = this.conn.prepareStatement("SELECT * FROM roles where name = ?;")
+        )
+        {
+            pr.setString(1, roleName);
+            ResultSet rs = pr.executeQuery();
+            while(rs.next()) {
+                result =  new Role(rs.getInt("role_id"), rs.getString("name"));
+            }
+        } catch (SQLException e) {
+            LOG.error(e.getMessage(), e);
+        }
+
+        return result;
+    }
 
     public void createNewRole(int role_id, String name) {
 
@@ -351,5 +342,7 @@ public class UserStore {
 
         User ggg = UserStore.getInstance().getUser("user", "user");
         System.out.println(ggg);
+
+        System.out.println(UserStore.getInstance().getRoles().get(1));
     }
 }
