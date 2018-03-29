@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="05_mvc_jstl:war">
+    <output-path>$PROJECT_DIR$/p009servlet_two/05_mvc_jstl/target</output-path>
+    <root id="archive" name="05_mvc_jstl-1.0.war">
+      <element id="artifact" artifact-name="05_mvc_jstl:war exploded" />
+    </root>
+  </artifact>
+</component>

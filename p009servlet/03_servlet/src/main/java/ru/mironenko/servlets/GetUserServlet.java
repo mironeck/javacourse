@@ -1,6 +1,5 @@
 package ru.mironenko.servlets;
 
-import ru.mironenko.controls.DBActions;
 import ru.mironenko.models.User;
 
 import javax.servlet.ServletException;
@@ -19,7 +18,7 @@ public class GetUserServlet extends HttpServlet {
         resp.setContentType("text/html");
         String userName = req.getParameter("name");
         String userLogin = req.getParameter("login");
-        User user = this.dbActions.getUser(userName, userLogin);
+        User user = this.dbActions.(userName, userLogin);
         PrintWriter writer = new PrintWriter(resp.getOutputStream());
         writer.append("<!DOCTYPE html>" +
                 "<html lang=\"en\">" +

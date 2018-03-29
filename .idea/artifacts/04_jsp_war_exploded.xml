@@ -1,0 +1,18 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="04_jsp:war exploded">
+    <output-path>$PROJECT_DIR$/out/artifacts/04_jsp_war_exploded</output-path>
+    <root id="archive" name="04_jsp_war exploded.war">
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="04_jsp" />
+        </element>
+        <element id="directory" name="lib">
+          <element id="library" level="project" name="Maven: log4j:log4j:1.2.17" />
+          <element id="library" level="project" name="Maven: org.slf4j:slf4j-api:1.7.5" />
+          <element id="library" level="project" name="Maven: net.bytebuddy:byte-buddy:1.6.5" />
+        </element>
+      </element>
+      <element id="javaee-facet-resources" facet="04_jsp/web/Web" />
+    </root>
+  </artifact>
+</component>

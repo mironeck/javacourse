@@ -1,6 +1,5 @@
 package ru.mironenko.servlets;
 
-import ru.mironenko.controls.DBActions;
 import ru.mironenko.models.User;
 
 import javax.servlet.ServletException;

@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="03_servlet_connect:war">
+    <output-path>$PROJECT_DIR$/p009servlet/03_servlet_connect/target</output-path>
+    <root id="archive" name="03_servlet_connect-1.0.war">
+      <element id="artifact" artifact-name="03_servlet_connect:war exploded" />
+    </root>
+  </artifact>
+</component>

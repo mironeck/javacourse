@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="08_html_css_js:war">
+    <output-path>$PROJECT_DIR$/p009servlet_two/08_html_css_js/target</output-path>
+    <root id="archive" name="08_html_css_js-1.0.war">
+      <element id="artifact" artifact-name="08_html_css_js:war exploded" />
+    </root>
+  </artifact>
+</component>

@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="06_filters_servlet:war">
+    <output-path>$PROJECT_DIR$/p009servlet_two/06_filters_servlet/target</output-path>
+    <root id="archive" name="06_filters_servlet-1.0.war">
+      <element id="artifact" artifact-name="06_filters_servlet:war exploded" />
+    </root>
+  </artifact>
+</component>
