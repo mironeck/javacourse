@@ -13,6 +13,6 @@
     <groupId>ru.mironenko</groupId>
     <artifactId>08_html_css_js</artifactId>
     <version>1.0</version>
-
+    <packaging>war</packaging>
     
 </project>
