@@ -1,2 +1,2 @@
 # Курс "Java от А до Я" http://job4j.ru
-Цель: трудоустройство на позицию Java developer в октябре 2017г
+link to images of crud servlet https://github.com/mironeck/javacourse/tree/master/p009servlet_two/06_filters_servlet/CRUD%20Servlets
