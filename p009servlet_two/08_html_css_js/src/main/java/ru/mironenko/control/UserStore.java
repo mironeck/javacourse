@@ -9,6 +9,7 @@ import javax.sql.DataSource;
 import java.io.InputStream;
 import java.sql.*;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 import java.util.Properties;
 
@@ -16,10 +17,8 @@ public class UserStore {
 
     private static final Logger LOG = LoggerFactory.getLogger(UserStore.class);
 
-    private static final String CREATE_USERS_TABLE_QUERY = "CREATE TABLE IF NOT EXIST userswithpass(id serial PRIMARY KEY," +
-            "name VARCHAR(20), login VARCHAR(20), password VARCHAR(20), email VARCHAR(20), role_id INTEGER, createdate TIMESTAMP);";
-
-    private static final String CREATE_ROLES_TABLE_QUERY = "CREATE TABLE IF NOT EXIST roles(id serial primary key, role_id INTEGER, name VARCHAR(20));";
+    private static final String CREATE_USERS_TABLE_QUERY = "CREATE TABLE IF NOT EXISTS usershtml(id serial PRIMARY KEY," +
+            "name VARCHAR(20), login VARCHAR(20), password VARCHAR(20), email VARCHAR(20),  country VARCHAR(20),  city VARCHAR(20), createdate TIMESTAMP);";
 
     //Eager initialization singleton
     private static final UserStore instance = new UserStore();
@@ -76,7 +75,6 @@ public class UserStore {
             e.printStackTrace();
         }
         createTablesIfNotExist(CREATE_USERS_TABLE_QUERY);
-        createTablesIfNotExist(CREATE_ROLES_TABLE_QUERY);
 
     }
 
@@ -99,15 +97,16 @@ public class UserStore {
     public void createUser(User user) {
 
         try(
-                PreparedStatement pr = this.conn.prepareStatement("INSERT INTO userswithpass(name, login, password, email, role_id,  createdate) VALUES (?, ?, ?, ?, ?, ?)")
+                PreparedStatement pr = this.conn.prepareStatement("INSERT INTO usershtml(name, login, password, email, country,  city, createdate) VALUES (?, ?, ?, ?, ?, ?, ?)")
         )
         {
             pr.setString(1, user.getName());
             pr.setString(2, user.getLogin());
             pr.setString(3, user.getPassword());
             pr.setString(4, user.getEmail());
-            pr.setInt(5, user.getRole().getId());
-            pr.setTimestamp(6, (Timestamp) user.getCreateDate());
+            pr.setString(5, user.getCountry());
+            pr.setString(6, user.getCity());
+            pr.setTimestamp(7, (Timestamp) user.getCreateDate());
             pr.executeUpdate();
         }catch (SQLException e) {
             LOG.error(e.getMessage(), e);
@@ -125,7 +124,7 @@ public class UserStore {
     public void editUser(String name, String login, String newLogin, String newEmail) {
 
         try(
-                PreparedStatement pr = this.conn.prepareStatement("UPDATE userswithpass SET login = ?, email = ? " +
+                PreparedStatement pr = this.conn.prepareStatement("UPDATE usershtml SET login = ?, email = ? " +
                         "WHERE name = ? AND login = ?")
         )
         {
@@ -148,7 +147,7 @@ public class UserStore {
     public void deleteUser(String name, String login) {
 
         try (
-                PreparedStatement pr = this.conn.prepareStatement("DELETE FROM userswithpass WHERE name = ? AND login = ?");
+                PreparedStatement pr = this.conn.prepareStatement("DELETE FROM usershtml WHERE name = ? AND login = ?");
         )
         {
             pr.setString(1, name);
@@ -166,17 +165,15 @@ public class UserStore {
         List<User> result = new ArrayList<>();
 
         try (
-                PreparedStatement pr = this.conn.prepareStatement("select u.name, u.login, u.password, u.email, u.createdate, r.name as role, r.role_id as \"role id\" from \n" +
-                        "userswithpass as u inner join roles as r\n" +
-                        "on u.role_id = r.role_id;")
+                PreparedStatement pr = this.conn.prepareStatement("SELECT * FROM usershtml;")
         )
         {
             ResultSet rs = pr.executeQuery();
             while(rs.next()) {
                 User user =  new User(rs.getString("name"), rs.getString("login"),
                         rs.getString("password"), rs.getString("email"), rs.getTimestamp("createdate"));
-                Role role = new Role(Integer.parseInt(rs.getString("role id")), rs.getString("role"));
-                user.setRole(role);
+                user.setCountry(rs.getString("country"));
+                user.setCity(rs.getString("city"));
                 result.add(user);
             }
         } catch (SQLException e) {
@@ -214,101 +211,12 @@ public class UserStore {
     }
 
 
-    public List<Role> getRoles() {
-
-        List<Role> roles = new ArrayList<>();
-        try (
-                PreparedStatement pr = this.conn.prepareStatement("SELECT * FROM roles;")
-        )
-        {
-            ResultSet rs = pr.executeQuery();
-            while(rs.next()) {
-                Role role =  new Role(rs.getInt("role_id"), rs.getString("name"));
-                roles.add(role);
-            }
-        } catch (SQLException e) {
-            LOG.error(e.getMessage(), e);
-        }
-
-        return roles;
-    }
-
-    public Role getRole(String roleName) {
-
-        Role result = null;
-        try (
-                PreparedStatement pr = this.conn.prepareStatement("SELECT * FROM roles where name = ?;")
-        )
-        {
-            pr.setString(1, roleName);
-            ResultSet rs = pr.executeQuery();
-            while(rs.next()) {
-                result =  new Role(rs.getInt("role_id"), rs.getString("name"));
-            }
-        } catch (SQLException e) {
-            LOG.error(e.getMessage(), e);
-        }
-
-        return result;
-    }
-
-    public void createNewRole(int role_id, String name) {
-
-        try(
-                PreparedStatement pr = this.conn.prepareStatement("INSERT INTO roles(role_id, name) VALUES (?, ?)")
-        )
-        {
-            pr.setInt(1, role_id);
-            pr.setString(2, name);
-            pr.executeUpdate();
-        }catch (SQLException e) {
-            LOG.error(e.getMessage(), e);
-        }
-    }
-
-
-    public void editRole(int roleId, String name, int newRoleId, String newName) {
-
-        try(
-                PreparedStatement pr = this.conn.prepareStatement("UPDATE roles SET role_id = ?, name = ? " +
-                        "WHERE role_id = ? AND name = ?")
-        )
-        {
-            pr.setInt(1 , newRoleId);
-            pr.setString(2 , newName);
-            pr.setInt(3 , roleId);
-            pr.setString(4 , name);
-            pr.executeUpdate();
-        } catch (SQLException e) {
-            LOG.error(e.getMessage(), e);
-        }
-    }
-
-    public void deleteRole(int id, String name) {
-
-        try (
-                PreparedStatement pr = this.conn.prepareStatement("DELETE FROM roles WHERE role_id = ? AND name = ?")
-        )
-        {
-            pr.setInt(1, id);
-            pr.setString(2, name);
-            pr.executeUpdate();
-
-        } catch (SQLException e) {
-            LOG.error(e.getMessage(), e);
-        }
-
-    }
-
-
     public User getUser(String login, String password) {
         User result = null;
 
         try (
-                PreparedStatement pr = this.conn.prepareStatement("select u.name, u.login, u.password, u.email, u.createdate, r.name as role, r.role_id as \"role id\" from \n" +
-                        "userswithpass as u \n" +
-                        "inner join roles as r\n" +
-                        "on u.role_id = r.role_id\n" +
+                PreparedStatement pr = this.conn.prepareStatement("select u.name, u.login, u.password, u.email, u.createdate from \n" +
+                        "usershtml as u "+
                         "where u.login = ? and u.password = ?;")
         )
         {
@@ -318,8 +226,6 @@ public class UserStore {
             while(rs.next()) {
                 result =  new User(rs.getString("name"), rs.getString("login"),
                         rs.getString("password"), rs.getString("email"), rs.getTimestamp("createdate"));
-                Role role = new Role(Integer.parseInt(rs.getString("role id")), rs.getString("role"));
-                result.setRole(role);
             }
         } catch (SQLException e) {
             LOG.error(e.getMessage(), e);
@@ -328,20 +234,29 @@ public class UserStore {
         return result;
     }
 
-    public static void main(String[] args) {
+//    public static void main(String[] args) {
 
-        List<User> list = UserStore.getInstance().getUserList();
+//        User user = new User("admin", "admin", "admin", "admin@admin",new Timestamp(new Date().getTime()));
+//        user.setCountry("Canada");
+//        user.setCity("Montreal");
+//        User user2 = new User("user", "user", "user", "user@user",new Timestamp(new Date().getTime()));
+//        user2.setCountry("USA");
+//        user2.setCity("NY");
+//        UserStore.getInstance().createUser(user);
+//        UserStore.getInstance().createUser(user2);
 
-        for(User user : list) {
-            System.out.println(user);
-        }
-
-        boolean test = UserStore.getInstance().isCredential("admin", "admin");
-        System.out.println(test);
-
-        User ggg = UserStore.getInstance().getUser("user", "user");
-        System.out.println(ggg);
-
-        System.out.println(UserStore.getInstance().getRoles().get(1));
-    }
+//        List<User> list = UserStore.getInstance().getUserList();
+//
+//        for(User tmp : list) {
+//            System.out.println(tmp);
+//        }
+//
+//        boolean test = UserStore.getInstance().isCredential("admin", "admin");
+//        System.out.println(test);
+//
+//
+//        User ggg = UserStore.getInstance().getUser("admin", "admin");
+//        System.out.println(ggg);
+//
+//    }
 }

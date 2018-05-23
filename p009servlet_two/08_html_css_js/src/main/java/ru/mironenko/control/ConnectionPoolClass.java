@@ -11,7 +11,7 @@ import javax.sql.DataSource;
 public class ConnectionPoolClass {
 
     public static final String DRIVER = "org.postgresql.Driver";
-    public static final String URL = "jdbc:postgresql://localhost:5432/users_store_two";
+    public static final String URL = "jdbc:postgresql://localhost:5432/users_store_html";
     public static final String USERNAME = "postgres";
     public static final String PASSWORD = "password";
 

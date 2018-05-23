@@ -9,9 +9,9 @@ public class User {
     private final String login;
     private String password;
     private String email;
-    private int role_id;
     private final Date createDate;
-    private Role role;
+    private String country;
+    private String city;
 
 
     public User(String name, String login, String password, String email, Date createDate) {
@@ -26,20 +26,12 @@ public class User {
         return password;
     }
 
-    public int getRole_id() {
-        return role_id;
-    }
-
     public void setPassword(String password) {
         this.password = password;
     }
 
     public void setEmail(String email) {
         this.email = email;
-    }
-
-    public void setRole_id(int role_id) {
-        this.role_id = role_id;
     }
 
     public String getName() {
@@ -58,18 +50,26 @@ public class User {
         return createDate;
     }
 
-    public Role getRole() {
-        return role;
+    public String getCountry() {
+        return country;
     }
 
-    public void setRole(Role role) {
-        this.role = role;
+    public void setCountry(String country) {
+        this.country = country;
     }
 
+    public String getCity() {
+        return city;
+    }
+
+    public void setCity(String city) {
+        this.city = city;
+    }
 
     @Override
     public String toString() {
-        return String.format("User : name - %s, login - %s, password - %s, email - %s, role_id - %s, date of creation - %s",
-                name, login, password, email, role_id, createDate);
+        return String.format("User : name - %s, login - %s, password - %s, email - %s, date of creation - %s," +
+                        "city - %s, country - %s",
+                name, login, password, email, createDate, city, country);
     }
 }
