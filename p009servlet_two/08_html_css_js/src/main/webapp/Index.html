@@ -8,32 +8,65 @@
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script>
 
-        $(
-            $.ajax('./json', {
-                method : 'get',
-                complete: function(data) {
-                    var result = "<tr>"+
-                                 "<td>Name</td>"+
-                                 "<td>Login</td>"+
-                                 "<td>Email</td>"+
-                                 "<td>Country</td>"+
-                                 "<td>City</td>"+
-                                 "</tr>";
-                    var users = JSON.parse(data.responseText); // возвращает массив объектов users
-                    for(var i=0; i!=users.length; ++i) {
-                        result += "<tr>"+
-                            "<td>" + users[i].name + "</td>"+
-                            "<td>" + users[i].login + "</td>"+
-                            "<td>" + users[i].email + "</td>"+
-                            "<td>" + users[i].country +"</td>"+
-                            "<td>" + users[i].city + "</td>"+
-                            "</tr>";
+        $(document).ready(function () {
+
+            showUsers();
+
+            $("ajaxform").submit(function () {
+
+                var form = $(this);
+                var error = false;
+                form.find('input').each(function () {
+
+                    if($(this).val() == '') {
+                        alert('Fill field "'+$(this).attr('name')+'", please!');
+                        error = true;
                     }
-                    var table = document.getElementById("users");
-                    table.innerHTML = result;
+                });
+
+                if(!error) {
+                    var data = form.serialize();
+                    $.ajax({
+                        type: 'post',
+                        url: './gson',
+                        dataType: gson,
+                        data: data
+                    });
                 }
             })
-        );
+        })
+
+
+
+        function showUsers() {
+
+            $.ajax('./json', {
+
+                method : 'get',
+                    complete: function(data) {
+                        var result = "<tr>"+
+                                     "<td>Name</td>"+
+                                     "<td>Login</td>"+
+                                     "<td>Email</td>"+
+                                     "<td>Country</td>"+
+                                     "<td>City</td>"+
+                                     "</tr>";
+                        var users = JSON.parse(data.responseText); // возвращает массив объектов users
+                        for(var i=0; i!=users.length; ++i) {
+                            result +=
+                                "<tr>"+
+                                "<td>" + users[i].name + "</td>"+
+                                "<td>" + users[i].login + "</td>"+
+                                "<td>" + users[i].email + "</td>"+
+                                "<td>" + users[i].country + "</td>"+
+                                "<td>" + users[i].city + "</td>"+
+                                "</tr>";
+                        }
+                        var table = document.getElementById("users");
+                        table.innerHTML = result;
+                    }
+                });
+        }
         //проверяет, не пустые ли поля в форме
         function validate() {
 
@@ -43,7 +76,7 @@
                 result = false;
             }
             if(!result) {
-                alert("Please connect input date.")
+                alert("Please correct input date.")
             }
             return result;
         }
@@ -51,7 +84,7 @@
 </head>
 <body>
 <div class="center">
-    <form method="post" action="" onsubmit="validate();">
+    <form method="post" action="/users/json" id="ajaxform" onsubmit="validate();">
         <input type="hidden" name="user_id">
         <p>Name : <input type="text" name="name"></p>
         <p>Login : <input type="text" name="login"></p>
